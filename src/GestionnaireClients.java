@@ -15,5 +15,4 @@ public class GestionnaireClients {
     public void ajouterClient (Client c) {
         clients.add(c);
     }
-
 }
