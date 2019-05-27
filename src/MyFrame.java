@@ -69,19 +69,19 @@ public class MyFrame extends JFrame
         //Container cTop = new Container();
         MotionPanel pTop = new MotionPanel(this);
         pTop.setBackground(new Color(0x4773B9));
-        pTop.setPreferredSize(new Dimension(1000,50));
+        pTop.setPreferredSize(new Dimension(1000,80));
         mainPanel.add(pTop, BorderLayout.PAGE_START);
         pTop.setLayout(new FlowLayout(FlowLayout.CENTER,0,0));
 
         Panel MenuLeft = new Panel();
         MenuLeft.setBackground(new Color(0x4773B9));
-        MenuLeft.setPreferredSize(new Dimension(940,50));
+        MenuLeft.setPreferredSize(new Dimension(940,80));
         pTop.add(MenuLeft);
         MenuLeft.setLayout(new FlowLayout(FlowLayout.CENTER,0,0));
 
         JPanel buttonLeftSpace = new JPanel();
         buttonLeftSpace.setBackground(new Color(0x4773B9));
-        buttonLeftSpace.setPreferredSize(new Dimension(50,0));
+        buttonLeftSpace.setPreferredSize(new Dimension(60,0));
         MenuLeft.add(buttonLeftSpace);
 
         /*JPanel buttonSpace1 = new JPanel();
@@ -104,7 +104,7 @@ public class MyFrame extends JFrame
 
         Panel MenuRight1 = new Panel();
         MenuRight1.setBackground(new Color(0x4773B9));
-        MenuRight1.setPreferredSize(new Dimension(30,50));
+        MenuRight1.setPreferredSize(new Dimension(30,80));
         MenuRight1.setLayout(new BorderLayout(0,0));
         pTop.add(MenuRight1);
 
@@ -113,7 +113,7 @@ public class MyFrame extends JFrame
 
         Panel MenuRight2 = new Panel();
         MenuRight2.setBackground(new Color(0x4773B9));
-        MenuRight2.setPreferredSize(new Dimension(30,50));
+        MenuRight2.setPreferredSize(new Dimension(30,80));
         MenuRight2.setLayout(new BorderLayout(0,0));
         pTop.add(MenuRight2);
 
@@ -123,10 +123,20 @@ public class MyFrame extends JFrame
 
         pContent = new Panel();
         pContent.setBackground(new Color(0x555555));
-        pContent.setPreferredSize(new Dimension(600,570));
+        pContent.setPreferredSize(new Dimension(1000,615));
         mainPanel.add(pContent, BorderLayout.CENTER);
         cardLayout = new CardLayout();
         pContent.setLayout(cardLayout);
+
+        Panel pRightBorder = new Panel();
+        pRightBorder.setBackground(new Color(0x4773B9));
+        pRightBorder.setPreferredSize(new Dimension(5,615));
+        mainPanel.add(pRightBorder, BorderLayout.EAST);
+
+        Panel pLeftBorder = new Panel();
+        pLeftBorder.setBackground(new Color(0x4773B9));
+        pLeftBorder.setPreferredSize(new Dimension(5,615));
+        mainPanel.add(pLeftBorder, BorderLayout.WEST);
 
         Panel card1 = new Panel();
         card1.setBackground(new Color(0xDD0000));
@@ -136,6 +146,22 @@ public class MyFrame extends JFrame
         Panel card3 = new Panel();
         card3.setBackground(new Color(0x000099));
 
+        Panel listPanel = new Panel();
+        listPanel.setBackground(new Color(0));
+        listPanel.setPreferredSize(new Dimension(300,615));
+        listPanel.setLayout(new FlowLayout(FlowLayout.LEFT, 0, 0));
+        card1.add(listPanel);
+
+        Panel searchBar = new Panel();
+        searchBar.setBackground(new Color(0x6A9DDB));
+        searchBar.setPreferredSize(new Dimension(285,30));
+        listPanel.add(searchBar);
+
+        Panel bidule = new Panel();
+        bidule.setBackground(new Color(0x4773B9));
+        bidule.setPreferredSize(new Dimension(15,30));
+        listPanel.add(bidule);
+
         ArrayList<String> categories = new ArrayList<String>(Arrays.asList(liste));
         list = new JList(createDefaultListModel());
         JScrollPane scrollpane = new JScrollPane(list);
@@ -144,9 +170,9 @@ public class MyFrame extends JFrame
         scrollpane.getVerticalScrollBar().setUI(new MyBasicScrollBarUI());
         scrollpane.getHorizontalScrollBar().setUI(new MyBasicScrollBarUI());
         Border border = BorderFactory.createEmptyBorder( 0, 0, 0, 0 );
-        scrollpane.setPreferredSize(new Dimension(300,625));
+        scrollpane.setPreferredSize(new Dimension(300,585));
         scrollpane.setBorder(border);
-        card1.add(scrollpane);
+        listPanel.add(scrollpane);
 
         pContent.add(card1, "Mon parc");
         pContent.add(card2, "Mes véhicules");
@@ -154,10 +180,10 @@ public class MyFrame extends JFrame
 
         cardLayout.show(pContent, "Mon parc");
 
-        Panel pFooter = new Panel();
-        pFooter.setBackground(new Color(0x4773B9));
-        pFooter.setPreferredSize(new Dimension(600,30));
-        mainPanel.add(pFooter, BorderLayout.PAGE_END);
+        Panel pBottomBorder = new Panel();
+        pBottomBorder.setBackground(new Color(0x4773B9));
+        pBottomBorder.setPreferredSize(new Dimension(600,5));
+        mainPanel.add(pBottomBorder, BorderLayout.PAGE_END);
 
         this.pack();
         this.setVisible(true);

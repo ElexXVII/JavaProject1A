@@ -3,6 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="bbd09144-606d-4ac1-90ca-7f01480efe70" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/reduceIcon.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/reduceIcon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FrameButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FrameButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MyFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyFrame.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,17 +22,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/JavaParkTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" selection-start-line="7" selection-end-line="7" />
+            <state relative-caret-position="34">
+              <caret line="2" selection-start-line="2" selection-end-line="2" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/MyFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="193">
-              <caret line="71" column="54" lean-forward="true" selection-start-line="71" selection-start-column="54" selection-end-line="71" selection-end-column="54" />
+            <state relative-caret-position="17">
+              <caret line="147" lean-forward="true" selection-start-line="147" selection-end-line="147" />
             </state>
           </provider>
         </entry>
@@ -43,14 +46,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MenuButton.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+            <state relative-caret-position="-833">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
               <folding>
                 <element signature="e#181#193#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/FrameButton.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="561">
+              <caret line="95" column="54" selection-start-line="95" selection-start-column="54" selection-end-line="95" selection-end-column="54" />
             </state>
           </provider>
         </entry>
@@ -81,17 +93,17 @@
         <option value="$PROJECT_DIR$/src/FlatButton.java" />
         <option value="$PROJECT_DIR$/src/ScrollList.java" />
         <option value="$PROJECT_DIR$/src/MyBasicScrollBarUI.java" />
-        <option value="$PROJECT_DIR$/src/FrameButton.java" />
         <option value="$PROJECT_DIR$/src/JavaParkTest.java" />
         <option value="$PROJECT_DIR$/src/MenuButton.java" />
-        <option value="$PROJECT_DIR$/src/MyFrame.java" />
         <option value="$PROJECT_DIR$/src/ImageRenderingBadly.java" />
+        <option value="$PROJECT_DIR$/src/FrameButton.java" />
+        <option value="$PROJECT_DIR$/src/MyFrame.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-255" />
-    <option name="y" value="-15" />
+    <option name="x" value="201" />
+    <option name="y" value="-29" />
     <option name="width" value="1750" />
     <option name="height" value="980" />
   </component>
@@ -147,7 +159,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ImageRenderingBadly">
+  <component name="RunManager" selected="Application.JavaParkTest">
     <configuration name="FlatScrollPane" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="FlatScrollPane" />
       <module name="JavaParkTest" />
@@ -185,8 +197,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ImageRenderingBadly" />
         <item itemvalue="Application.JavaParkTest" />
+        <item itemvalue="Application.ImageRenderingBadly" />
         <item itemvalue="Application.ScrollList" />
         <item itemvalue="Application.FlatScrollPane" />
         <item itemvalue="Application.XButtonTest" />
@@ -218,7 +230,14 @@
       <option name="project" value="LOCAL" />
       <updated>1558959651476</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="NIK">
+      <created>1558960130531</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1558960130531</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -234,7 +253,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.5885906" weight="0.30736545" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.5885906" visible="true" weight="0.30736545" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49731544" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -242,7 +261,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.4114094" side_tool="true" weight="0.32577905" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.3286119" />
-      <window_info active="true" anchor="bottom" id="Messages" order="10" sideWeight="0.49127516" visible="true" weight="0.20963173" />
+      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.49127516" weight="0.20963173" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -265,14 +284,6 @@
     <entry file="file://$PROJECT_DIR$/src/Panel.java" />
     <entry file="file://$PROJECT_DIR$/src/MyBasicScrollBarUI.java" />
     <entry file="file://$PROJECT_DIR$/src/ScrollList.java" />
-    <entry file="file://$PROJECT_DIR$/src/FrameButton.java" />
-    <entry file="file://$PROJECT_DIR$/src/JavaParkTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/FlatButton.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
@@ -287,20 +298,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyFrame.java">
+    <entry file="file://$PROJECT_DIR$/src/JavaParkTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="71" column="54" lean-forward="true" selection-start-line="71" selection-start-column="54" selection-end-line="71" selection-end-column="54" />
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MenuButton.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        <state relative-caret-position="-833">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
           <folding>
             <element signature="e#181#193#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FrameButton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="95" column="54" selection-start-line="95" selection-start-column="54" selection-end-line="95" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MyFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="147" lean-forward="true" selection-start-line="147" selection-end-line="147" />
         </state>
       </provider>
     </entry>

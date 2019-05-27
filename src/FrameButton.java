@@ -93,7 +93,7 @@ public class FrameButton extends FlatButton
         }
         else
         {
-            super.setPreferredSize(new Dimension(17,17));
+            super.setPreferredSize(new Dimension(15,15));
         }
     }
 
