@@ -31,6 +31,7 @@ public class Contrat {
         this.prixEstime = this.calculerPrix();
     }
 
+
     private boolean reductionAutorisee () {
         Duration septJours = Duration.ZERO;
         septJours = septJours.plusDays(7);
