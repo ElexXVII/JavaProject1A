@@ -1,7 +1,3 @@
-import java.time.Duration;
-import java.time.temporal.Temporal;
-import java.util.Date;
-
 public class Client {
 
     private static int nbClients;
@@ -9,7 +5,7 @@ public class Client {
 
     private String nom;
 
-    public Client(String nom, boolean reduction, Vehicule vehiculeLoue, Temporal debutLoc, Temporal finLoc, int kmEstime) {
+    public Client(String nom) {
 
         this.id = nbClients;
         this.nom = nom;
@@ -17,4 +13,8 @@ public class Client {
         nbClients++;
     }
 
+    @Override
+    public String toString() {
+        return "" + this.id + ". " + this.nom;
+    }
 }

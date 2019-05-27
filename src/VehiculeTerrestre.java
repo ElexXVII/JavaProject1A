@@ -8,4 +8,6 @@ public abstract class VehiculeTerrestre extends Vehicule{
         this.km = km;
         this.puissance = puissance;
     }
+
+    protected abstract String printType();
 }

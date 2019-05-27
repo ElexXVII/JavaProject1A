@@ -6,4 +6,11 @@ public class Voiture extends VehiculeTerrestre {
         super(vitesseMax, marque, modele, etat, prixJournalier, km, puissance);
         this.nbPlaces = nbPlaces;
     }
+
+    @Override
+    protected String printType() {
+        return "Voiture";
+    }
+
+
 }
