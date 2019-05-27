@@ -26,7 +26,7 @@ public class MenuButton extends FlatButton
     }
 
     @Override
-    protected void paintComponent(Graphics g)
+    public void paint(Graphics g)
     {
         if (getModel().isPressed())
         {
@@ -61,8 +61,8 @@ public class MenuButton extends FlatButton
         g2.fillRect(0, 0, getWidth(), getHeight());
 
         g2.setColor(new Color(0xFFFFFF));
-        g2.fillRect(0, 0, 1, getHeight());
-        g2.fillRect(getWidth()-1, 0, getWidth(), getHeight());
+        //g2.fillRect(0, 0, 1, getHeight());
+        //g2.fillRect(getWidth()-1, 0, getWidth(), getHeight());
 
         super.paintComponent(g);
     }
