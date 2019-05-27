@@ -1,0 +1,51 @@
+@startuml
+
+abstract class Vehicule {
+  -float vitesseMax
+  -String marque
+  -String modele
+  -String etat
+  -float prixJournalier
+  }
+
+abstract class VehiculeAerien {
+  -int heuresVol
+  -int nbMoteurs
+  }
+
+class Avion {
+  }
+
+abstract class VehiculeTerrestre {
+  -int km
+  -float puissance
+  }
+
+class Voiture {
+  -int nbPlaces
+  }
+
+
+class Moto {
+  }
+
+class Client {
+  -String nom
+  -boolean reduction
+  -Vehicule vehiculeLoue
+  -Date debutLoc
+  -Date finLoc
+  -float prixEstime
+  +faireUnDab()
+  }
+
+VehiculeAerien <|-down- Avion
+
+VehiculeTerrestre <|-down- Voiture
+VehiculeTerrestre <|-down- Moto
+
+Vehicule <|-down- VehiculeTerrestre
+Vehicule <|-down- VehiculeAerien
+
+@enduml
+
