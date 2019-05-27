@@ -6,6 +6,10 @@ import javax.swing.border.Border;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Vector;
 
 public class MyFrame extends JFrame
 {
@@ -13,6 +17,28 @@ public class MyFrame extends JFrame
 
     public Panel pContent;
     public CardLayout cardLayout;
+
+    JList list;
+
+    String liste[] = { "Household", "Office", "Extended Family",
+            "Company (US)", "Company (World)", "Team", "Will",
+            "Birthday Card List", "High School", "Country", "Continent",
+            "Planet", "Household", "Office", "Extended Family",
+            "Company (US)", "Company (World)", "Team", "Will",
+            "Birthday Card List", "High School", "Country", "Continent",
+            "Planet" , "Household", "Office", "Extended Family",
+            "Company (US)", "Company (World)", "Team", "Will",
+            "Birthday Card List", "High School", "Country", "Continent",
+            "Planet" , "Household", "Office", "Extended Family",
+            "Company (US)", "Company (World)", "Team", "Will",
+            "Birthday Card List", "High School", "Country", "Continent",
+            "Planet" , "Household", "Office", "Extended Family",
+            "Company (US)", "Company (World)", "Team", "Will",
+            "Birthday Card List", "High School", "Country", "Continent",
+            "Planet" , "Household", "Office", "Extended Family",
+            "Company (US)", "Company (World)", "Team", "Will",
+            "Birthday Card List", "High School", "Country", "Continent",
+            "Planet" };
 
     public MyFrame()
     {
@@ -43,15 +69,15 @@ public class MyFrame extends JFrame
         //Container cTop = new Container();
         MotionPanel pTop = new MotionPanel(this);
         pTop.setBackground(new Color(0x4773B9));
-        pTop.setPreferredSize(new Dimension(1000,100));
+        pTop.setPreferredSize(new Dimension(1000,50));
         mainPanel.add(pTop, BorderLayout.PAGE_START);
         pTop.setLayout(new FlowLayout(FlowLayout.CENTER,0,0));
 
         Panel MenuLeft = new Panel();
         MenuLeft.setBackground(new Color(0x4773B9));
-        MenuLeft.setPreferredSize(new Dimension(940,100));
+        MenuLeft.setPreferredSize(new Dimension(940,50));
         pTop.add(MenuLeft);
-        MenuLeft.setLayout(new FlowLayout(FlowLayout.LEFT,0,40));
+        MenuLeft.setLayout(new FlowLayout(FlowLayout.CENTER,0,0));
 
         JPanel buttonLeftSpace = new JPanel();
         buttonLeftSpace.setBackground(new Color(0x4773B9));
@@ -78,7 +104,7 @@ public class MyFrame extends JFrame
 
         Panel MenuRight1 = new Panel();
         MenuRight1.setBackground(new Color(0x4773B9));
-        MenuRight1.setPreferredSize(new Dimension(30,100));
+        MenuRight1.setPreferredSize(new Dimension(30,50));
         MenuRight1.setLayout(new BorderLayout(0,0));
         pTop.add(MenuRight1);
 
@@ -87,7 +113,7 @@ public class MyFrame extends JFrame
 
         Panel MenuRight2 = new Panel();
         MenuRight2.setBackground(new Color(0x4773B9));
-        MenuRight2.setPreferredSize(new Dimension(30,100));
+        MenuRight2.setPreferredSize(new Dimension(30,50));
         MenuRight2.setLayout(new BorderLayout(0,0));
         pTop.add(MenuRight2);
 
@@ -110,35 +136,16 @@ public class MyFrame extends JFrame
         Panel card3 = new Panel();
         card3.setBackground(new Color(0x000099));
 
-        String categories[] = { "Household", "Office", "Extended Family",
-                "Company (US)", "Company (World)", "Team", "Will",
-                "Birthday Card List", "High School", "Country", "Continent",
-                "Planet", "Household", "Office", "Extended Family",
-                "Company (US)", "Company (World)", "Team", "Will",
-                "Birthday Card List", "High School", "Country", "Continent",
-                "Planet" , "Household", "Office", "Extended Family",
-                "Company (US)", "Company (World)", "Team", "Will",
-                "Birthday Card List", "High School", "Country", "Continent",
-                "Planet" , "Household", "Office", "Extended Family",
-                "Company (US)", "Company (World)", "Team", "Will",
-                "Birthday Card List", "High School", "Country", "Continent",
-                "Planet" , "Household", "Office", "Extended Family",
-                "Company (US)", "Company (World)", "Team", "Will",
-                "Birthday Card List", "High School", "Country", "Continent",
-                "Planet" , "Household", "Office", "Extended Family",
-                "Company (US)", "Company (World)", "Team", "Will",
-                "Birthday Card List", "High School", "Country", "Continent",
-                "Planet" };
-        JList list = new JList(categories);
+        ArrayList<String> categories = new ArrayList<String>(Arrays.asList(liste));
+        list = new JList(createDefaultListModel());
         JScrollPane scrollpane = new JScrollPane(list);
         scrollpane.getVerticalScrollBar().setPreferredSize(new Dimension(15,15));
         scrollpane.getHorizontalScrollBar().setPreferredSize(new Dimension(15,15));
         scrollpane.getVerticalScrollBar().setUI(new MyBasicScrollBarUI());
         scrollpane.getHorizontalScrollBar().setUI(new MyBasicScrollBarUI());
         Border border = BorderFactory.createEmptyBorder( 0, 0, 0, 0 );
-        scrollpane.setPreferredSize(new Dimension(300,570));
+        scrollpane.setPreferredSize(new Dimension(300,625));
         scrollpane.setBorder(border);
-
         card1.add(scrollpane);
 
         pContent.add(card1, "Mon parc");
@@ -155,7 +162,31 @@ public class MyFrame extends JFrame
         this.pack();
         this.setVisible(true);
 
+        //filterModel((DefaultListModel<String>) list.getModel(), "House");
+
         //panel.setBackground(new Color(153, 192, 255));
 
+    }
+
+    private ListModel<String> createDefaultListModel() {
+        DefaultListModel<String> model = new DefaultListModel<>();
+        for (String s : liste) {
+            model.addElement(s);
+        }
+        return model;
+    }
+
+    public void filterModel(DefaultListModel<String> model, String filter) {
+        for (String s : liste) {
+            if (!s.contains(filter)) {
+                if (model.contains(s)) {
+                    model.removeElement(s);
+                }
+            } else {
+                if (!model.contains(s)) {
+                    model.addElement(s);
+                }
+            }
+        }
     }
 }
