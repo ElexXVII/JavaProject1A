@@ -12,4 +12,8 @@ public class GestionnaireClients {
         return clients.size();
     }
 
+    public void ajouterClient (Client c) {
+        clients.add(c);
+    }
+
 }

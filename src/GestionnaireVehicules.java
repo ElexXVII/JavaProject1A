@@ -12,4 +12,10 @@ public class GestionnaireVehicules {
         return vehicules.size();
     }
 
+    public void ajouterVehicule (Vehicule v) {
+        vehicules.add(v);
+    }
+
+
+
 }
