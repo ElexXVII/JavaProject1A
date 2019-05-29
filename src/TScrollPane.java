@@ -5,8 +5,6 @@ import java.util.Arrays;
 
 public class TScrollPane extends JScrollPane implements Definition
 {
-    //..JScrollPane scrollpane = new JScrollPane(list);
-
     public TScrollPane(JList list)
     {
         super(list);
@@ -19,10 +17,8 @@ public class TScrollPane extends JScrollPane implements Definition
         this.setBorder(border);
     }
 
-
-
     public void filterModel(DefaultListModel<String> model, String filter) {
-        for (String s : liste) {
+        for (String s : elementArray) {
             if (!s.contains(filter)) {
                 if (model.contains(s)) {
                     model.removeElement(s);

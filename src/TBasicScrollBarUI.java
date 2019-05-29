@@ -2,22 +2,23 @@ import javax.swing.*;
 import javax.swing.plaf.basic.BasicScrollBarUI;
 import java.awt.*;
 
-public class TBasicScrollBarUI extends BasicScrollBarUI
+public class TBasicScrollBarUI extends BasicScrollBarUI implements Definition
 {
-    protected Color backgroundColor = new Color(0xDDDDDD);
-    protected Color idleColor = new Color(0x4773B9);
-    protected Color hoverColor = new Color(0x416BAA);
-    protected Color pressColor = new Color(0x35549B);
+    protected Color idleColor = idleButtonColor;
+    protected Color hoverColor = hoverButtonColor;
+    protected Color pressColor = pressButtonColor;
+
+    protected Color backgroundColor = backgroundSlideColor;
 
     //private final Dimension d = new Dimension();
 
     @Override
-    protected FrameButton createDecreaseButton(int orientation) {
-        return new FrameButton("Increase");
+    protected TFrameButton createDecreaseButton(int orientation) {
+        return new TFrameButton("Increase");
     }
     @Override
-    protected FrameButton createIncreaseButton(int orientation) {
-        return new FrameButton("Decrease");
+    protected TFrameButton createIncreaseButton(int orientation) {
+        return new TFrameButton("Decrease");
     }
 
     @Override

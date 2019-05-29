@@ -8,6 +8,7 @@ import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.nio.channels.FileLock;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -15,11 +16,45 @@ import java.util.Vector;
 
 public class TFrame extends JFrame implements Definition
 {
+    //=============
+    // VARIABLES
+    //=============
+
+    // Main
     private TFrame frame;
     private TPanel mainPanel;
 
-    public TPanel pContent;
-    public CardLayout cardLayout;
+    // Menu & Menu Buttons
+    private TMotionPanel pTop;
+    private TPanel MenuLeft;
+    private TPanel buttonLeftSpace;
+    private TMenuButton[] buttons;
+
+    // Frame buttons
+    private TPanel MenuRight1;
+    private TPanel MenuRight2;
+    private TFrameButton reduceButton;
+    private TFrameButton closeButton;
+
+    // Content
+    private TPanel contentPanel;
+    private CardLayout cardLayout;
+    private TPanel[] cards;
+
+    // Contract Panel
+    private TPanel contractListPanel;
+    private TPanel ListTitlePanel;
+    private TLabel ListeTitleLabel;
+    private TPanel verticalSeparator1;
+    private TPanel verticalSeparator2;
+    // List
+    TList list;
+    TTextField searchBar;
+    TScrollPane scrollPane;
+
+    //=============
+    // CONSTRUCTOR
+    //=============
 
     public TFrame()
     {
@@ -27,147 +62,14 @@ public class TFrame extends JFrame implements Definition
 
         initFrame();
 
-        initContentPane();
+        initFramePanel();
 
-        //Container cTop = new Container();
-        MotionPanel pTop = new MotionPanel(this);
-        pTop.setBackground(new Color(0x4773B9));
-        pTop.setPreferredSize(new Dimension(1000,80));
-        mainPanel.add(pTop, BorderLayout.PAGE_START);
-        pTop.setLayout(new FlowLayout(FlowLayout.CENTER,0,0));
+        initMenu();
 
-        TPanel MenuLeft = new TPanel();
-        MenuLeft.setBackground(new Color(0x4773B9));
-        MenuLeft.setPreferredSize(new Dimension(940,80));
-        pTop.add(MenuLeft);
-        MenuLeft.setLayout(new FlowLayout(FlowLayout.CENTER,0,0));
+        initContent();
 
-        JPanel buttonLeftSpace = new JPanel();
-        buttonLeftSpace.setBackground(new Color(0x4773B9));
-        buttonLeftSpace.setPreferredSize(new Dimension(60,0));
-        MenuLeft.add(buttonLeftSpace);
-
-        MenuButton b1 = new MenuButton(frame, "Mon parc");
-        MenuButton b2 = new MenuButton(frame, "Mes véhicules");
-        MenuButton b3 = new MenuButton(frame, "Mes clients");
-
-        b1.setOtherButtons(b2, b3);
-        b2.setOtherButtons(b3, b1);
-        b3.setOtherButtons(b1, b2);
-        MenuLeft.add(b1);
-        MenuLeft.add(b2);
-        MenuLeft.add(b3);
-
-        b1.setIsPressed(true);
-
-        TPanel MenuRight1 = new TPanel();
-        MenuRight1.setBackground(new Color(0x4773B9));
-        MenuRight1.setPreferredSize(new Dimension(30,80));
-        MenuRight1.setLayout(new BorderLayout(0,0));
-        pTop.add(MenuRight1);
-
-        FrameButton reduceButton = new FrameButton(frame, "Reduce");
-        MenuRight1.add(reduceButton, BorderLayout.PAGE_START);
-
-        TPanel MenuRight2 = new TPanel();
-        MenuRight2.setBackground(new Color(0x4773B9));
-        MenuRight2.setPreferredSize(new Dimension(30,80));
-        MenuRight2.setLayout(new BorderLayout(0,0));
-        pTop.add(MenuRight2);
-
-        FrameButton closeCross = new FrameButton(frame, "Close");
-        //closeCross.setPressedIcon(pressedIcon);
-        MenuRight2.add(closeCross, BorderLayout.PAGE_START);
-
-        pContent = new TPanel();
-        pContent.setBackground(new Color(0x555555));
-        pContent.setPreferredSize(new Dimension(1000,615));
-        mainPanel.add(pContent, BorderLayout.CENTER);
-        cardLayout = new CardLayout();
-        pContent.setLayout(cardLayout);
-
-        TPanel pRightBorder = new TPanel();
-        pRightBorder.setBackground(new Color(0x4773B9));
-        pRightBorder.setPreferredSize(new Dimension(5,615));
-        mainPanel.add(pRightBorder, BorderLayout.EAST);
-
-        TPanel pLeftBorder = new TPanel();
-        pLeftBorder.setBackground(new Color(0x4773B9));
-        pLeftBorder.setPreferredSize(new Dimension(5,615));
-        mainPanel.add(pLeftBorder, BorderLayout.WEST);
-
-        TPanel card1 = new TPanel();
-        card1.setBackground(new Color(0xDD0000));
-        card1.setLayout(new FlowLayout(FlowLayout.LEFT,0,0));
-        TPanel card2 = new TPanel();
-        card2.setBackground(new Color(0x00BB00));
-        TPanel card3 = new TPanel();
-        card3.setBackground(new Color(0x000099));
-
-        TPanel listPanel = new TPanel();
-        listPanel.setBackground(new Color(0));
-        listPanel.setPreferredSize(new Dimension(300,615));
-        listPanel.setLayout(new FlowLayout(FlowLayout.LEFT, 0, 0));
-        card1.add(listPanel);
-
-        TPanel ListTitlePanel = new TPanel();
-        ListTitlePanel.setBackground(new Color(0x6A9DDB));
-        ListTitlePanel.setPreferredSize(new Dimension(285,30));
-        listPanel.add(ListTitlePanel);
-
-        JLabel ListeTitleLabel = new JLabel("Historique des contrats");
-        ListeTitleLabel.setFont(new Font("Montserrat",Font.ROMAN_BASELINE, 15));
-        ListeTitleLabel.setForeground(new Color(255,255,255));
-        ListTitlePanel.add(ListeTitleLabel);
-
-        TPanel verticalSeparator1 = new TPanel();
-        verticalSeparator1.setBackground(new Color(0x4773B9));
-        verticalSeparator1.setPreferredSize(new Dimension(15,30));
-        listPanel.add(verticalSeparator1);
-
-        TList list = new TList();
-        TScrollPane scrollPane = new TScrollPane(list);
-
-        TTextField searchBar = new TTextField("Rechercher un contrat");
-        searchBar.setFont(new Font("Montserrat",Font.ROMAN_BASELINE, 12));
-        searchBar.setBackground(new Color(0xDDDDDD));
-        searchBar.setForeground(new Color(0x555555));
-        searchBar.setPreferredSize(new Dimension(285,30));
-        searchBar.setBorder(border);
-        searchBar.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e)
-            {
-                scrollPane.filterModel((DefaultListModel<String>) list.getModel(), searchBar.getText());
-            }
-        });
-        listPanel.add(searchBar);
-
-        TPanel verticalSeparator2 = new TPanel();
-        verticalSeparator2.setBackground(new Color(0x4773B9));
-        verticalSeparator2.setPreferredSize(new Dimension(15,30));
-        listPanel.add(verticalSeparator2);
-
-        listPanel.add(scrollPane);
-
-        pContent.add(card1, "Mon parc");
-        pContent.add(card2, "Mes véhicules");
-        pContent.add(card3, "Mes clients");
-
-        cardLayout.show(pContent, "Mon parc");
-
-        TPanel pBottomBorder = new TPanel();
-        pBottomBorder.setBackground(new Color(0x4773B9));
-        pBottomBorder.setPreferredSize(new Dimension(600,5));
-        mainPanel.add(pBottomBorder, BorderLayout.PAGE_END);
-
-        this.pack();
         this.setVisible(true);
-
-        //filterModel((DefaultListModel<String>) list.getModel(), "House");
-
-        //TPanel.setBackground(new Color(153, 192, 255));
-
+        this.pack();
     }
 
     private void initFrame()
@@ -191,11 +93,159 @@ public class TFrame extends JFrame implements Definition
         this.setBackground(new Color(0));
     }
 
-    public void initContentPane()
+    //=============
+    // PRIVATE FUNCTIONS
+    //=============
+
+    private void initFramePanel()
     {
-        mainPanel = new TPanel(1000,700,WHITE,WHITE, new BorderLayout(0,0));
+        mainPanel = new TPanel(1000,700, null, null, new BorderLayout(0,0), false);
         this.setContentPane(mainPanel);
+
+        TPanel pRightBorder = new TPanel(5, 615, InterfaceMainColor, null, null, true);
+        mainPanel.add(pRightBorder, BorderLayout.EAST);
+
+        TPanel pLeftBorder = new TPanel(5, 615, InterfaceMainColor, null, null, true);
+        mainPanel.add(pLeftBorder, BorderLayout.WEST);
+
+        TPanel pBottomBorder = new TPanel(600, 5, InterfaceMainColor, null, null, true);
+        mainPanel.add(pBottomBorder, BorderLayout.PAGE_END);
     }
 
+    private void initMenu()
+    {
+        pTop = new TMotionPanel(this, 1000,80, InterfaceMainColor, null,
+                new FlowLayout(FlowLayout.CENTER,0,0), true);
+        mainPanel.add(pTop, BorderLayout.PAGE_START);
 
+        MenuLeft = new TPanel(940, 80, null, null, new FlowLayout(FlowLayout.CENTER,0,0), false);
+        pTop.add(MenuLeft);
+
+        buttonLeftSpace = new TPanel(60, 0, null, null, null, false);
+        MenuLeft.add(buttonLeftSpace);
+
+        initMenuButtons();
+        initFrameButtons();
+    }
+
+    private void initMenuButtons()
+    {
+        buttons = new TMenuButton[3];
+
+        for (int i=0; i<3; i++)
+        {
+            buttons[i] = new TMenuButton(frame, buttonsName[i]);
+        }
+
+        for (int i=0; i<3; i++)
+        {
+            buttons[i].setOtherButtons(buttons[(i + 1) % 3], buttons[(i + 2) % 3]);
+            MenuLeft.add(buttons[i]);
+        }
+
+        buttons[0].setIsPressed(true);
+    }
+
+    private void initFrameButtons()
+    {
+        MenuRight1 = new TPanel(30, 80, null, null, new BorderLayout(0,0),false);
+        pTop.add(MenuRight1);
+
+        reduceButton = new TFrameButton(frame, "Reduce");
+        MenuRight1.add(reduceButton, BorderLayout.PAGE_START);
+
+        MenuRight2 = new TPanel(30, 80, null, null, new BorderLayout(0,0),false);
+        pTop.add(MenuRight2);
+
+        closeButton = new TFrameButton(frame, "Close");
+        MenuRight2.add(closeButton, BorderLayout.PAGE_START);
+    }
+
+    private void initContent()
+    {
+        cardLayout = new CardLayout();
+        contentPanel = new TPanel(1000, 615, null, null, cardLayout, false);
+        mainPanel.add(contentPanel, BorderLayout.CENTER);
+
+        initCards();
+
+        initContractPanel();
+    }
+
+    private void initCards()
+    {
+        cards = new TPanel[3];
+
+        for (int i=0; i<3; i++)
+        {
+            cards[i] = new TPanel(-1, -1, new Color(255<<16>>(i*8)), null, null, true);
+            cards[i].setLayout(new FlowLayout(FlowLayout.LEFT,0,0));
+            contentPanel.add(cards[i], buttonsName[i]);
+        }
+    }
+
+    private void initContractPanel()
+    {
+        TPanel card = cards[0];
+
+        contractListPanel = new TPanel(300, 615, null, null, new FlowLayout(FlowLayout.LEFT, 0, 0), false);
+        cards[0].add(contractListPanel);
+
+        initLists();
+
+        initToFillArea();
+    }
+
+    private void initLists()
+    {
+        ListTitlePanel = new TPanel(285, 30, InterfaceLightColor, WHITE, new FlowLayout(FlowLayout.CENTER), true);
+        contractListPanel.add(ListTitlePanel);
+
+        ListeTitleLabel = new TLabel("Historique des contrats", WHITE);
+        ListTitlePanel.add(ListeTitleLabel);
+
+        verticalSeparator1 = new TPanel(15, 30, InterfaceMainColor, null, null, true);
+        contractListPanel.add(verticalSeparator1);
+
+        list = new TList();
+        scrollPane = new TScrollPane(list);
+
+        searchBar = new TTextField(frame, "Rechercher un contrat", 285, 30, LIGHTGREY, DARKGREY);
+        contractListPanel.add(searchBar);
+
+        verticalSeparator2 = new TPanel(15, 30, InterfaceMainColor, null, null, true);
+        contractListPanel.add(verticalSeparator2);
+
+        contractListPanel.add(scrollPane);
+
+        cardLayout.show(contentPanel, "Mon parc");
+
+        //filterModel((DefaultListModel<String>) list.getModel(), "House");
+        //TPanel.setBackground(new Color(153, 192, 255));
+    }
+
+    private void initToFillArea()
+    {
+
+    }
+
+    //=============
+    // GETTERS
+    //=============
+
+    public TPanel getContentPanel() {
+        return contentPanel;
+    }
+
+    public CardLayout getCardLayout() {
+        return cardLayout;
+    }
+
+    public TList getList() {
+        return list;
+    }
+
+    public TScrollPane getScrollPane() {
+        return scrollPane;
+    }
 }

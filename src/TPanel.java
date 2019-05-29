@@ -12,13 +12,18 @@ public class TPanel extends JPanel
         super();
     }
 
-    public TPanel(int x, int y, Color back, Color front, LayoutManager l)
+    public TPanel(int x, int y, Color back, Color front, LayoutManager layout, boolean opaque)
     {
         super();
 
-        this.setBackground(new Color(0xFFFFFF));
-        this.setPreferredSize(new Dimension(1000,700));
-        this.setLayout(new BorderLayout(0,0));
+        this.setBackground(back);
+        this.setForeground(front);
+        if (x != -1 && y != -1)
+        {
+            this.setPreferredSize(new Dimension(x,y));
+        }
+        this.setOpaque(opaque);
+        this.setLayout(layout);
     }
 
     @Override

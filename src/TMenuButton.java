@@ -1,25 +1,26 @@
 import java.awt.*;
 import java.util.ArrayList;
 
-public class MenuButton extends FlatButton
+public class TMenuButton extends TFlatButton implements Definition
 {
-    private String name;
-
-    private ArrayList<MenuButton> otherButtons = new ArrayList<MenuButton>();
-
     private TFrame frame;
 
-    public MenuButton()
+    private String name;
+    private ArrayList<TMenuButton> otherButtons = new ArrayList<TMenuButton>();
+
+    public TMenuButton()
     {
         super();
     }
 
-    public MenuButton(TFrame frame, String text)
+    public TMenuButton(TFrame frame, String text)
     {
         super(text);
         super.setBorderPainted(false);
         super.setFocusPainted(false);
         super.setContentAreaFilled(false);
+
+        this.setFont(menuFont);
 
         this.frame = frame;
         this.name = text;
@@ -30,14 +31,14 @@ public class MenuButton extends FlatButton
     {
         if (getModel().isPressed())
         {
-            for (MenuButton button : otherButtons)
+            for (TMenuButton button : otherButtons)
             {
                 button.setIsPressed(false);
                 button.repaint();
             }
             isPressed = true;
 
-            frame.cardLayout.show(frame.pContent, this.name);
+            frame.getCardLayout().show(frame.getContentPanel(), this.name);
         }
         if (isPressed)
         {
@@ -67,11 +68,11 @@ public class MenuButton extends FlatButton
         super.paintComponent(g);
     }
 
-    public void setOtherButtons(MenuButton ... buttons)
+    public void setOtherButtons(TMenuButton ... buttons)
     {
-        otherButtons = new ArrayList<MenuButton>();
+        otherButtons = new ArrayList<TMenuButton>();
 
-        for (MenuButton button : buttons)
+        for (TMenuButton button : buttons)
         {
             otherButtons.add(button);
         }

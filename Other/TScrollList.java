@@ -3,12 +3,12 @@ import java.awt.*;
 import javax.swing.*;
 import javax.swing.border.Border;
 
-public class ScrollList extends JFrame implements Definition
+public class TScrollList extends JFrame implements Definition
 {
 
     JScrollPane scrollpane;
 
-    public ScrollList() {
+    public TScrollList() {
         super("JScrollPane Demonstration");
         setSize(300, 200);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -30,7 +30,7 @@ public class ScrollList extends JFrame implements Definition
     }
 
     public static void main(String args[]) {
-        ScrollList sl = new ScrollList();
+        TScrollList sl = new TScrollList();
         sl.setVisible(true);
     }
 }

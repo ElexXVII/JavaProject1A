@@ -6,14 +6,14 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
-public class FrameButton extends FlatButton implements Definition
+public class TFrameButton extends TFlatButton implements Definition
 {
     TFrame frame;
     String name;
 
     BufferedImage image;
 
-    public FrameButton(String name)
+    public TFrameButton(String name)
     {
         super();
         this.name = name;
@@ -37,7 +37,7 @@ public class FrameButton extends FlatButton implements Definition
         }
     }
 
-    public FrameButton(TFrame frame, String name)
+    public TFrameButton(TFrame frame, String name)
     {
         super();
         this.frame = frame;
@@ -47,7 +47,7 @@ public class FrameButton extends FlatButton implements Definition
         if (name.equals("Close"))
         {
             this.hoverColor = hoverCrossColor;
-            this.pressColor = pressrossColor;
+            this.pressColor = pressCrossColor;
 
             try {
                 image = ImageIO.read(new File("images/closeIcon.png"));

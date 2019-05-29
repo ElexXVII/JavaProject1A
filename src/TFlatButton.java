@@ -1,7 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
 
-public class FlatButton extends JButton implements Definition
+public class TFlatButton extends JButton implements Definition
 {
     protected Color idleColor = idleButtonColor;
     protected Color hoverColor = hoverButtonColor;
@@ -9,13 +9,13 @@ public class FlatButton extends JButton implements Definition
 
     boolean isPressed = false;
 
-    public FlatButton()
+    public TFlatButton()
     {
         super();
         initButton();
     }
 
-    public FlatButton(String text)
+    public TFlatButton(String text)
     {
         super(text);
         initButton();
@@ -27,7 +27,7 @@ public class FlatButton extends JButton implements Definition
         super.setFocusPainted(false);
         super.setContentAreaFilled(false);
 
-        this.setFont(new Font("Montserrat",Font.ROMAN_BASELINE, 20));
+        this.setFont(mainFont);
         this.setForeground(new Color(255,255,255));
         this.setPreferredSize(new Dimension(175,50));
         this.setHorizontalAlignment(SwingConstants.CENTER);

@@ -13,7 +13,7 @@ public class TList extends JList implements Definition
     public ListModel<String> createDefaultListModel()
     {
         DefaultListModel<String> model = new DefaultListModel<>();
-        for (String s : liste) {
+        for (String s : elementArray) {
             model.addElement(s);
         }
         return model;
