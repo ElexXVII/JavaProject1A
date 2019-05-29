@@ -2,7 +2,7 @@ import javax.swing.*;
 import javax.swing.plaf.basic.BasicScrollBarUI;
 import java.awt.*;
 
-public class MyBasicScrollBarUI extends BasicScrollBarUI
+public class TBasicScrollBarUI extends BasicScrollBarUI
 {
     protected Color backgroundColor = new Color(0xDDDDDD);
     protected Color idleColor = new Color(0x4773B9);
@@ -13,11 +13,11 @@ public class MyBasicScrollBarUI extends BasicScrollBarUI
 
     @Override
     protected FrameButton createDecreaseButton(int orientation) {
-        return new FrameButton("Decrease");
+        return new FrameButton("Increase");
     }
     @Override
     protected FrameButton createIncreaseButton(int orientation) {
-        return new FrameButton("Increase");
+        return new FrameButton("Decrease");
     }
 
     @Override

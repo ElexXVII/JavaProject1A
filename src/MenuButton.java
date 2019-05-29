@@ -7,14 +7,14 @@ public class MenuButton extends FlatButton
 
     private ArrayList<MenuButton> otherButtons = new ArrayList<MenuButton>();
 
-    private MyFrame frame;
+    private TFrame frame;
 
     public MenuButton()
     {
         super();
     }
 
-    public MenuButton(MyFrame frame, String text)
+    public MenuButton(TFrame frame, String text)
     {
         super(text);
         super.setBorderPainted(false);

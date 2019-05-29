@@ -3,7 +3,8 @@ import java.awt.*;
 import javax.swing.*;
 import javax.swing.border.Border;
 
-public class ScrollList extends JFrame {
+public class ScrollList extends JFrame implements Definition
+{
 
     JScrollPane scrollpane;
 
@@ -20,10 +21,9 @@ public class ScrollList extends JFrame {
         scrollpane = new JScrollPane(list);
         scrollpane.getVerticalScrollBar().setPreferredSize(new Dimension(15,15));
         scrollpane.getHorizontalScrollBar().setPreferredSize(new Dimension(15,15));
-        scrollpane.getVerticalScrollBar().setUI(new MyBasicScrollBarUI());
-        scrollpane.getHorizontalScrollBar().setUI(new MyBasicScrollBarUI());
+        scrollpane.getVerticalScrollBar().setUI(new TBasicScrollBarUI());
+        scrollpane.getHorizontalScrollBar().setUI(new TBasicScrollBarUI());
 
-        Border border = BorderFactory.createEmptyBorder( 0, 0, 0, 0 );
         scrollpane.setBorder(border);
 
         getContentPane().add(scrollpane, BorderLayout.CENTER);

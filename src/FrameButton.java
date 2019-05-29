@@ -6,9 +6,9 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
-public class FrameButton extends FlatButton
+public class FrameButton extends FlatButton implements Definition
 {
-    MyFrame frame;
+    TFrame frame;
     String name;
 
     BufferedImage image;
@@ -18,9 +18,26 @@ public class FrameButton extends FlatButton
         super();
         this.name = name;
         initButton();
+
+        if (name.equals("Increase"))
+        {
+            try {
+                image = ImageIO.read(new File("images/increaseIcon.png"));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        else if (name.equals("Decrease"))
+        {
+            try {
+                image = ImageIO.read(new File("images/decreaseIcon.png"));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
-    public FrameButton(MyFrame frame, String name)
+    public FrameButton(TFrame frame, String name)
     {
         super();
         this.frame = frame;
@@ -29,8 +46,8 @@ public class FrameButton extends FlatButton
 
         if (name.equals("Close"))
         {
-            this.hoverColor = new Color(0xe0552f);
-            this.pressColor = new Color(0xc13a15);
+            this.hoverColor = hoverCrossColor;
+            this.pressColor = pressrossColor;
 
             try {
                 image = ImageIO.read(new File("images/closeIcon.png"));
@@ -46,23 +63,6 @@ public class FrameButton extends FlatButton
                 e.printStackTrace();
             }
         }
-        else if (name.equals("Increase"))
-        {
-            try {
-                image = ImageIO.read(new File("images/closeIcon.png"));
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-        else if (name.equals("Decrease"))
-        {
-            try {
-                image = ImageIO.read(new File("images/closeIcon.png"));
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-        //this.setIcon(new ImageIcon(image));
     }
 
     private void initButton()

@@ -1,11 +1,11 @@
 import javax.swing.*;
 import java.awt.*;
 
-public class FlatButton extends JButton
+public class FlatButton extends JButton implements Definition
 {
-    protected Color idleColor = new Color(0x4773B9);
-    protected Color hoverColor = new Color(0x416BAA);
-    protected Color pressColor = new Color(0x35549B);
+    protected Color idleColor = idleButtonColor;
+    protected Color hoverColor = hoverButtonColor;
+    protected Color pressColor = pressButtonColor;
 
     boolean isPressed = false;
 
@@ -46,6 +46,6 @@ public class FlatButton extends JButton
 
     protected void setHoverColor(Color color)
     {
-        this.hoverColor = hoverColor;
+        this.hoverColor = color;
     }
 }

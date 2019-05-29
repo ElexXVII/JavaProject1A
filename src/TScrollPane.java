@@ -1,0 +1,37 @@
+import javax.swing.*;
+import java.awt.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class TScrollPane extends JScrollPane implements Definition
+{
+    //..JScrollPane scrollpane = new JScrollPane(list);
+
+    public TScrollPane(JList list)
+    {
+        super(list);
+
+        this.getVerticalScrollBar().setPreferredSize(new Dimension(15,15));
+        this.getHorizontalScrollBar().setPreferredSize(new Dimension(15,15));
+        this.getVerticalScrollBar().setUI(new TBasicScrollBarUI());
+        this.getHorizontalScrollBar().setUI(new TBasicScrollBarUI());
+        this.setPreferredSize(new Dimension(300,555));
+        this.setBorder(border);
+    }
+
+
+
+    public void filterModel(DefaultListModel<String> model, String filter) {
+        for (String s : liste) {
+            if (!s.contains(filter)) {
+                if (model.contains(s)) {
+                    model.removeElement(s);
+                }
+            } else {
+                if (!model.contains(s)) {
+                    model.addElement(s);
+                }
+            }
+        }
+    }
+}
