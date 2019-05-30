@@ -188,7 +188,7 @@ public class TFrame extends JFrame implements Definition
     {
         TPanel card = cards[0];
 
-        contractListPanel = new TPanel(300, 615, null, null, new FlowLayout(FlowLayout.LEFT, 0, 0), false);
+        contractListPanel = new TPanel(300, 585, null, null, new FlowLayout(FlowLayout.LEFT, 0, 0), false);
         cards[0].add(contractListPanel);
 
         initLists();
