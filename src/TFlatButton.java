@@ -26,12 +26,6 @@ public class TFlatButton extends JButton implements Definition
         super.setBorderPainted(false);
         super.setFocusPainted(false);
         super.setContentAreaFilled(false);
-
-        this.setFont(mainFont);
-        this.setForeground(new Color(255,255,255));
-        this.setPreferredSize(new Dimension(175,50));
-        this.setHorizontalAlignment(SwingConstants.CENTER);
-        this.setVerticalAlignment(SwingConstants.CENTER);
     }
 
     @Override

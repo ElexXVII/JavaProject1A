@@ -41,16 +41,20 @@ public class TFrame extends JFrame implements Definition
     private CardLayout cardLayout;
     private TPanel[] cards;
 
-    // Contract Panel
+    // Contract Panel : Card[0]
+    // List
     private TPanel contractListPanel;
     private TPanel ListTitlePanel;
     private TLabel ListeTitleLabel;
     private TPanel verticalSeparator1;
+    private TContentButton newContractButton;
+    private TPanel verticalSeparator3;
+    private TList list;
+    private TTextField searchBar;
     private TPanel verticalSeparator2;
-    // List
-    TList list;
-    TTextField searchBar;
-    TScrollPane scrollPane;
+    private TScrollPane scrollPane;
+    // Contract Area To Fill
+    private TPanel contractAreaToFill;
 
     //=============
     // CONSTRUCTOR
@@ -188,16 +192,17 @@ public class TFrame extends JFrame implements Definition
     {
         TPanel card = cards[0];
 
-        contractListPanel = new TPanel(300, 585, null, null, new FlowLayout(FlowLayout.LEFT, 0, 0), false);
+        contractListPanel = new TPanel(300, 615, null, null, new FlowLayout(FlowLayout.LEFT, 0, 0), false);
         cards[0].add(contractListPanel);
 
         initLists();
 
-        initToFillArea();
+        initAreaToFill();
     }
 
     private void initLists()
     {
+        // Card0
         ListTitlePanel = new TPanel(285, 30, InterfaceLightColor, WHITE, new FlowLayout(FlowLayout.CENTER), true);
         contractListPanel.add(ListTitlePanel);
 
@@ -208,7 +213,7 @@ public class TFrame extends JFrame implements Definition
         contractListPanel.add(verticalSeparator1);
 
         list = new TList();
-        scrollPane = new TScrollPane(list);
+        scrollPane = new TScrollPane(list, 300,525);
 
         searchBar = new TTextField(frame, "Rechercher un contrat", 285, 30, LIGHTGREY, DARKGREY);
         contractListPanel.add(searchBar);
@@ -218,13 +223,16 @@ public class TFrame extends JFrame implements Definition
 
         contractListPanel.add(scrollPane);
 
-        cardLayout.show(contentPanel, "Mon parc");
+        newContractButton = new TContentButton(frame, "Nouveau Contrat", 285, 30);
+        contractListPanel.add(newContractButton);
 
-        //filterModel((DefaultListModel<String>) list.getModel(), "House");
-        //TPanel.setBackground(new Color(153, 192, 255));
+        verticalSeparator3 = new TPanel(15, 30, InterfaceMainColor, null, null, true);
+        contractListPanel.add(verticalSeparator3);
+
+        cardLayout.show(contentPanel, "Mon parc");
     }
 
-    private void initToFillArea()
+    private void initAreaToFill()
     {
 
     }
@@ -241,7 +249,8 @@ public class TFrame extends JFrame implements Definition
         return cardLayout;
     }
 
-    public TList getList() {
+    public TList getList()
+    {
         return list;
     }
 

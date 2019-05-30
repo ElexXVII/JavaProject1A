@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bbd09144-606d-4ac1-90ca-7f01480efe70" name="Default Changelist" comment="pouêt">
-      <change beforePath="$PROJECT_DIR$/src/Contrat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Contrat.java" afterDir="false" />
+    <list default="true" id="bbd09144-606d-4ac1-90ca-7f01480efe70" name="Default Changelist" comment="NIK">
+      <change afterPath="$PROJECT_DIR$/src/TContentButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Definition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Definition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TFlatButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TFlatButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TFrameButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TFrameButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TMenuButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TMenuButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TScrollPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TScrollPane.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,94 +25,49 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Voiture.java">
+        <entry file="file://$PROJECT_DIR$/src/TFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+            <state relative-caret-position="357">
+              <caret line="56" column="38" selection-start-line="56" selection-start-column="38" selection-end-line="56" selection-end-column="38" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/VehiculeTerrestre.java">
+        <entry file="file://$PROJECT_DIR$/src/TFlatButton.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="42" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
+            <state relative-caret-position="442">
+              <caret line="27" column="42" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Vehicule.java">
+        <entry file="file://$PROJECT_DIR$/src/TMenuButton.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+            <state relative-caret-position="-868">
+              <caret line="9" column="50" selection-start-line="9" selection-start-column="50" selection-end-line="9" selection-end-column="50" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Avion.java">
+        <entry file="file://$PROJECT_DIR$/src/TContentButton.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="5" lean-forward="true" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Moto.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Client.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+            <state relative-caret-position="323">
+              <caret line="19" column="40" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Contrat.java">
+        <entry file="file://$PROJECT_DIR$/src/Definition.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="33" column="4" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="4" />
+            <state relative-caret-position="250">
+              <caret line="23" column="52" selection-start-line="23" selection-start-column="52" selection-end-line="23" selection-end-column="52" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/JavaParkTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="13" selection-start-column="13" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GestionnaireClients.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GestionnaireVehicules.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -114,65 +77,80 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>border</find>
+      <find>Panel</find>
+      <find>pContent</find>
+      <find>TSC</find>
+      <find>T</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>TPanel</replace>
+      <replace>contentPanel</replace>
+    </replaceStrings>
+  </component>
   <component name="Git.Settings">
-    <option name="PREVIOUS_COMMIT_AUTHORS">
-      <list>
-        <option value="Thibault" />
-      </list>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/MotionPanel.java" />
-        <option value="$PROJECT_DIR$/src/Panel.java" />
         <option value="$PROJECT_DIR$/src/Frame.java" />
         <option value="$PROJECT_DIR$/src/XButtonTest.java" />
         <option value="$PROJECT_DIR$/src/FlatScrollPane.java" />
         <option value="$PROJECT_DIR$/src/MyHorizontalScrollBar.java" />
         <option value="$PROJECT_DIR$/src/MyScrollBar.java" />
         <option value="$PROJECT_DIR$/src/BasicScrollBarUI.java" />
-        <option value="$PROJECT_DIR$/src/FlatButton.java" />
-        <option value="$PROJECT_DIR$/src/MyBasicScrollBarUI.java" />
-        <option value="$PROJECT_DIR$/src/FrameButton.java" />
-        <option value="$PROJECT_DIR$/src/MenuButton.java" />
-        <option value="$PROJECT_DIR$/src/JavaParkTest.java" />
-        <option value="$PROJECT_DIR$/src/MyFrame.java" />
-        <option value="$PROJECT_DIR$/src/VehiculeAerien.java" />
-        <option value="$PROJECT_DIR$/src/GestionnaireVehicules.java" />
-        <option value="$PROJECT_DIR$/.idea/misc.xml" />
-        <option value="$PROJECT_DIR$/.idea/workspace.xml" />
         <option value="$PROJECT_DIR$/src/ImageRenderingBadly.java" />
+        <option value="$PROJECT_DIR$/src/MyFrame.java" />
+        <option value="$PROJECT_DIR$/src/HintTextField.java" />
+        <option value="$PROJECT_DIR$/src/MyBasicScrollBarUI.java" />
+        <option value="$PROJECT_DIR$/src/Panel.java" />
         <option value="$PROJECT_DIR$/src/ScrollList.java" />
-        <option value="$PROJECT_DIR$/src/GestionnaireClients.java" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/Client.java" />
-        <option value="$PROJECT_DIR$/src/Voiture.java" />
-        <option value="$PROJECT_DIR$/src/VehiculeTerrestre.java" />
-        <option value="$PROJECT_DIR$/src/Vehicule.java" />
-        <option value="$PROJECT_DIR$/src/Avion.java" />
-        <option value="$PROJECT_DIR$/src/Moto.java" />
-        <option value="$PROJECT_DIR$/src/Contrat.java" />
+        <option value="$PROJECT_DIR$/src/FrameButton.java" />
+        <option value="$PROJECT_DIR$/src/JavaParkTest.java" />
+        <option value="$PROJECT_DIR$/src/TListenerImpl.java" />
+        <option value="$PROJECT_DIR$/src/MotionPanel.java" />
+        <option value="$PROJECT_DIR$/src/TMotionPanel.java" />
+        <option value="$PROJECT_DIR$/src/MenuButton.java" />
+        <option value="$PROJECT_DIR$/src/TPanel.java" />
+        <option value="$PROJECT_DIR$/src/FlatButton.java" />
+        <option value="$PROJECT_DIR$/src/TScrollList.java" />
+        <option value="$PROJECT_DIR$/src/TBasicScrollBarUI.java" />
+        <option value="$PROJECT_DIR$/src/TLabel.java" />
+        <option value="$PROJECT_DIR$/src/TList.java" />
+        <option value="$PROJECT_DIR$/src/TTextField.java" />
+        <option value="$PROJECT_DIR$/src/JEditorText.java" />
+        <option value="$PROJECT_DIR$/src/TScrollPane.java" />
+        <option value="$PROJECT_DIR$/src/TFrameButton.java" />
+        <option value="$PROJECT_DIR$/src/TFlatButton.java" />
+        <option value="$PROJECT_DIR$/src/TMenuButton.java" />
+        <option value="$PROJECT_DIR$/src/TFrame.java" />
+        <option value="$PROJECT_DIR$/src/TContentButton.java" />
+        <option value="$PROJECT_DIR$/src/Definition.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-230" />
-    <option name="y" value="-30" />
+    <option name="x" value="95" />
+    <option name="y" value="10" />
     <option name="width" value="1750" />
     <option name="height" value="980" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -183,39 +161,26 @@
             <path>
               <item name="JavaProject1A" type="b2602c69:ProjectViewProjectNode" />
               <item name="JavaProject1A" type="462c0819:PsiDirectoryNode" />
-              <item name=".idea" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaProject1A" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JavaProject1A" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaProject1A" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JavaProject1A" type="462c0819:PsiDirectoryNode" />
-              <item name="javadoc" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaProject1A" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JavaProject1A" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="application.passwordSafe" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Java\JavaProject1A\Other" />
       <recent name="C:\Users\ElexXVII\IdeaProjects\JavaParkTest" />
       <recent name="C:\Users\ElexXVII\IdeaProjects\JavaParkTest\src" />
       <recent name="C:\Users\ElexXVII\IdeaProjects\JavaParkTest\out\production\JavaParkTest" />
@@ -249,6 +214,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="JEditorTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="JEditorTest" />
+      <module name="JavaParkTest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="JavaParkTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="JavaParkTest" />
       <module name="JavaParkTest" />
@@ -263,20 +235,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="XButtonTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="XButtonTest" />
-      <module name="JavaParkTest" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.JavaParkTest" />
+        <item itemvalue="Application.JEditorTest" />
         <item itemvalue="Application.ImageRenderingBadly" />
         <item itemvalue="Application.ScrollList" />
         <item itemvalue="Application.FlatScrollPane" />
-        <item itemvalue="Application.XButtonTest" />
       </list>
     </recent_temporary>
   </component>
@@ -291,114 +256,63 @@
       <option name="presentableId" value="Default" />
       <updated>1557952296058</updated>
     </task>
-    <task id="LOCAL-00001" summary="wiiiiiiiiiiiiii">
-      <created>1558945867644</created>
+    <task id="LOCAL-00001" summary="NIK">
+      <created>1558959594412</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1558945867645</updated>
+      <updated>1558959594412</updated>
     </task>
-    <task id="LOCAL-00002" summary="wiiiiiiiiiiiiii">
-      <created>1558948119399</created>
+    <task id="LOCAL-00002" summary="NIK">
+      <created>1558959651476</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1558948119399</updated>
+      <updated>1558959651476</updated>
     </task>
-    <task id="LOCAL-00003" summary="wiiiiiiiiiiiiii">
-      <created>1558948846709</created>
+    <task id="LOCAL-00003" summary="NIK">
+      <created>1558960130531</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1558948846712</updated>
+      <updated>1558960130531</updated>
     </task>
-    <task id="LOCAL-00004" summary="wiiiiiiiiiiiiii">
-      <created>1558951210474</created>
+    <task id="LOCAL-00004" summary="NIK">
+      <created>1558963903444</created>
       <option name="number" value="00004" />
       <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
-      <updated>1558951210474</updated>
+      <updated>1558963903444</updated>
     </task>
-    <task id="LOCAL-00005" summary="wiiiiiiiiiiiiii">
-      <created>1558951399999</created>
+    <task id="LOCAL-00005" summary="NIK">
+      <created>1559163398167</created>
       <option name="number" value="00005" />
       <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
-      <updated>1558951399999</updated>
+      <updated>1559163398167</updated>
     </task>
-    <task id="LOCAL-00006" summary="wiiiiiiiiiiiiii">
-      <created>1558958982230</created>
+    <task id="LOCAL-00006" summary="Code propre">
+      <created>1559174004225</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1558958982231</updated>
+      <updated>1559174004225</updated>
     </task>
-    <task id="LOCAL-00007" summary="wiiiiiiiiiiiiii">
-      <created>1558960440288</created>
+    <task id="LOCAL-00007" summary="NIK">
+      <created>1559210961273</created>
       <option name="number" value="00007" />
       <option name="presentableId" value="LOCAL-00007" />
       <option name="project" value="LOCAL" />
-      <updated>1558960440288</updated>
+      <updated>1559210961273</updated>
     </task>
-    <task id="LOCAL-00008" summary="wiiiiiiiiiiiiii">
-      <created>1558960611905</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1558960611905</updated>
-    </task>
-    <task id="LOCAL-00009" summary="wiiiiiiiiiiiiii">
-      <created>1558960663402</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1558960663402</updated>
-    </task>
-    <task id="LOCAL-00010" summary="wiiiiiiiiiiiiii">
-      <created>1558960800232</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1558960800232</updated>
-    </task>
-    <task id="LOCAL-00011" summary="wiiiiiiiiiiiiii">
-      <created>1558960931142</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1558960931142</updated>
-    </task>
-    <task id="LOCAL-00012" summary="wiiiiiiiiiiiiii">
-      <created>1558963979963</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1558963979963</updated>
-    </task>
-    <task id="LOCAL-00013" summary="wiiiiiiiiiiiiii">
-      <created>1558964362039</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1558964362039</updated>
-    </task>
-    <option name="localTasksCounter" value="14" />
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-  </component>
   <component name="ToolWindowManager">
-    <frame x="64" y="-4" width="1857" height="1085" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.11498065" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15570469" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -407,15 +321,15 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.58761746" weight="0.32517838" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49731544" weight="0.39943343" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.5885906" visible="true" weight="0.04249292" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49731544" weight="0.12889518" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32925585" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.16615698" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.41238254" side_tool="true" weight="0.32517838" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="9" visible="true" weight="0.32925585" />
-      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.49127516" weight="0.20897044" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.4114094" side_tool="true" weight="0.32577905" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.3286119" />
+      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.49127516" weight="0.20963173" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -426,205 +340,142 @@
       <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout>
   </component>
-  <component name="Vcs.Log.History.Properties">
-    <option name="COLUMN_ORDER">
-      <list>
-        <option value="0" />
-        <option value="2" />
-        <option value="3" />
-        <option value="1" />
-      </list>
-    </option>
-  </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="wiiiiiiiiiiiiii" />
-    <option name="LAST_COMMIT_MESSAGE" value="wiiiiiiiiiiiiii" />
+    <MESSAGE value="Code propre" />
+    <MESSAGE value="NIK" />
+    <option name="LAST_COMMIT_MESSAGE" value="NIK" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/out/production/JavaParkTest/JavaParkTest.class" />
-    <entry file="file://$PROJECT_DIR$/src/MotionPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#271#507#0" expanded="true" />
-            <element signature="e#506#507#0" expanded="true" />
-            <element signature="e#493#1127#0" expanded="true" />
-            <element signature="e#1126#1127#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/reduceIcon.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/images/reduceIcon.png" />
     <entry file="file://$PROJECT_DIR$/src/ScrollButton.java" />
-    <entry file="file://$PROJECT_DIR$/src/FrameButton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1815">
-          <caret line="127" column="48" selection-start-line="127" selection-start-column="48" selection-end-line="127" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MenuButton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="35" column="30" selection-start-line="35" selection-start-column="30" selection-end-line="35" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyBasicScrollBarUI.java">
+    <entry file="file://$PROJECT_DIR$/Other/ImageRenderingBadly.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
-          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TListenerImpl.java" />
+    <entry file="file://$PROJECT_DIR$/Other/TScrollList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="31" column="44" lean-forward="true" selection-start-line="31" selection-start-column="44" selection-end-line="31" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TLabel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Panel.java">
+    <entry file="file://$PROJECT_DIR$/src/TMotionPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="17" column="32" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
+        <state relative-caret-position="338">
+          <caret line="43" column="1" lean-forward="true" selection-start-line="26" selection-start-column="1" selection-end-line="43" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/FlatButton.java">
+    <entry file="file://$PROJECT_DIR$/src/TList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+        <state relative-caret-position="255">
+          <caret line="15" column="36" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="14" column="93" selection-start-line="14" selection-start-column="87" selection-end-line="14" selection-end-column="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TBasicScrollBarUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="10" column="58" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TTextField.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-323">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="36" lean-forward="true" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/VehiculeAerien.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/JEditorText.java" />
     <entry file="file://$PROJECT_DIR$/src/JavaParkTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="13" selection-start-column="13" selection-end-column="13" />
+        <state relative-caret-position="68">
+          <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ImageRenderingBadly.java">
+    <entry file="file://$PROJECT_DIR$/src/TScrollPane.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="535">
-          <caret line="42" column="5" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
+        <state relative-caret-position="83">
+          <caret line="15" column="47" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ScrollList.java">
+    <entry file="file://$PROJECT_DIR$/src/TFrameButton.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="35" column="1" selection-start-line="35" selection-start-column="1" selection-end-line="35" selection-end-column="1" />
+        <state relative-caret-position="357">
+          <caret line="91" column="36" selection-start-line="91" selection-start-column="36" selection-end-line="91" selection-end-column="36" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#1983#2921#0" expanded="true" />
+            <element signature="e#2920#2921#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/src/TFlatButton.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="7" lean-forward="true" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
+        <state relative-caret-position="442">
+          <caret line="27" column="42" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javadoc/stylesheet.css">
+    <entry file="file://$PROJECT_DIR$/src/TFrame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="894">
-          <caret line="526" lean-forward="true" selection-start-line="526" selection-end-line="526" />
+        <state relative-caret-position="357">
+          <caret line="56" column="38" selection-start-line="56" selection-start-column="38" selection-end-line="56" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GestionnaireVehicules.java">
+    <entry file="file://$PROJECT_DIR$/src/TMenuButton.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+        <state relative-caret-position="-868">
+          <caret line="9" column="50" selection-start-line="9" selection-start-column="50" selection-end-line="9" selection-end-column="50" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GestionnaireClients.java">
+    <entry file="file://$PROJECT_DIR$/src/TContentButton.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="323">
+          <caret line="19" column="40" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/VehiculeTerrestre.java">
+    <entry file="file://$PROJECT_DIR$/src/Definition.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="42" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Voiture.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vehicule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Avion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="5" lean-forward="true" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Moto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Contrat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="4" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="4" />
+        <state relative-caret-position="250">
+          <caret line="23" column="52" selection-start-line="23" selection-start-column="52" selection-end-line="23" selection-end-column="52" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

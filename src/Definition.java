@@ -19,6 +19,10 @@ public interface Definition
     Color InterfaceMainColor = new Color(0x4773B9);
     Color InterfaceLightColor = new Color (0x6A9DDB);
 
+    Color idleButtonLightColor = InterfaceLightColor;
+    Color hoverButtonLightColor = new Color (0x5f91ce);
+    Color pressButtonLightColor = InterfaceMainColor;
+
     Color idleButtonColor = InterfaceMainColor;
     Color hoverButtonColor = new Color(0x416BAA);
     Color pressButtonColor = new Color(0x35549B);

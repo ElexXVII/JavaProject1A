@@ -75,7 +75,8 @@ public class TFrameButton extends TFlatButton implements Definition
         {
             super.setPreferredSize(new Dimension(30,30));
 
-            super.addMouseListener(new MouseAdapter() {
+            super.addMouseListener(new MouseAdapter()
+                                   {
                                        public void mouseReleased(MouseEvent e) {
                                            if (name.equals("Reduce")) {
                                                if (e.getX() >= 0 && e.getX() < 30 && e.getY() >= 0 && e.getY() < 30) {
@@ -88,8 +89,7 @@ public class TFrameButton extends TFlatButton implements Definition
                                                }
                                            }
                                        }
-                                   }
-            );
+                                   });
         }
         else
         {

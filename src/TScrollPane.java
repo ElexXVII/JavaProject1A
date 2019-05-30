@@ -5,7 +5,7 @@ import java.util.Arrays;
 
 public class TScrollPane extends JScrollPane implements Definition
 {
-    public TScrollPane(JList list)
+    public TScrollPane(JList list, int x, int y)
     {
         super(list);
 
@@ -13,7 +13,7 @@ public class TScrollPane extends JScrollPane implements Definition
         this.getHorizontalScrollBar().setPreferredSize(new Dimension(15,15));
         this.getVerticalScrollBar().setUI(new TBasicScrollBarUI());
         this.getHorizontalScrollBar().setUI(new TBasicScrollBarUI());
-        this.setPreferredSize(new Dimension(300,555));
+        this.setPreferredSize(new Dimension(x, y));
         this.setBorder(border);
     }
 

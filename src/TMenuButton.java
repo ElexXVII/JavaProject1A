@@ -1,3 +1,4 @@
+import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
 
@@ -6,7 +7,7 @@ public class TMenuButton extends TFlatButton implements Definition
     private TFrame frame;
 
     private String name;
-    private ArrayList<TMenuButton> otherButtons = new ArrayList<TMenuButton>();
+    private ArrayList<TMenuButton> otherButtons;// = new ArrayList<TMenuButton>();
 
     public TMenuButton()
     {
@@ -24,6 +25,11 @@ public class TMenuButton extends TFlatButton implements Definition
 
         this.frame = frame;
         this.name = text;
+
+        this.setForeground(Color.WHITE);
+        this.setPreferredSize(new Dimension(175,50));
+        this.setHorizontalAlignment(SwingConstants.CENTER);
+        this.setVerticalAlignment(SwingConstants.CENTER);
     }
 
     @Override
