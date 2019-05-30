@@ -9,6 +9,9 @@ class TTextField extends JTextField implements FocusListener, ActionListener, De
 {
     private TFrame frame;
 
+    private Color back;
+    private Color front;
+
     private final String hint;
     private boolean showingHint;
 
@@ -22,6 +25,8 @@ class TTextField extends JTextField implements FocusListener, ActionListener, De
 
         this.frame = frame;
 
+        this.back = back;
+        this.front = front;
         this.hint = hint;
         this.showingHint = true;
         super.addFocusListener(this);
@@ -53,8 +58,8 @@ class TTextField extends JTextField implements FocusListener, ActionListener, De
         if(this.getText().isEmpty())
         {
             super.setFont(new Font("Montserrat",Font.ROMAN_BASELINE, 12));
-            super.setBackground(new Color(0xDDDDDD));
-            super.setForeground(new Color(0x555555));
+            super.setBackground(back);
+            super.setForeground(front);
             super.setText(hint);
             showingHint = true;
         }

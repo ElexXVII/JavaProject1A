@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
-public class GestionnaireClients {
-
+public class GestionnaireClients
+{
     private ArrayList<Client> clients = new ArrayList<>();
 
     public Client getClient (int id) {

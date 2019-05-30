@@ -44,8 +44,8 @@ public class TFrame extends JFrame implements Definition
     // Contract Panel : Card[0]
     // List
     private TPanel contractListPanel;
-    private TPanel ListTitlePanel;
-    private TLabel ListeTitleLabel;
+    private TPanel listTitlePanel;
+    private TLabel listTitleLabel;
     private TPanel verticalSeparator1;
     private TContentButton newContractButton;
     private TPanel verticalSeparator3;
@@ -54,7 +54,11 @@ public class TFrame extends JFrame implements Definition
     private TPanel verticalSeparator2;
     private TScrollPane scrollPane;
     // Contract Area To Fill
-    private TPanel contractAreaToFill;
+    private TPanel contractAreaToFillPanel;
+    //private TLabel contractSurnameLabel;
+    private TTextField contractSurnameField;
+    //private TLabel contractNameLabel;
+    private TTextField contractNameField;
 
     //=============
     // CONSTRUCTOR
@@ -195,19 +199,21 @@ public class TFrame extends JFrame implements Definition
         contractListPanel = new TPanel(300, 615, null, null, new FlowLayout(FlowLayout.LEFT, 0, 0), false);
         cards[0].add(contractListPanel);
 
+        contractAreaToFillPanel = new TPanel(690, 616, InterfaceLightColor, null, new FlowLayout(FlowLayout.CENTER, getWidth()/2, 30), true);
+        cards[0].add(contractAreaToFillPanel);
+
         initLists();
 
-        initAreaToFill();
+        initAreasToFill();
     }
 
     private void initLists()
     {
         // Card0
-        ListTitlePanel = new TPanel(285, 30, InterfaceLightColor, WHITE, new FlowLayout(FlowLayout.CENTER), true);
-        contractListPanel.add(ListTitlePanel);
-
-        ListeTitleLabel = new TLabel("Historique des contrats", WHITE);
-        ListTitlePanel.add(ListeTitleLabel);
+        listTitlePanel = new TPanel(285, 30, InterfaceLightColor, WHITE, new FlowLayout(FlowLayout.CENTER), true);
+        contractListPanel.add(listTitlePanel);
+        listTitleLabel = new TLabel("Historique des contrats", WHITE);
+        listTitlePanel.add(listTitleLabel);
 
         verticalSeparator1 = new TPanel(15, 30, InterfaceMainColor, null, null, true);
         contractListPanel.add(verticalSeparator1);
@@ -232,9 +238,20 @@ public class TFrame extends JFrame implements Definition
         cardLayout.show(contentPanel, "Mon parc");
     }
 
-    private void initAreaToFill()
+    private void initAreasToFill()
     {
+        /*contractSurnameLabel = new TLabel("Nom : ", WHITE);
+        contractAreaToFillPanel.add(contractSurnameLabel);*/
+        contractSurnameField = new TTextField(frame, "Nom", 250, 30, WHITE, BLACK);
+        contractAreaToFillPanel.add(contractSurnameField);
 
+        /*contractNameLabel = new TLabel("Prenom : ", WHITE);
+        contractAreaToFillPanel.add(contractNameLabel);*/
+        contractNameField = new TTextField(frame, "Prenom", 250, 30, WHITE, BLACK);
+        contractAreaToFillPanel.add(contractNameField);
+
+        contractNameField = new TTextField(frame, "Telephone", 250, 30, WHITE, BLACK);
+        contractAreaToFillPanel.add(contractNameField);
     }
 
     //=============
