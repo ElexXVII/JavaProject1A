@@ -49,6 +49,7 @@ public class TFrame extends JFrame implements Definition
     // List
     ArrayList<String> contractArrayList;
     private TPanel contractListPanel;
+    private TPanel contractListContent;
     private TPanel contractListTitlePanel;
     private TLabel contractListTitleLabel;
     private TPanel contractVerticalSeparator1;
@@ -71,6 +72,7 @@ public class TFrame extends JFrame implements Definition
     // List
     ArrayList<String> vehicleArrayList;
     private TPanel vehicleListPanel;
+    private TPanel vehicleListContent;
     private TPanel vehicleListTitlePanel;
     private TLabel vehicleListTitleLabel;
     private TPanel vehicleVerticalSeparator1;
@@ -93,6 +95,7 @@ public class TFrame extends JFrame implements Definition
     // List
     ArrayList<String> clientArrayList;
     private TPanel clientListPanel;
+    private TPanel clientListContent;
     private TPanel clientListTitlePanel;
     private TLabel clientListTitleLabel;
     private TPanel clientVerticalSeparator1;
