@@ -35,28 +35,6 @@ public interface Definition
     // Listes
     String[] buttonsName = {"Mes contrats", "Mes véhicules", "Mes clients"};
 
-    String elementArray[] = { "Household", "Office", "Extended Family",
-            "Company (US)", "Company (World)", "Team", "Will",
-            "Birthday Card List", "High School", "Country", "Continent",
-            "Planet", "Household", "Office", "Extended Family",
-            "Company (US)", "Company (World)", "Team", "Will",
-            "Birthday Card List", "High School", "Country", "Continent",
-            "Planet" , "Household", "Office", "Extended Family",
-            "Company (US)", "Company (World)", "Team", "Will",
-            "Birthday Card List", "High School", "Country", "Continent",
-            "Planet" , "Household", "Office", "Extended Family",
-            "Company (US)", "Company (World)", "Team", "Will",
-            "Birthday Card List", "High School", "Country", "Continent",
-            "Planet" , "Household", "Office", "Extended Family",
-            "Company (US)", "Company (World)", "Team", "Will",
-            "Birthday Card List", "High School", "Country", "Continent",
-            "Planet" , "Household", "Office", "Extended Family",
-            "Company (US)", "Company (World)", "Team", "Will",
-            "Birthday Card List", "High School", "Country", "Continent",
-            "Planet" };
-
-    ArrayList<String> elementArrayList = new ArrayList<String>(Arrays.asList(elementArray));
-
     // Bordure
     Border border = BorderFactory.createEmptyBorder( 0, 0, 0, 0 );
 }

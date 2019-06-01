@@ -43,22 +43,49 @@ public class TFrame extends JFrame implements Definition
 
     // Contract Panel : Card[0]
     // List
+    ArrayList<String> contractArrayList;
     private TPanel contractListPanel;
-    private TPanel listTitlePanel;
-    private TLabel listTitleLabel;
-    private TPanel verticalSeparator1;
-    private TContentButton newContractButton;
-    private TPanel verticalSeparator3;
-    private TList list;
-    private TTextField searchBar;
-    private TPanel verticalSeparator2;
-    private TScrollPane scrollPane;
+    private TPanel contractListTitlePanel;
+    private TLabel contractListTitleLabel;
+    private TPanel contractVerticalSeparator1;
+    private TContentButton contractNewContractButton;
+    private TPanel contractVerticalSeparator3;
+    private TList contractList;
+    private TSearchBar contractSearchBar;
+    private TPanel contractVerticalSeparator2;
+    private TScrollPane contractScrollPane;
     // Contract Area To Fill
     private TPanel contractAreaToFillPanel;
     //private TLabel contractSurnameLabel;
     private TTextField contractSurnameField;
     //private TLabel contractNameLabel;
     private TTextField contractNameField;
+    private TConfirmButton contractConfirmButton;
+    private TConfirmButton contractCancelButton;
+
+    // Client Panel : Card[1]
+    // List
+    ArrayList<String> clientArrayList;
+    private TPanel clientListPanel;
+    private TPanel clientListTitlePanel;
+    private TLabel clientListTitleLabel;
+    private TPanel clientVerticalSeparator1;
+    private TContentButton clientNewclientButton;
+    private TPanel clientVerticalSeparator3;
+    private TList clientList;
+    private TSearchBar clientSearchBar;
+    private TPanel clientVerticalSeparator2;
+    private TScrollPane clientScrollPane;
+    // client Area To Fill
+    private TPanel clientAreaToFillPanel;
+    //private TLabel clientSurnameLabel;
+    private TTextField clientSurnameField;
+    //private TLabel clientNameLabel;
+    private TTextField clientNameField;
+    private TTextField clientMailField;
+    private TTextField clientAdressField;
+    private TConfirmButton clientConfirmButton;
+    private TConfirmButton clientCancelButton;
 
     //=============
     // CONSTRUCTOR
@@ -177,8 +204,16 @@ public class TFrame extends JFrame implements Definition
 
         initCards();
 
-        initContractPanel();
+        fillContractCard();
+        fillVehiculeCard();
+        fillClientCard();
+
+        cardLayout.show(contentPanel, buttonsName[0]);
     }
+
+    //=============
+    // INIT CARDS
+    //=============
 
     private void initCards()
     {
@@ -192,53 +227,71 @@ public class TFrame extends JFrame implements Definition
         }
     }
 
-    private void initContractPanel()
+    //=============
+    // INIT CARD 0
+    //=============
+
+    private void fillContractCard()
     {
-        TPanel card = cards[0];
+        contractArrayList = new ArrayList<String>();
 
         contractListPanel = new TPanel(300, 615, null, null, new FlowLayout(FlowLayout.LEFT, 0, 0), false);
         cards[0].add(contractListPanel);
 
+        initContractLists();
+
         contractAreaToFillPanel = new TPanel(690, 616, InterfaceLightColor, null, new FlowLayout(FlowLayout.CENTER, getWidth()/2, 30), true);
         cards[0].add(contractAreaToFillPanel);
 
-        initLists();
+        initContractAreasToFill();
 
-        initAreasToFill();
     }
 
-    private void initLists()
+    private void fillVehiculeCard()
+    {
+        /*contractListPanel = new TPanel(300, 615, null, null, new FlowLayout(FlowLayout.LEFT, 0, 0), false);
+        cards[0].add(contractListPanel);
+
+        initContractLists();
+
+        contractAreaToFillPanel = new TPanel(690, 616, InterfaceLightColor, null, new FlowLayout(FlowLayout.CENTER, getWidth()/2, 30), true);
+        cards[0].add(contractAreaToFillPanel);
+
+        initContractAreasToFill();
+
+        cardLayout.show(contentPanel, "Mes contrats");*/
+    }
+
+    private void initContractLists()
     {
         // Card0
-        listTitlePanel = new TPanel(285, 30, InterfaceLightColor, WHITE, new FlowLayout(FlowLayout.CENTER), true);
-        contractListPanel.add(listTitlePanel);
-        listTitleLabel = new TLabel("Historique des contrats", WHITE);
-        listTitlePanel.add(listTitleLabel);
+        contractListTitlePanel = new TPanel(285, 30, InterfaceLightColor, WHITE, new FlowLayout(FlowLayout.CENTER), true);
+        contractListPanel.add(contractListTitlePanel);
+        contractListTitleLabel = new TLabel("Historique des contrats", WHITE);
+        contractListTitlePanel.add(contractListTitleLabel);
 
-        verticalSeparator1 = new TPanel(15, 30, InterfaceMainColor, null, null, true);
-        contractListPanel.add(verticalSeparator1);
+        contractVerticalSeparator1 = new TPanel(15, 30, InterfaceMainColor, null, null, true);
+        contractListPanel.add(contractVerticalSeparator1);
 
-        list = new TList();
-        scrollPane = new TScrollPane(list, 300,525);
+        contractList = new TList();
+        contractScrollPane = new TScrollPane(contractList, 300,525);
 
-        searchBar = new TTextField(frame, "Rechercher un contrat", 285, 30, LIGHTGREY, DARKGREY);
-        contractListPanel.add(searchBar);
+        contractSearchBar = new TSearchBar(frame, 0, "Rechercher un contrat", 285, 30, LIGHTGREY, DARKGREY);
+        contractListPanel.add(contractSearchBar);
 
-        verticalSeparator2 = new TPanel(15, 30, InterfaceMainColor, null, null, true);
-        contractListPanel.add(verticalSeparator2);
+        contractVerticalSeparator2 = new TPanel(15, 30, InterfaceMainColor, null, null, true);
+        contractListPanel.add(contractVerticalSeparator2);
 
-        contractListPanel.add(scrollPane);
+        contractListPanel.add(contractScrollPane);
 
-        newContractButton = new TContentButton(frame, "Nouveau Contrat", 285, 30);
-        contractListPanel.add(newContractButton);
+        contractNewContractButton = new TContentButton(frame, "Nouveau contrat", 285, 30);
+        contractListPanel.add(contractNewContractButton);
 
-        verticalSeparator3 = new TPanel(15, 30, InterfaceMainColor, null, null, true);
-        contractListPanel.add(verticalSeparator3);
-
-        cardLayout.show(contentPanel, "Mon parc");
+        contractVerticalSeparator3 = new TPanel(15, 30, InterfaceMainColor, null, null, true);
+        contractListPanel.add(contractVerticalSeparator3);
     }
 
-    private void initAreasToFill()
+    private void initContractAreasToFill()
     {
         /*contractSurnameLabel = new TLabel("Nom : ", WHITE);
         contractAreaToFillPanel.add(contractSurnameLabel);*/
@@ -255,6 +308,81 @@ public class TFrame extends JFrame implements Definition
     }
 
     //=============
+    // INIT CARD 3
+    //=============
+
+    private void fillClientCard()
+    {
+        clientArrayList = new ArrayList<String>();
+
+        clientListPanel = new TPanel(300, 615, null, null, new FlowLayout(FlowLayout.LEFT, 0, 0), false);
+        cards[2].add(clientListPanel);
+
+        initClientLists();
+
+        clientAreaToFillPanel = new TPanel(690, 616, InterfaceLightColor, null, new FlowLayout(FlowLayout.CENTER, getWidth()/2, 30), true);
+        cards[2].add(clientAreaToFillPanel);
+
+        initClientAreasToFill();
+    }
+
+    private void initClientLists()
+    {
+        // Card0
+        clientListTitlePanel = new TPanel(285, 30, InterfaceLightColor, WHITE, new FlowLayout(FlowLayout.CENTER), true);
+        clientListPanel.add(clientListTitlePanel);
+        clientListTitleLabel = new TLabel("Liste des clients", WHITE);
+        clientListTitlePanel.add(clientListTitleLabel);
+
+        clientVerticalSeparator1 = new TPanel(15, 30, InterfaceMainColor, null, null, true);
+        clientListPanel.add(clientVerticalSeparator1);
+
+        clientList = new TList();
+        clientScrollPane = new TScrollPane(frame, clientList, 300,525);
+
+        clientSearchBar = new TSearchBar(frame, 0, "Rechercher un client", 285, 30, LIGHTGREY, DARKGREY);
+        clientListPanel.add(clientSearchBar);
+
+        clientVerticalSeparator2 = new TPanel(15, 30, InterfaceMainColor, null, null, true);
+        clientListPanel.add(clientVerticalSeparator2);
+
+        clientListPanel.add(clientScrollPane);
+
+        clientNewclientButton = new TContentButton(frame, "Nouveau client", 285, 30);
+        clientListPanel.add(clientNewclientButton);
+
+        clientVerticalSeparator3 = new TPanel(15, 30, InterfaceMainColor, null, null, true);
+        clientListPanel.add(clientVerticalSeparator3);
+    }
+
+    private void initClientAreasToFill()
+    {
+        /*clientSurnameLabel = new TLabel("Nom : ", WHITE);
+        clientAreaToFillPanel.add(clientSurnameLabel);*/
+        clientSurnameField = new TTextField(frame, "Nom", 250, 30, WHITE, BLACK);
+        clientAreaToFillPanel.add(clientSurnameField);
+
+        /*clientNameLabel = new TLabel("Prenom : ", WHITE);
+        clientAreaToFillPanel.add(clientNameLabel);*/
+        clientNameField = new TTextField(frame, "Prenom", 250, 30, WHITE, BLACK);
+        clientAreaToFillPanel.add(clientNameField);
+
+        clientNameField = new TTextField(frame, "Telephone", 250, 30, WHITE, BLACK);
+        clientAreaToFillPanel.add(clientNameField);
+
+        clientMailField = new TTextField(frame, "E-mail", 250, 30, WHITE, BLACK);
+        clientAreaToFillPanel.add(clientMailField);
+
+        clientAdressField = new TTextField(frame, "Adresse", 250, 30, WHITE, BLACK);
+        clientAreaToFillPanel.add(clientAdressField);
+
+        clientConfirmButton = new TConfirmButton(frame, "Confirmer", 250, 30);
+        clientAreaToFillPanel.add(clientConfirmButton);
+        clientCancelButton = new TConfirmButton(frame, "Annuler", 250, 30);
+        clientAreaToFillPanel.add(clientCancelButton);
+    }
+
+    //=============
     // GETTERS
     //=============
 
@@ -266,12 +394,20 @@ public class TFrame extends JFrame implements Definition
         return cardLayout;
     }
 
-    public TList getList()
+    public TList getContractList()
     {
-        return list;
+        return contractList;
     }
 
-    public TScrollPane getScrollPane() {
-        return scrollPane;
+    public TScrollPane getContractScrollPane() {
+        return contractScrollPane;
+    }
+
+    public ArrayList<String> getContractArrayList() {
+        return contractArrayList;
+    }
+
+    public ArrayList<String> getClientArrayList() {
+        return clientArrayList;
     }
 }

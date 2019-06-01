@@ -1,11 +1,11 @@
 import javax.swing.*;
 import java.awt.*;
-import java.util.ArrayList;
-import java.util.Arrays;
 
 public class TScrollPane extends JScrollPane implements Definition
 {
-    public TScrollPane(JList list, int x, int y)
+    TFrame frame;
+
+    public TScrollPane(TFrame frame, JList list, int x, int y)
     {
         super(list);
 

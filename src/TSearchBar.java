@@ -5,7 +5,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
 
-class TTextField extends JTextField implements FocusListener, ActionListener, Definition
+class TSearchBar extends JTextField implements FocusListener, ActionListener, Definition
 {
     private TFrame frame;
 
@@ -14,17 +14,19 @@ class TTextField extends JTextField implements FocusListener, ActionListener, De
 
     private final String hint;
     private boolean showingHint;
+    private final int whichMenu;
 
-    TTextField textField;
+    //TSearchBar textField;
     TScrollPane scrollPane;
     TList list;
 
-    public TTextField(TFrame frame, final String hint, int x, int y, Color back, Color front)
+    public TSearchBar(TFrame frame, int whichMenu, final String hint, int x, int y, Color back, Color front)
     {
         super(hint);
 
         this.frame = frame;
 
+        this.whichMenu = whichMenu;
         this.back = back;
         this.front = front;
         this.hint = hint;
@@ -36,7 +38,7 @@ class TTextField extends JTextField implements FocusListener, ActionListener, De
         this.setPreferredSize(new Dimension(x, y));
         this.setBorder(border);
 
-        textField = this;
+        //textField = this;
         scrollPane = frame.getContractScrollPane();
         list = frame.getContractList();
 
@@ -74,7 +76,7 @@ class TTextField extends JTextField implements FocusListener, ActionListener, De
     @Override
     public void actionPerformed(ActionEvent e)
     {
-        scrollPane.filterModel((DefaultListModel<String>) list.getModel(), textField.getText());
+        scrollPane.filterModel((DefaultListModel<String>) list.getModel(), this.getText());
     }
 }
 
