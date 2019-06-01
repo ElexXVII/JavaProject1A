@@ -39,8 +39,21 @@ class TSearchBar extends JTextField implements FocusListener, ActionListener, De
         this.setBorder(border);
 
         //textField = this;
-        scrollPane = frame.getContractScrollPane();
-        list = frame.getContractList();
+        switch(whichMenu)
+        {
+            case 0:
+                scrollPane = frame.getContractScrollPane();
+                list = frame.getContractList();
+                break;
+            case 1:
+                scrollPane = frame.getVehicleScrollPane();
+                list = frame.getVehicleList();
+                break;
+            case 2:
+                scrollPane = frame.getClientScrollPane();
+                list = frame.getClientList();
+                break;
+        }
 
         this.addActionListener(this);
     }

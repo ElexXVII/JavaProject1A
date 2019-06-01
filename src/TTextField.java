@@ -74,7 +74,7 @@ class TTextField extends JTextField implements FocusListener, ActionListener, De
     @Override
     public void actionPerformed(ActionEvent e)
     {
-        scrollPane.filterModel((DefaultListModel<String>) list.getModel(), textField.getText());
+        //scrollPane.filterModel((DefaultListModel<String>) list.getModel(), textField.getText());
     }
 }
 

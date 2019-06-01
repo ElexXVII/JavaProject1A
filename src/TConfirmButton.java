@@ -1,14 +1,22 @@
+import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class TConfirmButton extends TFlatButton implements Definition
+public class TConfirmButton extends TFlatButton implements Definition, ActionListener
 {
     TFrame frame;
 
-    public TConfirmButton(TFrame frame, String text, int x, int y)
+    private final int whichMenu;
+    TScrollPane scrollPane;
+    TList list;
+
+    public TConfirmButton(TFrame frame, int whichMenu, String text, int x, int y)
     {
         super(text);
 
         this.frame = frame;
+        this.whichMenu = whichMenu;
         this.setPreferredSize(new Dimension(x, y));
         this.setForeground(WHITE);
         this.setFont(menuFont);
@@ -16,6 +24,8 @@ public class TConfirmButton extends TFlatButton implements Definition
         super.setBorderPainted(false);
         super.setFocusPainted(false);
         super.setContentAreaFilled(false);
+
+        this.addActionListener(this);
 
         idleColor = idleButtonLightColor;
 
@@ -28,6 +38,22 @@ public class TConfirmButton extends TFlatButton implements Definition
         {
             hoverColor = hoverButtonLightColor;
             pressColor = pressButtonLightColor;
+        }
+
+        switch(whichMenu)
+        {
+            case 0:
+                scrollPane = frame.getContractScrollPane();
+                list = frame.getContractList();
+                break;
+            case 1:
+                scrollPane = frame.getVehicleScrollPane();
+                list = frame.getVehicleList();
+                break;
+            case 2:
+                scrollPane = frame.getClientScrollPane();
+                list = frame.getClientList();
+                break;
         }
     }
 
@@ -60,5 +86,12 @@ public class TConfirmButton extends TFlatButton implements Definition
         //g2.fillRect(getWidth()-1, 0, getWidth(), getHeight());
 
         super.paintComponent(g);
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e)
+    {
+        System.out.println("Test");
+        scrollPane.addElement((DefaultListModel<String>) list.getModel(), frame.getClientSurnameField().getText()+" "+frame.getClientNameField().getText());
     }
 }
