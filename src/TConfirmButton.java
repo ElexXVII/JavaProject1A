@@ -2,21 +2,30 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 public class TConfirmButton extends TFlatButton implements Definition, ActionListener
 {
     TFrame frame;
 
+    String name;
     private final int whichMenu;
+    int id;
     TScrollPane scrollPane;
-    TList list;
+    TList tlist;
 
-    public TConfirmButton(TFrame frame, int whichMenu, String text, int x, int y)
+    ArrayList<String> list;
+
+    TTextField[] textFields;
+
+    public TConfirmButton(TFrame frame, int whichMenu, String text, int x, int y, TTextField... textFields)
     {
         super(text);
 
         this.frame = frame;
         this.whichMenu = whichMenu;
+        this.textFields = textFields;
+        this.name = text;
         this.setPreferredSize(new Dimension(x, y));
         this.setForeground(WHITE);
         this.setFont(menuFont);
@@ -44,15 +53,21 @@ public class TConfirmButton extends TFlatButton implements Definition, ActionLis
         {
             case 0:
                 scrollPane = frame.getContractScrollPane();
-                list = frame.getContractList();
+                tlist = frame.getContractList();
+                list = frame.getContractArrayList();
+                id = frame.contractID;
                 break;
             case 1:
                 scrollPane = frame.getVehicleScrollPane();
-                list = frame.getVehicleList();
+                tlist = frame.getVehicleList();
+                list = frame.getVehicleArrayList();
+                id = frame.vehicleID;
                 break;
             case 2:
                 scrollPane = frame.getClientScrollPane();
-                list = frame.getClientList();
+                tlist = frame.getClientList();
+                list = frame.getClientArrayList();
+                id = frame.clientID;
                 break;
         }
     }
@@ -91,7 +106,27 @@ public class TConfirmButton extends TFlatButton implements Definition, ActionLis
     @Override
     public void actionPerformed(ActionEvent e)
     {
-        System.out.println("Test");
-        scrollPane.addElement((DefaultListModel<String>) list.getModel(), frame.getClientSurnameField().getText()+" "+frame.getClientNameField().getText());
+        if (name.equals("Annuler"))
+        {
+
+        }
+        else
+        {
+            boolean isEmpty = false;
+
+            for (TTextField textField : textFields)
+            {
+                if(textField.getText().isEmpty())
+                {
+                    isEmpty = true;
+                }
+            }
+            if (!isEmpty)
+            {
+                String newElement = (id++)+ " - "+ frame.getClientSurnameField().getText()+" "+frame.getClientNameField().getText();
+                scrollPane.addElement((DefaultListModel<String>) tlist.getModel(), newElement);
+                list.add(newElement);
+            }
+        }
     }
 }

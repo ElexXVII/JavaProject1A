@@ -20,6 +20,10 @@ public class TFrame extends JFrame implements Definition
     // VARIABLES
     //=============
 
+    static int contractID = 0;
+    static int vehicleID = 0;
+    static int clientID = 0;
+
     // Main
     private TFrame frame;
     private TPanel mainPanel;
@@ -454,7 +458,7 @@ public class TFrame extends JFrame implements Definition
         clientAdressField = new TTextField(frame, "Adresse", 250, 30, WHITE, BLACK);
         clientAreaToFillPanel.add(clientAdressField);
 
-        clientConfirmButton = new TConfirmButton(frame, 2, "Confirmer", 250, 30);
+        clientConfirmButton = new TConfirmButton(frame, 2, "Confirmer", 250, 30, clientSurnameField, clientNameField, clientPhoneField, clientMailField, clientAdressField);
         clientAreaToFillPanel.add(clientConfirmButton);
         clientCancelButton = new TConfirmButton(frame, 2, "Annuler", 250, 30);
         clientAreaToFillPanel.add(clientCancelButton);
