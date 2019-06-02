@@ -1,7 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class TScrollPane extends JScrollPane implements Definition
 {
@@ -41,7 +41,7 @@ public class TScrollPane extends JScrollPane implements Definition
     {
         for (ParcAgent agent : list)
         {
-            if (!agent.getDisplay().contains(filter))
+            if (!agent.getDisplay().toLowerCase().contains(filter.toLowerCase()))
             {
                 if (model.contains(agent.getDisplay()))
                 {

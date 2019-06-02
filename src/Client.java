@@ -1,22 +1,23 @@
 public class Client extends ParcAgent
 {
-    private int clientID;
+    static private int clientID = 0;
     private int id;
 
-    private static int nbClients;
+    //private static int nbClients;
     private String name;
     private String surname;
-    private int phone;
+    private String phone;
     private String address;
 
-    public Client(String name, String surname, int phone, String address)
+    public Client(String name, String surname, String phone, String address)
     {
         this.name = name;
         this.surname = surname;
         this.phone = phone;
         this.address = address;
 
-        this.id = clientID++;
+        this.id = clientID;
+        clientID++;
     }
 
     public String getDisplay()
@@ -32,7 +33,7 @@ public class Client extends ParcAgent
         return surname;
     }
 
-    public int getPhone() {
+    public String getPhone() {
         return phone;
     }
 

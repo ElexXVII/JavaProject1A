@@ -70,7 +70,7 @@ public class TFrame extends JFrame implements Definition
     private TPanel vehicleListTitlePanel;
     private TLabel vehicleListTitleLabel;
     private TPanel vehicleVerticalSeparator;
-    private TContentButton vehicleNewvehicleButton;
+    private TContentButton vehicleNewVehicleButton;
     private TList vehicleList;
     private TSearchBar vehicleSearchBar;
     private TScrollPane vehicleScrollPane;
@@ -108,9 +108,9 @@ public class TFrame extends JFrame implements Definition
     private TConfirmButton clientConfirmButton;
     private TConfirmButton clientCancelButton;
 
-    private ArrayList<Client> clients;
-    private ArrayList<Vehicule> vehicles;
-    private ArrayList<Contrat> contracts;
+    private ArrayList<ParcAgent> clients;
+    private ArrayList<ParcAgent> vehicles;
+    private ArrayList<ParcAgent> contracts;
 
     //=============
     // CONSTRUCTOR
@@ -220,6 +220,21 @@ public class TFrame extends JFrame implements Definition
 
         closeButton = new TFrameButton(frame, "Close");
         MenuRight2.add(closeButton, BorderLayout.PAGE_START);
+    }
+
+    private void initArrayLists()
+    {
+        clients = new ArrayList<ParcAgent>();
+        vehicles = new ArrayList<ParcAgent>();
+        contracts = new ArrayList<ParcAgent>();
+
+        clients.add(Tony);
+        //clients.add(George);
+        //clients.add(Marcel);
+
+        vehicles.add(Twingo);
+        vehicles.add(Clio2);
+        vehicles.add(R8);
     }
 
     private void initContent()
@@ -354,8 +369,8 @@ public class TFrame extends JFrame implements Definition
 
         vehicleListContent.add(vehicleScrollPane);
 
-        vehicleNewvehicleButton = new TContentButton(frame, "Nouveau véhicule", 295, 30);
-        vehicleListContent.add(vehicleNewvehicleButton);
+        vehicleNewVehicleButton = new TContentButton(frame, "Nouveau véhicule", 295, 30);
+        vehicleListContent.add(vehicleNewVehicleButton);
 
     }
 
@@ -389,8 +404,10 @@ public class TFrame extends JFrame implements Definition
         vehicleNbSeatField = new TTextField(frame, "Nombre de places", 250, 30, WHITE, BLACK);
         vehicleAreaToFillPanel.add(vehicleNbSeatField);
 
-        vehicleConfirmButton = new TConfirmButton(frame, 1, "Confirmer", 250, 30, vehicleBrandField, vehicleModelField, vehicleDailyPriceField);
+        vehicleConfirmButton = new TConfirmButton(frame, 1, "Confirmer", 250, 30, vehicleBrandField, vehicleModelField, vehicleDailyPriceField,
+                vehicleMaxSpeedField, vehicleStateField, vehicleOdometerField, vehiclePowerField, vehicleNbSeatField);
         vehicleAreaToFillPanel.add(vehicleConfirmButton);
+
         vehicleCancelButton = new TConfirmButton(frame, 1, "Annuler", 250, 30);
         vehicleAreaToFillPanel.add(vehicleCancelButton);
     }
@@ -465,13 +482,6 @@ public class TFrame extends JFrame implements Definition
         clientAreaToFillPanel.add(clientCancelButton);
     }
 
-    private void initArrayLists()
-    {
-        clients = new ArrayList<Client>();
-        vehicles = new ArrayList<Vehicule>();
-        contracts = new ArrayList<Contrat>();
-    }
-
     //=============
     // GETTERS
     //=============
@@ -521,17 +531,17 @@ public class TFrame extends JFrame implements Definition
 
     // ARRAYLIST GETTERS
 
-    public ArrayList getContractArrayList()
+    public ArrayList<ParcAgent> getContractArrayList()
     {
         return contracts;
     }
 
-    public ArrayList getVehicleArrayList()
+    public ArrayList<ParcAgent> getVehicleArrayList()
     {
         return vehicles;
     }
 
-    public ArrayList getClientArrayList()
+    public ArrayList<ParcAgent> getClientArrayList()
     {
         return clients;
     }

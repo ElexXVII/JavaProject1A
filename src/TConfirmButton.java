@@ -152,13 +152,13 @@ public class TConfirmButton extends TFlatButton implements Definition, ActionLis
                         list = frame.getClientArrayList();
                         id = frame.clientID;
 
-                        newAgent = new Client(textFields[0].getText(), textFields[1].getText(), Integer.parseInt(textFields[2].getText()), textFields[3].getText());
+                        newAgent = new Client(textFields[0].getText(), textFields[1].getText(), textFields[2].getText(), textFields[3].getText());
                         break;
                 }
 
-                String newElement = (id++)+ " - "+ frame.getClientSurnameField().getText()+" "+frame.getClientNameField().getText();
+                //String newElement = (id++)+ " - "+ frame.getClientSurnameField().getText()+" "+frame.getClientNameField().getText();
                 scrollPane.addElement((DefaultListModel<String>) tlist.getModel(), newAgent);
-                list.add(newElement);
+                list.add(newAgent);
 
                 for (TTextField textField : textFields)
                 {

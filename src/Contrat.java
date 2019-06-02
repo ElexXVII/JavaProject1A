@@ -3,7 +3,7 @@ import java.time.temporal.Temporal;
 
 public class Contrat extends ParcAgent
 {
-    private static int contractID;
+    static private int contractID = 0;
     private int id;
 
     private Client client;
@@ -33,7 +33,8 @@ public class Contrat extends ParcAgent
 
         this.prixEstime = this.calculerPrix();
 
-        this.id = contractID++;
+        this.id = contractID;
+        contractID ++;
     }
 
 

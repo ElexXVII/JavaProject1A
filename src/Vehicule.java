@@ -1,9 +1,9 @@
 public abstract class Vehicule extends ParcAgent
 {
-    //private static int nbClients;
-    private static int carID;
-
+    static private int carID = 0;
     private int id;
+    //private static int nbClients = 0;
+
     private float vitesseMax;
     private String marque;
     private String modele;
@@ -18,7 +18,8 @@ public abstract class Vehicule extends ParcAgent
         this.etat = etat;
         this.prixJournalier = prixJournalier;
 
-        this.id = carID++;
+        this.id = carID;
+        carID++;
     }
 
     public float getPrixJournalier() {
