@@ -163,7 +163,7 @@ public class TConfirmButton extends TFlatButton implements Definition, ActionLis
                 for (TTextField textField : textFields)
                 {
                     textField.setText("");
-                    //textField.setFocusable(false);
+                    textField.focusLost();
                 }
             }
         }

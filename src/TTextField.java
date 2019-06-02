@@ -66,5 +66,10 @@ class TTextField extends JTextField implements FocusListener, Definition
     {
         return showingHint ? "" : super.getText();
     }
+
+    public void focusLost()
+    {
+        focusLost(new FocusEvent(this, 0, false, this));
+    }
 }
 
