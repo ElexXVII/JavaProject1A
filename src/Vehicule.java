@@ -1,6 +1,7 @@
-public abstract class Vehicule {
-
-    private static int nbClients;
+public abstract class Vehicule extends ParcAgent
+{
+    //private static int nbClients;
+    private static int carID;
 
     private int id;
     private float vitesseMax;
@@ -9,15 +10,15 @@ public abstract class Vehicule {
     private String etat;
     private float prixJournalier;
 
-    public Vehicule(float vitesseMax, String marque, String modele, String etat, float prixJournalier) {
-        this.id = nbClients;
+    public Vehicule( String modele, String marque, float prixJournalier, float vitesseMax, String etat) {
+        //this.id = nbClients;
         this.vitesseMax = vitesseMax;
         this.marque = marque;
         this.modele = modele;
         this.etat = etat;
         this.prixJournalier = prixJournalier;
 
-        nbClients++;
+        this.id = carID++;
     }
 
     public float getPrixJournalier() {
@@ -25,6 +26,31 @@ public abstract class Vehicule {
     }
 
     protected abstract String printType ();
+
+    public String getDisplay()
+    {
+        return id + " - " + modele + " " + marque;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public float getVitesseMax() {
+        return vitesseMax;
+    }
+
+    public String getMarque() {
+        return marque;
+    }
+
+    public String getModele() {
+        return modele;
+    }
+
+    public String getEtat() {
+        return etat;
+    }
 
     @Override
     public String toString() {

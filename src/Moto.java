@@ -1,7 +1,7 @@
 public class Moto extends VehiculeTerrestre {
 
-    public Moto(float vitesseMax, String marque, String modele, String etat, float prixJournalier, int km, float puissance) {
-        super(vitesseMax, marque, modele, etat, prixJournalier, km, puissance);
+    public Moto( String modele, String marque, float prixJournalier, float vitesseMax, String etat, int km, float puissance) {
+        super(modele, marque,prixJournalier, vitesseMax,  etat,  km, puissance);
     }
 
     @Override

@@ -35,6 +35,10 @@ public interface Definition
     // Listes
     String[] buttonsName = {"Mes contrats", "Mes véhicules", "Mes clients"};
 
+    //Examples
+    Vehicule Twingo = new Voiture("Twingo","Renault",  150, 100f, "Bonne", 50000, 75f, 4);
+    Client Tony = new Client("Chouteau", "tony", 0601020304, "7 rue des pissenlis");
+
     // Bordure
     Border border = BorderFactory.createEmptyBorder( 0, 0, 0, 0 );
 }

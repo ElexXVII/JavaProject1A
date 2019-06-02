@@ -2,6 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.time.temporal.Temporal;
 import java.util.ArrayList;
 
 public class TConfirmButton extends TFlatButton implements Definition, ActionListener
@@ -14,7 +15,7 @@ public class TConfirmButton extends TFlatButton implements Definition, ActionLis
     TScrollPane scrollPane;
     TList tlist;
 
-    ArrayList<String> list;
+    ArrayList list;
 
     TTextField[] textFields;
 
@@ -53,19 +54,19 @@ public class TConfirmButton extends TFlatButton implements Definition, ActionLis
         {
             case 0:
                 scrollPane = frame.getContractScrollPane();
-                tlist = frame.getContractList();
+                tlist = frame.getContractTList();
                 list = frame.getContractArrayList();
                 id = frame.contractID;
                 break;
             case 1:
                 scrollPane = frame.getVehicleScrollPane();
-                tlist = frame.getVehicleList();
+                tlist = frame.getVehicleTList();
                 list = frame.getVehicleArrayList();
                 id = frame.vehicleID;
                 break;
             case 2:
                 scrollPane = frame.getClientScrollPane();
-                tlist = frame.getClientList();
+                tlist = frame.getClientTList();
                 list = frame.getClientArrayList();
                 id = frame.clientID;
                 break;
@@ -123,9 +124,47 @@ public class TConfirmButton extends TFlatButton implements Definition, ActionLis
             }
             if (!isEmpty)
             {
+                ParcAgent newAgent = new ParcAgent();
+
+                switch(whichMenu)
+                {
+                    case 0:
+                        scrollPane = frame.getContractScrollPane();
+                        tlist = frame.getContractTList();
+                        list = frame.getContractArrayList();
+                        id = frame.contractID;
+
+                        newAgent = new Contrat(Tony, Twingo, 100, false);
+                        break;
+                    case 1:
+                        scrollPane = frame.getVehicleScrollPane();
+                        tlist = frame.getVehicleTList();
+                        list = frame.getVehicleArrayList();
+                        id = frame.vehicleID;
+
+                        newAgent = new Voiture(textFields[0].getText(), textFields[1].getText(), Float.parseFloat(textFields[2].getText()),
+                                Float.parseFloat(textFields[3].getText()), textFields[4].getText(), Integer.parseInt(textFields[5].getText()),
+                                Float.parseFloat(textFields[6].getText()), Integer.parseInt(textFields[7].getText()));
+                        break;
+                    case 2:
+                        scrollPane = frame.getClientScrollPane();
+                        tlist = frame.getClientTList();
+                        list = frame.getClientArrayList();
+                        id = frame.clientID;
+
+                        newAgent = new Client(textFields[0].getText(), textFields[1].getText(), Integer.parseInt(textFields[2].getText()), textFields[3].getText());
+                        break;
+                }
+
                 String newElement = (id++)+ " - "+ frame.getClientSurnameField().getText()+" "+frame.getClientNameField().getText();
-                scrollPane.addElement((DefaultListModel<String>) tlist.getModel(), newElement);
+                scrollPane.addElement((DefaultListModel<String>) tlist.getModel(), newAgent);
                 list.add(newElement);
+
+                for (TTextField textField : textFields)
+                {
+                    textField.setText("");
+                    //textField.setFocusable(false);
+                }
             }
         }
     }

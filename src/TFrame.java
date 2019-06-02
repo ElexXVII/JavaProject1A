@@ -47,75 +47,70 @@ public class TFrame extends JFrame implements Definition
 
     // Contract Panel : Card[0]
     // List
-    ArrayList<String> contractArrayList;
     private TPanel contractListPanel;
     private TPanel contractListContent;
     private TPanel contractListTitlePanel;
     private TLabel contractListTitleLabel;
-    private TPanel contractVerticalSeparator1;
+    private TPanel contractVerticalSeparator;
     private TContentButton contractNewContractButton;
-    private TPanel contractVerticalSeparator3;
     private TList contractList;
     private TSearchBar contractSearchBar;
-    private TPanel contractVerticalSeparator2;
     private TScrollPane contractScrollPane;
     // Contract Area To Fill
     private TPanel contractAreaToFillPanel;
-    //private TLabel contractSurnameLabel;
-    private TTextField contractSurnameField;
-    //private TLabel contractNameLabel;
-    private TTextField contractNameField;
+    private TTextField contractClientField;
+    private TTextField contractVehicleField;
     private TConfirmButton contractConfirmButton;
     private TConfirmButton contractCancelButton;
 
     // Contract Panel : Card[1]
     // List
-    ArrayList<String> vehicleArrayList;
     private TPanel vehicleListPanel;
     private TPanel vehicleListContent;
     private TPanel vehicleListTitlePanel;
     private TLabel vehicleListTitleLabel;
-    private TPanel vehicleVerticalSeparator1;
+    private TPanel vehicleVerticalSeparator;
     private TContentButton vehicleNewvehicleButton;
-    private TPanel vehicleVerticalSeparator3;
     private TList vehicleList;
     private TSearchBar vehicleSearchBar;
-    private TPanel vehicleVerticalSeparator2;
     private TScrollPane vehicleScrollPane;
     // vehicle Area To Fill
     private TPanel vehicleAreaToFillPanel;
-    //private TLabel vehicleSurnameLabel;
-    private TTextField vehicleSurnameField;
-    //private TLabel vehicleNameLabel;
-    private TTextField vehicleNameField;
+    private TTextField vehicleBrandField;
+    private TTextField vehicleModelField;
+    private TTextField vehicleDailyPriceField;
+    private TTextField vehicleMaxSpeedField;
+    private TTextField vehicleStateField;
+    private TTextField vehicleOdometerField;
+    private TTextField vehiclePowerField;
+    private TTextField vehicleNbSeatField;
     private TConfirmButton vehicleConfirmButton;
     private TConfirmButton vehicleCancelButton;
 
     // Client Panel : Card[2]
     // List
-    ArrayList<String> clientArrayList;
     private TPanel clientListPanel;
     private TPanel clientListContent;
     private TPanel clientListTitlePanel;
     private TLabel clientListTitleLabel;
-    private TPanel clientVerticalSeparator1;
+    private TPanel clientVerticalSeparator;
     private TContentButton clientNewclientButton;
-    private TPanel clientVerticalSeparator3;
     private TList clientList;
     private TSearchBar clientSearchBar;
-    private TPanel clientVerticalSeparator2;
     private TScrollPane clientScrollPane;
     // client Area To Fill
     private TPanel clientAreaToFillPanel;
-    //private TLabel clientSurnameLabel;
     private TTextField clientSurnameField;
-    //private TLabel clientNameLabel;
     private TTextField clientNameField;
     private TTextField clientPhoneField;
     private TTextField clientMailField;
     private TTextField clientAdressField;
     private TConfirmButton clientConfirmButton;
     private TConfirmButton clientCancelButton;
+
+    private ArrayList<Client> clients;
+    private ArrayList<Vehicule> vehicles;
+    private ArrayList<Contrat> contracts;
 
     //=============
     // CONSTRUCTOR
@@ -131,6 +126,7 @@ public class TFrame extends JFrame implements Definition
 
         initMenu();
 
+        initArrayLists();
         initContent();
 
         this.setVisible(true);
@@ -263,8 +259,6 @@ public class TFrame extends JFrame implements Definition
 
     private void fillContractCard()
     {
-        contractArrayList = new ArrayList<String>();
-
         contractListPanel = new TPanel(300, 615, null, null, new FlowLayout(FlowLayout.LEFT, 0, 0), false);
         cards[0].add(contractListPanel);
 
@@ -280,46 +274,42 @@ public class TFrame extends JFrame implements Definition
     private void initContractLists()
     {
         // Card0
-        contractListTitlePanel = new TPanel(285, 30, InterfaceLightColor, WHITE, new FlowLayout(FlowLayout.CENTER), true);
-        contractListPanel.add(contractListTitlePanel);
+        contractListContent = new TPanel(295, 615, null, null, new FlowLayout(FlowLayout.LEFT, 0, 0), false);
+        contractListPanel.add(contractListContent);
+
+        contractVerticalSeparator = new TPanel(5, 615, InterfaceMainColor, null, null, true);
+        contractListPanel.add(contractVerticalSeparator);
+
+        contractListTitlePanel = new TPanel(295, 30, InterfaceLightColor, WHITE, new FlowLayout(FlowLayout.CENTER), true);
+        contractListContent.add(contractListTitlePanel);
         contractListTitleLabel = new TLabel("Historique des contrats", WHITE);
         contractListTitlePanel.add(contractListTitleLabel);
 
-        contractVerticalSeparator1 = new TPanel(15, 30, InterfaceMainColor, null, null, true);
-        contractListPanel.add(contractVerticalSeparator1);
 
         contractList = new TList(frame, 0);
-        contractScrollPane = new TScrollPane(this, 0, contractList, 300,525);
+        contractScrollPane = new TScrollPane(this, 0, contractList, 295,525);
 
-        contractSearchBar = new TSearchBar(frame, 0, "Rechercher un contrat", 285, 30, LIGHTGREY, DARKGREY);
-        contractListPanel.add(contractSearchBar);
+        contractSearchBar = new TSearchBar(frame, 0, "Rechercher un contrat", 295, 30, LIGHTGREY, DARKGREY);
+        contractListContent.add(contractSearchBar);
 
-        contractVerticalSeparator2 = new TPanel(15, 30, InterfaceMainColor, null, null, true);
-        contractListPanel.add(contractVerticalSeparator2);
+        contractListContent.add(contractScrollPane);
 
-        contractListPanel.add(contractScrollPane);
-
-        contractNewContractButton = new TContentButton(frame, "Nouveau contrat", 285, 30);
-        contractListPanel.add(contractNewContractButton);
-
-        contractVerticalSeparator3 = new TPanel(15, 30, InterfaceMainColor, null, null, true);
-        contractListPanel.add(contractVerticalSeparator3);
+        contractNewContractButton = new TContentButton(frame, "Nouveau contrat", 295, 30);
+        contractListContent.add(contractNewContractButton);
     }
 
     private void initContractAreasToFill()
     {
-        /*contractSurnameLabel = new TLabel("Nom : ", WHITE);
-        contractAreaToFillPanel.add(contractSurnameLabel);*/
-        contractSurnameField = new TTextField(frame, "Nom", 250, 30, WHITE, BLACK);
-        contractAreaToFillPanel.add(contractSurnameField);
+        contractClientField = new TTextField(frame, "Client", 250, 30, WHITE, BLACK);
+        contractAreaToFillPanel.add(contractClientField);
 
-        /*contractNameLabel = new TLabel("Prenom : ", WHITE);
-        contractAreaToFillPanel.add(contractNameLabel);*/
-        contractNameField = new TTextField(frame, "Prenom", 250, 30, WHITE, BLACK);
-        contractAreaToFillPanel.add(contractNameField);
+        contractVehicleField = new TTextField(frame, "Vehicle", 250, 30, WHITE, BLACK);
+        contractAreaToFillPanel.add(contractVehicleField);
 
-        contractNameField = new TTextField(frame, "Telephone", 250, 30, WHITE, BLACK);
-        contractAreaToFillPanel.add(contractNameField);
+        contractConfirmButton = new TConfirmButton(frame, 0, "Confirmer", 250, 30, contractClientField, contractVehicleField);
+        contractAreaToFillPanel.add(contractConfirmButton);
+        contractCancelButton = new TConfirmButton(frame, 0, "Annuler", 250, 30);
+        contractAreaToFillPanel.add(contractCancelButton);
     }
 
     //=============
@@ -328,8 +318,6 @@ public class TFrame extends JFrame implements Definition
 
     private void fillVehiculeCard()
     {
-        vehicleArrayList = new ArrayList<String>();
-
         vehicleListPanel = new TPanel(300, 615, null, null, new FlowLayout(FlowLayout.LEFT, 0, 0), false);
         cards[1].add(vehicleListPanel);
 
@@ -346,46 +334,65 @@ public class TFrame extends JFrame implements Definition
     private void initVehicleLists()
     {
         // Card0
-        vehicleListTitlePanel = new TPanel(285, 30, InterfaceLightColor, WHITE, new FlowLayout(FlowLayout.CENTER), true);
-        vehicleListPanel.add(vehicleListTitlePanel);
+        vehicleListContent = new TPanel(295, 615, null, null, new FlowLayout(FlowLayout.LEFT, 0, 0), false);
+        vehicleListPanel.add(vehicleListContent);
+
+        vehicleVerticalSeparator = new TPanel(5, 615, InterfaceMainColor, null, null, true);
+        vehicleListPanel.add(vehicleVerticalSeparator);
+
+        vehicleListTitlePanel = new TPanel(295, 30, InterfaceLightColor, WHITE, new FlowLayout(FlowLayout.CENTER), true);
+        vehicleListContent.add(vehicleListTitlePanel);
         vehicleListTitleLabel = new TLabel("Historique des véhicules", WHITE);
         vehicleListTitlePanel.add(vehicleListTitleLabel);
 
-        vehicleVerticalSeparator1 = new TPanel(15, 30, InterfaceMainColor, null, null, true);
-        vehicleListPanel.add(vehicleVerticalSeparator1);
 
         vehicleList = new TList(frame, 1);
-        vehicleScrollPane = new TScrollPane(this, 1, vehicleList, 300,525);
+        vehicleScrollPane = new TScrollPane(this, 1, vehicleList, 295,525);
 
-        vehicleSearchBar = new TSearchBar(frame, 1, "Rechercher un véhicule", 285, 30, LIGHTGREY, DARKGREY);
-        vehicleListPanel.add(vehicleSearchBar);
+        vehicleSearchBar = new TSearchBar(frame, 1, "Rechercher un véhicule", 295, 30, LIGHTGREY, DARKGREY);
+        vehicleListContent.add(vehicleSearchBar);
 
-        vehicleVerticalSeparator2 = new TPanel(15, 30, InterfaceMainColor, null, null, true);
-        vehicleListPanel.add(vehicleVerticalSeparator2);
+        vehicleListContent.add(vehicleScrollPane);
 
-        vehicleListPanel.add(vehicleScrollPane);
+        vehicleNewvehicleButton = new TContentButton(frame, "Nouveau véhicule", 295, 30);
+        vehicleListContent.add(vehicleNewvehicleButton);
 
-        vehicleNewvehicleButton = new TContentButton(frame, "Nouveau véhicule", 285, 30);
-        vehicleListPanel.add(vehicleNewvehicleButton);
-
-        vehicleVerticalSeparator3 = new TPanel(15, 30, InterfaceMainColor, null, null, true);
-        vehicleListPanel.add(vehicleVerticalSeparator3);
     }
 
     private void initVehicleAreasToFill()
     {
         /*vehicleSurnameLabel = new TLabel("Nom : ", WHITE);
         vehicleAreaToFillPanel.add(vehicleSurnameLabel);*/
-        vehicleSurnameField = new TTextField(frame, "Marque", 250, 30, WHITE, BLACK);
-        vehicleAreaToFillPanel.add(vehicleSurnameField);
+        vehicleBrandField = new TTextField(frame, "Marque", 250, 30, WHITE, BLACK);
+        vehicleAreaToFillPanel.add(vehicleBrandField);
 
         /*vehicleNameLabel = new TLabel("Prenom : ", WHITE);
         vehicleAreaToFillPanel.add(vehicleNameLabel);*/
-        vehicleNameField = new TTextField(frame, "Modèle", 250, 30, WHITE, BLACK);
-        vehicleAreaToFillPanel.add(vehicleNameField);
+        vehicleModelField = new TTextField(frame, "Modèle", 250, 30, WHITE, BLACK);
+        vehicleAreaToFillPanel.add(vehicleModelField);
 
-        vehicleNameField = new TTextField(frame, "Prix par jour", 250, 30, WHITE, BLACK);
-        vehicleAreaToFillPanel.add(vehicleNameField);
+        vehicleDailyPriceField = new TTextField(frame, "Prix journalier", 250, 30, WHITE, BLACK);
+        vehicleAreaToFillPanel.add(vehicleDailyPriceField);
+
+        vehicleMaxSpeedField = new TTextField(frame, "Vitesse maximale", 250, 30, WHITE, BLACK);
+        vehicleAreaToFillPanel.add(vehicleMaxSpeedField);
+
+        vehicleStateField = new TTextField(frame, "Etat du véhicule", 250, 30, WHITE, BLACK);
+        vehicleAreaToFillPanel.add(vehicleStateField);
+
+        vehicleOdometerField = new TTextField(frame, "Distance déjà parcourue", 250, 30, WHITE, BLACK);
+        vehicleAreaToFillPanel.add(vehicleOdometerField);
+
+        vehiclePowerField = new TTextField(frame, "Puissance", 250, 30, WHITE, BLACK);
+        vehicleAreaToFillPanel.add(vehiclePowerField);
+
+        vehicleNbSeatField = new TTextField(frame, "Nombre de places", 250, 30, WHITE, BLACK);
+        vehicleAreaToFillPanel.add(vehicleNbSeatField);
+
+        vehicleConfirmButton = new TConfirmButton(frame, 1, "Confirmer", 250, 30, vehicleBrandField, vehicleModelField, vehicleDailyPriceField);
+        vehicleAreaToFillPanel.add(vehicleConfirmButton);
+        vehicleCancelButton = new TConfirmButton(frame, 1, "Annuler", 250, 30);
+        vehicleAreaToFillPanel.add(vehicleCancelButton);
     }
 
     //=============
@@ -394,12 +401,6 @@ public class TFrame extends JFrame implements Definition
 
     private void fillClientCard()
     {
-        clientArrayList = new ArrayList<String>();
-        clientArrayList.add("TEXT1");
-        clientArrayList.add("TEXT2");
-        clientArrayList.add("TEXT3");
-        clientArrayList.add("TEXT4");
-
         clientListPanel = new TPanel(300, 615, null, null, new FlowLayout(FlowLayout.LEFT, 0, 0), false);
         cards[2].add(clientListPanel);
 
@@ -414,30 +415,27 @@ public class TFrame extends JFrame implements Definition
     private void initClientLists()
     {
         // Card0
-        clientListTitlePanel = new TPanel(285, 30, InterfaceLightColor, WHITE, new FlowLayout(FlowLayout.CENTER), true);
-        clientListPanel.add(clientListTitlePanel);
+        clientListContent = new TPanel(295, 615, null, null, new FlowLayout(FlowLayout.LEFT, 0, 0), false);
+        clientListPanel.add(clientListContent);
+
+        clientVerticalSeparator = new TPanel(5, 615, InterfaceMainColor, null, null, true);
+        clientListPanel.add(clientVerticalSeparator);
+
+        clientListTitlePanel = new TPanel(295, 30, InterfaceLightColor, WHITE, new FlowLayout(FlowLayout.CENTER), true);
+        clientListContent.add(clientListTitlePanel);
         clientListTitleLabel = new TLabel("Liste des clients", WHITE);
         clientListTitlePanel.add(clientListTitleLabel);
 
-        clientVerticalSeparator1 = new TPanel(15, 30, InterfaceMainColor, null, null, true);
-        clientListPanel.add(clientVerticalSeparator1);
-
         clientList = new TList(frame, 2);
-        clientScrollPane = new TScrollPane(this, 2, clientList, 300,525);
+        clientScrollPane = new TScrollPane(this, 2, clientList, 295,525);
 
-        clientSearchBar = new TSearchBar(frame, 2, "Rechercher un client", 285, 30, LIGHTGREY, DARKGREY);
-        clientListPanel.add(clientSearchBar);
+        clientSearchBar = new TSearchBar(frame, 2, "Rechercher un client", 295, 30, LIGHTGREY, DARKGREY);
+        clientListContent.add(clientSearchBar);
 
-        clientVerticalSeparator2 = new TPanel(15, 30, InterfaceMainColor, null, null, true);
-        clientListPanel.add(clientVerticalSeparator2);
+        clientListContent.add(clientScrollPane);
 
-        clientListPanel.add(clientScrollPane);
-
-        clientNewclientButton = new TContentButton(frame, "Nouveau client", 285, 30);
-        clientListPanel.add(clientNewclientButton);
-
-        clientVerticalSeparator3 = new TPanel(15, 30, InterfaceMainColor, null, null, true);
-        clientListPanel.add(clientVerticalSeparator3);
+        clientNewclientButton = new TContentButton(frame, "Nouveau client", 295, 30);
+        clientListContent.add(clientNewclientButton);
     }
 
     private void initClientAreasToFill()
@@ -467,6 +465,13 @@ public class TFrame extends JFrame implements Definition
         clientAreaToFillPanel.add(clientCancelButton);
     }
 
+    private void initArrayLists()
+    {
+        clients = new ArrayList<Client>();
+        vehicles = new ArrayList<Vehicule>();
+        contracts = new ArrayList<Contrat>();
+    }
+
     //=============
     // GETTERS
     //=============
@@ -484,16 +489,15 @@ public class TFrame extends JFrame implements Definition
 
     // TLIST GETTERS
 
-    public TList getContractList()
+    public TList getContractTList()
     {
         return contractList;
     }
-
-    public TList getVehicleList()
+    public TList getVehicleTList()
     {
         return vehicleList;
     }
-    public TList getClientList()
+    public TList getClientTList()
     {
         return clientList;
     }
@@ -517,19 +521,19 @@ public class TFrame extends JFrame implements Definition
 
     // ARRAYLIST GETTERS
 
-    public ArrayList<String> getContractArrayList()
+    public ArrayList getContractArrayList()
     {
-        return contractArrayList;
+        return contracts;
     }
 
-    public ArrayList<String> getVehicleArrayList()
+    public ArrayList getVehicleArrayList()
     {
-        return vehicleArrayList;
+        return vehicles;
     }
 
-    public ArrayList<String> getClientArrayList()
+    public ArrayList getClientArrayList()
     {
-        return clientArrayList;
+        return clients;
     }
 
     // TEXTFIELD ADD NEW CLIENT

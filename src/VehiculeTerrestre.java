@@ -3,8 +3,8 @@ public abstract class VehiculeTerrestre extends Vehicule{
     private int km;
     private float puissance;
 
-    public VehiculeTerrestre(float vitesseMax, String marque, String modele, String etat, float prixJournalier, int km, float puissance) {
-        super(vitesseMax, marque, modele, etat, prixJournalier);
+    public VehiculeTerrestre(String modele, String marque, float prixJournalier, float vitesseMax, String etat, int km, float puissance) {
+        super(modele, marque,prixJournalier, vitesseMax,  etat);
         this.km = km;
         this.puissance = puissance;
     }

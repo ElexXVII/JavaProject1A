@@ -7,7 +7,7 @@ public class TScrollPane extends JScrollPane implements Definition
 {
     TFrame frame;
 
-    ArrayList<String> list;
+    ArrayList<ParcAgent> list;
     TList tlist;
 
     public TScrollPane(TFrame frame, int whichMenu, TList tlist, int x, int y)
@@ -39,27 +39,27 @@ public class TScrollPane extends JScrollPane implements Definition
 
     public void filterModel(DefaultListModel<String> model, String filter)
     {
-        for (String s : list)
+        for (ParcAgent agent : list)
         {
-            if (!s.contains(filter))
+            if (!agent.getDisplay().contains(filter))
             {
-                if (model.contains(s))
+                if (model.contains(agent.getDisplay()))
                 {
-                    model.removeElement(s);
+                    model.removeElement(agent.getDisplay());
                 }
             }
             else
             {
-                if (!model.contains(s))
+                if (!model.contains(agent.getDisplay()))
                 {
-                    model.addElement(s);
+                    model.addElement(agent.getDisplay());
                 }
             }
         }
     }
 
-    public void addElement(DefaultListModel<String> model, String element)
+    public void addElement(DefaultListModel<String> model, ParcAgent agent)
     {
-        model.addElement(element);
+        model.addElement(agent.getDisplay());
     }
 }

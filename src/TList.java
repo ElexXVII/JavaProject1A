@@ -6,7 +6,7 @@ public class TList extends JList implements Definition
     TFrame frame;
 
     private final int whichMenu;
-    private ArrayList<String> list;
+    private ArrayList<ParcAgent> list;
 
     public TList(TFrame frame, int whichMenu)
     {
@@ -32,9 +32,10 @@ public class TList extends JList implements Definition
     public ListModel<String> createDefaultListModel()
     {
         DefaultListModel<String> model = new DefaultListModel<>();
-        for (String s : list)
+
+        for (ParcAgent agent : list)
         {
-            model.addElement(s);
+            model.addElement(agent.getDisplay());
         }
         return model;
     }

@@ -1,42 +1,47 @@
 import java.time.Duration;
 import java.time.temporal.Temporal;
 
-public class Contrat {
+public class Contrat extends ParcAgent
+{
+    private static int contractID;
+    private int id;
 
     private Client client;
     private Vehicule vehicule;
-    private Temporal debutLoc;
-    private Temporal finLoc;
+   // private Temporal debutLoc;
+    //private Temporal finLoc;
     private int kmEstime;
 
     private boolean reduction;
-    private Duration duree;
+    //private Duration duree;
     private float prixEstime;
 
-    public Contrat(Client client, Vehicule vehicule, Temporal debutLoc, Temporal finLoc, int kmEstime, boolean reduction) {
+    public Contrat(Client client, Vehicule vehicule/*, Temporal debutLoc, Temporal finLoc*/, int kmEstime, boolean reduction) {
         this.client = client;
         this.vehicule = vehicule;
-        this.debutLoc = debutLoc;
-        this.finLoc = finLoc;
+        //this.debutLoc = debutLoc;
+        //this.finLoc = finLoc;
         this.kmEstime = kmEstime;
 
-        if (this.reductionAutorisee()) {
+        /*if (this.reductionAutorisee()) {
             this.reduction = reduction;
         } else {
             this.reduction = false;
-        }
+        }*/
 
-        this.duree = Duration.between(debutLoc, finLoc).abs();
+        //this.duree = Duration.between(debutLoc, finLoc).abs();
 
         this.prixEstime = this.calculerPrix();
+
+        this.id = contractID++;
     }
 
 
-    private boolean reductionAutorisee () {
+    /*private boolean reductionAutorisee () {
         Duration septJours = Duration.ZERO;
         septJours = septJours.plusDays(7);
         return (this.duree.compareTo(septJours) > 0);
-    }
+    }*/
 
     private float calculerPrix () {
 
@@ -77,6 +82,11 @@ public class Contrat {
         } else {
             return res;
         }
+    }
+
+    public String getDisplay()
+    {
+        return id + " - " + client.getName() + " " + vehicule.getModele();
     }
 
 }
