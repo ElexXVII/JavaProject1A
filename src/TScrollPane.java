@@ -1,13 +1,12 @@
 import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
-import java.util.Collections;
 
 public class TScrollPane extends JScrollPane implements Definition
 {
     TFrame frame;
 
-    ArrayList<ParcAgent> list;
+    ArrayList list;
     TList tlist;
 
     public TScrollPane(TFrame frame, int whichMenu, TList tlist, int x, int y)
@@ -26,20 +25,20 @@ public class TScrollPane extends JScrollPane implements Definition
         switch(whichMenu)
         {
             case 0:
-                list = frame.getContractArrayList();
+                list = Gestionnaire.getContrats();
                 break;
             case 1:
-                list = frame.getVehicleArrayList();
+                list = Gestionnaire.getVehicules();
                 break;
             case 2:
-                list = frame.getClientArrayList();
+                list = Gestionnaire.getClients();
                 break;
         }
     }
 
     public void filterModel(DefaultListModel<String> model, String filter)
     {
-        for (ParcAgent agent : list)
+        for (ParcAgent agent : (ArrayList<ParcAgent>) list)
         {
             if (!agent.getDisplay().toLowerCase().contains(filter.toLowerCase()))
             {

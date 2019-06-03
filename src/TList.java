@@ -8,7 +8,7 @@ public class TList extends JList implements Definition, MouseListener {
     TFrame frame;
 
     private final int whichMenu;
-    private ArrayList<ParcAgent> list;
+    private ArrayList list;
 
     public TList(TFrame frame, int whichMenu)
     {
@@ -18,26 +18,44 @@ public class TList extends JList implements Definition, MouseListener {
         switch(whichMenu)
         {
             case 0:
-                list = frame.getContractArrayList();
+                list = Gestionnaire.getContrats();
                 break;
             case 1:
-                list = frame.getVehicleArrayList();
+                list = Gestionnaire.getVehicules();
                 break;
             case 2:
-                list = frame.getClientArrayList();
+                list = Gestionnaire.getClients();
                 break;
         }
 
         this.setModel(createDefaultListModel());
 
         this.addMouseListener(this);
+
+        this.addMouseListener( new MouseAdapter()
+        {
+            @Override
+            public void mousePressed(MouseEvent e)
+            {
+                if ( SwingUtilities.isRightMouseButton(e) )
+                {
+                    JList list = (JList)e.getSource();
+                    int row = list.locationToIndex(e.getPoint());
+                    System.out.println(e.getPoint());
+                    list.setSelectedIndex(row);
+                }
+            }
+
+        });
+
+        this.addMouseListener(new TPopClickListener());
     }
 
     public ListModel<String> createDefaultListModel()
     {
         DefaultListModel<String> model = new DefaultListModel<>();
 
-        for (ParcAgent agent : list)
+        for (ParcAgent agent : (ArrayList<ParcAgent>) list)
         {
             model.addElement(agent.getDisplay());
         }

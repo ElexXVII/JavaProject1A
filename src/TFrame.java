@@ -132,11 +132,13 @@ public class TFrame extends JFrame implements Definition
 
         initFrame();
 
+        Gestionnaire.initArrayList();
+        Gestionnaire.sauvegarder();
+
         initFramePanel();
 
         initMenu();
 
-        initArrayLists();
         initContent();
 
         this.setVisible(true);
@@ -167,6 +169,12 @@ public class TFrame extends JFrame implements Definition
     //=============
     // PRIVATE FUNCTIONS
     //=============
+
+    private void initArrayLists()
+    {
+        //GestionnaireVehicules g = new GestionnaireVehicules();
+        //g.chargerVehicules();
+    }
 
     private void initFramePanel()
     {
@@ -230,21 +238,6 @@ public class TFrame extends JFrame implements Definition
 
         closeButton = new TFrameButton(frame, "Close");
         MenuRight2.add(closeButton, BorderLayout.PAGE_START);
-    }
-
-    private void initArrayLists()
-    {
-        clients = new ArrayList<ParcAgent>();
-        vehicles = new ArrayList<ParcAgent>();
-        contracts = new ArrayList<ParcAgent>();
-
-        clients.add(Tony);
-        clients.add(George);
-        clients.add(Marcel);
-
-        vehicles.add(Twingo);
-        vehicles.add(Clio2);
-        vehicles.add(R8);
     }
 
     private void initContent()

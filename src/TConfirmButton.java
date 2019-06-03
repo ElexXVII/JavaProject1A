@@ -57,7 +57,7 @@ public class TConfirmButton extends TFlatButton implements Definition, ActionLis
             case 0:
                 scrollPane = frame.getContractScrollPane();
                 tlist = frame.getContractTList();
-                list = frame.getContractArrayList();
+                list = Gestionnaire.getContrats();
                 id = frame.contractID;
 
                 areaToFillCardPanel = frame.getContractAreaToFillPanel();
@@ -66,7 +66,7 @@ public class TConfirmButton extends TFlatButton implements Definition, ActionLis
             case 1:
                 scrollPane = frame.getVehicleScrollPane();
                 tlist = frame.getVehicleTList();
-                list = frame.getVehicleArrayList();
+                list = Gestionnaire.getVehicules();
                 id = frame.vehicleID;
 
                 areaToFillCardPanel = frame.getVehicleAreaToFillPanel();
@@ -75,7 +75,7 @@ public class TConfirmButton extends TFlatButton implements Definition, ActionLis
             case 2:
                 scrollPane = frame.getClientScrollPane();
                 tlist = frame.getClientTList();
-                list = frame.getClientArrayList();
+                list = Gestionnaire.getClients();
                 id = frame.clientID;
 
                 areaToFillCardPanel = frame.getClientAreaToFillPanel();
@@ -141,41 +141,32 @@ public class TConfirmButton extends TFlatButton implements Definition, ActionLis
 
             if (!isEmpty)
             {
-                ParcAgent newAgent = new ParcAgent();
+                ParcAgent newAgent;
 
                 switch(whichMenu)
                 {
                     case 0:
-                        scrollPane = frame.getContractScrollPane();
-                        tlist = frame.getContractTList();
-                        list = frame.getContractArrayList();
-                        id = frame.contractID;
-
                         newAgent = new Contrat(Tony, Twingo, 100, false);
+                        scrollPane.addElement((DefaultListModel<String>) tlist.getModel(), newAgent);
+                        list.add(newAgent);
                         break;
                     case 1:
-                        scrollPane = frame.getVehicleScrollPane();
-                        tlist = frame.getVehicleTList();
-                        list = frame.getVehicleArrayList();
-                        id = frame.vehicleID;
-
                         newAgent = new Voiture(textFields[0].getText(), textFields[1].getText(), Float.parseFloat(textFields[2].getText()),
                                 Float.parseFloat(textFields[3].getText()), textFields[4].getText(), Integer.parseInt(textFields[5].getText()),
                                 Float.parseFloat(textFields[6].getText()), Integer.parseInt(textFields[7].getText()));
+                        scrollPane.addElement((DefaultListModel<String>) tlist.getModel(), newAgent);
+                        list.add(newAgent);
                         break;
                     case 2:
-                        scrollPane = frame.getClientScrollPane();
-                        tlist = frame.getClientTList();
-                        list = frame.getClientArrayList();
-                        id = frame.clientID;
-
                         newAgent = new Client(textFields[0].getText(), textFields[1].getText(), textFields[2].getText(), textFields[3].getText());
+                        scrollPane.addElement((DefaultListModel<String>) tlist.getModel(), newAgent);
+                        list.add(newAgent);
                         break;
                 }
 
                 //String newElement = (id++)+ " - "+ frame.getClientSurnameField().getText()+" "+frame.getClientNameField().getText();
-                scrollPane.addElement((DefaultListModel<String>) tlist.getModel(), newAgent);
-                list.add(newAgent);
+                //scrollPane.addElement((DefaultListModel<String>) tlist.getModel(), newAgent);
+                //list.add(newAgent);
                 cardLayout.show(areaToFillCardPanel,areaTofillCardName[0]);
 
                 for (TTextField textField : textFields)

@@ -1,7 +1,6 @@
-import java.time.Duration;
-import java.time.temporal.Temporal;
+import java.io.Serializable;
 
-public class Contrat extends ParcAgent
+public class Contrat extends ParcAgent implements Serializable
 {
     static private int contractID = 0;
     private int id;

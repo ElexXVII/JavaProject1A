@@ -3,11 +3,25 @@ import java.beans.XMLEncoder;
 import java.io.*;
 import java.util.ArrayList;
 
-public abstract class Gestionnaire {
+public class Gestionnaire implements Definition, Serializable
+{
+
+    public Gestionnaire() {}
 
     private static ArrayList<Vehicule> vehicules = new ArrayList<>();
     private static ArrayList<Client> clients = new ArrayList<>();
     private static ArrayList<Contrat> contrats = new ArrayList<>();
+
+    public static void initArrayList()
+    {
+        clients.add(Tony);
+        clients.add(George);
+        clients.add(Marcel);
+
+        vehicules.add(Twingo);
+        vehicules.add(Clio2);
+        vehicules.add(R8);
+    }
 
     /** Vehicules **/
 
@@ -65,8 +79,23 @@ public abstract class Gestionnaire {
 
     /** XML **/
 
+    public static void sauvegarder()
+    {
+        sauvegarderClients();
+        sauvegarderContrats();
+        sauvegarderVehicules();
+    }
+
+    public static void charger()
+    {
+        chargerClients();
+        chargerContrats();
+        chargerVehicules();
+    }
+
     public static void chargerVehicules () {
         XMLDecoder decoder;
+
         try {
            decoder = new XMLDecoder(new FileInputStream("vehicules.xml"));
         } catch (FileNotFoundException e) {
@@ -80,17 +109,20 @@ public abstract class Gestionnaire {
         decoder.close();
     }
 
-    public static void sauvegarderVehicules () {
+    private static void sauvegarderVehicules () {
         XMLEncoder encoder;
+
+        TArray a = new TArray(vehicules);
+
         try {
-            encoder = new XMLEncoder(new FileOutputStream("vehicules.xml"));
+            encoder = new XMLEncoder(new BufferedOutputStream(new FileOutputStream("vehicules.xml")));
         } catch (FileNotFoundException e) {
             encoder = null;
             e.printStackTrace();
         }
 
         assert encoder != null;
-        encoder.writeObject(vehicules);
+        encoder.writeObject(a);
 
         encoder.close();
     }
@@ -111,17 +143,19 @@ public abstract class Gestionnaire {
         decoder.close();
     }
 
-    public static void sauvegarderClients () {
+    private static void sauvegarderClients () {
         XMLEncoder encoder;
+
+        TArray a = new TArray(clients);
+
         try {
-            encoder = new XMLEncoder(new FileOutputStream("clients.xml"));
+            encoder = new XMLEncoder(new BufferedOutputStream(new FileOutputStream("clients.xml")));
         } catch (FileNotFoundException e) {
             encoder = null;
             e.printStackTrace();
         }
 
-        assert encoder != null;
-        encoder.writeObject(clients);
+        encoder.writeObject(a);
 
         encoder.close();
     }
@@ -136,23 +170,23 @@ public abstract class Gestionnaire {
             e.printStackTrace();
         }
 
-        assert decoder != null;
-        contrats = (ArrayList<Contrat>)decoder.readObject();
+        contrats = (ArrayList<Contrat>) decoder.readObject();
 
         decoder.close();
     }
 
-    public static void sauvegarderContrats () {
+    private static void sauvegarderContrats () {
         XMLEncoder encoder;
+
+        TArray a = new TArray(contrats);
+
         try {
-            encoder = new XMLEncoder(new FileOutputStream("contrats.xml"));
+            encoder = new XMLEncoder(new BufferedOutputStream(new FileOutputStream("contrats.xml")));
         } catch (FileNotFoundException e) {
             encoder = null;
             e.printStackTrace();
         }
-
-        assert encoder != null;
-        encoder.writeObject(contrats);
+        encoder.writeObject(a);
 
         encoder.close();
     }
