@@ -1,3 +1,4 @@
+import javax.smartcardio.Card;
 import javax.swing.*;
 import java.awt.*;
 
@@ -47,6 +48,7 @@ public class TFrame extends JFrame implements Definition
 
     // Contract Panel : Card[0]
     // List
+    private CardLayout contractAreaLayout;
     private TPanel contractListPanel;
     private TPanel contractListContent;
     private TPanel contractListTitlePanel;
@@ -58,6 +60,8 @@ public class TFrame extends JFrame implements Definition
     private TScrollPane contractScrollPane;
     // Contract Area To Fill
     private TPanel contractAreaToFillPanel;
+    private TPanel contractTextFieldArea;
+    private TPanel contractEmpty;
     private TTextField contractClientField;
     private TTextField contractVehicleField;
     private TConfirmButton contractConfirmButton;
@@ -65,6 +69,7 @@ public class TFrame extends JFrame implements Definition
 
     // Contract Panel : Card[1]
     // List
+    private CardLayout vehicleAreaLayout;
     private TPanel vehicleListPanel;
     private TPanel vehicleListContent;
     private TPanel vehicleListTitlePanel;
@@ -76,6 +81,7 @@ public class TFrame extends JFrame implements Definition
     private TScrollPane vehicleScrollPane;
     // vehicle Area To Fill
     private TPanel vehicleAreaToFillPanel;
+    private TPanel vehicleTextFieldArea;
     private TTextField vehicleBrandField;
     private TTextField vehicleModelField;
     private TTextField vehicleDailyPriceField;
@@ -89,6 +95,7 @@ public class TFrame extends JFrame implements Definition
 
     // Client Panel : Card[2]
     // List
+    private CardLayout clientAreaLayout;
     private TPanel clientListPanel;
     private TPanel clientListContent;
     private TPanel clientListTitlePanel;
@@ -100,6 +107,7 @@ public class TFrame extends JFrame implements Definition
     private TScrollPane clientScrollPane;
     // client Area To Fill
     private TPanel clientAreaToFillPanel;
+    private TPanel clientTextFieldArea;
     private TTextField clientSurnameField;
     private TTextField clientNameField;
     private TTextField clientPhoneField;
@@ -229,8 +237,8 @@ public class TFrame extends JFrame implements Definition
         contracts = new ArrayList<ParcAgent>();
 
         clients.add(Tony);
-        //clients.add(George);
-        //clients.add(Marcel);
+        clients.add(George);
+        clients.add(Marcel);
 
         vehicles.add(Twingo);
         vehicles.add(Clio2);
@@ -274,12 +282,15 @@ public class TFrame extends JFrame implements Definition
 
     private void fillContractCard()
     {
+
         contractListPanel = new TPanel(300, 615, null, null, new FlowLayout(FlowLayout.LEFT, 0, 0), false);
         cards[0].add(contractListPanel);
 
+        contractAreaLayout = new CardLayout();
+        contractAreaToFillPanel = new TPanel(690, 616, InterfaceLightColor, null, contractAreaLayout, true);
+
         initContractLists();
 
-        contractAreaToFillPanel = new TPanel(690, 616, InterfaceLightColor, null, new FlowLayout(FlowLayout.CENTER, getWidth()/2, 30), true);
         cards[0].add(contractAreaToFillPanel);
 
         initContractAreasToFill();
@@ -300,7 +311,6 @@ public class TFrame extends JFrame implements Definition
         contractListTitleLabel = new TLabel("Historique des contrats", WHITE);
         contractListTitlePanel.add(contractListTitleLabel);
 
-
         contractList = new TList(frame, 0);
         contractScrollPane = new TScrollPane(this, 0, contractList, 295,525);
 
@@ -309,22 +319,30 @@ public class TFrame extends JFrame implements Definition
 
         contractListContent.add(contractScrollPane);
 
-        contractNewContractButton = new TContentButton(frame, "Nouveau contrat", 295, 30);
+        contractNewContractButton = new TContentButton(frame, 0, "Nouveau contrat", 295, 30);
         contractListContent.add(contractNewContractButton);
     }
 
     private void initContractAreasToFill()
     {
+        contractEmpty = new TPanel(690, 616, InterfaceLightColor, null, null, true);
+        contractAreaToFillPanel.add(contractEmpty, areaTofillCardName[0]);
+
+        contractTextFieldArea = new TPanel(690, 616, InterfaceLightColor, null, new FlowLayout(FlowLayout.CENTER, getWidth()/2, 30), true);
+        contractAreaToFillPanel.add(contractTextFieldArea, areaTofillCardName[1]);
+
         contractClientField = new TTextField(frame, "Client", 250, 30, WHITE, BLACK);
-        contractAreaToFillPanel.add(contractClientField);
+        contractTextFieldArea.add(contractClientField);
 
         contractVehicleField = new TTextField(frame, "Vehicle", 250, 30, WHITE, BLACK);
-        contractAreaToFillPanel.add(contractVehicleField);
+        contractTextFieldArea.add(contractVehicleField);
 
         contractConfirmButton = new TConfirmButton(frame, 0, "Confirmer", 250, 30, contractClientField, contractVehicleField);
-        contractAreaToFillPanel.add(contractConfirmButton);
+        contractTextFieldArea.add(contractConfirmButton);
         contractCancelButton = new TConfirmButton(frame, 0, "Annuler", 250, 30);
-        contractAreaToFillPanel.add(contractCancelButton);
+        contractTextFieldArea.add(contractCancelButton);
+
+        contractAreaLayout.show(contractAreaToFillPanel, areaTofillCardName[0]);
     }
 
     //=============
@@ -369,7 +387,7 @@ public class TFrame extends JFrame implements Definition
 
         vehicleListContent.add(vehicleScrollPane);
 
-        vehicleNewVehicleButton = new TContentButton(frame, "Nouveau véhicule", 295, 30);
+        vehicleNewVehicleButton = new TContentButton(frame, 1, "Nouveau véhicule", 295, 30);
         vehicleListContent.add(vehicleNewVehicleButton);
 
     }
@@ -451,7 +469,7 @@ public class TFrame extends JFrame implements Definition
 
         clientListContent.add(clientScrollPane);
 
-        clientNewclientButton = new TContentButton(frame, "Nouveau client", 295, 30);
+        clientNewclientButton = new TContentButton(frame, 2, "Nouveau client", 295, 30);
         clientListContent.add(clientNewclientButton);
     }
 
@@ -495,6 +513,36 @@ public class TFrame extends JFrame implements Definition
 
     public CardLayout getCardLayout() {
         return cardLayout;
+    }
+
+    public CardLayout getContractAreaLayout()
+    {
+        //System.out.println((contractAreaLayout==null)+"");
+        return contractAreaLayout;
+    }
+
+    public CardLayout getVehicleAreaLayout()
+    {
+        return vehicleAreaLayout;
+    }
+
+    public CardLayout getClientAreaLayout()
+    {
+        return clientAreaLayout;
+    }
+
+    public TPanel getContractAreaToFillPanel()
+    {
+        return contractAreaToFillPanel;
+    }
+    public TPanel getVehicleAreaToFillPanel()
+    {
+        return vehicleAreaToFillPanel;
+    }
+
+    public TPanel getClientAreaToFillPanel()
+    {
+        return clientAreaToFillPanel;
     }
 
     // TLIST GETTERS

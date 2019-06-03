@@ -1,17 +1,46 @@
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class TContentButton extends TFlatButton implements Definition
+public class TContentButton extends TFlatButton implements Definition, ActionListener
 {
     TFrame frame;
 
-    public TContentButton(TFrame frame, String text, int x, int y)
+    TPanel areaToFillCardPanel;
+    CardLayout cardLayout;
+
+    int whichMenu;
+
+    public TContentButton(TFrame frame, int whichMenu, String text, int x, int y)
     {
         super(text);
 
         this.frame = frame;
+        this.whichMenu = whichMenu;
         this.setPreferredSize(new Dimension(x, y));
         this.setForeground(WHITE);
         this.setFont(menuFont);
+
+        //System.out.println(whichMenu);
+        switch(whichMenu)
+        {
+            case 0:
+                areaToFillCardPanel = frame.getContractAreaToFillPanel();
+                cardLayout = frame.getContractAreaLayout();
+                //System.out.println((cardLayout==null)+"");
+                break;
+            case 1:
+                areaToFillCardPanel = frame.getVehicleAreaToFillPanel();
+                cardLayout = frame.getVehicleAreaLayout();
+                break;
+            case 2:
+                areaToFillCardPanel = frame.getClientAreaToFillPanel();
+                cardLayout = frame.getClientAreaLayout();
+                break;
+        }
+        //System.out.println((cardLayout==null)+"");
+
+        this.addActionListener(this);
 
         super.setBorderPainted(false);
         super.setFocusPainted(false);
@@ -51,5 +80,12 @@ public class TContentButton extends TFlatButton implements Definition
         //g2.fillRect(getWidth()-1, 0, getWidth(), getHeight());
 
         super.paintComponent(g);
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e)
+    {
+        //System.out.println((areaToFillCardPanel==null)+"");
+        cardLayout.show(areaToFillCardPanel,areaTofillCardName[1]);
     }
 }
