@@ -1,4 +1,6 @@
-public abstract class Vehicule extends ParcAgent
+import java.io.Serializable;
+
+public abstract class Vehicule extends ParcAgent implements Serializable
 {
     static private int carID = 0;
     private int id;

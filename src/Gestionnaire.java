@@ -3,14 +3,16 @@ import java.beans.XMLEncoder;
 import java.io.*;
 import java.util.ArrayList;
 
-public class GestionnaireVehicules implements Serializable {
+public class Gestionnaire {
+
+    private ArrayList<Vehicule> vehicules = new ArrayList<>();
+    private ArrayList<Client> clients = new ArrayList<>();
+    private ArrayList<Contrat> contrats = new ArrayList<>();
+
 
     public ArrayList<Vehicule> getVehicules() {
         return vehicules;
     }
-
-    private ArrayList<Vehicule> vehicules = new ArrayList<>();
-
 
     public Vehicule getVehicule (int id) {
         return vehicules.get(id);
