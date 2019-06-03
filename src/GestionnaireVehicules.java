@@ -22,7 +22,7 @@ public class GestionnaireVehicules implements Serializable {
     public void chargerVehicules () {
         XMLDecoder decoder;
         try {
-           decoder = new XMLDecoder(new FileInputStream("vehicules.json"));
+           decoder = new XMLDecoder(new FileInputStream("vehicules.xml"));
         } catch (FileNotFoundException e) {
             decoder = null;
             e.printStackTrace();
@@ -37,7 +37,7 @@ public class GestionnaireVehicules implements Serializable {
     public void sauvegarderVehicules () {
         XMLEncoder encoder;
         try {
-            encoder = new XMLEncoder(new FileOutputStream("vehicules.json"));
+            encoder = new XMLEncoder(new FileOutputStream("vehicules.xml"));
         } catch (FileNotFoundException e) {
             encoder = null;
             e.printStackTrace();
