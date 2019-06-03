@@ -28,9 +28,25 @@ public class GestionnaireVehicules implements Serializable {
             e.printStackTrace();
         }
 
-        ajouterVehicule((Vehicule)decoder.readObject());
+        assert decoder != null;
+        vehicules = (ArrayList<Vehicule>)decoder.readObject();
 
         decoder.close();
+    }
+
+    public void sauvegarderVehicules () {
+        XMLEncoder encoder;
+        try {
+            encoder = new XMLEncoder(new FileOutputStream("vehicules.json"));
+        } catch (FileNotFoundException e) {
+            encoder = null;
+            e.printStackTrace();
+        }
+
+        assert encoder != null;
+        encoder.writeObject(vehicules);
+
+        encoder.close();
     }
 
 }
