@@ -48,7 +48,6 @@ public class TFrame extends JFrame implements Definition
 
     // Contract Panel : Card[0]
     // List
-    private CardLayout contractAreaLayout;
     private TPanel contractListPanel;
     private TPanel contractListContent;
     private TPanel contractListTitlePanel;
@@ -59,6 +58,7 @@ public class TFrame extends JFrame implements Definition
     private TSearchBar contractSearchBar;
     private TScrollPane contractScrollPane;
     // Contract Area To Fill
+    private CardLayout contractAreaLayout;
     private TPanel contractAreaToFillPanel;
     private TPanel contractTextFieldArea;
     private TPanel contractEmpty;
@@ -69,7 +69,6 @@ public class TFrame extends JFrame implements Definition
 
     // Contract Panel : Card[1]
     // List
-    private CardLayout vehicleAreaLayout;
     private TPanel vehicleListPanel;
     private TPanel vehicleListContent;
     private TPanel vehicleListTitlePanel;
@@ -80,8 +79,10 @@ public class TFrame extends JFrame implements Definition
     private TSearchBar vehicleSearchBar;
     private TScrollPane vehicleScrollPane;
     // vehicle Area To Fill
+    private CardLayout vehicleAreaLayout;
     private TPanel vehicleAreaToFillPanel;
     private TPanel vehicleTextFieldArea;
+    private TPanel vehicleEmpty;
     private TTextField vehicleBrandField;
     private TTextField vehicleModelField;
     private TTextField vehicleDailyPriceField;
@@ -95,7 +96,6 @@ public class TFrame extends JFrame implements Definition
 
     // Client Panel : Card[2]
     // List
-    private CardLayout clientAreaLayout;
     private TPanel clientListPanel;
     private TPanel clientListContent;
     private TPanel clientListTitlePanel;
@@ -106,8 +106,10 @@ public class TFrame extends JFrame implements Definition
     private TSearchBar clientSearchBar;
     private TScrollPane clientScrollPane;
     // client Area To Fill
+    private CardLayout clientAreaLayout;
     private TPanel clientAreaToFillPanel;
     private TPanel clientTextFieldArea;
+    private TPanel clientEmpty;
     private TTextField clientSurnameField;
     private TTextField clientNameField;
     private TTextField clientPhoneField;
@@ -282,7 +284,6 @@ public class TFrame extends JFrame implements Definition
 
     private void fillContractCard()
     {
-
         contractListPanel = new TPanel(300, 615, null, null, new FlowLayout(FlowLayout.LEFT, 0, 0), false);
         cards[0].add(contractListPanel);
 
@@ -294,7 +295,6 @@ public class TFrame extends JFrame implements Definition
         cards[0].add(contractAreaToFillPanel);
 
         initContractAreasToFill();
-
     }
 
     private void initContractLists()
@@ -354,14 +354,14 @@ public class TFrame extends JFrame implements Definition
         vehicleListPanel = new TPanel(300, 615, null, null, new FlowLayout(FlowLayout.LEFT, 0, 0), false);
         cards[1].add(vehicleListPanel);
 
+        vehicleAreaLayout = new CardLayout();
+        vehicleAreaToFillPanel = new TPanel(690, 616, InterfaceLightColor, null, vehicleAreaLayout, true);
+
         initVehicleLists();
 
-        vehicleAreaToFillPanel = new TPanel(690, 616, InterfaceLightColor, null, new FlowLayout(FlowLayout.CENTER, getWidth()/2, 30), true);
         cards[1].add(vehicleAreaToFillPanel);
 
         initVehicleAreasToFill();
-
-        cardLayout.show(contentPanel, "Mes contrats");
     }
 
     private void initVehicleLists()
@@ -394,40 +394,46 @@ public class TFrame extends JFrame implements Definition
 
     private void initVehicleAreasToFill()
     {
+        vehicleEmpty = new TPanel(690, 616, InterfaceLightColor, null, null, true);
+        vehicleAreaToFillPanel.add(vehicleEmpty, areaTofillCardName[0]);
+
+        vehicleTextFieldArea = new TPanel(690, 616, InterfaceLightColor, null, new FlowLayout(FlowLayout.CENTER, getWidth()/2, 30), true);
+        vehicleAreaToFillPanel.add(vehicleTextFieldArea, areaTofillCardName[1]);
+
         /*vehicleSurnameLabel = new TLabel("Nom : ", WHITE);
         vehicleAreaToFillPanel.add(vehicleSurnameLabel);*/
         vehicleBrandField = new TTextField(frame, "Marque", 250, 30, WHITE, BLACK);
-        vehicleAreaToFillPanel.add(vehicleBrandField);
+        vehicleTextFieldArea.add(vehicleBrandField);
 
         /*vehicleNameLabel = new TLabel("Prenom : ", WHITE);
         vehicleAreaToFillPanel.add(vehicleNameLabel);*/
         vehicleModelField = new TTextField(frame, "Modèle", 250, 30, WHITE, BLACK);
-        vehicleAreaToFillPanel.add(vehicleModelField);
+        vehicleTextFieldArea.add(vehicleModelField);
 
         vehicleDailyPriceField = new TTextField(frame, "Prix journalier", 250, 30, WHITE, BLACK);
-        vehicleAreaToFillPanel.add(vehicleDailyPriceField);
+        vehicleTextFieldArea.add(vehicleDailyPriceField);
 
         vehicleMaxSpeedField = new TTextField(frame, "Vitesse maximale", 250, 30, WHITE, BLACK);
-        vehicleAreaToFillPanel.add(vehicleMaxSpeedField);
+        vehicleTextFieldArea.add(vehicleMaxSpeedField);
 
         vehicleStateField = new TTextField(frame, "Etat du véhicule", 250, 30, WHITE, BLACK);
-        vehicleAreaToFillPanel.add(vehicleStateField);
+        vehicleTextFieldArea.add(vehicleStateField);
 
         vehicleOdometerField = new TTextField(frame, "Distance déjà parcourue", 250, 30, WHITE, BLACK);
-        vehicleAreaToFillPanel.add(vehicleOdometerField);
+        vehicleTextFieldArea.add(vehicleOdometerField);
 
         vehiclePowerField = new TTextField(frame, "Puissance", 250, 30, WHITE, BLACK);
-        vehicleAreaToFillPanel.add(vehiclePowerField);
+        vehicleTextFieldArea.add(vehiclePowerField);
 
         vehicleNbSeatField = new TTextField(frame, "Nombre de places", 250, 30, WHITE, BLACK);
-        vehicleAreaToFillPanel.add(vehicleNbSeatField);
+        vehicleTextFieldArea.add(vehicleNbSeatField);
 
         vehicleConfirmButton = new TConfirmButton(frame, 1, "Confirmer", 250, 30, vehicleBrandField, vehicleModelField, vehicleDailyPriceField,
                 vehicleMaxSpeedField, vehicleStateField, vehicleOdometerField, vehiclePowerField, vehicleNbSeatField);
-        vehicleAreaToFillPanel.add(vehicleConfirmButton);
+        vehicleTextFieldArea.add(vehicleConfirmButton);
 
         vehicleCancelButton = new TConfirmButton(frame, 1, "Annuler", 250, 30);
-        vehicleAreaToFillPanel.add(vehicleCancelButton);
+        vehicleTextFieldArea.add(vehicleCancelButton);
     }
 
     //=============
@@ -439,9 +445,11 @@ public class TFrame extends JFrame implements Definition
         clientListPanel = new TPanel(300, 615, null, null, new FlowLayout(FlowLayout.LEFT, 0, 0), false);
         cards[2].add(clientListPanel);
 
+        clientAreaLayout = new CardLayout();
+        clientAreaToFillPanel = new TPanel(690, 616, InterfaceLightColor, null, clientAreaLayout, true);
+
         initClientLists();
 
-        clientAreaToFillPanel = new TPanel(690, 616, InterfaceLightColor, null, new FlowLayout(FlowLayout.CENTER, getWidth()/2, 30), true);
         cards[2].add(clientAreaToFillPanel);
 
         initClientAreasToFill();
@@ -475,29 +483,35 @@ public class TFrame extends JFrame implements Definition
 
     private void initClientAreasToFill()
     {
+        clientEmpty = new TPanel(690, 616, InterfaceLightColor, null, null, true);
+        clientAreaToFillPanel.add(clientEmpty, areaTofillCardName[0]);
+
+        clientTextFieldArea = new TPanel(690, 616, InterfaceLightColor, null, new FlowLayout(FlowLayout.CENTER, getWidth()/2, 30), true);
+        clientAreaToFillPanel.add(clientTextFieldArea, areaTofillCardName[1]);
+
         /*clientSurnameLabel = new TLabel("Nom : ", WHITE);
         clientAreaToFillPanel.add(clientSurnameLabel);*/
         clientSurnameField = new TTextField(frame, "Nom", 250, 30, WHITE, BLACK);
-        clientAreaToFillPanel.add(clientSurnameField);
+        clientTextFieldArea.add(clientSurnameField);
 
         /*clientNameLabel = new TLabel("Prenom : ", WHITE);
         clientAreaToFillPanel.add(clientNameLabel);*/
         clientNameField = new TTextField(frame, "Prenom", 250, 30, WHITE, BLACK);
-        clientAreaToFillPanel.add(clientNameField);
+        clientTextFieldArea.add(clientNameField);
 
         clientPhoneField = new TTextField(frame, "Telephone", 250, 30, WHITE, BLACK);
-        clientAreaToFillPanel.add(clientPhoneField);
+        clientTextFieldArea.add(clientPhoneField);
 
         clientMailField = new TTextField(frame, "E-mail", 250, 30, WHITE, BLACK);
-        clientAreaToFillPanel.add(clientMailField);
+        clientTextFieldArea.add(clientMailField);
 
         clientAdressField = new TTextField(frame, "Adresse", 250, 30, WHITE, BLACK);
-        clientAreaToFillPanel.add(clientAdressField);
+        clientTextFieldArea.add(clientAdressField);
 
         clientConfirmButton = new TConfirmButton(frame, 2, "Confirmer", 250, 30, clientSurnameField, clientNameField, clientPhoneField, clientMailField, clientAdressField);
-        clientAreaToFillPanel.add(clientConfirmButton);
+        clientTextFieldArea.add(clientConfirmButton);
         clientCancelButton = new TConfirmButton(frame, 2, "Annuler", 250, 30);
-        clientAreaToFillPanel.add(clientCancelButton);
+        clientTextFieldArea.add(clientCancelButton);
     }
 
     //=============

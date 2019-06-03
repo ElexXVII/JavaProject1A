@@ -20,8 +20,9 @@ public interface Definition
     // Colors
     Color WHITE = new Color(0xFFFFFF);
     Color BLACK = new Color(0);
-    Color LIGHTGREY = new Color(0xCCDDDD);
+    Color LIGHTGREY = new Color(0xDDDDDD);
     Color DARKGREY = new Color(0x555555);
+    Color emptyErrorColor = new Color(0xFFBBBB);
 
     Color InterfaceMainColor = new Color(0x4773B9);
     Color InterfaceLightColor = new Color (0x6A9DDB);

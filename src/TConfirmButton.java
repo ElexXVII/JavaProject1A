@@ -2,7 +2,6 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.time.temporal.Temporal;
 import java.util.ArrayList;
 
 public class TConfirmButton extends TFlatButton implements Definition, ActionListener
@@ -18,6 +17,9 @@ public class TConfirmButton extends TFlatButton implements Definition, ActionLis
     ArrayList list;
 
     TTextField[] textFields;
+
+    TPanel areaToFillCardPanel;
+    CardLayout cardLayout;
 
     public TConfirmButton(TFrame frame, int whichMenu, String text, int x, int y, TTextField... textFields)
     {
@@ -57,18 +59,27 @@ public class TConfirmButton extends TFlatButton implements Definition, ActionLis
                 tlist = frame.getContractTList();
                 list = frame.getContractArrayList();
                 id = frame.contractID;
+
+                areaToFillCardPanel = frame.getContractAreaToFillPanel();
+                cardLayout = frame.getContractAreaLayout();
                 break;
             case 1:
                 scrollPane = frame.getVehicleScrollPane();
                 tlist = frame.getVehicleTList();
                 list = frame.getVehicleArrayList();
                 id = frame.vehicleID;
+
+                areaToFillCardPanel = frame.getVehicleAreaToFillPanel();
+                cardLayout = frame.getVehicleAreaLayout();
                 break;
             case 2:
                 scrollPane = frame.getClientScrollPane();
                 tlist = frame.getClientTList();
                 list = frame.getClientArrayList();
                 id = frame.clientID;
+
+                areaToFillCardPanel = frame.getClientAreaToFillPanel();
+                cardLayout = frame.getClientAreaLayout();
                 break;
         }
     }
@@ -109,7 +120,7 @@ public class TConfirmButton extends TFlatButton implements Definition, ActionLis
     {
         if (name.equals("Annuler"))
         {
-
+            cardLayout.show(areaToFillCardPanel,areaTofillCardName[0]);
         }
         else
         {
@@ -120,8 +131,14 @@ public class TConfirmButton extends TFlatButton implements Definition, ActionLis
                 if(textField.getText().isEmpty())
                 {
                     isEmpty = true;
+                    textField.setBackground(emptyErrorColor);
+                }
+                else
+                {
+                    textField.setBackground(WHITE);
                 }
             }
+
             if (!isEmpty)
             {
                 ParcAgent newAgent = new ParcAgent();
@@ -159,6 +176,7 @@ public class TConfirmButton extends TFlatButton implements Definition, ActionLis
                 //String newElement = (id++)+ " - "+ frame.getClientSurnameField().getText()+" "+frame.getClientNameField().getText();
                 scrollPane.addElement((DefaultListModel<String>) tlist.getModel(), newAgent);
                 list.add(newAgent);
+                cardLayout.show(areaToFillCardPanel,areaTofillCardName[0]);
 
                 for (TTextField textField : textFields)
                 {
