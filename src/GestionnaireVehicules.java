@@ -5,7 +5,12 @@ import java.util.ArrayList;
 
 public class GestionnaireVehicules implements Serializable {
 
+    public ArrayList<Vehicule> getVehicules() {
+        return vehicules;
+    }
+
     private ArrayList<Vehicule> vehicules = new ArrayList<>();
+
 
     public Vehicule getVehicule (int id) {
         return vehicules.get(id);
