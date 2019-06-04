@@ -11,6 +11,37 @@ public class Client extends ParcAgent
     private String phone;
     private String address;
 
+    public Client() {
+    }
+
+    public static int getClientID() {
+        return clientID;
+    }
+
+    public static void setClientID(int clientID) {
+        Client.clientID = clientID;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
     public Client(String name, String surname, String phone, String address)
     {
         this.name = name;
