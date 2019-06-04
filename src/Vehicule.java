@@ -16,7 +16,39 @@ public abstract class Vehicule extends ParcAgent
 
     }
 
-    public Vehicule( String modele, String marque, float prixJournalier, float vitesseMax, String etat) {
+    public static int getCarID() {
+        return carID;
+    }
+
+    public static void setCarID(int carID) {
+        Vehicule.carID = carID;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setVitesseMax(float vitesseMax) {
+        this.vitesseMax = vitesseMax;
+    }
+
+    public void setMarque(String marque) {
+        this.marque = marque;
+    }
+
+    public void setModele(String modele) {
+        this.modele = modele;
+    }
+
+    public void setEtat(String etat) {
+        this.etat = etat;
+    }
+
+    public void setPrixJournalier(float prixJournalier) {
+        this.prixJournalier = prixJournalier;
+    }
+
+    public Vehicule(String modele, String marque, float prixJournalier, float vitesseMax, String etat) {
         //this.id = nbClients;
         this.vitesseMax = vitesseMax;
         this.marque = marque;
