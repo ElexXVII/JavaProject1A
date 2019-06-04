@@ -8,7 +8,7 @@ class TPopUpMenu extends JPopupMenu implements Definition
 
     public TPopUpMenu()
     {
-        this.setBorder(BorderFactory.createMatteBorder(1, 1, 1, 1, Color.BLACK));//Border( 2, 2, 2, 2 ));
+        this.setBorder(BorderFactory.createMatteBorder(1, 1, 1, 1, Color.BLUE));//Border( 2, 2, 2, 2 ));
 
         changeItem = new JMenuItem("Modifier");
         add(changeItem);
