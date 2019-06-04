@@ -1,15 +1,18 @@
 import javax.swing.*;
+import java.awt.*;
 
-class TPopUpMenu extends JPopupMenu
+class TPopUpMenu extends JPopupMenu implements Definition
 {
-    JMenuItem changeItem;
-    JMenuItem deleteItem;
+    private JMenuItem changeItem;
+    private JMenuItem deleteItem;
 
     public TPopUpMenu()
     {
-        changeItem = new JMenuItem("Click Me!");
+        this.setBorder(BorderFactory.createMatteBorder(1, 1, 1, 1, Color.BLACK));//Border( 2, 2, 2, 2 ));
+
+        changeItem = new JMenuItem("Modifier");
         add(changeItem);
-        deleteItem = new JMenuItem("Click Me!");
+        deleteItem = new JMenuItem("Supprimer");
         add(deleteItem);
     }
 }

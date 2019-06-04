@@ -1,3 +1,5 @@
+import java.io.Serializable;
+
 public abstract class VehiculeAerien extends Vehicule {
 
     private int heuresVol;

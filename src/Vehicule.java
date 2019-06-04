@@ -1,6 +1,6 @@
 import java.io.Serializable;
 
-public abstract class Vehicule extends ParcAgent implements Serializable
+public abstract class Vehicule extends ParcAgent
 {
     static private int carID = 0;
     private int id;
@@ -11,6 +11,11 @@ public abstract class Vehicule extends ParcAgent implements Serializable
     private String modele;
     private String etat;
     private float prixJournalier;
+
+    public Vehicule()
+    {
+
+    }
 
     public Vehicule( String modele, String marque, float prixJournalier, float vitesseMax, String etat) {
         //this.id = nbClients;

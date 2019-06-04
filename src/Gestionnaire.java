@@ -3,12 +3,13 @@ import java.beans.XMLEncoder;
 import java.io.*;
 import java.util.ArrayList;
 
-public class Gestionnaire implements Definition, Serializable
+public class Gestionnaire implements Definition
 {
 
     public Gestionnaire() {}
 
     private static ArrayList<Vehicule> vehicules = new ArrayList<>();
+    private static ArrayList vehiculesTest = new ArrayList<>();
     private static ArrayList<Client> clients = new ArrayList<>();
     private static ArrayList<Contrat> contrats = new ArrayList<>();
 
@@ -21,6 +22,10 @@ public class Gestionnaire implements Definition, Serializable
         vehicules.add(Twingo);
         vehicules.add(Clio2);
         vehicules.add(R8);
+
+        vehiculesTest.add(Twingo);
+        vehiculesTest.add(Clio2);
+        vehiculesTest.add(R8);
     }
 
     /** Vehicules **/
@@ -113,18 +118,25 @@ public class Gestionnaire implements Definition, Serializable
         XMLEncoder encoder;
 
         TArray a = new TArray(vehicules);
+        FileOutputStream f = null;
 
         try {
-            encoder = new XMLEncoder(new BufferedOutputStream(new FileOutputStream("vehicules.xml")));
+            f = new FileOutputStream("vehicules.xml");
         } catch (FileNotFoundException e) {
-            encoder = null;
             e.printStackTrace();
         }
 
-        assert encoder != null;
-        encoder.writeObject(a);
+        encoder = new XMLEncoder(f);
+
+        encoder.writeObject(vehiculesTest);
 
         encoder.close();
+
+        try {
+            f.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 

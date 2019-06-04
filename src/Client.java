@@ -1,6 +1,6 @@
 import java.io.Serializable;
 
-public class Client extends ParcAgent implements Serializable
+public class Client extends ParcAgent
 {
     static private int clientID = 0;
     private int id;

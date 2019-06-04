@@ -1,7 +1,14 @@
+import java.io.Serializable;
+
 public abstract class VehiculeTerrestre extends Vehicule{
 
     private int km;
     private float puissance;
+
+    public VehiculeTerrestre()
+    {
+        super();
+    }
 
     public VehiculeTerrestre(String modele, String marque, float prixJournalier, float vitesseMax, String etat, int km, float puissance) {
         super(modele, marque,prixJournalier, vitesseMax,  etat);
