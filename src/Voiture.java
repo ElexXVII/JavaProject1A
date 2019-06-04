@@ -19,5 +19,7 @@ public class Voiture extends VehiculeTerrestre{
         return "Voiture";
     }
 
-
+    public int getNbPlaces() {
+        return nbPlaces;
+    }
 }

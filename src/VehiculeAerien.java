@@ -10,4 +10,12 @@ public abstract class VehiculeAerien extends Vehicule {
         this.heuresVol = heuresVol;
         this.nbMoteurs = nbMoteurs;
     }
+
+    public int getHeuresVol() {
+        return heuresVol;
+    }
+
+    public int getNbMoteurs() {
+        return nbMoteurs;
+    }
 }

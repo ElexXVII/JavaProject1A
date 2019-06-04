@@ -4,7 +4,6 @@ public abstract class Vehicule extends ParcAgent
 {
     static private int carID = 0;
     private int id;
-    //private static int nbClients = 0;
 
     private float vitesseMax;
     private String marque;

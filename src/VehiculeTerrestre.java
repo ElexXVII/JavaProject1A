@@ -17,4 +17,12 @@ public abstract class VehiculeTerrestre extends Vehicule{
     }
 
     protected abstract String printType();
+
+    public int getKm() {
+        return km;
+    }
+
+    public float getPuissance() {
+        return puissance;
+    }
 }
