@@ -80,6 +80,7 @@ public class Gestionnaire implements Definition
 
     public static void ajouterContrat (Contrat c) {
         contrats.add(c);
+
     }
 
     /** XML **/
