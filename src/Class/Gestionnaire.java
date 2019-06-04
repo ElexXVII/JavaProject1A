@@ -20,6 +20,9 @@ public class Gestionnaire implements Definition
 
     public static void initArrayList()
     {
+        charger();
+
+/*
         clients.add(Tony);
         clients.add(George);
         clients.add(Marcel);
@@ -27,10 +30,7 @@ public class Gestionnaire implements Definition
         vehicules.add(Twingo);
         vehicules.add(Clio2);
         vehicules.add(R8);
-
-        vehiculesTest.add(Twingo);
-        vehiculesTest.add(Clio2);
-        vehiculesTest.add(R8);
+        */
     }
 
     /** Vehicules **/
@@ -115,6 +115,7 @@ public class Gestionnaire implements Definition
         }
 
         assert decoder != null;
+
         vehicules = (ArrayList<Vehicule>)decoder.readObject();
 
         decoder.close();
@@ -123,7 +124,6 @@ public class Gestionnaire implements Definition
     private static void sauvegarderVehicules () {
         XMLEncoder encoder;
 
-        TArray a = new TArray(vehicules);
         FileOutputStream f = null;
 
         try {
@@ -134,7 +134,7 @@ public class Gestionnaire implements Definition
 
         encoder = new XMLEncoder(f);
 
-        encoder.writeObject(vehiculesTest);
+        encoder.writeObject(vehicules);
 
         encoder.close();
 
@@ -156,15 +156,14 @@ public class Gestionnaire implements Definition
         }
 
         assert decoder != null;
-        clients = (ArrayList<Client>)decoder.readObject();
+
+        clients = (ArrayList<Client>) decoder.readObject();
 
         decoder.close();
     }
 
     private static void sauvegarderClients () {
         XMLEncoder encoder;
-
-        TArray a = new TArray(clients);
 
         try {
             encoder = new XMLEncoder(new BufferedOutputStream(new FileOutputStream("clients.xml")));
@@ -173,7 +172,7 @@ public class Gestionnaire implements Definition
             e.printStackTrace();
         }
 
-        encoder.writeObject(a);
+        encoder.writeObject(clients);
 
         encoder.close();
     }
@@ -188,7 +187,8 @@ public class Gestionnaire implements Definition
             e.printStackTrace();
         }
 
-        contrats = (ArrayList<Contrat>) decoder.readObject();
+
+        contrats = (ArrayList<Contrat>)decoder.readObject();
 
         decoder.close();
     }
@@ -196,15 +196,13 @@ public class Gestionnaire implements Definition
     private static void sauvegarderContrats () {
         XMLEncoder encoder;
 
-        TArray a = new TArray(contrats);
-
         try {
             encoder = new XMLEncoder(new BufferedOutputStream(new FileOutputStream("contrats.xml")));
         } catch (FileNotFoundException e) {
             encoder = null;
             e.printStackTrace();
         }
-        encoder.writeObject(a);
+        encoder.writeObject(contrats);
 
         encoder.close();
     }
