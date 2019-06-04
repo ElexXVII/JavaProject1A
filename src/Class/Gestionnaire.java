@@ -187,7 +187,6 @@ public class Gestionnaire implements Definition
             e.printStackTrace();
         }
 
-
         contrats = (ArrayList<Contrat>)decoder.readObject();
 
         decoder.close();
