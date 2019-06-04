@@ -170,8 +170,6 @@ public class TFrame extends JFrame implements Definition
 
     private void initArrayLists()
     {
-        //GestionnaireVehicules g = new GestionnaireVehicules();
-        //g.chargerVehicules();
     }
 
     private void initFramePanel()
