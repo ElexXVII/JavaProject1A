@@ -611,7 +611,8 @@ public class TFrame extends JFrame implements Definition
         return clientSurnameField;
     }
 
-    public TTextField getClientNameField() {
+    public TTextField getClientNameField()
+    {
         return clientNameField;
     }
 }
