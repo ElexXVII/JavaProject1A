@@ -60,6 +60,8 @@ public class TFrame extends JFrame implements Definition
     private TPanel contractEmpty;
     private TTextField contractClientField;
     private TTextField contractVehicleField;
+    private TDateField contractBeginningField;
+    private TDateField contractEndingField;
     private TConfirmButton contractConfirmButton;
     private TConfirmButton contractCancelButton;
 
@@ -329,6 +331,12 @@ public class TFrame extends JFrame implements Definition
         contractVehicleField = new TTextField(frame, "Vehicle", 250, 30, Definition.WHITE, Definition.BLACK);
         contractTextFieldArea.add(contractVehicleField);
 
+        contractBeginningField = new TDateField(frame, "Beginning : DD/MM/YYYY", 250, 30, Definition.WHITE, Definition.BLACK);
+        contractTextFieldArea.add(contractBeginningField);
+
+        contractBeginningField = new TDateField(frame, "Ending : DD/MM/YYYY", 250, 30, Definition.WHITE, Definition.BLACK);
+        contractTextFieldArea.add(contractBeginningField);
+//TODO
         contractConfirmButton = new TConfirmButton(frame, 0, "Confirmer", 250, 30, contractClientField, contractVehicleField);
         contractTextFieldArea.add(contractConfirmButton);
         contractCancelButton = new TConfirmButton(frame, 0, "Annuler", 250, 30);
