@@ -20,7 +20,7 @@ public class Gestionnaire implements Definition
 
     public static void initArrayList()
     {
-        charger();
+       charger();
 
 /*
         clients.add(Tony);
