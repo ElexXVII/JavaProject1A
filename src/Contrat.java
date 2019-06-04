@@ -12,6 +12,66 @@ public class Contrat extends ParcAgent
     private int kmEstime;
 
     private boolean reduction;
+
+    public Contrat() {
+    }
+
+    public static int getContractID() {
+        return contractID;
+    }
+
+    public static void setContractID(int contractID) {
+        Contrat.contractID = contractID;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public Client getClient() {
+        return client;
+    }
+
+    public void setClient(Client client) {
+        this.client = client;
+    }
+
+    public Vehicule getVehicule() {
+        return vehicule;
+    }
+
+    public void setVehicule(Vehicule vehicule) {
+        this.vehicule = vehicule;
+    }
+
+    public int getKmEstime() {
+        return kmEstime;
+    }
+
+    public void setKmEstime(int kmEstime) {
+        this.kmEstime = kmEstime;
+    }
+
+    public boolean isReduction() {
+        return reduction;
+    }
+
+    public void setReduction(boolean reduction) {
+        this.reduction = reduction;
+    }
+
+    public float getPrixEstime() {
+        return prixEstime;
+    }
+
+    public void setPrixEstime(float prixEstime) {
+        this.prixEstime = prixEstime;
+    }
+
     //private Duration duree;
     private float prixEstime;
 
