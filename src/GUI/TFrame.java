@@ -131,7 +131,6 @@ public class TFrame extends JFrame implements Definition
         initFrame();
 
         Gestionnaire.initArrayList();
-        Gestionnaire.sauvegarder();
 
         initFramePanel();
 

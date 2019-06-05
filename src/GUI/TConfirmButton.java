@@ -150,8 +150,8 @@ public class TConfirmButton extends TFlatButton implements Definition, ActionLis
                 switch(whichMenu)
                 {
                     case 0:
-                        newAgent = new Contrat(Definition.Tony, Definition.Twingo, 100, false);
-                        scrollPane.addElement((DefaultListModel<String>) tlist.getModel(), newAgent);
+                        //newAgent = new Contrat(Definition.Tony, Definition.Twingo, 100, false);
+                        //scrollPane.addElement((DefaultListModel<String>) tlist.getModel(), newAgent);
                         break;
                     case 1:
                         newAgent = new Voiture(textFields[0].getText(), textFields[1].getText(), Float.parseFloat(textFields[2].getText()),

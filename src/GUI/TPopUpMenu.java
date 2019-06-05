@@ -1,5 +1,6 @@
 package GUI;
 import Interface.*;
+import Class.*;
 
 import javax.swing.*;
 import java.awt.*;
@@ -59,6 +60,7 @@ class TPopUpMenu extends JPopupMenu implements Definition
             public void actionPerformed(ActionEvent e)
             {
                 scrollPane.delElement((DefaultListModel<String>) tlist.getModel(), selectedIndex);
+                Gestionnaire.sauvegarder();
             }
         });
         add(deleteItem);

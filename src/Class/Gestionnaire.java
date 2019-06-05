@@ -20,17 +20,7 @@ public class Gestionnaire implements Definition
 
     public static void initArrayList()
     {
-       charger();
-
-/*
-        clients.add(Tony);
-        clients.add(George);
-        clients.add(Marcel);
-
-        vehicules.add(Twingo);
-        vehicules.add(Clio2);
-        vehicules.add(R8);
-        */
+        charger();
     }
 
     /** Vehicules **/
@@ -119,6 +109,16 @@ public class Gestionnaire implements Definition
         vehicules = (ArrayList<Vehicule>)decoder.readObject();
 
         decoder.close();
+
+        int maxID = 0;
+        for (Vehicule vehicule : vehicules)
+        {
+            if (vehicule.getId() > maxID)
+            {
+                maxID = vehicule.getId();
+            }
+        }
+        Vehicule.setCarID(maxID+1);
     }
 
     private static void sauvegarderVehicules () {
@@ -158,8 +158,22 @@ public class Gestionnaire implements Definition
         assert decoder != null;
 
         clients = (ArrayList<Client>) decoder.readObject();
+        /*for (int i=0; i<50; i++)
+        {
+            clients.add(clients.get(0));
+        }*/
 
         decoder.close();
+
+        int maxID = 0;
+        for (Client client : clients)
+        {
+            if (client.getId() > maxID)
+            {
+                maxID = client.getId();
+            }
+        }
+        Client.setClientID(maxID+1);
     }
 
     private static void sauvegarderClients () {
@@ -190,6 +204,16 @@ public class Gestionnaire implements Definition
         contrats = (ArrayList<Contrat>)decoder.readObject();
 
         decoder.close();
+
+        int maxID = 0;
+        for (Contrat contrat : contrats)
+        {
+            if (contrat.getId() > maxID)
+            {
+                maxID = contrat.getId();
+            }
+        }
+        Contrat.setContractID(maxID+1);
     }
 
     private static void sauvegarderContrats () {
