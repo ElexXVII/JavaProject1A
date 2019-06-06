@@ -45,7 +45,7 @@ public class TConfirmButton extends TFlatButton implements Definition, ActionLis
 
         idleColor = Definition.idleButtonLightColor;
 
-        if (text.equals("Annuler"))
+        if (text.equals("Annuler") || text.equals("Supprimer"))
         {
             hoverColor = Definition.hoverCrossColor;
             pressColor = Definition.pressCrossColor;
@@ -122,9 +122,15 @@ public class TConfirmButton extends TFlatButton implements Definition, ActionLis
     @Override
     public void actionPerformed(ActionEvent e)
     {
-        if (name.equals("Annuler"))
+        if (name.equals("Annuler") || name.equals("Retour"))
         {
             cardLayout.show(areaToFillCardPanel, Definition.areaTofillCardName[0]);
+        }
+        else if (name.equals("Supprimer"))
+        {
+            scrollPane.delElement((DefaultListModel<String>) tlist.getModel(), tlist.getSelectedIndex());
+            cardLayout.show(areaToFillCardPanel, Definition.areaTofillCardName[0]);
+            Gestionnaire.sauvegarder();
         }
         else
         {

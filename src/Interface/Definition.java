@@ -45,7 +45,7 @@ public interface Definition
 
     // Listes
     String[] buttonsName = {"Mes contrats", "Mes véhicules", "Mes clients"};
-    String[] areaTofillCardName = {"Nothing", "TextField", "Change"};
+    String[] areaTofillCardName = {"Nothing", "TextField", "Delete"};
 
     //Examples
     //Voiture Twingo = new Voiture("Twingo","Renault",  20, 100f, STATE1, 10000, 75f, 4);

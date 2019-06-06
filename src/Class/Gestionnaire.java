@@ -21,6 +21,7 @@ public class Gestionnaire implements Definition
     public static void initArrayList()
     {
         charger();
+        //contrats.add(new Contrat(Tony, Twingo, 100, true));
     }
 
     /** Vehicules **/

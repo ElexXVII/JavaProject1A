@@ -56,6 +56,7 @@ public class TFrame extends JFrame implements Definition
     // Contract Area To Fill
     private CardLayout contractAreaLayout;
     private TPanel contractAreaToFillPanel;
+
     private TPanel contractTextFieldArea;
     private TPanel contractEmpty;
     private TTextField contractClientField;
@@ -64,6 +65,10 @@ public class TFrame extends JFrame implements Definition
     private TDateField contractEndingField;
     private TConfirmButton contractConfirmButton;
     private TConfirmButton contractCancelButton;
+
+    private TPanel contractDeletePanel;
+    private TConfirmButton contractConfirmDeleteButton;
+    private TConfirmButton contractCancelDeleteButton;
 
     // Contract Panel : Card[1]
     // List
@@ -79,6 +84,7 @@ public class TFrame extends JFrame implements Definition
     // vehicle Area To Fill
     private CardLayout vehicleAreaLayout;
     private TPanel vehicleAreaToFillPanel;
+
     private TPanel vehicleTextFieldArea;
     private TPanel vehicleEmpty;
     private TTextField vehicleBrandField;
@@ -91,6 +97,10 @@ public class TFrame extends JFrame implements Definition
     private TTextField vehicleNbSeatField;
     private TConfirmButton vehicleConfirmButton;
     private TConfirmButton vehicleCancelButton;
+
+    private TPanel vehicleDeletePanel;
+    private TConfirmButton vehicleConfirmDeleteButton;
+    private TConfirmButton vehicleCancelDeleteButton;
 
     // Class.Client Panel : Card[2]
     // List
@@ -106,6 +116,7 @@ public class TFrame extends JFrame implements Definition
     // client Area To Fill
     private CardLayout clientAreaLayout;
     private TPanel clientAreaToFillPanel;
+
     private TPanel clientTextFieldArea;
     private TPanel clientEmpty;
     private TTextField clientSurnameField;
@@ -116,6 +127,11 @@ public class TFrame extends JFrame implements Definition
     private TConfirmButton clientConfirmButton;
     private TConfirmButton clientCancelButton;
 
+    private TPanel clientDeletePanel;
+    private TConfirmButton clientConfirmDeleteButton;
+    private TConfirmButton clientCancelDeleteButton;
+
+    // Lists
     private ArrayList<ParcAgent> clients;
     private ArrayList<ParcAgent> vehicles;
     private ArrayList<ParcAgent> contracts;
@@ -313,14 +329,16 @@ public class TFrame extends JFrame implements Definition
 
     private void initContractAreasToFill()
     {
+        // Empty Panel
         contractEmpty = new TPanel(690, 616, Definition.InterfaceLightColor, null, null, true);
         contractAreaToFillPanel.add(contractEmpty, Definition.areaTofillCardName[0]);
 
+        // TextField Panel
         contractTextFieldArea = new TPanel(690, 616, Definition.InterfaceLightColor, null, new FlowLayout(FlowLayout.CENTER, getWidth()/2, 15), true);
         contractAreaToFillPanel.add(contractTextFieldArea, Definition.areaTofillCardName[1]);
 
-        TPanel CenterPanel = new TPanel(500, ((int)contractTextFieldArea.getPreferredSize().getHeight()-4*30-5*15)/2, null, null, null, false);
-        contractTextFieldArea.add(CenterPanel);
+        TPanel CenterPanel1 = new TPanel(500, ((int)contractTextFieldArea.getPreferredSize().getHeight()-4*30-5*15)/2, null, null, null, false);
+        contractTextFieldArea.add(CenterPanel1);
 
         contractClientField = new TTextField(frame, "Client", 250, 30, Definition.WHITE, Definition.BLACK);
         contractTextFieldArea.add(contractClientField);
@@ -333,11 +351,23 @@ public class TFrame extends JFrame implements Definition
 
         contractBeginningField = new TDateField(frame, "Ending : DD/MM/YYYY", 250, 30, Definition.WHITE, Definition.BLACK);
         contractTextFieldArea.add(contractBeginningField);
-//TODO
+
         contractConfirmButton = new TConfirmButton(frame, 0, "Confirmer", 250, 30, contractClientField, contractVehicleField);
         contractTextFieldArea.add(contractConfirmButton);
         contractCancelButton = new TConfirmButton(frame, 0, "Annuler", 250, 30);
         contractTextFieldArea.add(contractCancelButton);
+
+        // Delete Panel
+        contractDeletePanel = new TPanel(690, 616, Definition.InterfaceLightColor, null, new FlowLayout(FlowLayout.CENTER, getWidth()/2, 15), true);
+        contractAreaToFillPanel.add(contractDeletePanel, Definition.areaTofillCardName[2]);
+
+        TPanel CenterPanel2 = new TPanel(500, ((int)contractTextFieldArea.getPreferredSize().getHeight()-2*30-4*15)/2, null, null, null, false);
+        contractDeletePanel.add(CenterPanel2);
+
+        contractConfirmDeleteButton = new TConfirmButton(frame, 0, "Supprimer", 250, 30);
+        contractDeletePanel.add(contractConfirmDeleteButton);
+        contractCancelDeleteButton = new TConfirmButton(frame, 0, "Retour", 250, 30);
+        contractDeletePanel.add(contractCancelDeleteButton);
 
         contractAreaLayout.show(contractAreaToFillPanel, Definition.areaTofillCardName[0]);
     }
@@ -390,9 +420,11 @@ public class TFrame extends JFrame implements Definition
 
     private void initVehicleAreasToFill()
     {
+        // Empty Panel
         vehicleEmpty = new TPanel(690, 616, Definition.InterfaceLightColor, null, null, true);
         vehicleAreaToFillPanel.add(vehicleEmpty, Definition.areaTofillCardName[0]);
 
+        // TextField Panel
         vehicleTextFieldArea = new TPanel(690, 616, Definition.InterfaceLightColor, null, new FlowLayout(FlowLayout.CENTER, getWidth()/2, 15), true);
         vehicleAreaToFillPanel.add(vehicleTextFieldArea, Definition.areaTofillCardName[1]);
 
@@ -429,6 +461,20 @@ public class TFrame extends JFrame implements Definition
 
         vehicleCancelButton = new TConfirmButton(frame, 1, "Annuler", 250, 30);
         vehicleTextFieldArea.add(vehicleCancelButton);
+
+        // Delete Panel
+        vehicleDeletePanel = new TPanel(690, 616, Definition.InterfaceLightColor, null, new FlowLayout(FlowLayout.CENTER, getWidth()/2, 15), true);
+        vehicleAreaToFillPanel.add(vehicleDeletePanel, Definition.areaTofillCardName[2]);
+
+        TPanel CenterPanel2 = new TPanel(500, ((int)vehicleTextFieldArea.getPreferredSize().getHeight()-2*30-4*15)/2, null, null, null, false);
+        vehicleDeletePanel.add(CenterPanel2);
+
+        vehicleConfirmDeleteButton = new TConfirmButton(frame, 1, "Supprimer", 250, 30);
+        vehicleDeletePanel.add(vehicleConfirmDeleteButton);
+        vehicleCancelDeleteButton = new TConfirmButton(frame, 1, "Retour", 250, 30);
+        vehicleDeletePanel.add(vehicleCancelDeleteButton);
+
+        vehicleAreaLayout.show(vehicleAreaToFillPanel, Definition.areaTofillCardName[0]);
     }
 
     //=============
@@ -478,9 +524,11 @@ public class TFrame extends JFrame implements Definition
 
     private void initClientAreasToFill()
     {
+        // Empty Panel
         clientEmpty = new TPanel(690, 616, Definition.InterfaceLightColor, null, null, true);
         clientAreaToFillPanel.add(clientEmpty, Definition.areaTofillCardName[0]);
 
+        // TextField Panel
         clientTextFieldArea = new TPanel(690, 616, Definition.InterfaceLightColor, null, new FlowLayout(FlowLayout.CENTER, getWidth()/2, 15), true);
         clientAreaToFillPanel.add(clientTextFieldArea, Definition.areaTofillCardName[1]);
 
@@ -508,6 +556,20 @@ public class TFrame extends JFrame implements Definition
         clientTextFieldArea.add(clientConfirmButton);
         clientCancelButton = new TConfirmButton(frame, 2, "Annuler", 250, 30);
         clientTextFieldArea.add(clientCancelButton);
+
+        // Delete Panel
+        clientDeletePanel = new TPanel(690, 616, Definition.InterfaceLightColor, null, new FlowLayout(FlowLayout.CENTER, getWidth()/2, 15), true);
+        clientAreaToFillPanel.add(clientDeletePanel, Definition.areaTofillCardName[2]);
+
+        TPanel CenterPanel2 = new TPanel(500, ((int)clientTextFieldArea.getPreferredSize().getHeight()-2*30-4*15)/2, null, null, null, false);
+        clientDeletePanel.add(CenterPanel2);
+
+        clientConfirmDeleteButton = new TConfirmButton(frame, 2, "Supprimer", 250, 30);
+        clientDeletePanel.add(clientConfirmDeleteButton);
+        clientCancelDeleteButton = new TConfirmButton(frame, 2, "Retour", 250, 30);
+        clientDeletePanel.add(clientCancelDeleteButton);
+
+        clientAreaLayout.show(clientAreaToFillPanel, Definition.areaTofillCardName[0]);
     }
 
     //=============
