@@ -96,13 +96,6 @@ public class Contrat extends ParcAgent
         contractID ++;
     }
 
-
-    /*private boolean reductionAutorisee () {
-        Duration septJours = Duration.ZERO;
-        septJours = septJours.plusDays(7);
-        return (this.duree.compareTo(septJours) > 0);
-    }*/
-
     private float calculerPrix () {
 
         float res = 0;

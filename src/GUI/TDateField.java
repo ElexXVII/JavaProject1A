@@ -44,6 +44,10 @@ public class TDateField extends TTextField implements DocumentListener {
         otherDate = beginning ? this.getFrame().getContractEndingField() : this.getFrame().getContractBeginningField();
     }
 
+    public void setReduc () {
+        reduc = getFrame().getContractHasReduction();
+    }
+
     @Override
     public void insertUpdate(DocumentEvent e) {
 
@@ -69,6 +73,7 @@ public class TDateField extends TTextField implements DocumentListener {
             System.out.println("b" +this.otherDate.getD());
             int dur = (int)Math.abs(Duration.between(this.getD().toInstant(), otherDate.getD().toInstant()).toDays());
             System.out.println("a"+dur);
+            System.out.println("g" + reduc);
             this.reduc.setDuration(dur);
         } else {
 

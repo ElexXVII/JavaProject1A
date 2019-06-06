@@ -18,6 +18,9 @@ public class TConfirmButton extends TFlatButton implements Definition, ActionLis
     TScrollPane scrollPane;
     TList tlist;
 
+    TScrollPane contractVehicleScrollPane;
+    TScrollPane contractClientScrollPane;
+
     ArrayList list;
 
     TTextField[] textFields;
@@ -36,6 +39,9 @@ public class TConfirmButton extends TFlatButton implements Definition, ActionLis
         this.setPreferredSize(new Dimension(x, y));
         this.setForeground(Definition.WHITE);
         this.setFont(Definition.menuFont);
+
+        //contractVehicleScrollPane = frame.getVehicleContractScrollPane();
+        contractClientScrollPane = frame.getClientContractScrollPane();
 
         super.setBorderPainted(false);
         super.setFocusPainted(false);
@@ -129,6 +135,7 @@ public class TConfirmButton extends TFlatButton implements Definition, ActionLis
         else if (name.equals("Supprimer"))
         {
             scrollPane.delElement((DefaultListModel<String>) tlist.getModel(), tlist.getSelectedIndex());
+            frame.getClientContractScrollPane().delElement((DefaultListModel<String>) frame.getClientContractList().getModel(), tlist.getSelectedIndex());
             cardLayout.show(areaToFillCardPanel, Definition.areaTofillCardName[0]);
             Gestionnaire.sauvegarder();
         }
@@ -156,8 +163,8 @@ public class TConfirmButton extends TFlatButton implements Definition, ActionLis
                 switch(whichMenu)
                 {
                     case 0:
-                        //newAgent = new Contrat(Definition.Tony, Definition.Twingo, 100, false);
-                        //scrollPane.addElement((DefaultListModel<String>) tlist.getModel(), newAgent);
+                        newAgent = new Contrat(Definition.Tony, Definition.Twingo, 100, false);
+                        scrollPane.addElement((DefaultListModel<String>) tlist.getModel(), newAgent);
                         break;
                     case 1:
                         newAgent = new Voiture(textFields[0].getText(), textFields[1].getText(), Float.parseFloat(textFields[2].getText()),
@@ -168,7 +175,9 @@ public class TConfirmButton extends TFlatButton implements Definition, ActionLis
                     case 2:
                         newAgent = new Client(textFields[0].getText(), textFields[1].getText(), textFields[2].getText(), textFields[3].getText());
                         scrollPane.addElement((DefaultListModel<String>) tlist.getModel(), newAgent);
+                        frame.getClientContractScrollPane().addElement((DefaultListModel<String>) frame.getClientContractList().getModel(), newAgent);
                         break;
+
                 }
                 Gestionnaire.sauvegarder();
 

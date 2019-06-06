@@ -61,6 +61,7 @@ public class TFrame extends JFrame implements Definition
     private TPanel contractEmpty;
     private TTextField contractClientField;
     private TTextField contractVehicleField;
+    private TTextField contractEstimatedKm;
     private TDateField contractBeginningField;
     private TDateField contractEndingField;
     private TCheckBox contractHasReduction;
@@ -137,6 +138,20 @@ public class TFrame extends JFrame implements Definition
     private ArrayList<ParcAgent> clients;
     private ArrayList<ParcAgent> vehicles;
     private ArrayList<ParcAgent> contracts;
+    private TPanel contractListsArea;
+    private TList vehicleContractList;
+    private TScrollPane vehicleContractScrollPane;
+
+    public TList getVehicleContractList() {
+        return vehicleContractList;
+    }
+
+    public TScrollPane getVehicleContractScrollPane() {
+        return vehicleContractScrollPane;
+    }
+
+    private TList clientContractList;
+    private TScrollPane clientContractScrollPane;
 
     //=============
     // CONSTRUCTOR
@@ -261,9 +276,9 @@ public class TFrame extends JFrame implements Definition
 
         initCards();
 
-        fillContractCard();
         fillVehiculeCard();
         fillClientCard();
+        fillContractCard();
 
         cardLayout.show(contentPanel, Definition.buttonsName[0]);
     }
@@ -341,6 +356,14 @@ public class TFrame extends JFrame implements Definition
         return contractEndingField;
     }
 
+    public TList getClientContractList() {
+        return clientContractList;
+    }
+
+    public TScrollPane getClientContractScrollPane() {
+        return clientContractScrollPane;
+    }
+
     private void initContractAreasToFill()
     {
         // Empty Panel
@@ -348,39 +371,90 @@ public class TFrame extends JFrame implements Definition
         contractAreaToFillPanel.add(contractEmpty, Definition.areaTofillCardName[0]);
 
         // TextField Panel
-        contractTextFieldArea = new TPanel(690, 616, Definition.InterfaceLightColor, null, new FlowLayout(FlowLayout.CENTER, getWidth()/2, 15), true);
-        contractAreaToFillPanel.add(contractTextFieldArea, Definition.areaTofillCardName[1]);
+        TPanel t = new TPanel(690, 616, null, null, new FlowLayout(0, 0, 0), false);
+        contractAreaToFillPanel.add(t, Definition.areaTofillCardName[1]);
 
-        TPanel CenterPanel1 = new TPanel(500, ((int)contractTextFieldArea.getPreferredSize().getHeight()-4*30-5*15)/2, null, null, null, false);
+        clientContractList = new TList(frame, 2);
+        clientContractScrollPane = new TScrollPane(this, 2, clientContractList, 295,247);
+
+        vehicleContractList = new TList(frame, 1);
+        vehicleContractScrollPane = new TScrollPane(this, 1, vehicleContractList, 295,247);
+
+        contractTextFieldArea = new TPanel(390, 616, Definition.InterfaceLightColor, null, new FlowLayout(FlowLayout.CENTER, 195, 15), true);
+        t.add(contractTextFieldArea);
+
+        TPanel CenterPanel1 = new TPanel(500, ((int)contractTextFieldArea.getPreferredSize().getHeight()-8*30-9*15)/2, null, null, null, false);
         contractTextFieldArea.add(CenterPanel1);
 
         contractClientField = new TTextField(frame, "Client", 250, 30, Definition.WHITE, Definition.BLACK);
         contractTextFieldArea.add(contractClientField);
 
-        contractVehicleField = new TTextField(frame, "Vehicle", 250, 30, Definition.WHITE, Definition.BLACK);
+        contractVehicleField = new TTextField(frame, "Véhicule", 250, 30, Definition.WHITE, Definition.BLACK);
         contractTextFieldArea.add(contractVehicleField);
 
-        contractBeginningField = new TDateField(frame, "Beginning : DD/MM/YYYY", 250, 30, Definition.WHITE, Definition.BLACK, true);
+        contractBeginningField = new TDateField(frame, "Début : DD/MM/YYYY", 250, 30, Definition.WHITE, Definition.BLACK, true);
         contractTextFieldArea.add(contractBeginningField);
 
-        contractEndingField = new TDateField(frame, "Ending : DD/MM/YYYY", 250, 30, Definition.WHITE, Definition.BLACK, false);
+        contractEndingField = new TDateField(frame, "Fin : DD/MM/YYYY", 250, 30, Definition.WHITE, Definition.BLACK, false);
         contractTextFieldArea.add(contractEndingField);
 
         contractBeginningField.setOtherDate();
         contractEndingField.setOtherDate();
 
 
-        contractHasReduction = new TCheckBox("Reduction -10% ?");
+        contractEstimatedKm = new TTextField(frame, "KM estimés", 250, 30, Definition.WHITE, Definition.BLACK);
+        contractTextFieldArea.add(contractEstimatedKm);
+
+        contractHasReduction = new TCheckBox("Réduction -10% ?");
         contractTextFieldArea.add(contractHasReduction);
 
-        contractPriceField = new TLabel("Estimated price : ", Definition.WHITE);
-        contractTextFieldArea.add(contractPriceField);
+        contractBeginningField.setReduc();
+        contractEndingField.setReduc();
+
 //TODO
         contractConfirmButton = new TConfirmButton(frame, 0, "Confirmer", 250, 30, contractClientField, contractVehicleField);
         contractTextFieldArea.add(contractConfirmButton);
 
         contractCancelButton = new TConfirmButton(frame, 0, "Annuler", 250, 30);
         contractTextFieldArea.add(contractCancelButton);
+
+        // Lists + Bar Panel
+
+        TPanel locListBarPanel = new TPanel(300, 616, null, null, new FlowLayout(FlowLayout.CENTER, 0, 0), false);
+        t.add(locListBarPanel);
+        locListBarPanel.add(new TPanel(5, 615, Definition.InterfaceMainColor, null, null, true));
+        // Lists Panel
+        contractListsArea = new TPanel(295, 616, null, null, new FlowLayout(FlowLayout.CENTER, 0, 0), false);
+        locListBarPanel.add(contractListsArea);
+
+        // Vehicle List Panel
+        TPanel locVehicleListContent = new TPanel(295, 308, null, null, new FlowLayout(FlowLayout.LEFT, 0, 0), false);
+        contractListsArea.add(locVehicleListContent);
+
+        TPanel locVehicleListTitlePanel = new TPanel(295, 30, Definition.InterfaceLightColor, Definition.WHITE, new FlowLayout(FlowLayout.CENTER), true);
+        locVehicleListContent.add(locVehicleListTitlePanel);
+        TLabel locVehicleListTitleLabel = new TLabel("Liste des véhicules", Definition.WHITE);
+        locVehicleListTitlePanel.add(locVehicleListTitleLabel);
+        
+        TSearchBar locVehicleSearchBar = new TSearchBar(frame, 3, "Rechercher un véhicule", 295, 30, Definition.LIGHTGREY, Definition.DARKGREY);
+        
+        locVehicleListContent.add(locVehicleSearchBar);
+        locVehicleListContent.add(vehicleContractScrollPane);
+
+        // Client List Panel
+
+        TPanel locClientListContent = new TPanel(295, 308, null, null, new FlowLayout(FlowLayout.LEFT, 0, 0), false);
+        contractListsArea.add(locClientListContent);
+
+        TPanel locClientListTitlePanel = new TPanel(295, 30, Definition.InterfaceLightColor, Definition.WHITE, new FlowLayout(FlowLayout.CENTER), true);
+        locClientListContent.add(locClientListTitlePanel);
+        TLabel locClientListTitleLabel = new TLabel("Liste des clients", Definition.WHITE);
+        locClientListTitlePanel.add(locClientListTitleLabel);
+
+        TSearchBar locClientSearchBar = new TSearchBar(frame, 4, "Rechercher un client", 295, 30, Definition.LIGHTGREY, Definition.DARKGREY);
+        
+        locClientListContent.add(locClientSearchBar);
+        locClientListContent.add(clientContractScrollPane);
 
         // Delete Panel
         contractDeletePanel = new TPanel(690, 616, Definition.InterfaceLightColor, null, new FlowLayout(FlowLayout.CENTER, getWidth()/2, 15), true);
