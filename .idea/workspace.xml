@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bbd09144-606d-4ac1-90ca-7f01480efe70" name="Default Changelist" comment="&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;">
-      <change afterPath="$PROJECT_DIR$/rendu.txt" afterDir="false" />
+    <list default="true" id="bbd09144-606d-4ac1-90ca-7f01480efe70" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/TDateField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/TDateField.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,73 +18,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Class/Gestionnaire.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="36" selection-start-line="36" selection-end-line="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Class/Voiture.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Class/Vehicule.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
-              <caret line="65" selection-start-line="65" selection-end-line="65" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GUI/TFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
-              <caret line="338" column="6" selection-start-line="338" selection-start-column="6" selection-end-line="338" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rendu.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="18" lean-forward="true" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/clients.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GUI/TTextField.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GUI/TDateField.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+            <state relative-caret-position="278">
+              <caret line="568" column="49" lean-forward="true" selection-start-line="568" selection-start-column="49" selection-end-line="568" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -92,11 +29,25 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GUI/TList.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/GUI/TDateField.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1275">
-              <caret line="92" column="13" selection-start-line="92" selection-start-column="13" selection-end-line="92" selection-end-column="13" />
+            <state relative-caret-position="180">
+              <caret line="59" column="25" selection-start-line="59" selection-start-column="25" selection-end-line="59" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GUI/TTextField.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="392">
+              <caret line="74" column="22" selection-start-line="74" selection-start-column="22" selection-end-line="74" selection-end-column="22" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1694#1695#0" expanded="true" />
+                <element signature="e#1757#1758#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -106,85 +57,109 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>public</find>
-      <find>MenuRight1</find>
-      <find>addMou</find>
-      <find>addM</find>
+      <find>border</find>
+      <find>Panel</find>
+      <find>pContent</find>
+      <find>TSC</find>
+      <find>T</find>
+      <find>client</find>
+      <find>System.out.println(</find>
+      <find>Serializable</find>
+      <find>println</find>
+      <find>TBut</find>
+      <find>contract</find>
     </findStrings>
     <replaceStrings>
-      <replace>public static</replace>
+      <replace>TPanel</replace>
+      <replace>contentPanel</replace>
+      <replace>client</replace>
+      <replace>contract</replace>
+      <replace>vehicle</replace>
     </replaceStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/src</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
-    <option name="PREVIOUS_COMMIT_AUTHORS">
-      <list>
-        <option value="Thibault" />
-      </list>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="SET_USER_NAME_GLOBALLY" value="false" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/MotionPanel.java" />
-        <option value="$PROJECT_DIR$/src/Panel.java" />
-        <option value="$PROJECT_DIR$/src/Frame.java" />
-        <option value="$PROJECT_DIR$/src/XButtonTest.java" />
-        <option value="$PROJECT_DIR$/src/FlatScrollPane.java" />
-        <option value="$PROJECT_DIR$/src/MyHorizontalScrollBar.java" />
-        <option value="$PROJECT_DIR$/src/MyScrollBar.java" />
-        <option value="$PROJECT_DIR$/src/BasicScrollBarUI.java" />
-        <option value="$PROJECT_DIR$/src/FlatButton.java" />
-        <option value="$PROJECT_DIR$/src/MyBasicScrollBarUI.java" />
-        <option value="$PROJECT_DIR$/src/FrameButton.java" />
-        <option value="$PROJECT_DIR$/src/MenuButton.java" />
-        <option value="$PROJECT_DIR$/src/JavaParkTest.java" />
-        <option value="$PROJECT_DIR$/src/MyFrame.java" />
-        <option value="$PROJECT_DIR$/.idea/misc.xml" />
-        <option value="$PROJECT_DIR$/.idea/workspace.xml" />
-        <option value="$PROJECT_DIR$/src/ScrollList.java" />
-        <option value="$PROJECT_DIR$/src/GestionnaireClients.java" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/Avion.java" />
+        <option value="$PROJECT_DIR$/src/TFrameButton.java" />
+        <option value="$PROJECT_DIR$/src/TFlatButton.java" />
+        <option value="$PROJECT_DIR$/src/TMenuButton.java" />
+        <option value="$PROJECT_DIR$/src/TconfirmButton.java" />
+        <option value="$PROJECT_DIR$/src/DatePickerExample.java" />
+        <option value="$PROJECT_DIR$/src/JXDatePicker.java" />
+        <option value="$PROJECT_DIR$/src/org/jdesktop/swingx/JXDatePicker.java" />
+        <option value="$PROJECT_DIR$/src/TSearchBar.java" />
         <option value="$PROJECT_DIR$/src/Moto.java" />
-        <option value="$PROJECT_DIR$/src/ImageRenderingBadly.java" />
-        <option value="$PROJECT_DIR$/src/ClientPanel.java" />
-        <option value="$PROJECT_DIR$/src/GestionnaireVehicules.java" />
+        <option value="$PROJECT_DIR$/src/TTextField.java" />
+        <option value="$PROJECT_DIR$/src/ParcAgent.java" />
+        <option value="$PROJECT_DIR$/src/TContentButton.java" />
+        <option value="$PROJECT_DIR$/src/TFrame.java" />
+        <option value="$PROJECT_DIR$/src/Array.java" />
+        <option value="$PROJECT_DIR$/src/Definition.java" />
+        <option value="$PROJECT_DIR$/src/VehiculeAerien.java" />
+        <option value="$PROJECT_DIR$/src/Client.java" />
+        <option value="$PROJECT_DIR$/src/Contrat.java" />
+        <option value="$PROJECT_DIR$/src/Vehicule.java" />
         <option value="$PROJECT_DIR$/src/VehiculeTerrestre.java" />
         <option value="$PROJECT_DIR$/src/Voiture.java" />
-        <option value="$PROJECT_DIR$/src/VehiculeAerien.java" />
-        <option value="$PROJECT_DIR$/src/Vehicule.java" />
-        <option value="$PROJECT_DIR$/src/Client.java" />
-        <option value="$PROJECT_DIR$/src/TPopUpMenu.java" />
-        <option value="$PROJECT_DIR$/contrats.xml" />
+        <option value="$PROJECT_DIR$/src/TArray.java" />
         <option value="$PROJECT_DIR$/src/Gestionnaire.java" />
-        <option value="$PROJECT_DIR$/src/Contrat.java" />
+        <option value="$PROJECT_DIR$/src/TScrollPane.java" />
+        <option value="$PROJECT_DIR$/src/TConfirmButton.java" />
+        <option value="$PROJECT_DIR$/src/TPopClickListener.java" />
+        <option value="$PROJECT_DIR$/src/TList.java" />
+        <option value="$PROJECT_DIR$/src/TPopUpMenu.java" />
+        <option value="$PROJECT_DIR$/src/GUI/Avion.java" />
+        <option value="$PROJECT_DIR$/src/Avion.java" />
+        <option value="$PROJECT_DIR$/src/GUI/TMenuButton.java" />
+        <option value="$PROJECT_DIR$/src/GUI/TFlatButton.java" />
+        <option value="$PROJECT_DIR$/src/GUI/TLabel.java" />
+        <option value="$PROJECT_DIR$/src/GUI/TSearchBar.java" />
+        <option value="$PROJECT_DIR$/src/GUI/TTextField.java" />
+        <option value="$PROJECT_DIR$/src/JavaParkTest.java" />
+        <option value="$PROJECT_DIR$/src/Schtroumpf.java" />
+        <option value="$PROJECT_DIR$/src/GUI/TScrollPane.java" />
+        <option value="$PROJECT_DIR$/contrats.xml" />
+        <option value="$PROJECT_DIR$/vehicules.xml" />
+        <option value="$PROJECT_DIR$/src/GUI/TFrameButton.java" />
+        <option value="$PROJECT_DIR$/src/GUI/TBasicScrollBarUI.java" />
         <option value="$PROJECT_DIR$/clients.xml" />
+        <option value="$PROJECT_DIR$/src/GUI/TPopUpMenu.java" />
+        <option value="$PROJECT_DIR$/src/GUI/TContentButton.java" />
+        <option value="$PROJECT_DIR$/src/GUI/TList.java" />
+        <option value="$PROJECT_DIR$/src/GUI/TFrame.java" />
+        <option value="$PROJECT_DIR$/src/GUI/TConfirmButton.java" />
+        <option value="$PROJECT_DIR$/src/Interface/Definition.java" />
         <option value="$PROJECT_DIR$/src/Class/Gestionnaire.java" />
         <option value="$PROJECT_DIR$/src/GUI/TDateField.java" />
-        <option value="$PROJECT_DIR$/src/GUI/TFrame.java" />
-        <option value="$PROJECT_DIR$/rendu.txt" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-230" />
-    <option name="y" value="-30" />
+    <option name="x" value="95" />
+    <option name="y" value="10" />
     <option name="width" value="1750" />
     <option name="height" value="980" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -195,7 +170,23 @@
             <path>
               <item name="JavaProject1A" type="b2602c69:ProjectViewProjectNode" />
               <item name="JavaProject1A" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JavaProject1A" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JavaProject1A" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JavaProject1A" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JavaProject1A" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JavaProject1A" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JavaProject1A" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Class" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="JavaProject1A" type="b2602c69:ProjectViewProjectNode" />
@@ -203,22 +194,38 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="GUI" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="JavaProject1A" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JavaProject1A" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Interface" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="Errors" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.statistic.project.settings" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/images" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Java\JavaProject1A\Other" />
       <recent name="C:\Users\ElexXVII\IdeaProjects\JavaParkTest" />
       <recent name="C:\Users\ElexXVII\IdeaProjects\JavaParkTest\src" />
       <recent name="C:\Users\ElexXVII\IdeaProjects\JavaParkTest\out\production\JavaParkTest" />
@@ -252,7 +259,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JavaPark1A" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="JEditorTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="JEditorTest" />
+      <module name="JavaParkTest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JavaPark1A" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="JavaPark1A" />
       <module name="JavaParkTest" />
       <method v="2">
@@ -266,27 +280,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="XButtonTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="XButtonTest" />
-      <module name="JavaParkTest" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
+      <item itemvalue="Application.JavaPark1A" />
       <item itemvalue="Application.FlatScrollPane" />
       <item itemvalue="Application.ImageRenderingBadly" />
-      <item itemvalue="Application.JavaPark1A" />
+      <item itemvalue="Application.JEditorTest" />
       <item itemvalue="Application.ScrollList" />
-      <item itemvalue="Application.XButtonTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.JavaPark1A" />
+        <item itemvalue="Application.JEditorTest" />
         <item itemvalue="Application.ImageRenderingBadly" />
         <item itemvalue="Application.ScrollList" />
         <item itemvalue="Application.FlatScrollPane" />
-        <item itemvalue="Application.XButtonTest" />
       </list>
     </recent_temporary>
   </component>
@@ -301,261 +307,182 @@
       <option name="presentableId" value="Default" />
       <updated>1557952296058</updated>
     </task>
-    <task id="LOCAL-00001" summary="wiiiiiiiiiiiiii">
-      <created>1558945867644</created>
+    <task id="LOCAL-00001" summary="NIK">
+      <created>1558959594412</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1558945867645</updated>
+      <updated>1558959594412</updated>
     </task>
-    <task id="LOCAL-00002" summary="wiiiiiiiiiiiiii">
-      <created>1558948119399</created>
+    <task id="LOCAL-00002" summary="NIK">
+      <created>1558959651476</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1558948119399</updated>
+      <updated>1558959651476</updated>
     </task>
-    <task id="LOCAL-00003" summary="wiiiiiiiiiiiiii">
-      <created>1558948846709</created>
+    <task id="LOCAL-00003" summary="NIK">
+      <created>1558960130531</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1558948846712</updated>
+      <updated>1558960130531</updated>
     </task>
-    <task id="LOCAL-00004" summary="wiiiiiiiiiiiiii">
-      <created>1558951210474</created>
+    <task id="LOCAL-00004" summary="NIK">
+      <created>1558963903444</created>
       <option name="number" value="00004" />
       <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
-      <updated>1558951210474</updated>
+      <updated>1558963903444</updated>
     </task>
-    <task id="LOCAL-00005" summary="wiiiiiiiiiiiiii">
-      <created>1558951399999</created>
+    <task id="LOCAL-00005" summary="NIK">
+      <created>1559163398167</created>
       <option name="number" value="00005" />
       <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
-      <updated>1558951399999</updated>
+      <updated>1559163398167</updated>
     </task>
-    <task id="LOCAL-00006" summary="wiiiiiiiiiiiiii">
-      <created>1558958982230</created>
+    <task id="LOCAL-00006" summary="Code propre">
+      <created>1559174004225</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1558958982231</updated>
+      <updated>1559174004225</updated>
     </task>
-    <task id="LOCAL-00007" summary="wiiiiiiiiiiiiii">
-      <created>1558960440288</created>
+    <task id="LOCAL-00007" summary="NIK">
+      <created>1559210961273</created>
       <option name="number" value="00007" />
       <option name="presentableId" value="LOCAL-00007" />
       <option name="project" value="LOCAL" />
-      <updated>1558960440288</updated>
+      <updated>1559210961273</updated>
     </task>
-    <task id="LOCAL-00008" summary="wiiiiiiiiiiiiii">
-      <created>1558960611905</created>
+    <task id="LOCAL-00008" summary="NIK">
+      <created>1559400905192</created>
       <option name="number" value="00008" />
       <option name="presentableId" value="LOCAL-00008" />
       <option name="project" value="LOCAL" />
-      <updated>1558960611905</updated>
+      <updated>1559400905192</updated>
     </task>
-    <task id="LOCAL-00009" summary="wiiiiiiiiiiiiii">
-      <created>1558960663402</created>
+    <task id="LOCAL-00009" summary="NIK">
+      <created>1559405071793</created>
       <option name="number" value="00009" />
       <option name="presentableId" value="LOCAL-00009" />
       <option name="project" value="LOCAL" />
-      <updated>1558960663402</updated>
+      <updated>1559405071793</updated>
     </task>
-    <task id="LOCAL-00010" summary="wiiiiiiiiiiiiii">
-      <created>1558960800232</created>
+    <task id="LOCAL-00010" summary="NIK">
+      <created>1559405808033</created>
       <option name="number" value="00010" />
       <option name="presentableId" value="LOCAL-00010" />
       <option name="project" value="LOCAL" />
-      <updated>1558960800232</updated>
+      <updated>1559405808033</updated>
     </task>
-    <task id="LOCAL-00011" summary="wiiiiiiiiiiiiii">
-      <created>1558960931142</created>
+    <task id="LOCAL-00011" summary="NIK">
+      <created>1559421768314</created>
       <option name="number" value="00011" />
       <option name="presentableId" value="LOCAL-00011" />
       <option name="project" value="LOCAL" />
-      <updated>1558960931142</updated>
+      <updated>1559421768314</updated>
     </task>
-    <task id="LOCAL-00012" summary="wiiiiiiiiiiiiii">
-      <created>1558963979963</created>
+    <task id="LOCAL-00012" summary="NIK">
+      <created>1559486773918</created>
       <option name="number" value="00012" />
       <option name="presentableId" value="LOCAL-00012" />
       <option name="project" value="LOCAL" />
-      <updated>1558963979963</updated>
+      <updated>1559486773918</updated>
     </task>
-    <task id="LOCAL-00013" summary="wiiiiiiiiiiiiii">
-      <created>1558964362039</created>
+    <task id="LOCAL-00013" summary="NIK">
+      <created>1559486984580</created>
       <option name="number" value="00013" />
       <option name="presentableId" value="LOCAL-00013" />
       <option name="project" value="LOCAL" />
-      <updated>1558964362039</updated>
+      <updated>1559486984580</updated>
     </task>
-    <task id="LOCAL-00014" summary="pouêt">
-      <created>1558964414270</created>
+    <task id="LOCAL-00014" summary="NIK">
+      <created>1559490525112</created>
       <option name="number" value="00014" />
       <option name="presentableId" value="LOCAL-00014" />
       <option name="project" value="LOCAL" />
-      <updated>1558964414270</updated>
+      <updated>1559490525112</updated>
     </task>
-    <task id="LOCAL-00015" summary="pouêt">
-      <created>1558964591214</created>
+    <task id="LOCAL-00015" summary="NIK">
+      <created>1559567497578</created>
       <option name="number" value="00015" />
       <option name="presentableId" value="LOCAL-00015" />
       <option name="project" value="LOCAL" />
-      <updated>1558964591214</updated>
+      <updated>1559567497578</updated>
     </task>
-    <task id="LOCAL-00016" summary="pouêt">
-      <created>1558965941895</created>
+    <task id="LOCAL-00016" summary="NIK">
+      <created>1559571896025</created>
       <option name="number" value="00016" />
       <option name="presentableId" value="LOCAL-00016" />
       <option name="project" value="LOCAL" />
-      <updated>1558965941895</updated>
+      <updated>1559571896025</updated>
     </task>
-    <task id="LOCAL-00017" summary="pouêt">
-      <created>1559571857017</created>
+    <task id="LOCAL-00017" summary="NIK">
+      <created>1559577892638</created>
       <option name="number" value="00017" />
       <option name="presentableId" value="LOCAL-00017" />
       <option name="project" value="LOCAL" />
-      <updated>1559571857017</updated>
+      <updated>1559577892639</updated>
     </task>
-    <task id="LOCAL-00018" summary="charger/sauvegarder vehicules">
-      <created>1559572593742</created>
+    <task id="LOCAL-00018" summary="NIK">
+      <created>1559653552351</created>
       <option name="number" value="00018" />
       <option name="presentableId" value="LOCAL-00018" />
       <option name="project" value="LOCAL" />
-      <updated>1559572593742</updated>
+      <updated>1559653552351</updated>
     </task>
-    <task id="LOCAL-00019" summary="charger/sauvegarder vehicules">
-      <created>1559572604249</created>
+    <task id="LOCAL-00019" summary="NIK">
+      <created>1559659543699</created>
       <option name="number" value="00019" />
       <option name="presentableId" value="LOCAL-00019" />
       <option name="project" value="LOCAL" />
-      <updated>1559572604249</updated>
+      <updated>1559659543699</updated>
     </task>
-    <task id="LOCAL-00020" summary="charger/sauvegarder vehicules">
-      <created>1559572668226</created>
+    <task id="LOCAL-00020" summary="NIK">
+      <created>1559665472979</created>
       <option name="number" value="00020" />
       <option name="presentableId" value="LOCAL-00020" />
       <option name="project" value="LOCAL" />
-      <updated>1559572668226</updated>
+      <updated>1559665472979</updated>
     </task>
-    <task id="LOCAL-00021" summary="charger/sauvegarder vehicules">
-      <created>1559572958893</created>
+    <task id="LOCAL-00021" summary="NIK">
+      <created>1559665965636</created>
       <option name="number" value="00021" />
       <option name="presentableId" value="LOCAL-00021" />
       <option name="project" value="LOCAL" />
-      <updated>1559572958893</updated>
+      <updated>1559665965636</updated>
     </task>
-    <task id="LOCAL-00022" summary="charger/sauvegarder vehicules">
-      <created>1559573804551</created>
+    <task id="LOCAL-00022" summary="NIK">
+      <created>1559666400700</created>
       <option name="number" value="00022" />
       <option name="presentableId" value="LOCAL-00022" />
       <option name="project" value="LOCAL" />
-      <updated>1559573804551</updated>
+      <updated>1559666400700</updated>
     </task>
-    <task id="LOCAL-00023" summary="charger/sauvegarder tout">
-      <created>1559574147814</created>
+    <task id="LOCAL-00023" summary="NIK">
+      <created>1559748621992</created>
       <option name="number" value="00023" />
       <option name="presentableId" value="LOCAL-00023" />
       <option name="project" value="LOCAL" />
-      <updated>1559574147814</updated>
+      <updated>1559748621992</updated>
     </task>
-    <task id="LOCAL-00024" summary="charger/sauvegarder tout">
-      <created>1559574317282</created>
+    <task id="LOCAL-00024" summary="NIK">
+      <created>1559835489088</created>
       <option name="number" value="00024" />
       <option name="presentableId" value="LOCAL-00024" />
       <option name="project" value="LOCAL" />
-      <updated>1559574317282</updated>
+      <updated>1559835489088</updated>
     </task>
-    <task id="LOCAL-00025" summary="qzerygfselqsejhrsrlfhqzjho">
-      <created>1559653670537</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1559653670537</updated>
-    </task>
-    <task id="LOCAL-00026" summary="qzerygfselqsejhrsrlfhqzjho">
-      <created>1559653699391</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1559653699391</updated>
-    </task>
-    <task id="LOCAL-00027" summary="                    .+~                :xx++::&#10;                   :`. -          .!!X!~&quot;?!`~!~!. :-:.&#10;                  {             .!!!H&quot;:.~ ::+!~~!!!~ `%X.&#10;                  '             ~~!M!!&gt;!!X?!!!!!!!!!!...!~.&#10;                              {!:!MM!~:XM!!!!!!.:!..~ !.  `{&#10;                  {: `   :~ .:{~!!M!XXHM!!!X!XXHtMMHHHX!  ~ ~&#10;                ~~~~{' ~!!!:!!!!!XM!!M!!!XHMMMRMSXXX!!!!!!:  {`&#10;                  `{  {::!!!!!X!X?M!!M!!XMMMMXXMMMM??!!!!!?!:~{&#10;               : '~~~{!!!XMMH!!XMXMXHHXXXXM!!!!MMMMSXXXX!!!!!!!~&#10;            :    ::`~!!!MMMMXXXtMMMMMMMMMMMHX!!!!!!HMMMMMX!!!!!: ~&#10;               '~:~!!!!!MMMMMMMMMMMMMMMMMMMMMMXXX!!!M??MMMM!!X!!i:&#10;               {~{!!!!!XMMMMMMMMMMMM8M8MMMMM8MMMMMXX!!!!!!!!X!?t?!:&#10;               ~:~~!!!!?MMMMMM@M@RMRRR$@@MMRMRMMMMMMXSX!!!XMMMX{?X!&#10;             :XX {!!XHMMMM88MM88BR$M$$$$8@8RN88MMMMMMMMHXX?MMMMMX!!!&#10;           .:X! {XMSM8M@@$$$$$$$$$$$$$$$$$$$B8R$8MMMMMMMMMMMMMMMMX!X&#10;          :!?! !?XMMMMM8$$$$8$$$$$$$$$$$$$$BBR$$MMM@MMMMMMMMMMMMMM!!X&#10;        ~{!!~ {!!XMMMB$$$$$$$$$$$$$$$$$$$$$$$$MMR$8MR$MMMMMMMMMMMMM!?!:&#10;        :~~~ !:X!XMM8$$$$$$$$$$$$$$$$$$$$$$$RR$$MMMMR8NMMMMMMMMMMMMM{!`-&#10;    ~:{!:~`~':!:HMM8N$$$$$$$$$$$$$$$$$$$$$$$$$8MRMM8R$MRMMMMMMMMRMMMX!&#10;  !X!``~~   :~XM?SMM$B$$$$$$$$$$$$$$$$$$$$$$BR$$MMM$@R$M$MMMMMM$MMMMX?L&#10; X~.      : `!!!MM#$RR$$$$$$$$$$$$$$$$$R$$$$$R$M$MMRRRM8MMMMMMM$$MMMM!?:&#10; ! ~ {~  !! !!~`` :!!MR$$$$$$$$$$RMM!?!??RR?#R8$M$MMMRM$RMMMM8MM$MMM!M!:&gt;&#10;: ' &gt;!~ '!!  !   .!XMM8$$$$$@$$$R888HMM!!XXHWX$8$RM$MR5$8MMMMR$$@MMM!!!{ ~&#10;!  ' !  ~!! :!:XXHXMMMR$$$$$$$$$$$$$$$$8$$$$8$$$MMR$M$$$MMMMMM$$$MMM!!!!&#10; ~{!!!  !!! !!HMMMMMMMM$$$$$$$$$$$$$$$$$$$$$$$$$$MMM$M$$MM8MMMR$$MMXX!!!!/:`&#10;  ~!!!  !!! !XMMMMMMMMMMR$$$$$$$$$$$$R$RRR$$$$$$$MMMM$RM$MM8MM$$$M8MMMX!!!!:&#10;  !~ ~  !!~ XMMM%!!!XMMX?M$$$$$$$$B$MMSXXXH?MR$$8MMMM$$@$8$M$B$$$$B$MMMX!!!!&#10;  ~!    !! 'XMM?~~!!!MMMX!M$$$$$$MRMMM?!%MMMH!R$MMMMMM$$$MM$8$$$$$$MR@M!!!!!&#10;  {&gt;    !!  !Mf x@#&quot;~!t?M~!$$$$$RMMM?Xb@!~`??MS$M@MMM@RMRMMM$$$$$$RMMMMM!!!!&#10;  !    '!~ {!!:!?M   !@!M{XM$$R5M$8MMM$! -XXXMMRMBMMM$RMMM@$R$BR$MMMMX??!X!!&#10;  !    '!  !!X!!!?::xH!HM:MM$RM8M$RHMMMX...XMMMMM$RMMRRMMMMMMM8MMMMMMMMX!!X!&#10;  !     ~  !!?:::!!!MXMR~!MMMRMM8MMMMMS!!M?XXMMMMM$$M$M$RMMMM8$RMMMMMMMM%X!!&#10;  ~     ~  !~~X!!XHMMM?~ XM$MMMMRMMMMMM@MMMMMMMMMM$8@MMMMMMMMRMMMMM?!MMM%HX!&#10;           !!!!XSMMXXMM .MMMMMMMM$$$BB8MMM@MMMMMMMR$RMMMMMMMMMMMMMMMXX!?H!XX&#10;           XHXMMMMMMMM!.XMMMMMMMMMR$$$8M$$$$$M@88MMMMMMMMMMMMMMM!XMMMXX!!!XM&#10;      ~   {!MMMMMMMMRM:XMMMMMMMMMM8R$$$$$$$$$$$$$$$NMMMMMMMM?!MM!M8MXX!!/t!M&#10;      '   ~HMMMMMMMMM~!MM8@8MMM!MM$$8$$$$$$$$$$$$$$8MMMMMMM!!XMMMM$8MR!MX!MM&#10;          'MMMMMMMMMM'MM$$$$$MMXMXM$$$$$$$$$$$$$$$$RMMMMMMM!!MMM$$$$MMMMM{!M&#10;          'MMMMMMMMM!'MM$$$$$RMMMMMM$$$$$$$$$$$$$$$MMM!MMMX!!MM$$$$$M$$M$M!M&#10;           !MMMMMM$M! !MR$$$RMM8$8MXM8$$$$$$$$$$$$NMMM!MMM!!!?MRR$$RXM$$MR!M&#10;           !M?XMM$$M.{ !MMMMMMSUSRMXM$8R$$$$$$$$$$#$MM!MMM!X!t8$M$MMMHMRMMX$&#10;    ,-,   '!!!MM$RMSMX:.?!XMHRR$RM88$$$8M$$$$$R$$$$8MM!MMXMH!M$$RMMMMRNMMX!$&#10;   -'`    '!!!MMMMMMMMMM8$RMM8MBMRRMR8RMMM$$$$8$8$$$MMXMMMMM!MR$MM!M?MMMMMM$&#10;          'XX!MMMMMMM@RMM$MM@$$BM$$$M8MMMMR$$$$@$$$$MM!MMMMXX$MRM!XH!!??XMMM&#10;          `!!!M?MHMMM$RMMMR@$$$$MR@MMMM8MMMM$$$$$$$WMM!MMMM!M$RMM!!.MM!%M?~!&#10;           !!!!!!MMMMBMM$$RRMMMR8MMMMMRMMMMM8$$$$$$$MM?MMMM!f#RM~    `~!!!~!&#10;           ~!!HX!!~!?MM?MMM??MM?MMMMMMMMMRMMMM$$$$$MMM!MMMM!!&#10;           '!!!MX!:`~~`~~!~~!!!!XM!!!?!?MMMM8$$$$$MMMMXMMM!!&#10;            !!~M@MX.. {!!X!!!!XHMHX!!``!XMMMB$MM$$B$M!MMM!!&#10;            !!!?MRMM!:!XHMHMMMMMMMM!  X!SMMX$$MM$$$RMXMMM~&#10;             !M!MMMM&gt;!XMMMMMMMMXMM!!:!MM$MMMBRM$$$$8MMMM~&#10;             `?H!M$R&gt;'MMMM?MMM!MM6!X!XM$$$MM$MM$$$$MX$f&#10;              `MXM$8X MMMMMMM!!MM!!!!XM$$$MM$MM$$$RX@&quot;&#10;               ~M?$MM !MMMMXM!!MM!!!XMMM$$$8$XM$$RM!`&#10;                !XMMM !MMMMXX!XM!!!HMMMM$$$$RH$$M!~&#10;                'M?MM `?MMXMM!XM!XMMMMM$$$$$RM$$#&#10;                 `&gt;MMk ~MMHM!XM!XMMM$$$$$$BRM$M&quot;&#10;                  ~`?M. !M?MXM!X$$@M$$$$$$RMM#&#10;                    `!M  !!MM!X8$$$RM$$$$MM#`&#10;                      !% `~~~X8$$$$8M$$RR#`&#10;                       !!x:xH$$$$$$$R$R*`&#10;                        ~!?MMMMRRRM@M#`       &#10;                         `~???MMM?M&quot;`&#10;                             ``~~">
-      <created>1559653788767</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1559653788767</updated>
-    </task>
-    <task id="LOCAL-00028" summary="Gai teur et sait teur">
-      <created>1559654022285</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1559654022285</updated>
-    </task>
-    <task id="LOCAL-00029" summary="Gai teur et sait teur">
-      <created>1559654059394</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1559654059394</updated>
-    </task>
-    <task id="LOCAL-00030" summary="Gai teur et sait teur des cons (trats)">
-      <created>1559654099646</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1559654099646</updated>
-    </task>
-    <task id="LOCAL-00031" summary="La cool heure">
-      <created>1559654469872</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1559654469872</updated>
-    </task>
-    <task id="LOCAL-00032" summary="&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;">
-      <created>1559659653331</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1559659653331</updated>
-    </task>
-    <task id="LOCAL-00033" summary="&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;">
-      <created>1559659790947</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1559659790947</updated>
-    </task>
-    <task id="LOCAL-00034" summary="&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;">
-      <created>1559664968672</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1559664968672</updated>
-    </task>
-    <option name="localTasksCounter" value="35" />
+    <option name="localTasksCounter" value="25" />
     <servers />
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-4" width="1377" height="905" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23852521" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18133935" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -563,16 +490,17 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.58761746" visible="true" weight="0.32459426" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49731544" weight="0.39943343" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.278402" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.68924004" visible="true" weight="0.25842696" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49731544" weight="0.12734082" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32833958" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.16604245" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.45697898" side_tool="true" weight="0.2082019" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32833958" />
-      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.543021" weight="0.20724095" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.31075996" side_tool="true" visible="true" weight="0.25842696" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.3286119" />
+      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.49127516" weight="0.20724095" />
+      <window_info anchor="bottom" id="Statistic" order="11" weight="0.32862645" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -583,117 +511,295 @@
       <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout>
   </component>
-  <component name="Vcs.Log.History.Properties">
-    <option name="COLUMN_ORDER">
-      <list>
-        <option value="0" />
-        <option value="2" />
-        <option value="3" />
-        <option value="1" />
-      </list>
-    </option>
-  </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="wiiiiiiiiiiiiii" />
-    <MESSAGE value="pouêt" />
-    <MESSAGE value="charger/sauvegarder vehicules" />
-    <MESSAGE value="charger/sauvegarder tout" />
-    <MESSAGE value="qzerygfselqsejhrsrlfhqzjho" />
-    <MESSAGE value="                    .+~                :xx++::&#10;                   :`. -          .!!X!~&quot;?!`~!~!. :-:.&#10;                  {             .!!!H&quot;:.~ ::+!~~!!!~ `%X.&#10;                  '             ~~!M!!&gt;!!X?!!!!!!!!!!...!~.&#10;                              {!:!MM!~:XM!!!!!!.:!..~ !.  `{&#10;                  {: `   :~ .:{~!!M!XXHM!!!X!XXHtMMHHHX!  ~ ~&#10;                ~~~~{' ~!!!:!!!!!XM!!M!!!XHMMMRMSXXX!!!!!!:  {`&#10;                  `{  {::!!!!!X!X?M!!M!!XMMMMXXMMMM??!!!!!?!:~{&#10;               : '~~~{!!!XMMH!!XMXMXHHXXXXM!!!!MMMMSXXXX!!!!!!!~&#10;            :    ::`~!!!MMMMXXXtMMMMMMMMMMMHX!!!!!!HMMMMMX!!!!!: ~&#10;               '~:~!!!!!MMMMMMMMMMMMMMMMMMMMMMXXX!!!M??MMMM!!X!!i:&#10;               {~{!!!!!XMMMMMMMMMMMM8M8MMMMM8MMMMMXX!!!!!!!!X!?t?!:&#10;               ~:~~!!!!?MMMMMM@M@RMRRR$@@MMRMRMMMMMMXSX!!!XMMMX{?X!&#10;             :XX {!!XHMMMM88MM88BR$M$$$$8@8RN88MMMMMMMMHXX?MMMMMX!!!&#10;           .:X! {XMSM8M@@$$$$$$$$$$$$$$$$$$$B8R$8MMMMMMMMMMMMMMMMX!X&#10;          :!?! !?XMMMMM8$$$$8$$$$$$$$$$$$$$BBR$$MMM@MMMMMMMMMMMMMM!!X&#10;        ~{!!~ {!!XMMMB$$$$$$$$$$$$$$$$$$$$$$$$MMR$8MR$MMMMMMMMMMMMM!?!:&#10;        :~~~ !:X!XMM8$$$$$$$$$$$$$$$$$$$$$$$RR$$MMMMR8NMMMMMMMMMMMMM{!`-&#10;    ~:{!:~`~':!:HMM8N$$$$$$$$$$$$$$$$$$$$$$$$$8MRMM8R$MRMMMMMMMMRMMMX!&#10;  !X!``~~   :~XM?SMM$B$$$$$$$$$$$$$$$$$$$$$$BR$$MMM$@R$M$MMMMMM$MMMMX?L&#10; X~.      : `!!!MM#$RR$$$$$$$$$$$$$$$$$R$$$$$R$M$MMRRRM8MMMMMMM$$MMMM!?:&#10; ! ~ {~  !! !!~`` :!!MR$$$$$$$$$$RMM!?!??RR?#R8$M$MMMRM$RMMMM8MM$MMM!M!:&gt;&#10;: ' &gt;!~ '!!  !   .!XMM8$$$$$@$$$R888HMM!!XXHWX$8$RM$MR5$8MMMMR$$@MMM!!!{ ~&#10;!  ' !  ~!! :!:XXHXMMMR$$$$$$$$$$$$$$$$8$$$$8$$$MMR$M$$$MMMMMM$$$MMM!!!!&#10; ~{!!!  !!! !!HMMMMMMMM$$$$$$$$$$$$$$$$$$$$$$$$$$MMM$M$$MM8MMMR$$MMXX!!!!/:`&#10;  ~!!!  !!! !XMMMMMMMMMMR$$$$$$$$$$$$R$RRR$$$$$$$MMMM$RM$MM8MM$$$M8MMMX!!!!:&#10;  !~ ~  !!~ XMMM%!!!XMMX?M$$$$$$$$B$MMSXXXH?MR$$8MMMM$$@$8$M$B$$$$B$MMMX!!!!&#10;  ~!    !! 'XMM?~~!!!MMMX!M$$$$$$MRMMM?!%MMMH!R$MMMMMM$$$MM$8$$$$$$MR@M!!!!!&#10;  {&gt;    !!  !Mf x@#&quot;~!t?M~!$$$$$RMMM?Xb@!~`??MS$M@MMM@RMRMMM$$$$$$RMMMMM!!!!&#10;  !    '!~ {!!:!?M   !@!M{XM$$R5M$8MMM$! -XXXMMRMBMMM$RMMM@$R$BR$MMMMX??!X!!&#10;  !    '!  !!X!!!?::xH!HM:MM$RM8M$RHMMMX...XMMMMM$RMMRRMMMMMMM8MMMMMMMMX!!X!&#10;  !     ~  !!?:::!!!MXMR~!MMMRMM8MMMMMS!!M?XXMMMMM$$M$M$RMMMM8$RMMMMMMMM%X!!&#10;  ~     ~  !~~X!!XHMMM?~ XM$MMMMRMMMMMM@MMMMMMMMMM$8@MMMMMMMMRMMMMM?!MMM%HX!&#10;           !!!!XSMMXXMM .MMMMMMMM$$$BB8MMM@MMMMMMMR$RMMMMMMMMMMMMMMMXX!?H!XX&#10;           XHXMMMMMMMM!.XMMMMMMMMMR$$$8M$$$$$M@88MMMMMMMMMMMMMMM!XMMMXX!!!XM&#10;      ~   {!MMMMMMMMRM:XMMMMMMMMMM8R$$$$$$$$$$$$$$$NMMMMMMMM?!MM!M8MXX!!/t!M&#10;      '   ~HMMMMMMMMM~!MM8@8MMM!MM$$8$$$$$$$$$$$$$$8MMMMMMM!!XMMMM$8MR!MX!MM&#10;          'MMMMMMMMMM'MM$$$$$MMXMXM$$$$$$$$$$$$$$$$RMMMMMMM!!MMM$$$$MMMMM{!M&#10;          'MMMMMMMMM!'MM$$$$$RMMMMMM$$$$$$$$$$$$$$$MMM!MMMX!!MM$$$$$M$$M$M!M&#10;           !MMMMMM$M! !MR$$$RMM8$8MXM8$$$$$$$$$$$$NMMM!MMM!!!?MRR$$RXM$$MR!M&#10;           !M?XMM$$M.{ !MMMMMMSUSRMXM$8R$$$$$$$$$$#$MM!MMM!X!t8$M$MMMHMRMMX$&#10;    ,-,   '!!!MM$RMSMX:.?!XMHRR$RM88$$$8M$$$$$R$$$$8MM!MMXMH!M$$RMMMMRNMMX!$&#10;   -'`    '!!!MMMMMMMMMM8$RMM8MBMRRMR8RMMM$$$$8$8$$$MMXMMMMM!MR$MM!M?MMMMMM$&#10;          'XX!MMMMMMM@RMM$MM@$$BM$$$M8MMMMR$$$$@$$$$MM!MMMMXX$MRM!XH!!??XMMM&#10;          `!!!M?MHMMM$RMMMR@$$$$MR@MMMM8MMMM$$$$$$$WMM!MMMM!M$RMM!!.MM!%M?~!&#10;           !!!!!!MMMMBMM$$RRMMMR8MMMMMRMMMMM8$$$$$$$MM?MMMM!f#RM~    `~!!!~!&#10;           ~!!HX!!~!?MM?MMM??MM?MMMMMMMMMRMMMM$$$$$MMM!MMMM!!&#10;           '!!!MX!:`~~`~~!~~!!!!XM!!!?!?MMMM8$$$$$MMMMXMMM!!&#10;            !!~M@MX.. {!!X!!!!XHMHX!!``!XMMMB$MM$$B$M!MMM!!&#10;            !!!?MRMM!:!XHMHMMMMMMMM!  X!SMMX$$MM$$$RMXMMM~&#10;             !M!MMMM&gt;!XMMMMMMMMXMM!!:!MM$MMMBRM$$$$8MMMM~&#10;             `?H!M$R&gt;'MMMM?MMM!MM6!X!XM$$$MM$MM$$$$MX$f&#10;              `MXM$8X MMMMMMM!!MM!!!!XM$$$MM$MM$$$RX@&quot;&#10;               ~M?$MM !MMMMXM!!MM!!!XMMM$$$8$XM$$RM!`&#10;                !XMMM !MMMMXX!XM!!!HMMMM$$$$RH$$M!~&#10;                'M?MM `?MMXMM!XM!XMMMMM$$$$$RM$$#&#10;                 `&gt;MMk ~MMHM!XM!XMMM$$$$$$BRM$M&quot;&#10;                  ~`?M. !M?MXM!X$$@M$$$$$$RMM#&#10;                    `!M  !!MM!X8$$$RM$$$$MM#`&#10;                      !% `~~~X8$$$$8M$$RR#`&#10;                       !!x:xH$$$$$$$R$R*`&#10;                        ~!?MMMMRRRM@M#`       &#10;                         `~???MMM?M&quot;`&#10;                             ``~~" />
-    <MESSAGE value="Gai teur et sait teur" />
-    <MESSAGE value="Gai teur et sait teur des cons (trats)" />
-    <MESSAGE value="La cool heure" />
-    <MESSAGE value="&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;" />
+    <MESSAGE value="Code propre" />
+    <MESSAGE value="NIK" />
+    <option name="LAST_COMMIT_MESSAGE" value="NIK" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/out/production/JavaParkTest/JavaParkTest.class" />
-    <entry file="file://$PROJECT_DIR$/src/MotionPanel.java" />
-    <entry file="file://$PROJECT_DIR$/images/reduceIcon.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/images/reduceIcon.png" />
     <entry file="file://$PROJECT_DIR$/src/ScrollButton.java" />
-    <entry file="file://$PROJECT_DIR$/src/FrameButton.java" />
-    <entry file="file://$PROJECT_DIR$/src/MenuButton.java" />
-    <entry file="file://$PROJECT_DIR$/src/MyBasicScrollBarUI.java" />
-    <entry file="file://$PROJECT_DIR$/src/Panel.java" />
-    <entry file="file://$PROJECT_DIR$/src/FlatButton.java" />
-    <entry file="file://$PROJECT_DIR$/src/ScrollList.java" />
-    <entry file="file://$PROJECT_DIR$/javadoc/stylesheet.css">
+    <entry file="file://$PROJECT_DIR$/Other/ImageRenderingBadly.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="894">
-          <caret line="526" lean-forward="true" selection-start-line="526" selection-end-line="526" />
+        <state relative-caret-position="135">
+          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ImageRenderingBadly.java" />
-    <entry file="file://$PROJECT_DIR$/src/MyFrame.java" />
-    <entry file="file://$PROJECT_DIR$/src/JavaParkTest.java" />
-    <entry file="file://$PROJECT_DIR$/src/ParcAgent.java" />
-    <entry file="file://$PROJECT_DIR$/src/GestionnaireClients.java" />
-    <entry file="file://$PROJECT_DIR$/src/ClientPanel.java" />
-    <entry file="file://$PROJECT_DIR$/src/Moto.java" />
-    <entry file="file://$PROJECT_DIR$/src/Avion.java" />
-    <entry file="file://$PROJECT_DIR$/src/VehiculeAerien.java" />
-    <entry file="file://$PROJECT_DIR$/src/VehiculeTerrestre.java" />
-    <entry file="file://$PROJECT_DIR$/src/Vehicule.java" />
-    <entry file="file://$PROJECT_DIR$/src/TPopUpMenu.java" />
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/src/TListenerImpl.java" />
+    <entry file="file://$PROJECT_DIR$/Other/TScrollList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="7" lean-forward="true" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
+        <state relative-caret-position="476">
+          <caret line="31" column="44" lean-forward="true" selection-start-line="31" selection-start-column="44" selection-end-line="31" selection-end-column="44" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Client.java" />
-    <entry file="file://$PROJECT_DIR$/src/Voiture.java" />
-    <entry file="file://$PROJECT_DIR$/src/TTextField.java" />
-    <entry file="file://$PROJECT_DIR$/src/TSearchBar.java" />
-    <entry file="file://$PROJECT_DIR$/src/TArray.java" />
-    <entry file="file://$PROJECT_DIR$/src/TScrollPane.java" />
-    <entry file="file://$PROJECT_DIR$/src/Gestionnaire.java" />
-    <entry file="file://$PROJECT_DIR$/src/TPanel.java" />
-    <entry file="file://$PROJECT_DIR$/src/Contrat.java" />
-    <entry file="file://$PROJECT_DIR$/src/TFrame.java" />
-    <entry file="file://$PROJECT_DIR$/contrats.xml">
+    <entry file="file://$PROJECT_DIR$/src/GUI/TMotionPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="7" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
+        <state relative-caret-position="338">
+          <caret line="43" column="1" lean-forward="true" selection-start-line="26" selection-start-column="1" selection-end-line="43" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vehicules.xml">
+    <entry file="file://$PROJECT_DIR$/src/GUI/TPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="14" column="93" selection-start-line="14" selection-start-column="87" selection-end-line="14" selection-end-column="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/JEditorText.java" />
+    <entry file="file://$PROJECT_DIR$/src/org/jdesktop/swingx/JXDatePicker.java" />
+    <entry file="file://$PROJECT_DIR$/src/DatePickerExample.java" />
+    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/awt/CardLayout.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="524" selection-start-line="524" selection-end-line="524" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/contrats.xml" />
+    <entry file="file://$PROJECT_DIR$/src/Class/VehiculeAerien.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="53" selection-start-line="2" selection-start-column="53" selection-end-line="2" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Class/VehiculeTerrestre.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
-          <caret line="7" column="11" lean-forward="true" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+          <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
+          <folding>
+            <element signature="e#165#166#0" expanded="true" />
+            <element signature="e#183#184#0" expanded="true" />
+            <element signature="e#536#537#0" expanded="true" />
+            <element signature="e#561#562#0" expanded="true" />
+            <element signature="e#596#597#0" expanded="true" />
+            <element signature="e#628#629#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Class/Gestionnaire.java">
+    <entry file="file://$PROJECT_DIR$/src/GUI/TPopClickListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="36" selection-start-line="36" selection-end-line="36" />
+        <state relative-caret-position="330">
+          <caret line="24" column="70" selection-start-line="24" selection-start-column="70" selection-end-line="24" selection-end-column="70" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#576#577#0" expanded="true" />
+            <element signature="e#610#611#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Class/Voiture.java">
+    <entry file="file://$PROJECT_DIR$/src/GUI/TArray.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Class/Avion.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/TTextField.java">
+    <entry file="file://$PROJECT_DIR$/src/Class/Client.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+        <state relative-caret-position="30">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/TDateField.java">
+    <entry file="file://$PROJECT_DIR$/src/Class/ClientPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+        <state relative-caret-position="-8">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Class/Contrat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Class/Moto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Class/ParcAgent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/JavaPark1A.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="e#93#94#0" expanded="true" />
+            <element signature="e#136#137#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/TSearchBar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="12" selection-start-column="12" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/TLabel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="12" selection-start-column="12" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/TFlatButton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Class/GestionnaireClients.java" />
+    <entry file="file://$PROJECT_DIR$/src/Class/Vehicule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Class/Voiture.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="12" column="80" selection-start-line="12" selection-start-column="80" selection-end-line="12" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vehicules.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1395">
+          <caret line="93" column="9" selection-start-line="93" selection-start-column="9" selection-end-line="93" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/TMenuButton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/TFrameButton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="44" selection-start-line="44" selection-end-line="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/TBasicScrollBarUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="19" column="41" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/clients.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="17" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/TContentButton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="91" column="76" selection-start-line="91" selection-start-column="76" selection-end-line="91" selection-end-column="76" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/TConfirmButton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1511">
+          <caret line="124" column="52" selection-start-line="124" selection-start-column="52" selection-end-line="124" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/TScrollPane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="46" column="65" selection-start-line="46" selection-start-column="59" selection-end-line="46" selection-end-column="65" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/contrats.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="192" column="10" lean-forward="true" selection-start-line="192" selection-start-column="10" selection-end-line="192" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/TPopUpMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="467">
+          <caret line="75" column="84" lean-forward="true" selection-start-line="75" selection-start-column="84" selection-end-line="75" selection-end-column="84" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Class/Gestionnaire.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2398">
+          <caret line="23" column="10" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -702,36 +808,50 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/TList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1275">
-          <caret line="92" column="13" selection-start-line="92" selection-start-column="13" selection-end-line="92" selection-end-column="13" />
+        <state relative-caret-position="385">
+          <caret line="68" column="9" lean-forward="true" selection-start-line="68" selection-start-column="9" selection-end-line="68" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Interface/Definition.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="54" column="6" selection-start-line="54" selection-start-column="6" selection-end-line="54" selection-end-column="6" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/TFrame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="338" column="6" selection-start-line="338" selection-start-column="6" selection-end-line="338" selection-end-column="6" />
+        <state relative-caret-position="278">
+          <caret line="568" column="49" lean-forward="true" selection-start-line="568" selection-start-column="49" selection-end-line="568" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rendu.txt">
+    <entry file="file://$PROJECT_DIR$/src/GUI/TTextField.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="18" lean-forward="true" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+        <state relative-caret-position="392">
+          <caret line="74" column="22" selection-start-line="74" selection-start-column="22" selection-end-line="74" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1694#1695#0" expanded="true" />
+            <element signature="e#1757#1758#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/clients.xml">
+    <entry file="file://$PROJECT_DIR$/src/GUI/TDateField.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Class/Vehicule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="65" selection-start-line="65" selection-end-line="65" />
+        <state relative-caret-position="180">
+          <caret line="59" column="25" selection-start-line="59" selection-start-column="25" selection-end-line="59" selection-end-column="25" />
         </state>
       </provider>
     </entry>

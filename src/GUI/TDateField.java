@@ -55,7 +55,10 @@ public class TDateField extends TTextField implements DocumentListener {
     }
 
     @Override
-    public void focusLost (FocusEvent e) {
+    public void focusLost (FocusEvent e)
+    {
+        super.focusLost(e);
+
         d = date();
 
 
