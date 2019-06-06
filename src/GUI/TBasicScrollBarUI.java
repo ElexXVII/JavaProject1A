@@ -17,11 +17,11 @@ public class TBasicScrollBarUI extends BasicScrollBarUI implements Definition
 
     @Override
     protected TFrameButton createDecreaseButton(int orientation) {
-        return new TFrameButton("Increase");
+        return new TFrameButton("Decrease");
     }
     @Override
     protected TFrameButton createIncreaseButton(int orientation) {
-        return new TFrameButton("Decrease");
+        return new TFrameButton("Increase");
     }
 
     @Override

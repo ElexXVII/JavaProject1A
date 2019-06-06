@@ -90,5 +90,6 @@ public class TContentButton extends TFlatButton implements Definition, ActionLis
     {
         //System.out.println((areaToFillCardPanel==null)+"");
         cardLayout.show(areaToFillCardPanel, Definition.areaTofillCardName[1]);
+        //System.out.println(Definition.areaTofillCardName[2]);
     }
 }

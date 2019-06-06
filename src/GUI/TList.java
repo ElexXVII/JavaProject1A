@@ -35,6 +35,7 @@ public class TList extends JList implements Definition, MouseListener {
                 list = Gestionnaire.getClients();
                 break;
         }
+        this.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 
         this.setModel(createDefaultListModel());
 

@@ -1,5 +1,6 @@
 package GUI;
 import Interface.*;
+import Class.*;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
@@ -89,6 +90,7 @@ public class TFrameButton extends TFlatButton implements Definition
                                                if (e.getX() >= 0 && e.getX() < 30 && e.getY() >= 0 && e.getY() < 30) {
                                                    frame.setVisible(false);
                                                    frame.dispose();
+                                                   Gestionnaire.sauvegarder();
                                                }
                                            }
                                        }
