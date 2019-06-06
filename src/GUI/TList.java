@@ -3,6 +3,7 @@ import Class.*;
 import Interface.*;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
@@ -14,9 +15,8 @@ public class TList extends JList implements Definition, MouseListener {
     private final int whichMenu;
     private ArrayList list;
 
-    public int getWhichMenu() {
-        return whichMenu;
-    }
+    TPanel areaToFillCardPanel;
+    CardLayout cardLayout;
 
     public TList(TFrame frame, int whichMenu)
     {
@@ -26,12 +26,18 @@ public class TList extends JList implements Definition, MouseListener {
         switch(whichMenu)
         {
             case 0:
+                areaToFillCardPanel = frame.getContractAreaToFillPanel();
+                cardLayout = frame.getContractAreaLayout();
                 list = Gestionnaire.getContrats();
                 break;
             case 1:
+                areaToFillCardPanel = frame.getVehicleAreaToFillPanel();
+                cardLayout = frame.getVehicleAreaLayout();
                 list = Gestionnaire.getVehicules();
                 break;
             case 2:
+                areaToFillCardPanel = frame.getClientAreaToFillPanel();
+                cardLayout = frame.getClientAreaLayout();
                 list = Gestionnaire.getClients();
                 break;
         }
@@ -72,25 +78,23 @@ public class TList extends JList implements Definition, MouseListener {
         return model;
     }
 
-    @Override
-    public void mouseClicked(MouseEvent e)
+    public int getWhichMenu()
     {
-        JList list = (JList)e.getSource();
-        if (e.getClickCount() == 2)
-        {
-            System.out.println(list.getSelectedIndex());
-        }
+        return whichMenu;
     }
 
     @Override
-    public void mousePressed(MouseEvent e) {}
+    public void mousePressed(MouseEvent e)
+    {
+        cardLayout.show(areaToFillCardPanel, Definition.areaTofillCardName[0]);
+    }
 
+    @Override
+    public void mouseClicked(MouseEvent e){}
     @Override
     public void mouseReleased(MouseEvent e) {}
-
     @Override
     public void mouseEntered(MouseEvent e) {}
-
     @Override
     public void mouseExited(MouseEvent e) {}
 }

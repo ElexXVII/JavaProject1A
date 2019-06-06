@@ -11,12 +11,7 @@ public class TMenuButton extends TFlatButton implements Definition
     private TFrame frame;
 
     private String name;
-    private ArrayList<TMenuButton> otherButtons;// = new ArrayList<GUI.TMenuButton>();
-
-    public TMenuButton()
-    {
-        super();
-    }
+    private ArrayList<TMenuButton> otherButtons;
 
     public TMenuButton(TFrame frame, String text)
     {

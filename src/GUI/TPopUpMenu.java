@@ -62,7 +62,8 @@ class TPopUpMenu extends JPopupMenu implements Definition
             @Override
             public void actionPerformed(ActionEvent e)
             {
-
+                frame.AddPanelToChangePanel(whichMenu);
+                cardLayout.show(areaToFillCardPanel, Definition.areaTofillCardName[1]);
             }
         });
         add(changeItem);

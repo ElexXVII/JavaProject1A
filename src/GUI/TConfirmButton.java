@@ -139,6 +139,10 @@ public class TConfirmButton extends TFlatButton implements Definition, ActionLis
             cardLayout.show(areaToFillCardPanel, Definition.areaTofillCardName[0]);
             Gestionnaire.sauvegarder();
         }
+        else if (name.equals("Modifier"))
+        {
+
+        }
         else
         {
             boolean isEmpty = false;

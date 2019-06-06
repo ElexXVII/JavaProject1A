@@ -672,6 +672,26 @@ public class TFrame extends JFrame implements Definition
     }
 
     //=============
+    // PUBLICS FUNCTIONS
+    //=============
+
+    public void AddPanelToChangePanel(int whichMenu)
+    {
+        switch (whichMenu)
+        {
+            case 0:
+                contractConfirmButton.setName("Modifier");
+                break;
+            case 1:
+                vehicleConfirmButton.setName("Modifier");
+                break;
+            case 2:
+                clientConfirmButton.setName("Modifier");
+                break;
+        }
+    }
+
+    //=============
     // GETTERS
     //=============
 
