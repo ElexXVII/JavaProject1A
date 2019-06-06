@@ -16,6 +16,10 @@ class TTextField extends JTextField implements FocusListener, Definition
     private final String hint;
     private boolean showingHint;
 
+    public TFrame getFrame() {
+        return frame;
+    }
+
     public TTextField(TFrame frame, final String hint, int x, int y, Color back, Color front)
     {
         super(hint);

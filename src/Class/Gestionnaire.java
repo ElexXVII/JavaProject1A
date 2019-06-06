@@ -122,6 +122,8 @@ public class Gestionnaire implements Definition
         Vehicule.setCarID(maxID+1);
     }
 
+    // int get
+
     private static void sauvegarderVehicules () {
         XMLEncoder encoder;
 

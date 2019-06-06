@@ -63,6 +63,8 @@ public class TFrame extends JFrame implements Definition
     private TTextField contractVehicleField;
     private TDateField contractBeginningField;
     private TDateField contractEndingField;
+    private TCheckBox contractHasReduction;
+    private TLabel contractPriceField;
     private TConfirmButton contractConfirmButton;
     private TConfirmButton contractCancelButton;
 
@@ -327,6 +329,18 @@ public class TFrame extends JFrame implements Definition
         contractListContent.add(contractNewContractButton);
     }
 
+    public TCheckBox getContractHasReduction() {
+        return contractHasReduction;
+    }
+
+    public TDateField getContractBeginningField() {
+        return contractBeginningField;
+    }
+
+    public TDateField getContractEndingField() {
+        return contractEndingField;
+    }
+
     private void initContractAreasToFill()
     {
         // Empty Panel
@@ -346,14 +360,25 @@ public class TFrame extends JFrame implements Definition
         contractVehicleField = new TTextField(frame, "Vehicle", 250, 30, Definition.WHITE, Definition.BLACK);
         contractTextFieldArea.add(contractVehicleField);
 
-        contractBeginningField = new TDateField(frame, "Beginning : DD/MM/YYYY", 250, 30, Definition.WHITE, Definition.BLACK);
+        contractBeginningField = new TDateField(frame, "Beginning : DD/MM/YYYY", 250, 30, Definition.WHITE, Definition.BLACK, true);
         contractTextFieldArea.add(contractBeginningField);
 
-        contractBeginningField = new TDateField(frame, "Ending : DD/MM/YYYY", 250, 30, Definition.WHITE, Definition.BLACK);
-        contractTextFieldArea.add(contractBeginningField);
+        contractEndingField = new TDateField(frame, "Ending : DD/MM/YYYY", 250, 30, Definition.WHITE, Definition.BLACK, false);
+        contractTextFieldArea.add(contractEndingField);
 
+        contractBeginningField.setOtherDate();
+        contractEndingField.setOtherDate();
+
+
+        contractHasReduction = new TCheckBox("Reduction -10% ?");
+        contractTextFieldArea.add(contractHasReduction);
+
+        contractPriceField = new TLabel("Estimated price : ", Definition.WHITE);
+        contractTextFieldArea.add(contractPriceField);
+//TODO
         contractConfirmButton = new TConfirmButton(frame, 0, "Confirmer", 250, 30, contractClientField, contractVehicleField);
         contractTextFieldArea.add(contractConfirmButton);
+
         contractCancelButton = new TConfirmButton(frame, 0, "Annuler", 250, 30);
         contractTextFieldArea.add(contractCancelButton);
 
