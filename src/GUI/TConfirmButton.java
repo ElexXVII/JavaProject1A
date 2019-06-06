@@ -169,17 +169,20 @@ public class TConfirmButton extends TFlatButton implements Definition, ActionLis
                     case 0:
                         newAgent = new Contrat(Definition.Tony, Definition.Twingo, 100, false);
                         scrollPane.addElement((DefaultListModel<String>) tlist.getModel(), newAgent);
+                        list.add(newAgent);
                         break;
                     case 1:
                         newAgent = new Voiture(textFields[0].getText(), textFields[1].getText(), Float.parseFloat(textFields[2].getText()),
                                 Float.parseFloat(textFields[3].getText()), textFields[4].getText(), Integer.parseInt(textFields[5].getText()),
                                 Float.parseFloat(textFields[6].getText()), Integer.parseInt(textFields[7].getText()));
                         scrollPane.addElement((DefaultListModel<String>) tlist.getModel(), newAgent);
+                        list.add(newAgent);
                         break;
                     case 2:
                         newAgent = new Client(textFields[0].getText(), textFields[1].getText(), textFields[2].getText(), textFields[3].getText());
                         scrollPane.addElement((DefaultListModel<String>) tlist.getModel(), newAgent);
                         frame.getClientContractScrollPane().addElement((DefaultListModel<String>) frame.getClientContractList().getModel(), newAgent);
+                        list.add(newAgent);
                         break;
 
                 }

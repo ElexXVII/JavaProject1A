@@ -64,7 +64,6 @@ public class TScrollPane extends JScrollPane implements Definition
     public void addElement(DefaultListModel<String> model, ParcAgent agent)
     {
         model.addElement(agent.getDisplay());
-        list.add(agent);
     }
 
     public void delElement(DefaultListModel<String> model, int index)

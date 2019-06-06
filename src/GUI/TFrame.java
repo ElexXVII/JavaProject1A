@@ -401,7 +401,6 @@ public class TFrame extends JFrame implements Definition
         contractBeginningField.setOtherDate();
         contractEndingField.setOtherDate();
 
-
         contractEstimatedKm = new TTextField(frame, "KM estimés", 250, 30, Definition.WHITE, Definition.BLACK);
         contractTextFieldArea.add(contractEstimatedKm);
 
@@ -411,7 +410,6 @@ public class TFrame extends JFrame implements Definition
         contractBeginningField.setReduc();
         contractEndingField.setReduc();
 
-//TODO
         contractConfirmButton = new TConfirmButton(frame, 0, "Confirmer", 250, 30, contractClientField, contractVehicleField);
         contractTextFieldArea.add(contractConfirmButton);
 
@@ -419,7 +417,6 @@ public class TFrame extends JFrame implements Definition
         contractTextFieldArea.add(contractCancelButton);
 
         // Lists + Bar Panel
-
         TPanel locListBarPanel = new TPanel(300, 616, null, null, new FlowLayout(FlowLayout.CENTER, 0, 0), false);
         t.add(locListBarPanel);
         locListBarPanel.add(new TPanel(5, 615, Definition.InterfaceMainColor, null, null, true));
@@ -442,7 +439,6 @@ public class TFrame extends JFrame implements Definition
         locVehicleListContent.add(vehicleContractScrollPane);
 
         // Client List Panel
-
         TPanel locClientListContent = new TPanel(295, 308, null, null, new FlowLayout(FlowLayout.LEFT, 0, 0), false);
         contractListsArea.add(locClientListContent);
 
