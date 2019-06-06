@@ -69,6 +69,5 @@ public class TScrollPane extends JScrollPane implements Definition
     public void delElement(DefaultListModel<String> model, int index)
     {
         model.remove(index);
-        list.remove(index);
     }
 }

@@ -40,7 +40,7 @@ public class TConfirmButton extends TFlatButton implements Definition, ActionLis
         this.setForeground(Definition.WHITE);
         this.setFont(Definition.menuFont);
 
-        //contractVehicleScrollPane = frame.getVehicleContractScrollPane();
+        contractVehicleScrollPane = frame.getVehicleContractScrollPane();
         contractClientScrollPane = frame.getClientContractScrollPane();
 
         super.setBorderPainted(false);
@@ -134,10 +134,50 @@ public class TConfirmButton extends TFlatButton implements Definition, ActionLis
         }
         else if (name.equals("Supprimer"))
         {
-            scrollPane.delElement((DefaultListModel<String>) tlist.getModel(), tlist.getSelectedIndex());
-            frame.getClientContractScrollPane().delElement((DefaultListModel<String>) frame.getClientContractList().getModel(), tlist.getSelectedIndex());
-            cardLayout.show(areaToFillCardPanel, Definition.areaTofillCardName[0]);
+            int index = tlist.getSelectedIndex();
+
+            switch (whichMenu)
+            {
+                case 0:
+                    for (int i = 0; i < list.size(); i++) {
+                        Contrat c = (Contrat) list.get(i);
+
+                        if (c.getId() == Integer.parseInt((tlist.getModel().getElementAt(index).toString().split(" - ")[0]))) {
+                            list.remove(i);
+                        }
+                    }
+                    break;
+                case 1:
+                    for (int i = 0; i < list.size(); i++) {
+                        Vehicule c = (Vehicule) list.get(i);
+
+                        if (c.getId() == Integer.parseInt((tlist.getModel().getElementAt(index).toString().split(" - ")[0]))) {
+                            list.remove(i);
+                        }
+                    }
+                    break;
+                case 2:
+                    for (int i = 0; i < list.size(); i++) {
+                        Client c = (Client) list.get(i);
+
+                        if (c.getId() == Integer.parseInt((tlist.getModel().getElementAt(index).toString().split(" - ")[0]))) {
+                            list.remove(i);
+                        }
+                    }
+                    break;
+            }
+
+            scrollPane.delElement((DefaultListModel<String>) tlist.getModel(), index);
+            switch (whichMenu) {
+                case 1:
+                    frame.getClientContractScrollPane().delElement((DefaultListModel<String>) frame.getVehicleContractList().getModel(), index);
+                    break;
+                case 2:
+                    frame.getClientContractScrollPane().delElement((DefaultListModel<String>) frame.getClientContractList().getModel(), index);
+                    break;
+            }
             Gestionnaire.sauvegarder();
+            cardLayout.show(areaToFillCardPanel, Definition.areaTofillCardName[0]);
         }
         else if (name.equals("Modifier"))
         {

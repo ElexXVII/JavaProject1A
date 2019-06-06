@@ -31,11 +31,13 @@ public class TList extends JList implements Definition, MouseListener {
                 list = Gestionnaire.getContrats();
                 break;
             case 1:
+            case 3:
                 areaToFillCardPanel = frame.getVehicleAreaToFillPanel();
                 cardLayout = frame.getVehicleAreaLayout();
                 list = Gestionnaire.getVehicules();
                 break;
             case 2:
+            case 4:
                 areaToFillCardPanel = frame.getClientAreaToFillPanel();
                 cardLayout = frame.getClientAreaLayout();
                 list = Gestionnaire.getClients();
@@ -62,9 +64,17 @@ public class TList extends JList implements Definition, MouseListener {
             }
 
         });
-        TPopClickListener popListener = new TPopClickListener();
-        popListener.initFrame(frame, whichMenu);
-        this.addMouseListener(popListener);
+
+        if (whichMenu < 3)
+        {
+            TPopClickListener popListener = new TPopClickListener();
+            popListener.initFrame(frame, whichMenu);
+            this.addMouseListener(popListener);
+        }
+    }
+
+    public ArrayList getList() {
+        return list;
     }
 
     public ListModel<String> createDefaultListModel()

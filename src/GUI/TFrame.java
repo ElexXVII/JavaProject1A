@@ -374,23 +374,17 @@ public class TFrame extends JFrame implements Definition
         TPanel t = new TPanel(690, 616, null, null, new FlowLayout(0, 0, 0), false);
         contractAreaToFillPanel.add(t, Definition.areaTofillCardName[1]);
 
-        clientContractList = new TList(frame, 2);
-        clientContractScrollPane = new TScrollPane(this, 2, clientContractList, 295,247);
-
-        vehicleContractList = new TList(frame, 1);
+        vehicleContractList = new TList(frame, 3);
         vehicleContractScrollPane = new TScrollPane(this, 1, vehicleContractList, 295,247);
+
+        clientContractList = new TList(frame, 4);
+        clientContractScrollPane = new TScrollPane(this, 2, clientContractList, 295,247);
 
         contractTextFieldArea = new TPanel(390, 616, Definition.InterfaceLightColor, null, new FlowLayout(FlowLayout.CENTER, 195, 15), true);
         t.add(contractTextFieldArea);
 
-        TPanel CenterPanel1 = new TPanel(500, ((int)contractTextFieldArea.getPreferredSize().getHeight()-8*30-9*15)/2, null, null, null, false);
+        TPanel CenterPanel1 = new TPanel(500, ((int)contractTextFieldArea.getPreferredSize().getHeight()-6*30-7*15)/2, null, null, null, false);
         contractTextFieldArea.add(CenterPanel1);
-
-        contractClientField = new TTextField(frame, "Client", 250, 30, Definition.WHITE, Definition.BLACK);
-        contractTextFieldArea.add(contractClientField);
-
-        contractVehicleField = new TTextField(frame, "Véhicule", 250, 30, Definition.WHITE, Definition.BLACK);
-        contractTextFieldArea.add(contractVehicleField);
 
         contractBeginningField = new TDateField(frame, "Début : DD/MM/YYYY", 250, 30, Definition.WHITE, Definition.BLACK, true);
         contractTextFieldArea.add(contractBeginningField);
