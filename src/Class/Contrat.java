@@ -3,7 +3,16 @@ package Class;
 import java.time.Duration;
 import java.util.Calendar;
 
-public class Contrat extends ParcAgent
+/**
+ * Classe Contrat, fille de {@link ParcAgent}
+ * Représente un contrat, liant un {@link Client} à un {@link Vehicule}
+ * Il possère en plus une date de ddébut et une date de fin, ainsi qu'une distance estimée.
+ * On en déduit le booléen reduction disant si le contrat a utilisé la réduction, et l'entier duree représentantle nombre du jours du contrat.
+ * On calcule à la validation du contrat le prix basé sur la distance estimée.
+ * Ses getters et setters sont nécessaires pour la sérialisation XML.
+*/
+
+ public class Contrat extends ParcAgent
 {
     static private int contractID = 0;
     private int id;
@@ -14,7 +23,43 @@ public class Contrat extends ParcAgent
     private Calendar finLoc;
     private int kmEstime;
 
+    private float prixEstime;
+
     private int duree;
+    private boolean reduction;
+
+    /**
+     * Constructeur vide pour la sérialisation XML
+     */
+    public Contrat() {
+    }
+
+    /**
+     * Constructeur pour la création d'un contrat avec initialisation.
+     * @param client {@link Client}
+     * @param vehicule {@link Vehicule}
+     * @param debutLoc {@link Calendar}
+     * @param finLoc {@link Calendar}
+     * @param kmEstime int
+     * @param reduction boolean
+     */
+
+    public Contrat(Client client, Vehicule vehicule, Calendar debutLoc, Calendar finLoc, int kmEstime, boolean reduction) {
+        this.client = client;
+        this.vehicule = vehicule;
+        this.debutLoc = debutLoc;
+        this.finLoc = finLoc;
+        this.kmEstime = kmEstime;
+
+        this.reduction = reduction;
+
+        this.duree = Math.abs((int)Duration.between(debutLoc.toInstant(), finLoc.toInstant()).toDays());
+        System.out.println(duree);
+        this.prixEstime = this.calculerPrix();
+
+        this.id = contractID;
+        contractID ++;
+    }
 
     public Calendar getDebutLoc() {
         return debutLoc;
@@ -32,14 +77,6 @@ public class Contrat extends ParcAgent
         this.finLoc = finLoc;
     }
 
-    public boolean isReduction() {
-        return reduction;
-    }
-
-    private boolean reduction;
-
-    public Contrat() {
-    }
 
     public static int getContractID() {
         return contractID;
@@ -97,31 +134,20 @@ public class Contrat extends ParcAgent
         this.prixEstime = prixEstime;
     }
 
-    //private Duration duree;
-    private float prixEstime;
 
-    public Contrat(Client client, Vehicule vehicule, Calendar debutLoc, Calendar finLoc, int kmEstime, boolean reduction) {
-        this.client = client;
-        this.vehicule = vehicule;
-        this.debutLoc = debutLoc;
-        this.finLoc = finLoc;
-        this.kmEstime = kmEstime;
-
-        this.reduction = reduction;
-
-        this.duree = Math.abs((int)Duration.between(debutLoc.toInstant(), finLoc.toInstant()).toDays());
-        System.out.println(duree);
-        this.prixEstime = this.calculerPrix();
-
-        this.id = contractID;
-        contractID ++;
-    }
-
+    /**
+     * Détermine si la réduction est autorisée pour ce contrat (si la durée du contrat est supérieure à 7 jours
+     * @return boolean
+     */
     private boolean reductionAutorisee () {
 
         return (duree >= 7);
     }
 
+    /**
+     * Calcule le prix estimé en se basant sur la table des prix fournie par le sujet, le nombre de km estimé, la durée du contrat et la présence ou non de la réduction
+     * @return int
+     */
     private float calculerPrix () {
 
         float res = 0;
@@ -165,6 +191,10 @@ public class Contrat extends ParcAgent
 
     }
 
+    /**
+     * Renvoie la chaîne de caractères représentant le contrat, affichée dans le panneau latéral de la page "Mes Contrats"
+     * @return String
+     */
     public String toString()
     {
         return id + " - " + client.getName() + " " + vehicule.getModele() + "     " + this.prixEstime + "€";

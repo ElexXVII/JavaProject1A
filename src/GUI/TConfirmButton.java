@@ -36,9 +36,6 @@ public class TConfirmButton extends TFlatButton implements Definition, ActionLis
         this.setForeground(Definition.WHITE);
         this.setFont(Definition.menuFont);
 
-        TScrollPane contractVehicleScrollPane = frame.getVehicleContractScrollPane();
-        TScrollPane contractClientScrollPane = frame.getClientContractScrollPane();
-
         super.setBorderPainted(false);
         super.setFocusPainted(false);
         super.setContentAreaFilled(false);
@@ -64,7 +61,6 @@ public class TConfirmButton extends TFlatButton implements Definition, ActionLis
                 scrollPane = frame.getContractScrollPane();
                 tlist = frame.getContractTList();
                 list = Gestionnaire.getContrats();
-                int id = frame.contractID;
 
                 areaToFillCardPanel = frame.getContractAreaToFillPanel();
                 cardLayout = frame.getContractAreaLayout();
@@ -73,7 +69,6 @@ public class TConfirmButton extends TFlatButton implements Definition, ActionLis
                 scrollPane = frame.getVehicleScrollPane();
                 tlist = frame.getVehicleTList();
                 list = Gestionnaire.getVehicules();
-                id = frame.vehicleID;
 
                 areaToFillCardPanel = frame.getVehicleAreaToFillPanel();
                 cardLayout = frame.getVehicleAreaLayout();
@@ -82,7 +77,6 @@ public class TConfirmButton extends TFlatButton implements Definition, ActionLis
                 scrollPane = frame.getClientScrollPane();
                 tlist = frame.getClientTList();
                 list = Gestionnaire.getClients();
-                id = frame.clientID;
 
                 areaToFillCardPanel = frame.getClientAreaToFillPanel();
                 cardLayout = frame.getClientAreaLayout();
@@ -181,15 +175,6 @@ public class TConfirmButton extends TFlatButton implements Definition, ActionLis
 
             switch (whichMenu)
             {
-                case 0:
-                    for (int i = 0; i < list.size(); i++) {
-                        Contrat c = (Contrat) list.get(i);
-
-                        if (c.getId() == Integer.parseInt((tlist.getModel().getElementAt(index).toString().split(" - ")[0]))) {
-                            //list.remove(i);
-                        }
-                    }
-                    break;
                 case 1:
                     for (int i = 0; i < list.size(); i++) {
                         Vehicule v = (Vehicule) list.get(i);
@@ -304,9 +289,6 @@ public class TConfirmButton extends TFlatButton implements Definition, ActionLis
             }
             Gestionnaire.sauvegarder();
 
-            //String newElement = (id++)+ " - "+ frame.getClientSurnameField().getText()+" "+frame.getClientNameField().getText();
-            //scrollPane.addElement((DefaultListModel<String>) tlist.getModel(), newAgent);
-            //list.add(newAgent);
             cardLayout.show(areaToFillCardPanel, Definition.areaTofillCardName[0]);
 
             for (TTextField textField : textFields)
@@ -394,9 +376,6 @@ public class TConfirmButton extends TFlatButton implements Definition, ActionLis
                 }
                 Gestionnaire.sauvegarder();
 
-                //String newElement = (id++)+ " - "+ frame.getClientSurnameField().getText()+" "+frame.getClientNameField().getText();
-                //scrollPane.addElement((DefaultListModel<String>) tlist.getModel(), newAgent);
-                //list.add(newAgent);
                 cardLayout.show(areaToFillCardPanel, Definition.areaTofillCardName[0]);
 
                 for (TTextField textField : textFields)
