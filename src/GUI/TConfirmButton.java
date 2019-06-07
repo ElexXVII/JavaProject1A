@@ -12,21 +12,17 @@ public class TConfirmButton extends TFlatButton implements Definition, ActionLis
 {
     TFrame frame;
 
-    String name;
+    private String name;
     private final int whichMenu;
-    int id;
-    TScrollPane scrollPane;
-    TList tlist;
+    private TScrollPane scrollPane;
+    private TList tlist;
 
-    TScrollPane contractVehicleScrollPane;
-    TScrollPane contractClientScrollPane;
+    private ArrayList list;
 
-    ArrayList list;
+    private TTextField[] textFields;
 
-    TTextField[] textFields;
-
-    TPanel areaToFillCardPanel;
-    CardLayout cardLayout;
+    private TPanel areaToFillCardPanel;
+    private CardLayout cardLayout;
 
     public TConfirmButton(TFrame frame, int whichMenu, String text, int x, int y, TTextField... textFields)
     {
@@ -40,8 +36,8 @@ public class TConfirmButton extends TFlatButton implements Definition, ActionLis
         this.setForeground(Definition.WHITE);
         this.setFont(Definition.menuFont);
 
-        contractVehicleScrollPane = frame.getVehicleContractScrollPane();
-        contractClientScrollPane = frame.getClientContractScrollPane();
+        TScrollPane contractVehicleScrollPane = frame.getVehicleContractScrollPane();
+        TScrollPane contractClientScrollPane = frame.getClientContractScrollPane();
 
         super.setBorderPainted(false);
         super.setFocusPainted(false);
@@ -68,7 +64,7 @@ public class TConfirmButton extends TFlatButton implements Definition, ActionLis
                 scrollPane = frame.getContractScrollPane();
                 tlist = frame.getContractTList();
                 list = Gestionnaire.getContrats();
-                id = frame.contractID;
+                int id = frame.contractID;
 
                 areaToFillCardPanel = frame.getContractAreaToFillPanel();
                 cardLayout = frame.getContractAreaLayout();
@@ -199,6 +195,8 @@ public class TConfirmButton extends TFlatButton implements Definition, ActionLis
                         Vehicule v = (Vehicule) list.get(i);
 
                         if (v.getId() == Integer.parseInt((tlist.getModel().getElementAt(index).toString().split(" - ")[0]))) {
+
+
                             list.set(i, new Voiture(textFields[0].getHintOrText(), textFields[1].getHintOrText(), Float.parseFloat(textFields[2].getHintOrText()),
                                     Float.parseFloat(textFields[3].getHintOrText()), textFields[4].getHintOrText(), Integer.parseInt(textFields[5].getHintOrText()),
                                     Float.parseFloat(textFields[6].getHintOrText()), Integer.parseInt(textFields[7].getHintOrText())) );

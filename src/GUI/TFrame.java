@@ -511,6 +511,10 @@ public class TFrame extends JFrame implements Definition
 
     }
 
+    public TComboBox getVehicleTypeSelector() {
+        return vehicleTypeSelector;
+    }
+
     private void initVehicleAreasToFill()
     {
         // Empty Panel

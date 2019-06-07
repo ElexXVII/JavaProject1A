@@ -4,13 +4,14 @@ Saisir fiche client, véhicule !
 Stockage persistant !
 Case Reduction !
 Ajout, suppression !
+Saisir fiche contrat ~ En cours
+Prix location (avec/sans réduction) ~
+Modification ~ En cours
 
 A FAIRE :
 
-Saisir fiche contrat ~ En cours
 Vehicules : Choix moto/voiture/avion ~ TComboBox
-Prix location (avec/sans réduction) ~
-Modification ~ En cours
+Rendu des contrats
 
 VERIFICATION : parseInt, erreur de date, etc
 
