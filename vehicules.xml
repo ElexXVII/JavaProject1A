@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="1.8.0_191" class="java.beans.XMLDecoder">
+ <object class="java.util.ArrayList">
+  <void method="add">
+   <object class="Class.Voiture">
+    <void property="etat">
+     <string>Bonne</string>
+    </void>
+    <void property="id">
+     <int>12</int>
+    </void>
+    <void property="marque">
+     <string>45</string>
+    </void>
+    <void property="modele">
+     <string>45</string>
+    </void>
+    <void property="prixJournalier">
+     <float>20.0</float>
+    </void>
+    <void property="vitesseMax">
+     <float>150.0</float>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Class.Voiture">
+    <void property="etat">
+     <string>654</string>
+    </void>
+    <void property="id">
+     <int>16</int>
+    </void>
+    <void property="marque">
+     <string>R8</string>
+    </void>
+    <void property="modele">
+     <string>Audi</string>
+    </void>
+    <void property="prixJournalier">
+     <float>645.0</float>
+    </void>
+    <void property="vitesseMax">
+     <float>654.0</float>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Class.Voiture">
+    <void property="etat">
+     <string>70</string>
+    </void>
+    <void property="id">
+     <int>14</int>
+    </void>
+    <void property="marque">
+     <string>Renault</string>
+    </void>
+    <void property="modele">
+     <string>Twingo</string>
+    </void>
+    <void property="prixJournalier">
+     <float>60.0</float>
+    </void>
+    <void property="vitesseMax">
+     <float>654.0</float>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Class.Voiture">
+    <void property="etat">
+     <string>645654</string>
+    </void>
+    <void property="id">
+     <int>6</int>
+    </void>
+    <void property="marque">
+     <string>mp</string>
+    </void>
+    <void property="modele">
+     <string>Ma</string>
+    </void>
+    <void property="prixJournalier">
+     <float>456.0</float>
+    </void>
+    <void property="vitesseMax">
+     <float>654.0</float>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Class.Voiture">
+    <void property="etat">
+     <string>54</string>
+    </void>
+    <void property="id">
+     <int>8</int>
+    </void>
+    <void property="km">
+     <int>54</int>
+    </void>
+    <void property="marque">
+     <string>5445</string>
+    </void>
+    <void property="modele">
+     <string>45</string>
+    </void>
+    <void property="nbPlaces">
+     <int>54</int>
+    </void>
+    <void property="prixJournalier">
+     <float>546.0</float>
+    </void>
+    <void property="puissance">
+     <float>564.0</float>
+    </void>
+    <void property="vitesseMax">
+     <float>54654.0</float>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Class.Voiture">
+    <void property="etat">
+     <string>5</string>
+    </void>
+    <void property="id">
+     <int>18</int>
+    </void>
+    <void property="marque">
+     <string>Chouteau</string>
+    </void>
+    <void property="modele">
+     <string>Tony</string>
+    </void>
+    <void property="prixJournalier">
+     <float>5.0</float>
+    </void>
+    <void property="vitesseMax">
+     <float>5.0</float>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Class.Voiture">
+    <void property="etat">
+     <string>5</string>
+    </void>
+    <void property="id">
+     <int>20</int>
+    </void>
+    <void property="marque">
+     <string>Chouteau</string>
+    </void>
+    <void property="modele">
+     <string>Tony</string>
+    </void>
+    <void property="prixJournalier">
+     <float>6.0</float>
+    </void>
+    <void property="vitesseMax">
+     <float>5.0</float>
+    </void>
+   </object>
+  </void>
+ </object>
+</java>
