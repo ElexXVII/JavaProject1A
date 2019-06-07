@@ -9,9 +9,18 @@ public class Client extends ParcAgent
     private String name;
     private String surname;
     private String phone;
+    private String mail;
     private String address;
 
     public Client() {
+    }
+
+    public void setMail(String mail) {
+        this.mail = mail;
+    }
+
+    public String getMail() {
+        return mail;
     }
 
     public static int getClientID() {
@@ -42,11 +51,12 @@ public class Client extends ParcAgent
         this.address = address;
     }
 
-    public Client(String name, String surname, String phone, String address)
+    public Client(String name, String surname, String phone, String mail, String address)
     {
         this.name = name;
         this.surname = surname;
         this.phone = phone;
+        this.mail = mail;
         this.address = address;
 
         this.id = clientID;

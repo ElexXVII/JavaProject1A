@@ -52,7 +52,7 @@ public interface Definition
     //Voiture Clio2 = new Voiture("Clio 2","Renault",  30, 150, STATE2, 50000, 100, 5);
     //Voiture R8 = new Voiture("R8","Audi",  75, 250, STATE1, 5000, 375, 2);
 
-    Client Tony = new Client("Chouteau", "Tony", "0601020304", "7 rue des pissenlis Lille");
+    Client Tony = new Client("Chouteau", "Tony", "0601020304", "tchoutea@enssat.fr", "7 rue des pissenlis Lille");
     //Client George = new Client("Du Pont", "George", "0624586796", "9 avenue des pirles Paris");
     //Client Marcel = new Client("Robert", "Marcel", "0605545448", "56 grande rue Massy");
 
