@@ -169,7 +169,7 @@ public class Contrat extends ParcAgent
 
     public String getDisplay()
     {
-        return id + " - " + client.getName() + " " + vehicule.getModele();
+        return id + " - " + client.getName() + " " + vehicule.getModele() + "     " + this.prixEstime + "€";
     }
 
 }

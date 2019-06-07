@@ -404,7 +404,7 @@ public class TFrame extends JFrame implements Definition
         contractBeginningField.setReduc();
         contractEndingField.setReduc();
 
-        contractConfirmButton = new TConfirmButton(frame, 0, "Confirmer", 250, 30, contractClientField, contractVehicleField, contractBeginningField, contractEndingField, contractEstimatedKm);
+        contractConfirmButton = new TConfirmButton(frame, 0, "Confirmer", 250, 30, contractBeginningField, contractEndingField, contractEstimatedKm);
         contractTextFieldArea.add(contractConfirmButton);
 
         contractCancelButton = new TConfirmButton(frame, 0, "Annuler", 250, 30);
