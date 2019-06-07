@@ -205,9 +205,11 @@ public class TConfirmButton extends TFlatButton implements Definition, ActionLis
                                     Float.parseFloat(textFields[6].getHintOrText()), Integer.parseInt(textFields[7].getHintOrText())) );
                             ((Vehicule) list.get(i)).setId(v.getId());
 
-                            System.out.println(((Vehicule) list.get(i)).getMarque());
+                            //System.out.println(((Vehicule) list.get(i)).getMarque());
 
-                            scrollPane.filterModel((DefaultListModel<String>) tlist.getModel(), "");
+                            tlist.setModel(tlist.createDefaultListModel());
+                            frame.getVehicleContractList().setModel(frame.getVehicleContractList().createDefaultListModel());
+                            //scrollPane.filterModel((DefaultListModel<String>) tlist.getModel(), "");
                         }
                     }
                     break;

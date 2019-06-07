@@ -520,11 +520,11 @@ public class TFrame extends JFrame implements Definition
         TPanel CenterPanel = new TPanel(500, ((int)vehicleTextFieldArea.getPreferredSize().getHeight()-11*30-12*15)/2, null, null, null, false);
         vehicleTextFieldArea.add(CenterPanel);
 
-        vehicleBrandField = new TTextField(frame, "Marque", 250, 30, Definition.WHITE, Definition.BLACK);
-        vehicleTextFieldArea.add(vehicleBrandField);
-
         vehicleModelField = new TTextField(frame, "Modèle", 250, 30, Definition.WHITE, Definition.BLACK);
         vehicleTextFieldArea.add(vehicleModelField);
+
+        vehicleBrandField = new TTextField(frame, "Marque", 250, 30, Definition.WHITE, Definition.BLACK);
+        vehicleTextFieldArea.add(vehicleBrandField);
 
         vehicleDailyPriceField = new TTextField(frame, "Prix journalier", 250, 30, Definition.WHITE, Definition.BLACK);
         vehicleTextFieldArea.add(vehicleDailyPriceField);
@@ -544,7 +544,7 @@ public class TFrame extends JFrame implements Definition
         vehicleNbSeatField = new TTextField(frame, "Nombre de places", 250, 30, Definition.WHITE, Definition.BLACK);
         vehicleTextFieldArea.add(vehicleNbSeatField);
 
-        vehicleConfirmButton = new TConfirmButton(frame, 1, "Confirmer", 250, 30, vehicleBrandField, vehicleModelField, vehicleDailyPriceField,
+        vehicleConfirmButton = new TConfirmButton(frame, 1, "Confirmer", 250, 30, vehicleModelField, vehicleBrandField, vehicleDailyPriceField,
                 vehicleMaxSpeedField, vehicleStateField, vehicleOdometerField, vehiclePowerField, vehicleNbSeatField);
         vehicleTextFieldArea.add(vehicleConfirmButton);
 
@@ -667,6 +667,7 @@ public class TFrame extends JFrame implements Definition
 
     public void AddPanelToChangePanel(int whichMenu, int index)
     {
+
         switch (whichMenu)
         {
             case 0:
@@ -681,8 +682,8 @@ public class TFrame extends JFrame implements Definition
 
                     if (v.getId() == Integer.parseInt((vehicleList.getModel().getElementAt(index).toString().split(" - ")[0])))
                     {
-                        vehicleBrandField.setHint(v.getMarque());
                         vehicleModelField.setHint(v.getModele());
+                        vehicleBrandField.setHint(v.getMarque());
                         vehicleDailyPriceField.setHint(""+v.getPrixJournalier());
                         vehicleMaxSpeedField.setHint(""+v.getVitesseMax());
                         vehicleStateField.setHint(v.getEtat());
