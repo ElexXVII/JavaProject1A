@@ -198,14 +198,12 @@ public class TConfirmButton extends TFlatButton implements Definition, ActionLis
                     for (int i = 0; i < list.size(); i++) {
                         Vehicule v = (Vehicule) list.get(i);
 
-                        if (v.getId() == Integer.parseInt((tlist.getModel().getElementAt(index).toString().split(" - ")[0])))
-                        {
+                        if (v.getId() == Integer.parseInt((tlist.getModel().getElementAt(index).toString().split(" - ")[0]))) {
                             list.set(i, new Voiture(textFields[0].getHintOrText(), textFields[1].getHintOrText(), Float.parseFloat(textFields[2].getHintOrText()),
                                     Float.parseFloat(textFields[3].getHintOrText()), textFields[4].getHintOrText(), Integer.parseInt(textFields[5].getHintOrText()),
                                     Float.parseFloat(textFields[6].getHintOrText()), Integer.parseInt(textFields[7].getHintOrText())) );
                             ((Vehicule) list.get(i)).setId(v.getId());
 
-                            //System.out.println(((Vehicule) list.get(i)).getMarque());
 
                             tlist.setModel(tlist.createDefaultListModel());
                             frame.getVehicleContractList().setModel(frame.getVehicleContractList().createDefaultListModel());
@@ -292,7 +290,6 @@ public class TConfirmButton extends TFlatButton implements Definition, ActionLis
 
             for (TTextField textField : textFields)
             {
-                //System.out.println(textField);
                 if(textField.getText().isEmpty())
                 {
                     isEmpty = true;
@@ -311,10 +308,9 @@ public class TConfirmButton extends TFlatButton implements Definition, ActionLis
                 switch(whichMenu)
                 {
                     case 0:
-                        System.out.println(frame.getClientContractList().getSelectedIndex() + " " + Gestionnaire.getClients().size());
                         Client c = Gestionnaire.getClient(frame.getClientContractList().getSelectedIndex());
                         Vehicule v = Gestionnaire.getVehicule(frame.getVehicleContractList().getSelectedIndex());
-                        newAgent = new Contrat(c, v, frame.getContractBeginningField().getD(), frame.getContractEndingField().getD(), 100, frame.getContractHasReduction().isSelected());
+                        newAgent = new Contrat(c, v, frame.getContractBeginningField().getD(), frame.getContractEndingField().getD(), Integer.parseInt(frame.getContractEstimatedKm().getText()), frame.getContractHasReduction().isSelected());
                         scrollPane.addElement((DefaultListModel<String>) tlist.getModel(), newAgent);
                         list.add(newAgent);
                         break;

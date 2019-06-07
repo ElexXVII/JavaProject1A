@@ -148,7 +148,7 @@ public class Gestionnaire implements Definition
     }
 
 
-    public static void chargerClients () {
+    private static void chargerClients () {
         XMLDecoder decoder;
         try {
             decoder = new XMLDecoder(new FileInputStream("clients.xml"));

@@ -141,6 +141,7 @@ public class TFrame extends JFrame implements Definition
     private TPanel contractListsArea;
     private TList vehicleContractList;
     private TScrollPane vehicleContractScrollPane;
+    private TComboBox vehicleTypeSelector;
 
     public TList getVehicleContractList() {
         return vehicleContractList;
@@ -175,6 +176,10 @@ public class TFrame extends JFrame implements Definition
         this.pack();
     }
 
+    public TTextField getContractEstimatedKm() {
+        return contractEstimatedKm;
+    }
+
     private void initFrame()
     {
         frame = this;
@@ -183,7 +188,6 @@ public class TFrame extends JFrame implements Definition
         this.setTitle("JavaParkTest");
         this.setUndecorated(true);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        System.out.println(new File("images/logo.png").getAbsolutePath());
         try {
             BufferedImage image = ImageIO.read(new File("images/logo.png"));
             frame.setIconImage(image);
@@ -517,8 +521,11 @@ public class TFrame extends JFrame implements Definition
         vehicleTextFieldArea = new TPanel(690, 616, Definition.InterfaceLightColor, null, new FlowLayout(FlowLayout.CENTER, getWidth()/2, 15), true);
         vehicleAreaToFillPanel.add(vehicleTextFieldArea, Definition.areaTofillCardName[1]);
 
-        TPanel CenterPanel = new TPanel(500, ((int)vehicleTextFieldArea.getPreferredSize().getHeight()-11*30-12*15)/2, null, null, null, false);
+        TPanel CenterPanel = new TPanel(500, ((int)vehicleTextFieldArea.getPreferredSize().getHeight()-12*30-13*15)/2, null, null, null, false);
         vehicleTextFieldArea.add(CenterPanel);
+
+        vehicleTypeSelector = new TComboBox();
+        vehicleTextFieldArea.add(vehicleTypeSelector);
 
         vehicleModelField = new TTextField(frame, "Modèle", 250, 30, Definition.WHITE, Definition.BLACK);
         vehicleTextFieldArea.add(vehicleModelField);
@@ -746,7 +753,6 @@ public class TFrame extends JFrame implements Definition
 
     public CardLayout getContractAreaLayout()
     {
-        //System.out.println((contractAreaLayout==null)+"");
         return contractAreaLayout;
     }
 

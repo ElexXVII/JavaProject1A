@@ -107,14 +107,10 @@ public class Contrat extends ParcAgent
         this.finLoc = finLoc;
         this.kmEstime = kmEstime;
 
-        if (this.reductionAutorisee()) {
-            this.reduction = reduction;
-        } else {
-            this.reduction = false;
-        }
+        this.reduction = reduction;
 
         this.duree = Math.abs((int)Duration.between(debutLoc.toInstant(), finLoc.toInstant()).toDays());
-
+        System.out.println(duree);
         this.prixEstime = this.calculerPrix();
 
         this.id = contractID;
@@ -123,7 +119,7 @@ public class Contrat extends ParcAgent
 
     private boolean reductionAutorisee () {
 
-        return duree >= 7;
+        return (duree >= 7);
     }
 
     private float calculerPrix () {
@@ -132,7 +128,8 @@ public class Contrat extends ParcAgent
         int kmRestants = kmEstime - 50;
         int kmAjoutes;
 
-        res += vehicule.getPrixJournalier();
+        res += vehicule.getPrixJournalier() * this.duree;
+
 
         // Ajout des km 50 à 100;
         if (kmRestants > 0) {
@@ -165,6 +162,7 @@ public class Contrat extends ParcAgent
         } else {
             return res;
         }
+
     }
 
     public String getDisplay()
