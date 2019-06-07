@@ -10,6 +10,15 @@ public abstract class Vehicule extends ParcAgent
     private String modele;
     private String etat;
     private float prixJournalier;
+    private String className;
+
+    public String getClassName() {
+        return className;
+    }
+
+    public void setClassName(String className) {
+        this.className = className;
+    }
 
     public Vehicule()
     {
@@ -66,11 +75,6 @@ public abstract class Vehicule extends ParcAgent
 
     protected abstract String printType ();
 
-    public String getDisplay()
-    {
-        return id + " - " + modele + " " + marque;
-    }
-
     public int getId() {
         return id;
     }
@@ -93,6 +97,6 @@ public abstract class Vehicule extends ParcAgent
 
     @Override
     public String toString() {
-        return "" + this.id + ". " + this.marque + " " + this.modele + " (" + this.printType() + ")";
+        return "" + this.id + " - " + this.marque + " " + this.modele + " (" + this.className + ")";
     }
 }

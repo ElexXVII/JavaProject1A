@@ -12,21 +12,17 @@ public class TConfirmButton extends TFlatButton implements Definition, ActionLis
 {
     TFrame frame;
 
-    String name;
+    private String name;
     private final int whichMenu;
-    int id;
-    TScrollPane scrollPane;
-    TList tlist;
+    private TScrollPane scrollPane;
+    private TList tlist;
 
-    TScrollPane contractVehicleScrollPane;
-    TScrollPane contractClientScrollPane;
+    private ArrayList list;
 
-    ArrayList list;
+    private TTextField[] textFields;
 
-    TTextField[] textFields;
-
-    TPanel areaToFillCardPanel;
-    CardLayout cardLayout;
+    private TPanel areaToFillCardPanel;
+    private CardLayout cardLayout;
 
     public TConfirmButton(TFrame frame, int whichMenu, String text, int x, int y, TTextField... textFields)
     {
@@ -40,8 +36,8 @@ public class TConfirmButton extends TFlatButton implements Definition, ActionLis
         this.setForeground(Definition.WHITE);
         this.setFont(Definition.menuFont);
 
-        contractVehicleScrollPane = frame.getVehicleContractScrollPane();
-        contractClientScrollPane = frame.getClientContractScrollPane();
+        TScrollPane contractVehicleScrollPane = frame.getVehicleContractScrollPane();
+        TScrollPane contractClientScrollPane = frame.getClientContractScrollPane();
 
         super.setBorderPainted(false);
         super.setFocusPainted(false);
@@ -68,7 +64,7 @@ public class TConfirmButton extends TFlatButton implements Definition, ActionLis
                 scrollPane = frame.getContractScrollPane();
                 tlist = frame.getContractTList();
                 list = Gestionnaire.getContrats();
-                id = frame.contractID;
+                int id = frame.contractID;
 
                 areaToFillCardPanel = frame.getContractAreaToFillPanel();
                 cardLayout = frame.getContractAreaLayout();
@@ -198,14 +194,41 @@ public class TConfirmButton extends TFlatButton implements Definition, ActionLis
                     for (int i = 0; i < list.size(); i++) {
                         Vehicule v = (Vehicule) list.get(i);
 
-                        if (v.getId() == Integer.parseInt((tlist.getModel().getElementAt(index).toString().split(" - ")[0])))
-                        {
+                        if (v.getId() == Integer.parseInt(tlist.getModel().getElementAt(index).toString().split(" - ")[0])) {
+
+                            System.out.println(frame.getVehicleTypeSelector().getSelectedIndex());
+                            switch (frame.getVehicleTypeSelector().getSelectedIndex()) {
+
+                                case 0:
+                                    list.set(i, new Voiture(textFields[0].getHintOrText(), textFields[1].getHintOrText(), Float.parseFloat(textFields[2].getHintOrText()),
+                                            Float.parseFloat(textFields[3].getHintOrText()), textFields[4].getHintOrText(), Integer.parseInt(textFields[5].getHintOrText()),
+                                            Float.parseFloat(textFields[6].getHintOrText()), Integer.parseInt(textFields[7].getHintOrText())) );
+                                    ((Vehicule) list.get(i)).setId(v.getId());
+                                    System.out.println("Voiture creee");
+                                    break;
+                                case 1:
+                                    list.set(i, new Moto(textFields[0].getHintOrText(), textFields[1].getHintOrText(), Float.parseFloat(textFields[2].getHintOrText()),
+                                            Float.parseFloat(textFields[3].getHintOrText()), textFields[4].getHintOrText(), Integer.parseInt(textFields[5].getHintOrText()),
+                                            Float.parseFloat(textFields[6].getHintOrText())) );
+                                    ((Vehicule) list.get(i)).setId(v.getId());
+                                    System.out.println("Moto creee");
+                                    break;
+                                case 2:
+                                    list.set(i, new Avion(textFields[0].getHintOrText(), textFields[1].getHintOrText(), Float.parseFloat(textFields[2].getHintOrText()),
+                                            Float.parseFloat(textFields[3].getHintOrText()), textFields[4].getHintOrText(), Integer.parseInt(textFields[8].getHintOrText()),
+                                            Integer.parseInt(textFields[9].getHintOrText())) );
+                                    ((Vehicule) list.get(i)).setId(v.getId());
+                                    System.out.println("Avion creee");
+                                    break;
+
+                            }
+
+/*
                             list.set(i, new Voiture(textFields[0].getHintOrText(), textFields[1].getHintOrText(), Float.parseFloat(textFields[2].getHintOrText()),
                                     Float.parseFloat(textFields[3].getHintOrText()), textFields[4].getHintOrText(), Integer.parseInt(textFields[5].getHintOrText()),
                                     Float.parseFloat(textFields[6].getHintOrText()), Integer.parseInt(textFields[7].getHintOrText())) );
                             ((Vehicule) list.get(i)).setId(v.getId());
-
-                            //System.out.println(((Vehicule) list.get(i)).getMarque());
+*/
 
                             tlist.setModel(tlist.createDefaultListModel());
                             frame.getVehicleContractList().setModel(frame.getVehicleContractList().createDefaultListModel());
@@ -217,6 +240,8 @@ public class TConfirmButton extends TFlatButton implements Definition, ActionLis
                             textFields[5].setHint("Distance déjà parcourue");
                             textFields[6].setHint("Puissance");
                             textFields[7].setHint("Nombre de places");
+                            textFields[8].setHint("Nombre d'heures de vol");
+                            textFields[9].setHint("Nombre de moteurs");
 
                             textFields[0].setText("");
                             textFields[1].setText("");
@@ -226,6 +251,8 @@ public class TConfirmButton extends TFlatButton implements Definition, ActionLis
                             textFields[5].setText("");
                             textFields[6].setText("");
                             textFields[7].setText("");
+                            textFields[8].setText("");
+                            textFields[9].setText("");
 
                             textFields[0].focusLost();
                             textFields[1].focusLost();
@@ -235,6 +262,8 @@ public class TConfirmButton extends TFlatButton implements Definition, ActionLis
                             textFields[5].focusLost();
                             textFields[6].focusLost();
                             textFields[7].focusLost();
+                            textFields[8].focusLost();
+                            textFields[9].focusLost();
                         }
                     }
                     this.setName("Confirmer");
@@ -292,8 +321,7 @@ public class TConfirmButton extends TFlatButton implements Definition, ActionLis
 
             for (TTextField textField : textFields)
             {
-                //System.out.println(textField);
-                if(textField.getText().isEmpty())
+                if(textField.getText().isEmpty() && textField.isVisible())
                 {
                     isEmpty = true;
                     textField.setBackground(Definition.emptyErrorColor);
@@ -311,20 +339,50 @@ public class TConfirmButton extends TFlatButton implements Definition, ActionLis
                 switch(whichMenu)
                 {
                     case 0:
-                        System.out.println(frame.getClientContractList().getSelectedIndex() + " " + Gestionnaire.getClients().size());
                         Client c = Gestionnaire.getClient(frame.getClientContractList().getSelectedIndex());
                         Vehicule v = Gestionnaire.getVehicule(frame.getVehicleContractList().getSelectedIndex());
-                        newAgent = new Contrat(c, v, frame.getContractBeginningField().getD(), frame.getContractEndingField().getD(), 100, frame.getContractHasReduction().isSelected());
+                        newAgent = new Contrat(c, v, frame.getContractBeginningField().getD(), frame.getContractEndingField().getD(), Integer.parseInt(frame.getContractEstimatedKm().getText()), frame.getContractHasReduction().isSelected());
                         scrollPane.addElement((DefaultListModel<String>) tlist.getModel(), newAgent);
                         list.add(newAgent);
                         break;
                     case 1:
-                        newAgent = new Voiture(textFields[0].getText(), textFields[1].getText(), Float.parseFloat(textFields[2].getText()),
-                                Float.parseFloat(textFields[3].getText()), textFields[4].getText(), Long.parseLong(textFields[5].getText()),
-                                Float.parseFloat(textFields[6].getText()), Integer.parseInt(textFields[7].getText()));
-                        scrollPane.addElement((DefaultListModel<String>) tlist.getModel(), newAgent);
-                        frame.getVehicleContractScrollPane().addElement((DefaultListModel<String>) frame.getVehicleContractList().getModel(), newAgent);
-                        list.add(newAgent);
+                        System.out.println(frame.getVehicleTypeSelector().getSelectedIndex());
+                        switch (frame.getVehicleTypeSelector().getSelectedIndex()) {
+
+                            case 0:
+                                Voiture voit = new Voiture(textFields[0].getHintOrText(), textFields[1].getHintOrText(), Float.parseFloat(textFields[2].getHintOrText()),
+                                        Float.parseFloat(textFields[3].getHintOrText()), textFields[4].getHintOrText(), Integer.parseInt(textFields[5].getHintOrText()),
+                                        Float.parseFloat(textFields[6].getHintOrText()), Integer.parseInt(textFields[7].getHintOrText()));
+                                frame.getVehicleContractScrollPane().addElement((DefaultListModel<String>) frame.getVehicleContractList().getModel(), voit);
+                                scrollPane.addElement((DefaultListModel<String>) tlist.getModel(), voit);
+
+                                list.add(voit);
+
+                                System.out.println("Voiture creee");
+                                break;
+                            case 1:
+                                Moto mot = new Moto(textFields[0].getHintOrText(), textFields[1].getHintOrText(), Float.parseFloat(textFields[2].getHintOrText()),
+                                        Float.parseFloat(textFields[3].getHintOrText()), textFields[4].getHintOrText(), Integer.parseInt(textFields[5].getHintOrText()),
+                                        Float.parseFloat(textFields[6].getHintOrText()));
+                                frame.getVehicleContractScrollPane().addElement((DefaultListModel<String>) frame.getVehicleContractList().getModel(), mot);
+                                scrollPane.addElement((DefaultListModel<String>) tlist.getModel(), mot);
+
+                                list.add(mot);
+                                System.out.println("Moto creee");
+                                break;
+                            case 2:
+                                Avion av = new Avion(textFields[0].getHintOrText(), textFields[1].getHintOrText(), Float.parseFloat(textFields[2].getHintOrText()),
+                                        Float.parseFloat(textFields[3].getHintOrText()), textFields[4].getHintOrText(), Integer.parseInt(textFields[8].getHintOrText()),
+                                        Integer.parseInt(textFields[9].getHintOrText()));
+                                frame.getVehicleContractScrollPane().addElement((DefaultListModel<String>) frame.getVehicleContractList().getModel(), av);
+                                scrollPane.addElement((DefaultListModel<String>) tlist.getModel(), av);
+
+                                list.add(av);
+                                System.out.println("Avion creee");
+                                break;
+
+                        }
+
                         break;
                     case 2:
                         newAgent = new Client(textFields[0].getText(), textFields[1].getText(), textFields[2].getText(), textFields[3].getText(), textFields[4].getText());

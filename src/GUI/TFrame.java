@@ -142,6 +142,9 @@ public class TFrame extends JFrame implements Definition
     private TList vehicleContractList;
     private TScrollPane vehicleContractScrollPane;
     private TComboBox vehicleTypeSelector;
+    private TTextField vehicleNbFlightHoursField;
+    private TTextField vehicleNbEnginesField;
+    private TPanel centerPanel;
 
     public TList getVehicleContractList() {
         return vehicleContractList;
@@ -515,6 +518,34 @@ public class TFrame extends JFrame implements Definition
         return vehicleTypeSelector;
     }
 
+    public TTextField getVehicleOdometerField() {
+        return vehicleOdometerField;
+    }
+
+    public TTextField getVehiclePowerField() {
+        return vehiclePowerField;
+    }
+
+    public TTextField getVehicleNbSeatField() {
+        return vehicleNbSeatField;
+    }
+
+    public TTextField getVehicleNbFlightHoursField() {
+        return vehicleNbFlightHoursField;
+    }
+
+    public TTextField getVehicleNbEnginesField() {
+        return vehicleNbEnginesField;
+    }
+
+    public TPanel getCenterPanel() {
+        return centerPanel;
+    }
+
+    public void setCenterPanel(TPanel centerPanel) {
+        this.centerPanel = centerPanel;
+    }
+
     private void initVehicleAreasToFill()
     {
         // Empty Panel
@@ -525,10 +556,10 @@ public class TFrame extends JFrame implements Definition
         vehicleTextFieldArea = new TPanel(690, 616, Definition.InterfaceLightColor, null, new FlowLayout(FlowLayout.CENTER, getWidth()/2, 15), true);
         vehicleAreaToFillPanel.add(vehicleTextFieldArea, Definition.areaTofillCardName[1]);
 
-        TPanel CenterPanel = new TPanel(500, ((int)vehicleTextFieldArea.getPreferredSize().getHeight()-12*30-13*15)/2, null, null, null, false);
-        vehicleTextFieldArea.add(CenterPanel);
+        centerPanel = new TPanel(500, ((int)vehicleTextFieldArea.getPreferredSize().getHeight()-12*30-13*15)/2, null, null, null, false);
+        vehicleTextFieldArea.add(centerPanel);
 
-        vehicleTypeSelector = new TComboBox();
+        vehicleTypeSelector = new TComboBox(this);
         vehicleTextFieldArea.add(vehicleTypeSelector);
 
         vehicleModelField = new TTextField(frame, "Modèle", 250, 30, Definition.WHITE, Definition.BLACK);
@@ -555,8 +586,14 @@ public class TFrame extends JFrame implements Definition
         vehicleNbSeatField = new TTextField(frame, "Nombre de places", 250, 30, Definition.WHITE, Definition.BLACK);
         vehicleTextFieldArea.add(vehicleNbSeatField);
 
+        vehicleNbFlightHoursField = new TTextField(frame, "Nombre d'heures de vol", 250, 30, Definition.WHITE, Definition.BLACK);
+        vehicleTextFieldArea.add(vehicleNbFlightHoursField);
+
+        vehicleNbEnginesField = new TTextField(frame, "Nombre de moteurs", 250, 30, Definition.WHITE, Definition.BLACK);
+        vehicleTextFieldArea.add(vehicleNbEnginesField);
+
         vehicleConfirmButton = new TConfirmButton(frame, 1, "Confirmer", 250, 30, vehicleModelField, vehicleBrandField, vehicleDailyPriceField,
-                vehicleMaxSpeedField, vehicleStateField, vehicleOdometerField, vehiclePowerField, vehicleNbSeatField);
+                vehicleMaxSpeedField, vehicleStateField, vehicleOdometerField, vehiclePowerField, vehicleNbSeatField, vehicleNbFlightHoursField, vehicleNbEnginesField);
         vehicleTextFieldArea.add(vehicleConfirmButton);
 
         vehicleCancelButton = new TConfirmButton(frame, 1, "Annuler", 250, 30);
@@ -575,6 +612,8 @@ public class TFrame extends JFrame implements Definition
         vehicleDeletePanel.add(vehicleCancelDeleteButton);
 
         vehicleAreaLayout.show(vehicleAreaToFillPanel, Definition.areaTofillCardName[0]);
+
+        vehicleTypeSelector.afficher(0);
     }
 
     //=============
