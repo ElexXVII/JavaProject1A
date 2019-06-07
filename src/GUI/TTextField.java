@@ -13,7 +13,7 @@ class TTextField extends JTextField implements FocusListener, Definition
     private Color back;
     private Color front;
 
-    private final String hint;
+    private String hint;
     private boolean showingHint;
 
     public TFrame getFrame() {
@@ -64,10 +64,27 @@ class TTextField extends JTextField implements FocusListener, Definition
         }
     }
 
+    public void setHint(String hint)
+    {
+        this.hint = hint;
+    }
+
     @Override
     public String getText()
     {
         return showingHint ? "" : super.getText();
+    }
+
+    public String getHintOrText()
+    {
+        if(this.getText().isEmpty())
+        {
+            return hint;
+        }
+        else
+        {
+            return this.getText();
+        }
     }
 
     public void focusLost()
