@@ -216,6 +216,7 @@ public class TConfirmButton extends TFlatButton implements Definition, ActionLis
                                 Float.parseFloat(textFields[3].getText()), textFields[4].getText(), Integer.parseInt(textFields[5].getText()),
                                 Float.parseFloat(textFields[6].getText()), Integer.parseInt(textFields[7].getText()));
                         scrollPane.addElement((DefaultListModel<String>) tlist.getModel(), newAgent);
+                        frame.getVehicleContractScrollPane().addElement((DefaultListModel<String>) frame.getVehicleContractList().getModel(), newAgent);
                         list.add(newAgent);
                         break;
                     case 2:
