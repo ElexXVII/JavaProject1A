@@ -209,7 +209,23 @@ public class TConfirmButton extends TFlatButton implements Definition, ActionLis
 
                             tlist.setModel(tlist.createDefaultListModel());
                             frame.getVehicleContractList().setModel(frame.getVehicleContractList().createDefaultListModel());
-                            //scrollPane.filterModel((DefaultListModel<String>) tlist.getModel(), "");
+                            textFields[0].setHint("Modèle");
+                            textFields[1].setHint("Marque");
+                            textFields[2].setHint("Prix journalier");
+                            textFields[3].setHint("Vitesse maximale");
+                            textFields[4].setHint("Etat du véhicule");
+                            textFields[5].setHint("Distance déjà parcourue");
+                            textFields[6].setHint("Puissance");
+                            textFields[7].setHint("Nombre de places");
+
+                            textFields[0].focusLost();
+                            textFields[1].focusLost();
+                            textFields[2].focusLost();
+                            textFields[3].focusLost();
+                            textFields[4].focusLost();
+                            textFields[5].focusLost();
+                            textFields[6].focusLost();
+                            textFields[7].focusLost();
                         }
                     }
                     break;
