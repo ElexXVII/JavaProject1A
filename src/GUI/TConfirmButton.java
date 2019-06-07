@@ -197,6 +197,7 @@ public class TConfirmButton extends TFlatButton implements Definition, ActionLis
                         if (v.getId() == Integer.parseInt((tlist.getModel().getElementAt(index).toString().split(" - ")[0]))) {
 
 
+
                             list.set(i, new Voiture(textFields[0].getHintOrText(), textFields[1].getHintOrText(), Float.parseFloat(textFields[2].getHintOrText()),
                                     Float.parseFloat(textFields[3].getHintOrText()), textFields[4].getHintOrText(), Integer.parseInt(textFields[5].getHintOrText()),
                                     Float.parseFloat(textFields[6].getHintOrText()), Integer.parseInt(textFields[7].getHintOrText())) );
