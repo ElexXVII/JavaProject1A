@@ -65,20 +65,9 @@ public class TDateField extends TTextField implements DocumentListener {
 
         d = date();
 
-
-        System.out.println("d"+this.otherDate);
-
         if (this.getD() != null && this.otherDate.getD() != null) {
-            System.out.println("c"+this.getD());
-            System.out.println("b" +this.otherDate.getD());
             int dur = (int)Math.abs(Duration.between(this.getD().toInstant(), otherDate.getD().toInstant()).toDays());
-            System.out.println("a"+dur);
-            System.out.println("g" + reduc);
             this.reduc.setDuration(dur);
-        } else {
-
-            System.out.println("e"+this.getD());
-            System.out.println("f"+this.otherDate.getD());
         }
     }
 

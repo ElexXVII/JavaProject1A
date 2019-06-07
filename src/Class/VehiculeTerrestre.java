@@ -2,7 +2,7 @@ package Class;
 
 public abstract class VehiculeTerrestre extends Vehicule{
 
-    private int km;
+    private long km;
     private float puissance;
 
     public VehiculeTerrestre()
@@ -10,7 +10,7 @@ public abstract class VehiculeTerrestre extends Vehicule{
         super();
     }
 
-    public VehiculeTerrestre(String modele, String marque, float prixJournalier, float vitesseMax, String etat, int km, float puissance) {
+    public VehiculeTerrestre(String modele, String marque, float prixJournalier, float vitesseMax, String etat, long km, float puissance) {
         super(modele, marque,prixJournalier, vitesseMax,  etat);
         this.km = km;
         this.puissance = puissance;
@@ -26,7 +26,7 @@ public abstract class VehiculeTerrestre extends Vehicule{
         this.puissance = puissance;
     }
 
-    public int getKm() {
+    public long getKm() {
         return km;
     }
 

@@ -189,6 +189,7 @@ public class TConfirmButton extends TFlatButton implements Definition, ActionLis
 
             for (TTextField textField : textFields)
             {
+                System.out.println(textField);
                 if(textField.getText().isEmpty())
                 {
                     isEmpty = true;
@@ -207,13 +208,14 @@ public class TConfirmButton extends TFlatButton implements Definition, ActionLis
                 switch(whichMenu)
                 {
                     case 0:
-                        newAgent = new Contrat(Definition.Tony, Definition.Twingo, 100, false);
+
+                        newAgent = new Contrat(Definition.Tony, Definition.Twingo, frame.getContractBeginningField().getD(), frame.getContractEndingField().getD(), 100, false);
                         scrollPane.addElement((DefaultListModel<String>) tlist.getModel(), newAgent);
                         list.add(newAgent);
                         break;
                     case 1:
                         newAgent = new Voiture(textFields[0].getText(), textFields[1].getText(), Float.parseFloat(textFields[2].getText()),
-                                Float.parseFloat(textFields[3].getText()), textFields[4].getText(), Integer.parseInt(textFields[5].getText()),
+                                Float.parseFloat(textFields[3].getText()), textFields[4].getText(), Long.parseLong(textFields[5].getText()),
                                 Float.parseFloat(textFields[6].getText()), Integer.parseInt(textFields[7].getText()));
                         scrollPane.addElement((DefaultListModel<String>) tlist.getModel(), newAgent);
                         frame.getVehicleContractScrollPane().addElement((DefaultListModel<String>) frame.getVehicleContractList().getModel(), newAgent);

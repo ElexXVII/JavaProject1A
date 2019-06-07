@@ -9,7 +9,7 @@ public class Voiture extends VehiculeTerrestre{
         super();
     }
 
-    public Voiture( String modele, String marque, float prixJournalier, float vitesseMax, String etat, int km, float puissance, int nbPlaces) {
+    public Voiture( String modele, String marque, float prixJournalier, float vitesseMax, String etat, long km, float puissance, int nbPlaces) {
         super(modele, marque,prixJournalier, vitesseMax,  etat,  km, puissance);
         this.nbPlaces = nbPlaces;
     }

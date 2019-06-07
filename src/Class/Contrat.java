@@ -1,5 +1,8 @@
 package Class;
 
+import java.time.Duration;
+import java.util.Calendar;
+
 public class Contrat extends ParcAgent
 {
     static private int contractID = 0;
@@ -7,9 +10,31 @@ public class Contrat extends ParcAgent
 
     private Client client;
     private Vehicule vehicule;
-   // private Temporal debutLoc;
-    //private Temporal finLoc;
+    private Calendar debutLoc;
+    private Calendar finLoc;
     private int kmEstime;
+
+    private int duree;
+
+    public Calendar getDebutLoc() {
+        return debutLoc;
+    }
+
+    public void setDebutLoc(Calendar debutLoc) {
+        this.debutLoc = debutLoc;
+    }
+
+    public Calendar getFinLoc() {
+        return finLoc;
+    }
+
+    public void setFinLoc(Calendar finLoc) {
+        this.finLoc = finLoc;
+    }
+
+    public boolean isReduction() {
+        return reduction;
+    }
 
     private boolean reduction;
 
@@ -56,7 +81,7 @@ public class Contrat extends ParcAgent
         this.kmEstime = kmEstime;
     }
 
-    public boolean isReduction() {
+    public boolean getReduction() {
         return reduction;
     }
 
@@ -75,25 +100,30 @@ public class Contrat extends ParcAgent
     //private Duration duree;
     private float prixEstime;
 
-    public Contrat(Client client, Vehicule vehicule/*, Temporal debutLoc, Temporal finLoc*/, int kmEstime, boolean reduction) {
+    public Contrat(Client client, Vehicule vehicule, Calendar debutLoc, Calendar finLoc, int kmEstime, boolean reduction) {
         this.client = client;
         this.vehicule = vehicule;
-        //this.debutLoc = debutLoc;
-        //this.finLoc = finLoc;
+        this.debutLoc = debutLoc;
+        this.finLoc = finLoc;
         this.kmEstime = kmEstime;
 
-        /*if (this.reductionAutorisee()) {
+        if (this.reductionAutorisee()) {
             this.reduction = reduction;
         } else {
             this.reduction = false;
-        }*/
+        }
 
-        //this.duree = Duration.between(debutLoc, finLoc).abs();
+        this.duree = Math.abs((int)Duration.between(debutLoc.toInstant(), finLoc.toInstant()).toDays());
 
         this.prixEstime = this.calculerPrix();
 
         this.id = contractID;
         contractID ++;
+    }
+
+    private boolean reductionAutorisee () {
+
+        return duree >= 7;
     }
 
     private float calculerPrix () {
