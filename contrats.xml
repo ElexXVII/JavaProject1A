@@ -39,9 +39,6 @@
       <void property="id">
        <int>1</int>
       </void>
-      <void property="km">
-       <int>10000</int>
-      </void>
       <void property="marque">
        <string>Renault</string>
       </void>
