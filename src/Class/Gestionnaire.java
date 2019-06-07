@@ -1,6 +1,5 @@
 package Class;
 
-import GUI.TArray;
 import Interface.Definition;
 
 import java.beans.XMLDecoder;

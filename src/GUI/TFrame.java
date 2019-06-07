@@ -665,7 +665,7 @@ public class TFrame extends JFrame implements Definition
     // PUBLICS FUNCTIONS
     //=============
 
-    public void AddPanelToChangePanel(int whichMenu)
+    public void AddPanelToChangePanel(int whichMenu, int index)
     {
         switch (whichMenu)
         {
@@ -674,6 +674,32 @@ public class TFrame extends JFrame implements Definition
                 break;
             case 1:
                 vehicleConfirmButton.setName("Modifier");
+                System.out.println(vehicleConfirmButton.getName());
+
+                for (int i = 0; i < Gestionnaire.getVehicules().size(); i++) {
+                    Vehicule v = (Vehicule) Gestionnaire.getVehicules().get(i);
+
+                    if (v.getId() == Integer.parseInt((vehicleList.getModel().getElementAt(index).toString().split(" - ")[0])))
+                    {
+                        vehicleBrandField.setHint(v.getMarque());
+                        vehicleModelField.setHint(v.getModele());
+                        vehicleDailyPriceField.setHint(""+v.getPrixJournalier());
+                        vehicleMaxSpeedField.setHint(""+v.getVitesseMax());
+                        vehicleStateField.setHint(v.getEtat());
+                        vehicleOdometerField.setHint("0");
+                        vehiclePowerField.setHint("0");
+                        vehicleNbSeatField.setHint("0");
+
+                        vehicleBrandField.focusLost();
+                        vehicleModelField.focusLost();
+                        vehicleDailyPriceField.focusLost();
+                        vehicleMaxSpeedField.focusLost();
+                        vehicleStateField.focusLost();
+                        vehicleOdometerField.focusLost();
+                        vehiclePowerField.focusLost();
+                        vehicleNbSeatField.focusLost();
+                    }
+                }
                 break;
             case 2:
                 clientConfirmButton.setName("Modifier");
@@ -760,7 +786,7 @@ public class TFrame extends JFrame implements Definition
 
     // ARRAYLIST GETTERS
 
-    public ArrayList<ParcAgent> getContractArrayList()
+    /*public ArrayList<ParcAgent> getContractArrayList()
     {
         return contracts;
     }
@@ -773,7 +799,7 @@ public class TFrame extends JFrame implements Definition
     public ArrayList<ParcAgent> getClientArrayList()
     {
         return clients;
-    }
+    }*/
 
     // TEXTFIELD ADD NEW CLIENT
 

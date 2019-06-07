@@ -149,9 +149,9 @@ public class TConfirmButton extends TFlatButton implements Definition, ActionLis
                     break;
                 case 1:
                     for (int i = 0; i < list.size(); i++) {
-                        Vehicule c = (Vehicule) list.get(i);
+                        Vehicule v = (Vehicule) list.get(i);
 
-                        if (c.getId() == Integer.parseInt((tlist.getModel().getElementAt(index).toString().split(" - ")[0]))) {
+                        if (v.getId() == Integer.parseInt((tlist.getModel().getElementAt(index).toString().split(" - ")[0]))) {
                             list.remove(i);
                         }
                     }
@@ -181,7 +181,58 @@ public class TConfirmButton extends TFlatButton implements Definition, ActionLis
         }
         else if (name.equals("Modifier"))
         {
+            int index = tlist.getSelectedIndex();
 
+            switch (whichMenu)
+            {
+                case 0:
+                    for (int i = 0; i < list.size(); i++) {
+                        Contrat c = (Contrat) list.get(i);
+
+                        if (c.getId() == Integer.parseInt((tlist.getModel().getElementAt(index).toString().split(" - ")[0]))) {
+                            //list.remove(i);
+                        }
+                    }
+                    break;
+                case 1:
+                    for (int i = 0; i < list.size(); i++) {
+                        Vehicule v = (Vehicule) list.get(i);
+
+                        if (v.getId() == Integer.parseInt((tlist.getModel().getElementAt(index).toString().split(" - ")[0]))) {
+                            System.out.println(index+" "+Integer.parseInt((tlist.getModel().getElementAt(index).toString().split(" - ")[0]))+ " "+v.getId());
+                            list.set(i, new Voiture(textFields[0].getHintOrText(), textFields[1].getHintOrText(), Float.parseFloat(textFields[2].getHintOrText()),
+                                    Float.parseFloat(textFields[3].getHintOrText()), textFields[4].getHintOrText(), Integer.parseInt(textFields[5].getHintOrText()),
+                                    Float.parseFloat(textFields[6].getHintOrText()), Integer.parseInt(textFields[7].getHintOrText())) );
+                            ((Vehicule) list.get(i)).setId(v.getId());
+
+                            System.out.println(((Vehicule) list.get(i)).getMarque());
+
+                            scrollPane.filterModel((DefaultListModel<String>) tlist.getModel(), "");
+                        }
+                    }
+                    break;
+                case 2:
+                    for (int i = 0; i < list.size(); i++) {
+                        Client c = (Client) list.get(i);
+
+                        if (c.getId() == Integer.parseInt((tlist.getModel().getElementAt(index).toString().split(" - ")[0]))) {
+                            c = new Client(textFields[0].getHintOrText(), textFields[1].getHintOrText(), textFields[2].getHintOrText(), textFields[3].getHintOrText());
+                        }
+                    }
+                    break;
+            }
+            Gestionnaire.sauvegarder();
+
+            //String newElement = (id++)+ " - "+ frame.getClientSurnameField().getText()+" "+frame.getClientNameField().getText();
+            //scrollPane.addElement((DefaultListModel<String>) tlist.getModel(), newAgent);
+            //list.add(newAgent);
+            cardLayout.show(areaToFillCardPanel, Definition.areaTofillCardName[0]);
+
+            for (TTextField textField : textFields)
+            {
+                textField.setText("");
+                textField.focusLost();
+            }
         }
         else
         {
@@ -241,5 +292,10 @@ public class TConfirmButton extends TFlatButton implements Definition, ActionLis
                 }
             }
         }
+    }
+
+    public void setName(String name)
+    {
+        this.name = name;
     }
 }
