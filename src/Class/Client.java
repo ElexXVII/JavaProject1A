@@ -63,7 +63,7 @@ public class Client extends ParcAgent
         clientID++;
     }
 
-    public String getDisplay()
+    public String toString()
     {
         return id + " - " + name + " " + surname;
     }
@@ -86,10 +86,5 @@ public class Client extends ParcAgent
 
     public int getId() {
         return id;
-    }
-
-    @Override
-    public String toString() {
-        return "" + this.id + ". " + this.name;
     }
 }

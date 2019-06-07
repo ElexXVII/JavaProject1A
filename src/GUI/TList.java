@@ -83,7 +83,7 @@ public class TList extends JList implements Definition, MouseListener {
 
         for (ParcAgent agent : (ArrayList<ParcAgent>) list)
         {
-            model.addElement(agent.getDisplay());
+            model.addElement(agent.toString());
         }
         return model;
     }

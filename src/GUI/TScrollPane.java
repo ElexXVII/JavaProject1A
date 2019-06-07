@@ -44,18 +44,18 @@ public class TScrollPane extends JScrollPane implements Definition
     {
         for (ParcAgent agent : (ArrayList<ParcAgent>) list)
         {
-            if (!agent.getDisplay().toLowerCase().contains(filter.toLowerCase()))
+            if (!agent.toString().toLowerCase().contains(filter.toLowerCase()))
             {
-                if (model.contains(agent.getDisplay()))
+                if (model.contains(agent.toString()))
                 {
-                    model.removeElement(agent.getDisplay());
+                    model.removeElement(agent.toString());
                 }
             }
             else
             {
-                if (!model.contains(agent.getDisplay()))
+                if (!model.contains(agent.toString()))
                 {
-                    model.addElement(agent.getDisplay());
+                    model.addElement(agent.toString());
                 }
             }
         }
@@ -63,7 +63,7 @@ public class TScrollPane extends JScrollPane implements Definition
 
     public void addElement(DefaultListModel<String> model, ParcAgent agent)
     {
-        model.addElement(agent.getDisplay());
+        model.addElement(agent.toString());
     }
 
     public void delElement(DefaultListModel<String> model, int index)

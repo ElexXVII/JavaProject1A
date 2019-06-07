@@ -3,7 +3,7 @@ package Class;
 public class ParcAgent
 {
 
-    public String getDisplay()
+    public String toString()
     {
         // Not used (Only used on subClasses)
         return "";
