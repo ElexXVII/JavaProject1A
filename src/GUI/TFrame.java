@@ -90,7 +90,7 @@ public class TFrame extends JFrame implements Definition
 
     private TPanel vehicleTextFieldArea;
     private TPanel vehicleEmpty;
-    private TTextField vehicleBrandField;
+    public TTextField vehicleBrandField;
     private TTextField vehicleModelField;
     private TTextField vehicleDailyPriceField;
     private TTextField vehicleMaxSpeedField;
@@ -626,13 +626,14 @@ public class TFrame extends JFrame implements Definition
 
         /*clientSurnameLabel = new GUI.TLabel("Nom : ", WHITE);
         clientAreaToFillPanel.add(clientSurnameLabel);*/
+
+        clientNameField = new TTextField(frame, "Prénom", 250, 30, Definition.WHITE, Definition.BLACK);
+        clientTextFieldArea.add(clientNameField);
+
         clientSurnameField = new TTextField(frame, "Nom", 250, 30, Definition.WHITE, Definition.BLACK);
         clientTextFieldArea.add(clientSurnameField);
 
-        clientNameField = new TTextField(frame, "Prenom", 250, 30, Definition.WHITE, Definition.BLACK);
-        clientTextFieldArea.add(clientNameField);
-
-        clientPhoneField = new TTextField(frame, "Telephone", 250, 30, Definition.WHITE, Definition.BLACK);
+        clientPhoneField = new TTextField(frame, "Téléphone", 250, 30, Definition.WHITE, Definition.BLACK);
         clientTextFieldArea.add(clientPhoneField);
 
         clientMailField = new TTextField(frame, "E-mail", 250, 30, Definition.WHITE, Definition.BLACK);
@@ -641,7 +642,7 @@ public class TFrame extends JFrame implements Definition
         clientAdressField = new TTextField(frame, "Adresse", 250, 30, Definition.WHITE, Definition.BLACK);
         clientTextFieldArea.add(clientAdressField);
 
-        clientConfirmButton = new TConfirmButton(frame, 2, "Confirmer", 250, 30, clientSurnameField, clientNameField, clientPhoneField, clientMailField, clientAdressField);
+        clientConfirmButton = new TConfirmButton(frame, 2, "Confirmer", 250, 30, clientNameField, clientSurnameField, clientPhoneField, clientMailField, clientAdressField);
         clientTextFieldArea.add(clientConfirmButton);
         clientCancelButton = new TConfirmButton(frame, 2, "Annuler", 250, 30);
         clientTextFieldArea.add(clientCancelButton);
@@ -675,9 +676,9 @@ public class TFrame extends JFrame implements Definition
                 break;
             case 1:
                 vehicleConfirmButton.setName("Modifier");
-                System.out.println(vehicleConfirmButton.getName());
 
-                for (int i = 0; i < Gestionnaire.getVehicules().size(); i++) {
+                for (int i = 0; i < Gestionnaire.getVehicules().size(); i++)
+                {
                     Vehicule v = (Vehicule) Gestionnaire.getVehicules().get(i);
 
                     if (v.getId() == Integer.parseInt((vehicleList.getModel().getElementAt(index).toString().split(" - ")[0])))
@@ -704,6 +705,26 @@ public class TFrame extends JFrame implements Definition
                 break;
             case 2:
                 clientConfirmButton.setName("Modifier");
+
+                for (int i = 0; i < Gestionnaire.getClients().size(); i++)
+                {
+                    Client c = (Client) Gestionnaire.getClients().get(i);
+
+                    if (c.getId() == Integer.parseInt((clientList.getModel().getElementAt(index).toString().split(" - ")[0])))
+                    {
+                        clientSurnameField.setHint(c.getSurname());
+                        clientNameField.setHint(c.getName());
+                        clientPhoneField.setHint(""+c.getPhone());
+                        clientMailField.setHint(""+c.getMail());
+                        clientAdressField.setHint(""+c.getAddress());
+
+                        clientSurnameField.focusLost();
+                        clientNameField.focusLost();
+                        clientPhoneField.focusLost();
+                        clientMailField.focusLost();
+                        clientAdressField.focusLost();
+                    }
+                }
                 break;
         }
     }
@@ -802,14 +823,6 @@ public class TFrame extends JFrame implements Definition
         return clients;
     }*/
 
-    // TEXTFIELD ADD NEW CLIENT
+    // TEXTFIELD
 
-    public TTextField getClientSurnameField() {
-        return clientSurnameField;
-    }
-
-    public TTextField getClientNameField()
-    {
-        return clientNameField;
-    }
 }

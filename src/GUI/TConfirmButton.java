@@ -198,8 +198,8 @@ public class TConfirmButton extends TFlatButton implements Definition, ActionLis
                     for (int i = 0; i < list.size(); i++) {
                         Vehicule v = (Vehicule) list.get(i);
 
-                        if (v.getId() == Integer.parseInt((tlist.getModel().getElementAt(index).toString().split(" - ")[0]))) {
-                            System.out.println(index+" "+Integer.parseInt((tlist.getModel().getElementAt(index).toString().split(" - ")[0]))+ " "+v.getId());
+                        if (v.getId() == Integer.parseInt((tlist.getModel().getElementAt(index).toString().split(" - ")[0])))
+                        {
                             list.set(i, new Voiture(textFields[0].getHintOrText(), textFields[1].getHintOrText(), Float.parseFloat(textFields[2].getHintOrText()),
                                     Float.parseFloat(textFields[3].getHintOrText()), textFields[4].getHintOrText(), Integer.parseInt(textFields[5].getHintOrText()),
                                     Float.parseFloat(textFields[6].getHintOrText()), Integer.parseInt(textFields[7].getHintOrText())) );
@@ -218,6 +218,15 @@ public class TConfirmButton extends TFlatButton implements Definition, ActionLis
                             textFields[6].setHint("Puissance");
                             textFields[7].setHint("Nombre de places");
 
+                            textFields[0].setText("");
+                            textFields[1].setText("");
+                            textFields[2].setText("");
+                            textFields[3].setText("");
+                            textFields[4].setText("");
+                            textFields[5].setText("");
+                            textFields[6].setText("");
+                            textFields[7].setText("");
+
                             textFields[0].focusLost();
                             textFields[1].focusLost();
                             textFields[2].focusLost();
@@ -228,15 +237,40 @@ public class TConfirmButton extends TFlatButton implements Definition, ActionLis
                             textFields[7].focusLost();
                         }
                     }
+                    this.setName("Confirmer");
                     break;
                 case 2:
                     for (int i = 0; i < list.size(); i++) {
                         Client c = (Client) list.get(i);
 
-                        if (c.getId() == Integer.parseInt((tlist.getModel().getElementAt(index).toString().split(" - ")[0]))) {
-                            c = new Client(textFields[0].getHintOrText(), textFields[1].getHintOrText(), textFields[2].getHintOrText(), textFields[3].getHintOrText());
+                        if (c.getId() == Integer.parseInt((tlist.getModel().getElementAt(index).toString().split(" - ")[0])))
+                        {
+                            list.set(i, new Client(textFields[0].getHintOrText(), textFields[1].getHintOrText(), textFields[2].getHintOrText(), textFields[3].getHintOrText(), textFields[4].getHintOrText()) );
+                            ((Client) list.get(i)).setId(c.getId());
+
+                            tlist.setModel(tlist.createDefaultListModel());
+                            frame.getClientContractList().setModel(frame.getClientContractList().createDefaultListModel());
+
+                            textFields[0].setHint("Nom");
+                            textFields[1].setHint("Prénom");
+                            textFields[2].setHint("Téléphone");
+                            textFields[3].setHint("E-mail");
+                            textFields[4].setHint("Adresse");
+
+                            textFields[0].setText("");
+                            textFields[1].setText("");
+                            textFields[2].setText("");
+                            textFields[3].setText("");
+                            textFields[4].setText("");
+
+                            textFields[0].focusLost();
+                            textFields[1].focusLost();
+                            textFields[2].focusLost();
+                            textFields[3].focusLost();
+                            textFields[4].focusLost();
                         }
                     }
+                    this.setName("Confirmer");
                     break;
             }
             Gestionnaire.sauvegarder();
@@ -293,7 +327,7 @@ public class TConfirmButton extends TFlatButton implements Definition, ActionLis
                         list.add(newAgent);
                         break;
                     case 2:
-                        newAgent = new Client(textFields[0].getText(), textFields[1].getText(), textFields[2].getText(), textFields[3].getText());
+                        newAgent = new Client(textFields[0].getText(), textFields[1].getText(), textFields[2].getText(), textFields[3].getText(), textFields[4].getText());
                         scrollPane.addElement((DefaultListModel<String>) tlist.getModel(), newAgent);
                         frame.getClientContractScrollPane().addElement((DefaultListModel<String>) frame.getClientContractList().getModel(), newAgent);
                         list.add(newAgent);
