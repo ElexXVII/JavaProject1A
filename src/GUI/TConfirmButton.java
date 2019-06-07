@@ -301,6 +301,8 @@ public class TConfirmButton extends TFlatButton implements Definition, ActionLis
                 }
             }
 
+            if
+
             if (!isEmpty)
             {
                 ParcAgent newAgent;
