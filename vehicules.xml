@@ -3,89 +3,106 @@
  <object class="java.util.ArrayList">
   <void method="add">
    <object class="Class.Voiture">
+    <void property="className">
+     <string>Voiture</string>
+    </void>
     <void property="etat">
-     <string>Bonne</string>
+     <string>10</string>
     </void>
     <void property="id">
-     <int>12</int>
+     <int>2</int>
+    </void>
+    <void property="isUsed">
+     <boolean>true</boolean>
+    </void>
+    <void property="km">
+     <long>140</long>
     </void>
     <void property="marque">
-     <string>Volkswagen</string>
+     <string>10</string>
     </void>
     <void property="modele">
-     <string>Golf TDI</string>
+     <string>10</string>
+    </void>
+    <void property="nbPlaces">
+     <int>10</int>
+    </void>
+    <void property="prixJournalier">
+     <float>10.0</float>
+    </void>
+    <void property="puissance">
+     <float>10.0</float>
+    </void>
+    <void property="vitesseMax">
+     <float>10.0</float>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Class.Voiture">
+    <void property="className">
+     <string>Voiture</string>
+    </void>
+    <void property="etat">
+     <string>10</string>
+    </void>
+    <void property="id">
+     <int>3</int>
+    </void>
+    <void property="isUsed">
+     <boolean>true</boolean>
+    </void>
+    <void property="km">
+     <long>10</long>
+    </void>
+    <void property="marque">
+     <string>20</string>
+    </void>
+    <void property="modele">
+     <string>20</string>
+    </void>
+    <void property="nbPlaces">
+     <int>10</int>
     </void>
     <void property="prixJournalier">
      <float>20.0</float>
     </void>
+    <void property="puissance">
+     <float>10.0</float>
+    </void>
     <void property="vitesseMax">
-     <float>150.0</float>
+     <float>10.0</float>
     </void>
    </object>
   </void>
   <void method="add">
-   <object class="Class.Voiture">
+   <object class="Class.Avion">
+    <void property="className">
+     <string>Avion</string>
+    </void>
     <void property="etat">
-     <string>70</string>
+     <string>645645</string>
+    </void>
+    <void property="heuresVol">
+     <int>654645</int>
     </void>
     <void property="id">
-     <int>14</int>
+     <int>5</int>
     </void>
     <void property="marque">
-     <string>Renault</string>
+     <string>878</string>
     </void>
     <void property="modele">
-     <string>Twingo 3</string>
+     <string>Boeing</string>
+    </void>
+    <void property="nbMoteurs">
+     <int>564</int>
     </void>
     <void property="prixJournalier">
-     <float>60.0</float>
+     <float>6446.0</float>
     </void>
     <void property="vitesseMax">
-     <float>654.0</float>
-    </void>
-   </object>
-  </void>
-  <void method="add">
-   <object class="Class.Voiture">
-    <void property="etat">
-     <string>54</string>
-    </void>
-    <void property="id">
-     <int>8</int>
-    </void>
-    <void property="marque">
-     <string>Renault</string>
-    </void>
-    <void property="modele">
-     <string>Clio</string>
-    </void>
-    <void property="prixJournalier">
-     <float>546.0</float>
-    </void>
-    <void property="vitesseMax">
-     <float>54654.0</float>
-    </void>
-   </object>
-  </void>
-  <void method="add">
-   <object class="Class.Voiture">
-    <void property="etat">
-     <string>5</string>
-    </void>
-    <void property="id">
-     <int>18</int>
-    </void>
-    <void property="marque">
-     <string>Mazda</string>
-    </void>
-    <void property="modele">
-     <string>RX 5</string>
-    </void>
-    <void property="prixJournalier">
-     <float>5.0</float>
-    </void>
-    <void property="vitesseMax">
-     <float>5.0</float>
+     <float>6.4645656E7</float>
     </void>
    </object>
   </void>

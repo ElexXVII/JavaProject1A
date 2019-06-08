@@ -9,7 +9,11 @@ import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.time.Duration;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.TimeZone;
 
 public class TFrame extends JFrame implements Definition
 {
@@ -59,13 +63,10 @@ public class TFrame extends JFrame implements Definition
 
     private TPanel contractTextFieldArea;
     private TPanel contractEmpty;
-    private TTextField contractClientField;
-    private TTextField contractVehicleField;
     private TTextField contractEstimatedKm;
     private TDateField contractBeginningField;
     private TDateField contractEndingField;
     private TCheckBox contractHasReduction;
-    private TLabel contractPriceField;
     private TConfirmButton contractConfirmButton;
     private TConfirmButton contractCancelButton;
 
@@ -135,9 +136,6 @@ public class TFrame extends JFrame implements Definition
     private TConfirmButton clientCancelDeleteButton;
 
     // Lists
-    private ArrayList<ParcAgent> clients;
-    private ArrayList<ParcAgent> vehicles;
-    private ArrayList<ParcAgent> contracts;
     private TPanel contractListsArea;
     private TList vehicleContractList;
     private TScrollPane vehicleContractScrollPane;
@@ -387,6 +385,9 @@ public class TFrame extends JFrame implements Definition
         clientContractList = new TList(frame, 4);
         clientContractScrollPane = new TScrollPane(this, 2, clientContractList, 295,247);
 
+        vehicleContractList.setSelectedIndex(0);
+        clientContractList.setSelectedIndex(0);
+
         contractTextFieldArea = new TPanel(390, 616, Definition.InterfaceLightColor, null, new FlowLayout(FlowLayout.CENTER, 195, 15), true);
         t.add(contractTextFieldArea);
 
@@ -402,7 +403,7 @@ public class TFrame extends JFrame implements Definition
         contractBeginningField.setOtherDate();
         contractEndingField.setOtherDate();
 
-        contractEstimatedKm = new TTextField(frame, "KM estimés", 250, 30, Definition.WHITE, Definition.BLACK);
+        contractEstimatedKm = new TTextField(frame, "Km estimés", 250, 30, Definition.WHITE, Definition.BLACK);
         contractTextFieldArea.add(contractEstimatedKm);
 
         contractHasReduction = new TCheckBox("Réduction -10% ?");
@@ -559,7 +560,7 @@ public class TFrame extends JFrame implements Definition
         centerPanel = new TPanel(500, ((int)vehicleTextFieldArea.getPreferredSize().getHeight()-12*30-13*15)/2, null, null, null, false);
         vehicleTextFieldArea.add(centerPanel);
 
-        vehicleTypeSelector = new TComboBox(this);
+        vehicleTypeSelector = new TComboBox(this, 150, 30, Definition.WHITE, Definition.BLACK);
         vehicleTextFieldArea.add(vehicleTypeSelector);
 
         vehicleModelField = new TTextField(frame, "Modèle", 250, 30, Definition.WHITE, Definition.BLACK);
@@ -723,6 +724,30 @@ public class TFrame extends JFrame implements Definition
         {
             case 0:
                 contractConfirmButton.setName("Modifier");
+
+                for (int i = 0; i < Gestionnaire.getContrats().size(); i++)
+                {
+                    Contrat c = (Contrat) Gestionnaire.getContrats().get(i);
+
+                    if (c.getId() == Integer.parseInt((contractList.getModel().getElementAt(index).toString().split(" ")[0])))
+                    {
+                        int d1 = c.getDebutLoc().get(Calendar.DAY_OF_MONTH);
+                        int d2 = c.getDebutLoc().get(Calendar .MONTH);
+                        int d3 = c.getDebutLoc().get(Calendar .YEAR);
+
+                        int e1 = c.getFinLoc().get(Calendar.DATE);
+                        int e2 = c.getFinLoc().get(Calendar.MONTH);
+                        int e3 = c.getFinLoc().get(Calendar.YEAR);
+                        contractBeginningField.setHint((d1<10?"0"+d1:d1)+"/"+(d2<10?"0"+d2:d2)+"/"+(d3<10?"0"+d3:d3));
+                        contractEndingField.setHint((e1<10?"0"+e1:e1)+"/"+(e2<10?"0"+e2:e2)+"/"+(e3<10?"0"+e3:e3));
+                        contractEstimatedKm.setHint(c.getKmEstime()+"");
+
+                        contractBeginningField.focusLost();
+                        contractEndingField.focusLost();
+                        contractEstimatedKm.focusLost();
+                    }
+                }
+
                 break;
             case 1:
                 vehicleConfirmButton.setName("Modifier");
@@ -731,16 +756,40 @@ public class TFrame extends JFrame implements Definition
                 {
                     Vehicule v = (Vehicule) Gestionnaire.getVehicules().get(i);
 
-                    if (v.getId() == Integer.parseInt((vehicleList.getModel().getElementAt(index).toString().split(" - ")[0])))
+                    if (v.getId() == Integer.parseInt((vehicleList.getModel().getElementAt(index).toString().split(" ")[0])))
                     {
+                        switch(v.getClassName())
+                        {
+                            case "Voiture":
+                                vehicleTypeSelector.setSelectedItem("Voiture");
+                                System.out.println(vehicleTypeSelector.getSelectedItem()+"-");
+
+                                vehicleOdometerField.setHint(""+((Voiture) v).getKm());
+                                vehiclePowerField.setHint(""+ ((Voiture) v).getPuissance());
+                                vehicleNbSeatField.setHint(""+((Voiture) v).getNbPlaces());
+                                break;
+                            case "Moto":
+                                System.out.println(v.getClassName()+"-");
+                                vehicleTypeSelector.setSelectedItem("Moto");
+
+                                vehicleOdometerField.setHint(""+((Moto) v).getKm());
+                                vehiclePowerField.setHint(""+((Moto) v).getPuissance());
+                                break;
+                            case "Avion":
+                                System.out.println(v.getClassName()+"-");
+                                vehicleTypeSelector.setSelectedItem("Avion");
+                                vehicleNbEnginesField.setHint(""+((Avion) v).getNbMoteurs());
+                                vehicleNbFlightHoursField.setHint(""+((Avion) v).getHeuresVol());
+
+                                break;
+                        }
+                        vehicleTypeSelector.setVisible(false);
+
                         vehicleModelField.setHint(v.getModele());
                         vehicleBrandField.setHint(v.getMarque());
                         vehicleDailyPriceField.setHint(""+v.getPrixJournalier());
                         vehicleMaxSpeedField.setHint(""+v.getVitesseMax());
                         vehicleStateField.setHint(v.getEtat());
-                        vehicleOdometerField.setHint("0");
-                        vehiclePowerField.setHint("0");
-                        vehicleNbSeatField.setHint("0");
 
                         vehicleBrandField.focusLost();
                         vehicleModelField.focusLost();
@@ -750,6 +799,8 @@ public class TFrame extends JFrame implements Definition
                         vehicleOdometerField.focusLost();
                         vehiclePowerField.focusLost();
                         vehicleNbSeatField.focusLost();
+                        vehicleNbEnginesField.focusLost();
+                        vehicleNbFlightHoursField.focusLost();
                     }
                 }
                 break;
@@ -760,7 +811,7 @@ public class TFrame extends JFrame implements Definition
                 {
                     Client c = (Client) Gestionnaire.getClients().get(i);
 
-                    if (c.getId() == Integer.parseInt((clientList.getModel().getElementAt(index).toString().split(" - ")[0])))
+                    if (c.getId() == Integer.parseInt((clientList.getModel().getElementAt(index).toString().split(" ")[0])))
                     {
                         clientSurnameField.setHint(c.getSurname());
                         clientNameField.setHint(c.getName());
@@ -777,6 +828,91 @@ public class TFrame extends JFrame implements Definition
                 }
                 break;
         }
+    }
+
+    public void ChangePanelToAddPanel(int whichMenu)
+    {
+
+        switch (whichMenu)
+        {
+            case 0:
+                contractConfirmButton.setName("Confirmer");
+
+                contractBeginningField.setHint("Début : DD/MM/YYYY");
+                contractEndingField.setHint("Fin : DD/MM/YYYY");
+                contractEstimatedKm.setHint("Km estimés");
+
+                contractBeginningField.focusLost();
+                contractEndingField.focusLost();
+                contractEstimatedKm.focusLost();
+                break;
+            case 1:
+                vehicleConfirmButton.setName("Confirmer");
+
+                vehicleTypeSelector.setVisible(true);
+
+                vehicleModelField.setHint("Modèle");
+                vehicleBrandField.setHint("Marque");
+                vehicleDailyPriceField.setHint("Prix journalier");
+                vehicleMaxSpeedField.setHint("Vitesse maximale");
+                vehicleStateField.setHint("Etat du véhicule");
+                vehicleOdometerField.setHint("Distance déjà parcourue");
+                vehiclePowerField.setHint("Puissance");
+                vehicleNbSeatField.setHint("Nombre de places");
+                vehicleNbFlightHoursField.setHint("Nombre d'heures de vol");
+                vehicleNbEnginesField.setHint("Nombre de moteurs");
+
+                vehicleBrandField.setText("");
+                vehicleModelField.setText("");
+                vehicleDailyPriceField.setText("");
+                vehicleMaxSpeedField.setText("");
+                vehicleStateField.setText("");
+                vehicleOdometerField.setText("");
+                vehiclePowerField.setText("");
+                vehicleNbSeatField.setText("");
+                vehicleNbFlightHoursField.setText("");
+                vehicleNbEnginesField.setText("");
+
+                vehicleBrandField.focusLost();
+                vehicleModelField.focusLost();
+                vehicleDailyPriceField.focusLost();
+                vehicleMaxSpeedField.focusLost();
+                vehicleStateField.focusLost();
+                vehicleOdometerField.focusLost();
+                vehiclePowerField.focusLost();
+                vehicleNbSeatField.focusLost();
+                vehicleNbFlightHoursField.focusLost();
+                vehicleNbEnginesField.focusLost();
+
+                break;
+            case 2:
+                clientConfirmButton.setName("Confirmer");
+
+                clientSurnameField.setHint("Nom");
+                clientNameField.setHint("Prénom");
+                clientPhoneField.setHint("Téléphone");
+                clientMailField.setHint("E-Mail");
+                clientAdressField.setHint("Adresse");
+
+                clientSurnameField.setText("");
+                clientNameField.setText("");
+                clientPhoneField.setText("");
+                clientMailField.setText("");
+                clientAdressField.setText("");
+
+                clientSurnameField.focusLost();
+                clientNameField.focusLost();
+                clientPhoneField.focusLost();
+                clientMailField.focusLost();
+                clientAdressField.focusLost();
+
+                break;
+        }
+    }
+
+    public void displaySelector()
+    {
+        vehicleTypeSelector.setVisible(true);
     }
 
     //=============

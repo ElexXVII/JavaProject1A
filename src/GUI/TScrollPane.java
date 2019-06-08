@@ -13,6 +13,8 @@ public class TScrollPane extends JScrollPane implements Definition
     ArrayList list;
     TList tlist;
 
+    int whichMenu;
+
     public TScrollPane(TFrame frame, int whichMenu, TList tlist, int x, int y)
     {
         super(tlist);
@@ -25,7 +27,7 @@ public class TScrollPane extends JScrollPane implements Definition
         this.setBorder(Definition.border);
 
         this.tlist = tlist;
-
+        this.whichMenu = whichMenu;
         switch(whichMenu)
         {
             case 0:

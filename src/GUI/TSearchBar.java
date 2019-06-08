@@ -100,7 +100,14 @@ class TSearchBar extends JTextField implements FocusListener, ActionListener, De
     @Override
     public void actionPerformed(ActionEvent e)
     {
-        scrollPane.filterModel((DefaultListModel<String>) list.getModel(), this.getText());
+        if (whichMenu < 3)
+        {
+            scrollPane.filterModel((DefaultListModel<String>) list.getModel(), this.getText());
+        }
+        else
+        {
+            scrollPane.filterModel((DefaultListModel<String>) list.getModel(), this.getText());
+        }
     }
 }
 

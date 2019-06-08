@@ -1,5 +1,7 @@
 package GUI;
 
+import Interface.Definition;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -9,12 +11,20 @@ public class TComboBox extends JComboBox implements ActionListener {
 
     private TFrame frame;
 
-    public TComboBox(TFrame frame) {
+    public TComboBox(TFrame frame, int x, int y, Color back, Color front)
+    {
         super();
         this.frame = frame;
         this.addItem("Voiture");
         this.addItem("Moto");
         this.addItem("Avion");
+
+        this.setPreferredSize(new Dimension(x, y));
+        this.setBackground(back);
+        this.setForeground(front);
+
+        this.setBorder(Definition.border);
+        this.setUI(new TBasicComboBoxUI(this));
 
         this.addActionListener(this);
     }

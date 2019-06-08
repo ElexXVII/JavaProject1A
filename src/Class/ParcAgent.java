@@ -16,4 +16,9 @@ public class ParcAgent
         // Not used (Only used on subClasses)
         return "";
     }
+
+    public boolean getIsUsed()
+    {
+        return true;
+    }
 }

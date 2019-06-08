@@ -9,6 +9,7 @@ import java.awt.event.ActionListener;
 
 class TPopUpMenu extends JPopupMenu implements Definition
 {
+    private JMenuItem EndItem;
     private JMenuItem changeItem;
     private JMenuItem deleteItem;
 
@@ -54,6 +55,20 @@ class TPopUpMenu extends JPopupMenu implements Definition
                 areaToFillCardPanel = frame.getClientAreaToFillPanel();
                 cardLayout = frame.getClientAreaLayout();
                 break;
+        }
+
+        if (whichMenu == 0)
+        {
+            EndItem = new JMenuItem("Finaliser");
+            EndItem.addActionListener(new ActionListener()
+            {
+                @Override
+                public void actionPerformed(ActionEvent e)
+                {
+
+                }
+            });
+            add(EndItem);
         }
 
         changeItem = new JMenuItem("Modifier");

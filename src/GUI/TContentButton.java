@@ -88,6 +88,13 @@ public class TContentButton extends TFlatButton implements Definition, ActionLis
     @Override
     public void actionPerformed(ActionEvent e)
     {
+        if (whichMenu==0)
+        {
+            frame.getClientContractList().setModel(frame.getClientContractList().createDefaultListModel());
+            frame.getVehicleContractList().setModel(frame.getVehicleContractList().createDefaultListModel());
+        }
+        frame.displaySelector();
+        frame.ChangePanelToAddPanel(whichMenu);
         //System.out.println((areaToFillCardPanel==null)+"");
         cardLayout.show(areaToFillCardPanel, Definition.areaTofillCardName[1]);
         //System.out.println(Definition.areaTofillCardName[2]);
