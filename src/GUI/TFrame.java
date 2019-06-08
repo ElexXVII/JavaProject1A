@@ -9,11 +9,7 @@ import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-import java.time.Duration;
-import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Date;
-import java.util.TimeZone;
 
 public class TFrame extends JFrame implements Definition
 {
@@ -149,14 +145,6 @@ public class TFrame extends JFrame implements Definition
     private TTextField vehicleNbEnginesField;
     private TPanel centerPanel;
 
-    public TList getVehicleContractList() {
-        return vehicleContractList;
-    }
-
-    public TScrollPane getVehicleContractScrollPane() {
-        return vehicleContractScrollPane;
-    }
-
     private TList clientContractList;
     private TScrollPane clientContractScrollPane;
 
@@ -164,19 +152,8 @@ public class TFrame extends JFrame implements Definition
     // CONSTRUCTOR
     //=============
 
-    /*/**
-     * Returns the component at the specified index.
-     * <blockquote>
-     * <b>Note:</b> Although this method is not deprecated, the preferred
-     *    method to use is <code>get(int)</code>, which implements the
-     *    <code>List</code> interface defined in the 1.2 Collections framework.
-     * </blockquote>
-     * @param      index   an index into this list
-     * @return     the component at the specified index
-     * @exception  ArrayIndexOutOfBoundsException  if the <code>index</code>
-     *             is negative or greater than the current size of this
-     *             list
-     * @see #get(int)
+    /**
+     * Constructor TFrame (Main frame)
      */
     public TFrame()
     {
@@ -200,6 +177,9 @@ public class TFrame extends JFrame implements Definition
         return contractEstimatedKm;
     }
 
+    /**
+     * Init frame
+     */
     private void initFrame()
     {
         frame = this;
@@ -224,10 +204,9 @@ public class TFrame extends JFrame implements Definition
     // PRIVATE FUNCTIONS
     //=============
 
-    private void initArrayLists()
-    {
-    }
-
+    /**
+     * Init Main Panel
+     */
     private void initFramePanel()
     {
         mainPanel = new TPanel(1000,700, null, null, new BorderLayout(0,0), false);
@@ -243,6 +222,9 @@ public class TFrame extends JFrame implements Definition
         mainPanel.add(pBottomBorder, BorderLayout.PAGE_END);
     }
 
+    /**
+     * Init Menu panel
+     */
     private void initMenu()
     {
         pTop = new TMotionPanel(this, 1000,80, Definition.InterfaceMainColor, null,
@@ -259,6 +241,9 @@ public class TFrame extends JFrame implements Definition
         initFrameButtons();
     }
 
+    /**
+     * Init Menu Buttons
+     */
     private void initMenuButtons()
     {
         buttons = new TMenuButton[3];
@@ -277,6 +262,9 @@ public class TFrame extends JFrame implements Definition
         buttons[0].setIsPressed(true);
     }
 
+    /**
+     * Init Frame Buttons (Top right)
+     */
     private void initFrameButtons()
     {
         MenuRight1 = new TPanel(30, 80, null, null, new BorderLayout(0,0),false);
@@ -292,6 +280,9 @@ public class TFrame extends JFrame implements Definition
         MenuRight2.add(closeButton, BorderLayout.PAGE_START);
     }
 
+    /**
+     * Init Content of frame
+     */
     private void initContent()
     {
         cardLayout = new CardLayout();
@@ -311,6 +302,9 @@ public class TFrame extends JFrame implements Definition
     // INIT CARDS
     //=============
 
+    /**
+     * Init Cards of Content CardLayout
+     */
     private void initCards()
     {
         cards = new TPanel[3];
@@ -327,6 +321,9 @@ public class TFrame extends JFrame implements Definition
     // INIT CARD 0
     //=============
 
+    /**
+     * Fill panel with contentCards
+     */
     private void fillContractCard()
     {
         contractListPanel = new TPanel(300, 615, null, null, new FlowLayout(FlowLayout.LEFT, 0, 0), false);
@@ -342,6 +339,9 @@ public class TFrame extends JFrame implements Definition
         initContractAreasToFill();
     }
 
+    /**
+     * Init Menu Buttons
+     */
     private void initContractLists()
     {
         // Card0
@@ -368,34 +368,9 @@ public class TFrame extends JFrame implements Definition
         contractListContent.add(contractNewContractButton);
     }
 
-    public TCheckBox getContractHasReduction() {
-        return contractHasReduction;
-    }
-
-    public TDateField getContractBeginningField() {
-        return contractBeginningField;
-    }
-
-    public TDateField getContractEndingField() {
-        return contractEndingField;
-    }
-
-    public TList getClientContractList() {
-        return clientContractList;
-    }
-
-    public TScrollPane getClientContractScrollPane() {
-        return clientContractScrollPane;
-    }
-
-    public TTextField getContractKmFinishField() {
-        return contractKmFinishField;
-    }
-
-    public void setContractKmFinishField(TTextField contractKmFinishField) {
-        this.contractKmFinishField = contractKmFinishField;
-    }
-
+    /**
+     * Init Contract Area
+     */
     private void initContractAreasToFill()
     {
         // Empty Panel
@@ -517,6 +492,9 @@ public class TFrame extends JFrame implements Definition
     // INIT CARD 2
     //=============
 
+    /**
+     * Fill panel with contentCards
+     */
     private void fillVehiculeCard()
     {
         vehicleListPanel = new TPanel(300, 615, null, null, new FlowLayout(FlowLayout.LEFT, 0, 0), false);
@@ -532,6 +510,9 @@ public class TFrame extends JFrame implements Definition
         initVehicleAreasToFill();
     }
 
+    /**
+     * Init Menu Buttons
+     */
     private void initVehicleLists()
     {
         // Card0
@@ -559,38 +540,9 @@ public class TFrame extends JFrame implements Definition
 
     }
 
-    public TComboBox getVehicleTypeSelector() {
-        return vehicleTypeSelector;
-    }
-
-    public TTextField getVehicleOdometerField() {
-        return vehicleOdometerField;
-    }
-
-    public TTextField getVehiclePowerField() {
-        return vehiclePowerField;
-    }
-
-    public TTextField getVehicleNbSeatField() {
-        return vehicleNbSeatField;
-    }
-
-    public TTextField getVehicleNbFlightHoursField() {
-        return vehicleNbFlightHoursField;
-    }
-
-    public TTextField getVehicleNbEnginesField() {
-        return vehicleNbEnginesField;
-    }
-
-    public TPanel getCenterPanel() {
-        return centerPanel;
-    }
-
-    public void setCenterPanel(TPanel centerPanel) {
-        this.centerPanel = centerPanel;
-    }
-
+    /**
+     * Init Contract Area
+     */
     private void initVehicleAreasToFill()
     {
         // Empty Panel
@@ -665,6 +617,9 @@ public class TFrame extends JFrame implements Definition
     // INIT CARD 3
     //=============
 
+    /**
+     * Fill panel with contentCards
+     */
     private void fillClientCard()
     {
         clientListPanel = new TPanel(300, 615, null, null, new FlowLayout(FlowLayout.LEFT, 0, 0), false);
@@ -680,6 +635,9 @@ public class TFrame extends JFrame implements Definition
         initClientAreasToFill();
     }
 
+    /**
+     * Init Menu Buttons
+     */
     private void initClientLists()
     {
         // Card0
@@ -706,6 +664,9 @@ public class TFrame extends JFrame implements Definition
         clientListContent.add(clientNewclientButton);
     }
 
+    /**
+     * Init Contract Area
+     */
     private void initClientAreasToFill()
     {
         // Empty Panel
@@ -761,6 +722,12 @@ public class TFrame extends JFrame implements Definition
     // PUBLICS FUNCTIONS
     //=============
 
+    /**
+     * Change the panel used to add ParcAgent to a panel used to modify the selected ParcAgent
+     * @param whichMenu : Panel to change
+     *
+     * @param index : Selected index of the Tlist
+     */
     public void AddPanelToChangePanel(int whichMenu, int index)
     {
 
@@ -874,6 +841,10 @@ public class TFrame extends JFrame implements Definition
         }
     }
 
+    /**
+     * Change the panel used to modify the selected ParcAgentto a panel used to add a ParcAgent
+     * @param whichMenu : Panel to change
+     */
     public void ChangePanelToAddPanel(int whichMenu)
     {
         switch (whichMenu)
@@ -962,6 +933,74 @@ public class TFrame extends JFrame implements Definition
     // GETTERS
     //=============
 
+    public TComboBox getVehicleTypeSelector() {
+        return vehicleTypeSelector;
+    }
+
+    public TTextField getVehicleOdometerField() {
+        return vehicleOdometerField;
+    }
+
+    public TTextField getVehiclePowerField() {
+        return vehiclePowerField;
+    }
+
+    public TTextField getVehicleNbSeatField() {
+        return vehicleNbSeatField;
+    }
+
+    public TTextField getVehicleNbFlightHoursField() {
+        return vehicleNbFlightHoursField;
+    }
+
+    public TTextField getVehicleNbEnginesField() {
+        return vehicleNbEnginesField;
+    }
+
+    public TPanel getCenterPanel() {
+        return centerPanel;
+    }
+
+    public void setCenterPanel(TPanel centerPanel) {
+        this.centerPanel = centerPanel;
+    }
+
+    public TList getVehicleContractList() {
+        return vehicleContractList;
+    }
+
+    public TScrollPane getVehicleContractScrollPane() {
+        return vehicleContractScrollPane;
+    }
+
+    public TCheckBox getContractHasReduction() {
+        return contractHasReduction;
+    }
+
+    public TDateField getContractBeginningField() {
+        return contractBeginningField;
+    }
+
+    public TDateField getContractEndingField() {
+        return contractEndingField;
+    }
+
+    public TList getClientContractList() {
+        return clientContractList;
+    }
+
+    public TScrollPane getClientContractScrollPane() {
+        return clientContractScrollPane;
+    }
+
+    public TTextField getContractKmFinishField() {
+        return contractKmFinishField;
+    }
+
+    public void setContractKmFinishField(TTextField contractKmFinishField) {
+        this.contractKmFinishField = contractKmFinishField;
+    }
+
     public TFrame getFrame() {
         return frame;
     }
@@ -1034,23 +1073,5 @@ public class TFrame extends JFrame implements Definition
         return clientScrollPane;
     }
 
-    // ARRAYLIST GETTERS
-
-    /*public ArrayList<ParcAgent> getContractArrayList()
-    {
-        return contracts;
-    }
-
-    public ArrayList<ParcAgent> getVehicleArrayList()
-    {
-        return vehicles;
-    }
-
-    public ArrayList<ParcAgent> getClientArrayList()
-    {
-        return clients;
-    }*/
-
-    // TEXTFIELD
 
 }

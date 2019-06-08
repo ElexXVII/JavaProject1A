@@ -5,7 +5,7 @@ import javax.swing.*;
 import javax.swing.plaf.basic.BasicScrollBarUI;
 import java.awt.*;
 
-public class TBasicScrollBarUI extends BasicScrollBarUI implements Definition
+public class TScrollBarUI extends BasicScrollBarUI implements Definition
 {
     protected Color idleColor = Definition.idleButtonColor;
     protected Color hoverColor = Definition.hoverButtonColor;
@@ -14,16 +14,41 @@ public class TBasicScrollBarUI extends BasicScrollBarUI implements Definition
     protected Color backgroundColor = Definition.backgroundSlideColor;
 
     //private final Dimension d = new Dimension();
+    private int direction;
 
-    @Override
-    protected TFrameButton createDecreaseButton(int orientation) {
-        return new TFrameButton("Decrease");
-    }
-    @Override
-    protected TFrameButton createIncreaseButton(int orientation) {
-        return new TFrameButton("Increase");
+    public TScrollBarUI(int dir)
+    {
+        direction = dir;
     }
 
+    /**
+     * Create TList down/Right button (depends on the parameter)
+     * @param orientation : Horizontal or Vertical Bar
+     * @return
+     */
+    @Override
+    protected TFrameButton createDecreaseButton(int orientation)
+    {
+        return new TFrameButton(direction==0?"Decrease":"Right");
+    }
+
+    /**
+     * Create TList up/Left button (depends on the parameter)
+     * @param orientation : Horizontal or Vertical Bar
+     * @return
+     */
+    @Override
+    protected TFrameButton createIncreaseButton(int orientation)
+    {
+        return new TFrameButton(direction==0?"Increase":"Left");
+    }
+
+    /**
+     * I draw my own TrackBar
+     * @param g
+     * @param c
+     * @param r
+     */
     @Override
     protected void paintTrack(Graphics g, JComponent c, Rectangle r)
     {
@@ -35,8 +60,15 @@ public class TBasicScrollBarUI extends BasicScrollBarUI implements Definition
         g.fillRect(0,0,c.getWidth(), c.getHeight());
     }
 
+    /**
+     * I draw my own TrackBar
+     * @param g : Graphics
+     * @param c : JComponent linked
+     * @param r : Rectangle
+     */
     @Override
-    protected void paintThumb(Graphics g, JComponent c, Rectangle r) {
+    protected void paintThumb(Graphics g, JComponent c, Rectangle r)
+    {
 
         /*Graphics2D g2 = (Graphics2D)g.create();
         g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING,
@@ -64,8 +96,16 @@ public class TBasicScrollBarUI extends BasicScrollBarUI implements Definition
         //g.dispose();
     }
 
+    /**
+     * Update TList
+     * @param x : x value
+     * @param y : y value
+     * @param width : width
+     * @param height : height
+     */
     @Override
-    protected void setThumbBounds(int x, int y, int width, int height) {
+    protected void setThumbBounds(int x, int y, int width, int height)
+    {
         super.setThumbBounds(x, y, width, height);
         scrollbar.repaint();
     }

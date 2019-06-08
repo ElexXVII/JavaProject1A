@@ -48,22 +48,22 @@
   <void method="add">
    <object class="Class.Client">
     <void property="address">
-     <string>z</string>
+     <string>7 rue des pissenlis</string>
     </void>
     <void property="id">
-     <int>9</int>
+     <int>11</int>
     </void>
     <void property="mail">
-     <string>@.net</string>
+     <string>dupont.jerome@.com</string>
     </void>
     <void property="name">
-     <string>Lerin</string>
+     <string>Jérôme</string>
     </void>
     <void property="phone">
-     <string>45464</string>
+     <string>0655485614</string>
     </void>
     <void property="surname">
-     <string>Simon</string>
+     <string>Du Pont</string>
     </void>
    </object>
   </void>

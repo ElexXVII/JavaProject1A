@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="1.8.0_191" class="java.beans.XMLDecoder">
+ <object class="java.util.ArrayList">
+  <void method="add">
+   <object class="Class.Contrat">
+    <void property="client">
+     <object class="Class.Client">
+      <void property="address">
+       <string>y</string>
+      </void>
+      <void property="id">
+       <int>7</int>
+      </void>
+      <void property="mail">
+       <string>@.com</string>
+      </void>
+      <void property="name">
+       <string>Thibault</string>
+      </void>
+      <void property="phone">
+       <string>144464</string>
+      </void>
+      <void property="surname">
+       <string>Gaudier</string>
+      </void>
+     </object>
+    </void>
+    <void property="debutLoc">
+     <object class="java.util.GregorianCalendar">
+      <void property="time">
+       <object class="java.util.Date">
+        <long>923751597422</long>
+       </object>
+      </void>
+     </object>
+    </void>
+    <void property="finLoc">
+     <object class="java.util.GregorianCalendar">
+      <void property="time">
+       <object class="java.util.Date">
+        <long>924442797422</long>
+       </object>
+      </void>
+     </object>
+    </void>
+    <void property="finished">
+     <string>✔</string>
+    </void>
+    <void property="id">
+     <int>4</int>
+    </void>
+    <void property="kmEstime">
+     <int>100</int>
+    </void>
+    <void property="prixEstime">
+     <float>1894.5</float>
+    </void>
+    <void property="reduction">
+     <boolean>true</boolean>
+    </void>
+    <void property="vehicule">
+     <object class="Class.Voiture">
+      <void property="className">
+       <string>Voiture</string>
+      </void>
+      <void property="etat">
+       <string>Bonne</string>
+      </void>
+      <void property="id">
+       <int>10</int>
+      </void>
+      <void property="marque">
+       <string>Audi</string>
+      </void>
+      <void property="modele">
+       <string>R7</string>
+      </void>
+      <void property="nbPlaces">
+       <int>2</int>
+      </void>
+      <void property="prixJournalier">
+       <float>260.0</float>
+      </void>
+      <void property="puissance">
+       <float>290.0</float>
+      </void>
+      <void property="vitesseMax">
+       <float>340.0</float>
+      </void>
+     </object>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Class.Contrat">
+    <void property="client">
+     <object class="Class.Client">
+      <void property="address">
+       <string>x</string>
+      </void>
+      <void property="id">
+       <int>6</int>
+      </void>
+      <void property="mail">
+       <string>@.fr</string>
+      </void>
+      <void property="name">
+       <string>Tony</string>
+      </void>
+      <void property="phone">
+       <string>4564546465</string>
+      </void>
+      <void property="surname">
+       <string>Chouteau</string>
+      </void>
+     </object>
+    </void>
+    <void property="debutLoc">
+     <object class="java.util.GregorianCalendar">
+      <void property="time">
+       <object class="java.util.Date">
+        <long>923756068534</long>
+       </object>
+      </void>
+     </object>
+    </void>
+    <void property="finLoc">
+     <object class="java.util.GregorianCalendar">
+      <void property="time">
+       <object class="java.util.Date">
+        <long>924188068534</long>
+       </object>
+      </void>
+     </object>
+    </void>
+    <void property="finished">
+     <string>✔</string>
+    </void>
+    <void property="id">
+     <int>5</int>
+    </void>
+    <void property="kmEstime">
+     <int>10</int>
+    </void>
+    <void property="prixEstime">
+     <float>175.0</float>
+    </void>
+    <void property="vehicule">
+     <object class="Class.Moto">
+      <void property="className">
+       <string>Moto</string>
+      </void>
+      <void property="etat">
+       <string>Moyenne</string>
+      </void>
+      <void property="id">
+       <int>8</int>
+      </void>
+      <void property="marque">
+       <string>Ducati</string>
+      </void>
+      <void property="modele">
+       <string>1100 Panigale V4</string>
+      </void>
+      <void property="prixJournalier">
+       <float>35.0</float>
+      </void>
+      <void property="puissance">
+       <float>400.0</float>
+      </void>
+      <void property="vitesseMax">
+       <float>350.0</float>
+      </void>
+     </object>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Class.Contrat">
+    <void property="client">
+     <object class="Class.Client">
+      <void property="address">
+       <string>7 rue des pissenlis</string>
+      </void>
+      <void property="id">
+       <int>11</int>
+      </void>
+      <void property="mail">
+       <string>dupont.jerome@.com</string>
+      </void>
+      <void property="name">
+       <string>Jérôme</string>
+      </void>
+      <void property="phone">
+       <string>0655485614</string>
+      </void>
+      <void property="surname">
+       <string>Du Pont</string>
+      </void>
+     </object>
+    </void>
+    <void property="debutLoc">
+     <object class="java.util.GregorianCalendar">
+      <void property="time">
+       <object class="java.util.Date">
+        <long>1549038729756</long>
+       </object>
+      </void>
+     </object>
+    </void>
+    <void property="finLoc">
+     <object class="java.util.GregorianCalendar">
+      <void property="time">
+       <object class="java.util.Date">
+        <long>1553099529757</long>
+       </object>
+      </void>
+     </object>
+    </void>
+    <void property="finished">
+     <string>✘</string>
+    </void>
+    <void property="id">
+     <int>7</int>
+    </void>
+    <void property="kmEstime">
+     <int>2000</int>
+    </void>
+    <void property="prixEstime">
+     <float>4945.0</float>
+    </void>
+    <void property="vehicule">
+     <object class="Class.Voiture">
+      <void property="className">
+       <string>Voiture</string>
+      </void>
+      <void property="etat">
+       <string>Bonne</string>
+      </void>
+      <void property="id">
+       <int>5</int>
+      </void>
+      <void property="marque">
+       <string>Renault</string>
+      </void>
+      <void property="modele">
+       <string>Twingo</string>
+      </void>
+      <void property="nbPlaces">
+       <int>4</int>
+      </void>
+      <void property="prixJournalier">
+       <float>100.0</float>
+      </void>
+      <void property="puissance">
+       <float>75.0</float>
+      </void>
+      <void property="vitesseMax">
+       <float>160.0</float>
+      </void>
+     </object>
+    </void>
+   </object>
+  </void>
+ </object>
+</java>

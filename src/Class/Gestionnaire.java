@@ -87,7 +87,7 @@ public class Gestionnaire implements Definition
         XMLDecoder decoder;
 
         try {
-           decoder = new XMLDecoder(new FileInputStream("vehicules.xml"));
+           decoder = new XMLDecoder(new FileInputStream("xml/vehicules.xml"));
         } catch (FileNotFoundException e) {
             decoder = null;
             e.printStackTrace();
@@ -120,7 +120,7 @@ public class Gestionnaire implements Definition
         FileOutputStream f = null;
 
         try {
-            f = new FileOutputStream("vehicules.xml");
+            f = new FileOutputStream("xml/vehicules.xml");
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
@@ -144,7 +144,7 @@ public class Gestionnaire implements Definition
     private static void chargerClients () {
         XMLDecoder decoder;
         try {
-            decoder = new XMLDecoder(new FileInputStream("clients.xml"));
+            decoder = new XMLDecoder(new FileInputStream("xml/clients.xml"));
         } catch (FileNotFoundException e) {
             decoder = null;
             e.printStackTrace();
@@ -174,7 +174,7 @@ public class Gestionnaire implements Definition
         XMLEncoder encoder;
 
         try {
-            encoder = new XMLEncoder(new BufferedOutputStream(new FileOutputStream("clients.xml")));
+            encoder = new XMLEncoder(new BufferedOutputStream(new FileOutputStream("xml/clients.xml")));
         } catch (FileNotFoundException e) {
             encoder = null;
             e.printStackTrace();
@@ -193,7 +193,7 @@ public class Gestionnaire implements Definition
     private static void chargerContrats () {
         XMLDecoder decoder;
         try {
-            decoder = new XMLDecoder(new FileInputStream("contrats.xml"));
+            decoder = new XMLDecoder(new FileInputStream("xml/contrats.xml"));
         } catch (FileNotFoundException e) {
             decoder = null;
             e.printStackTrace();
@@ -221,7 +221,7 @@ public class Gestionnaire implements Definition
         XMLEncoder encoder;
 
         try {
-            encoder = new XMLEncoder(new BufferedOutputStream(new FileOutputStream("contrats.xml")));
+            encoder = new XMLEncoder(new BufferedOutputStream(new FileOutputStream("xml/contrats.xml")));
         } catch (FileNotFoundException e) {
             encoder = null;
             e.printStackTrace();

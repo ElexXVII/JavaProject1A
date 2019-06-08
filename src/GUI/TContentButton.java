@@ -14,6 +14,14 @@ public class TContentButton extends TFlatButton implements Definition, ActionLis
 
     int whichMenu;
 
+    /**
+     * Constructor
+     * @param frame : Ref to the main frame
+     * @param whichMenu : Menu which is displayed
+     * @param text : Title of the button
+     * @param x : width
+     * @param y : height
+     */
     public TContentButton(TFrame frame, int whichMenu, String text, int x, int y)
     {
         super(text);
@@ -54,6 +62,10 @@ public class TContentButton extends TFlatButton implements Definition, ActionLis
         pressColor = Definition.pressButtonLightColor;
     }
 
+    /**
+     * I draw the button as I want
+     * @param g : Graphics
+     */
     @Override
     public void paint(Graphics g)
     {
@@ -85,6 +97,10 @@ public class TContentButton extends TFlatButton implements Definition, ActionLis
         super.paintComponent(g);
     }
 
+    /**
+     * On click : Open the "Adding Agent" panel of the selected Agent : Contract, Vehicle, Client
+     * @param e : Event
+     */
     @Override
     public void actionPerformed(ActionEvent e)
     {

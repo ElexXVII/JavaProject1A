@@ -8,17 +8,25 @@ import javax.swing.plaf.basic.BasicComboPopup;
 import javax.swing.plaf.basic.ComboPopup;
 import java.awt.*;
 
-public class TBasicComboBoxUI extends BasicComboBoxUI
+public class TComboBoxUI extends BasicComboBoxUI
 {
     TComboBox c;
     BasicComboPopup p;
 
-    public TBasicComboBoxUI(TComboBox c)
+    /**
+     * Constructor of the UI
+     * @param c
+     */
+    public TComboBoxUI(TComboBox c)
     {
         super();
         this.c = c;
     }
 
+    /**
+     * Create our own "Increase" Button to display list
+     * @return
+     */
     @Override
     public JButton createArrowButton()
     {
@@ -31,8 +39,12 @@ public class TBasicComboBoxUI extends BasicComboBoxUI
         return null;
     }*/
 
-
-
+    /**
+     * I paint my own background to use the same style
+     * @param g : Graphics
+     * @param bounds : Rectangle with lenght of the object to draw
+     * @param hasFocus
+     */
     @Override
     public void paintCurrentValueBackground(Graphics g, Rectangle bounds, boolean hasFocus)
     {
@@ -40,6 +52,11 @@ public class TBasicComboBoxUI extends BasicComboBoxUI
         g.fillRect(0, 0, (int) bounds.getWidth(), (int) bounds.getHeight());
     }
 
+    /**
+     * Create our own popup
+     * @see {@link BasicComboPopup}
+     * @return
+     */
     public ComboPopup createPopup()
     {
         p = (BasicComboPopup) super.createPopup();

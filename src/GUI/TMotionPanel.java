@@ -8,6 +8,16 @@ public class TMotionPanel extends JPanel
 {
     private TFrame frame;
 
+    /**
+     * Constructor of the MotionPanel
+     * @param frame : Ref to the main frame
+     * @param x : width
+     * @param y : height
+     * @param back : Background Color
+     * @param front : Front Color
+     * @param layout : Layout used
+     * @param opaque : Is it visible or not
+     */
     public TMotionPanel(TFrame frame, int x, int y, Color back, Color front, LayoutManager layout, boolean opaque)
     {
         this.frame = frame;
@@ -31,6 +41,11 @@ class TListener extends MouseAdapter
     TMotionPanel panel;
     TMotionListener motionListener;
 
+    /**
+     * Constructor of the listener
+     * @param panel : Ref to the panel
+     * @param motionListener : Ref to the motionListener
+     */
     public TListener(TMotionPanel panel, TMotionListener motionListener)
     {
         this.panel = panel;
@@ -50,11 +65,19 @@ class TMotionListener extends MouseMotionAdapter
     private TFrame frame;
     private Point initialClick = new Point(0,0);
 
+    /**
+     * Constructor
+     * @param frame : Ref to the main frame
+     */
     public TMotionListener(TFrame frame)
     {
         this.frame = frame;
     }
 
+    /**
+     * Get the dragged vector and move the frame
+     * @param e : Event
+     */
     @Override
     public void mouseDragged(MouseEvent e)
     {

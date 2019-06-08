@@ -9,7 +9,8 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.util.ArrayList;
 
-public class TList extends JList implements Definition, MouseListener {
+public class TList extends JList implements Definition, MouseListener
+{
     TFrame frame;
 
     private final int whichMenu;
@@ -18,6 +19,11 @@ public class TList extends JList implements Definition, MouseListener {
     TPanel areaToFillCardPanel;
     CardLayout cardLayout;
 
+    /**
+     * Constructor TList which extends {@link JList}
+     * @param frame : Ref to the main frame
+     * @param whichMenu : Which menu to display
+     */
     public TList(TFrame frame, int whichMenu)
     {
         super();
@@ -77,6 +83,10 @@ public class TList extends JList implements Definition, MouseListener {
         return list;
     }
 
+    /**
+     * Creation of a default model with the Agent list
+     * @return model @see {@link ListModel<String>}
+     */
     public ListModel<String> createDefaultListModel()
     {
         DefaultListModel<String> model = new DefaultListModel<>();
@@ -93,6 +103,10 @@ public class TList extends JList implements Definition, MouseListener {
         return whichMenu;
     }
 
+    /**
+     * Handle mousePressed
+     * @param e : Event
+     */
     @Override
     public void mousePressed(MouseEvent e)
     {

@@ -13,6 +13,11 @@ public class TMenuButton extends TFlatButton implements Definition
     private String name;
     private ArrayList<TMenuButton> otherButtons;
 
+    /**
+     * Constructor
+     * @param frame : Ref to the main frame
+     * @param text : Name of the button
+     */
     public TMenuButton(TFrame frame, String text)
     {
         super(text);
@@ -31,6 +36,10 @@ public class TMenuButton extends TFlatButton implements Definition
         this.setVerticalAlignment(SwingConstants.CENTER);
     }
 
+    /**
+     * I draw my own button
+     * @param g : Graphics
+     */
     @Override
     public void paint(Graphics g)
     {

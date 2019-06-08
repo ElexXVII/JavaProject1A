@@ -24,6 +24,15 @@ public class TConfirmButton extends TFlatButton implements Definition, ActionLis
     private TPanel areaToFillCardPanel;
     private CardLayout cardLayout;
 
+    /**
+     * Constructor
+     * @param frame : Ref to the main frame
+     * @param whichMenu : Menu selected
+     * @param text : name
+     * @param x : width
+     * @param y : height
+     * @param textFields : List of textfields to fill
+     */
     public TConfirmButton(TFrame frame, int whichMenu, String text, int x, int y, TTextField... textFields)
     {
         super(text);
@@ -84,6 +93,10 @@ public class TConfirmButton extends TFlatButton implements Definition, ActionLis
         }
     }
 
+    /**
+     * I draw myself the button
+     * @param g : Graphics
+     */
     @Override
     public void paint(Graphics g)
     {
@@ -115,6 +128,12 @@ public class TConfirmButton extends TFlatButton implements Definition, ActionLis
         super.paintComponent(g);
     }
 
+    /**
+     * On click do on of the following:
+     *  - Adding : Check for the fields, if they are all filled, create the agent
+     *  - Modify : Check for the fields and modify agent with new params
+     * @param e : Event
+     */
     @Override
     public void actionPerformed(ActionEvent e)
     {
@@ -333,7 +352,7 @@ public class TConfirmButton extends TFlatButton implements Definition, ActionLis
                 {
                     Contrat c = (Contrat) list.get(i);
 
-                    if (c.getId() == Integer.parseInt(tlist.getModel().getElementAt(tlist.getSelectedIndex()).toString().split(" ")[0]))
+                    if (tlist.getSelectedIndex()>=0 && c.getId() == Integer.parseInt(tlist.getModel().getElementAt(tlist.getSelectedIndex()).toString().split(" ")[0]))
                     {
                         Contrat newAgent = new Contrat(c.getClient(), c.getVehicule(),  c.getDebutLoc(), c.getFinLoc(), Integer.parseInt(textField.getText()),
                                 c.getReduction());

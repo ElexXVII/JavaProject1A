@@ -23,7 +23,13 @@ class TPopUpMenu extends JPopupMenu implements Definition
     private CardLayout cardLayout;
     private TPanel areaToFillCardPanel;
 
-
+    /**
+     * Constructor of the PopUoMenu
+     *
+     * @param frame : Ref to the main frame
+     * @param whichMenu : Which menu to display
+     * @param selectedIndex : Selected index in the list
+     */
     public TPopUpMenu(TFrame frame, int whichMenu, int selectedIndex) {
         this.setBorder(BorderFactory.createMatteBorder(1, 1, 1, 1, Color.BLUE));//Border( 2, 2, 2, 2 ));
 

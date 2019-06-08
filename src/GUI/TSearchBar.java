@@ -23,6 +23,16 @@ class TSearchBar extends JTextField implements FocusListener, ActionListener, De
     TScrollPane scrollPane;
     TList list;
 
+    /**
+     * Constructor of the SeachBox extends {@link JTextField}
+     * @param frame : Ref to the main frame
+     * @param whichMenu : Which menu to display
+     * @param hint : Hint (Text on the background)
+     * @param x : width
+     * @param y : heigth
+     * @param back : Background Color
+     * @param front : Front Color
+     */
     public TSearchBar(TFrame frame, int whichMenu, final String hint, int x, int y, Color back, Color front)
     {
         super(hint);
@@ -69,6 +79,10 @@ class TSearchBar extends JTextField implements FocusListener, ActionListener, De
         this.addActionListener(this);
     }
 
+    /**
+     * FocusGained Override : Erase hint
+     * @param e : Event
+     */
     @Override
     public void focusGained(FocusEvent e)
     {
@@ -78,6 +92,11 @@ class TSearchBar extends JTextField implements FocusListener, ActionListener, De
             showingHint = false;
         }
     }
+
+    /**
+     * FocusGained Override : display hint
+     * @param e : Event
+     */
     @Override
     public void focusLost(FocusEvent e)
     {
@@ -97,6 +116,9 @@ class TSearchBar extends JTextField implements FocusListener, ActionListener, De
         return showingHint ? "" : super.getText();
     }
 
+    /**
+     * Handle ActionEvent : Filter TList if Enter key is pressed
+     */
     @Override
     public void actionPerformed(ActionEvent e)
     {

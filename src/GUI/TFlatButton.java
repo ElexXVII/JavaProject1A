@@ -13,18 +13,28 @@ public class TFlatButton extends JButton implements Definition
 
     boolean isPressed = false;
 
+    /**
+     * Constructor 1
+     */
     public TFlatButton()
     {
         super();
         initButton();
     }
 
+    /**
+     * Constructor 2
+     * @param text : Title
+     */
     public TFlatButton(String text)
     {
         super(text);
         initButton();
     }
 
+    /**
+     * Init params of buttons
+     */
     private void initButton()
     {
         super.setBorderPainted(false);
@@ -32,12 +42,20 @@ public class TFlatButton extends JButton implements Definition
         super.setContentAreaFilled(false);
     }
 
+    /**
+     * Dessiner le boutons (Flat design)
+     * @param g : Composant graphique
+     */
     @Override
     protected void paintComponent(Graphics g)
     {
         super.paintComponent(g);
     }
 
+    /**
+     * Override this methods allows to draw myself the button
+     * @param b
+     */
     @Override
     public void setContentAreaFilled(boolean b) {
     }

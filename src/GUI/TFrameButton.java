@@ -17,6 +17,12 @@ public class TFrameButton extends TFlatButton implements Definition
 
     BufferedImage image;
 
+    /**
+     * Constructor
+     * @param name : Name of button to draw the correct image :
+     *             Cross, Bar,
+     *             Increase, Decrease, Right or left Arrow
+     */
     public TFrameButton(String name)
     {
         super();
@@ -39,8 +45,29 @@ public class TFrameButton extends TFlatButton implements Definition
                 e.printStackTrace();
             }
         }
+        else if (name.equals("Left"))
+        {
+            try {
+                image = ImageIO.read(new File("images/rightIcon.png"));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        else if (name.equals("Right"))
+        {
+            try {
+                image = ImageIO.read(new File("images/leftIcon.png"));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
+    /**
+     * Constructor 2
+     * @param frame : Ref to the main frame
+     * @param name : name of the button
+     */
     public TFrameButton(TFrame frame, String name)
     {
         super();
@@ -69,6 +96,9 @@ public class TFrameButton extends TFlatButton implements Definition
         }
     }
 
+    /**
+     * Init button : action listener, drawing and size
+     */
     private void initButton()
     {
         super.setBorderPainted(false);
@@ -102,6 +132,10 @@ public class TFrameButton extends TFlatButton implements Definition
         }
     }
 
+    /**
+     * I draw myself the button
+     * @param g
+     */
     @Override
     public void paint(Graphics g)
     {
@@ -129,6 +163,10 @@ public class TFrameButton extends TFlatButton implements Definition
         g2.drawImage(image, 0, 0, getWidth(), getHeight(), this);
     }
 
+    /**
+     * Do not allow the JButton to be filled automatically
+     * @param b
+     */
     @Override
     public void setContentAreaFilled(boolean b) {
     }

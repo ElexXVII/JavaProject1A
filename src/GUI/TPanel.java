@@ -9,11 +9,23 @@ import java.io.IOException;
 
 public class TPanel extends JPanel
 {
+    /**
+     * Constructor
+     */
     public TPanel()
     {
         super();
     }
 
+    /**
+     * Constructor to a standard panel
+     * @param x : width
+     * @param y : height
+     * @param back : Background Color
+     * @param front : Front Color
+     * @param layout : Layout of this panel
+     * @param opaque : Is it visible
+     */
     public TPanel(int x, int y, Color back, Color front, LayoutManager layout, boolean opaque)
     {
         super();
@@ -28,6 +40,10 @@ public class TPanel extends JPanel
         this.setLayout(layout);
     }
 
+    /**
+     * Paint the panel
+     * @param g
+     */
     @Override
     public void paintComponent(Graphics g)
     {

@@ -11,6 +11,14 @@ public class TComboBox extends JComboBox implements ActionListener {
 
     private TFrame frame;
 
+    /**
+     * Constructor
+     * @param frame : Ref to the main frame
+     * @param x : width
+     * @param y : height
+     * @param back : Background Color
+     * @param front : FrontColor Color
+     */
     public TComboBox(TFrame frame, int x, int y, Color back, Color front)
     {
         super();
@@ -24,12 +32,17 @@ public class TComboBox extends JComboBox implements ActionListener {
         this.setForeground(front);
 
         this.setBorder(Definition.border);
-        this.setUI(new TBasicComboBoxUI(this));
+        this.setUI(new TComboBoxUI(this));
 
         this.addActionListener(this);
     }
 
-    public void actionPerformed (ActionEvent e) {
+    /**
+     * On click : Get class name of the selected item : Moto/Avion/Voiture
+     * @param e : Event
+     */
+    public void actionPerformed (ActionEvent e)
+    {
         System.out.println(this.selectedItemReminder);
 
         if (this.selectedItemReminder.equals("Voiture")) {
@@ -45,9 +58,15 @@ public class TComboBox extends JComboBox implements ActionListener {
         }
     }
 
-    public void afficher (int i) {
+    /**
+     * Display TextFields used to create a new agent : Depends of which Agent is created
+     * @param i
+     */
+    public void afficher (int i)
+    {
 
-        switch (i) {
+        switch (i)
+        {
             case 0:
                 frame.getVehiclePowerField().setVisible(true);
                 frame.getVehicleNbSeatField().setVisible(true);

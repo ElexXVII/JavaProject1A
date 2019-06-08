@@ -20,6 +20,15 @@ class TTextField extends JTextField implements FocusListener, Definition
         return frame;
     }
 
+    /**
+     * Constructor of the SeachBox extends {@link JTextField}
+     * @param frame : Ref to the main frame
+     * @param hint : Hint (Text on the background)
+     * @param x : width
+     * @param y : heigth
+     * @param back : Background Color
+     * @param front : Front Color
+     */
     public TTextField(TFrame frame, final String hint, int x, int y, Color back, Color front)
     {
         super(hint);
@@ -42,6 +51,10 @@ class TTextField extends JTextField implements FocusListener, Definition
         //list = frame.getContractTList();
     }
 
+    /**
+     * FocusGained Override : Erase hint
+     * @param e : Event
+     */
     @Override
     public void focusGained(FocusEvent e)
     {
@@ -51,6 +64,11 @@ class TTextField extends JTextField implements FocusListener, Definition
             showingHint = false;
         }
     }
+
+    /**
+     * FocusGained Override : display hint
+     * @param e : Event
+     */
     @Override
     public void focusLost(FocusEvent e)
     {
@@ -75,6 +93,10 @@ class TTextField extends JTextField implements FocusListener, Definition
         return showingHint ? "" : super.getText();
     }
 
+    /**
+     * Get hint if no String is in, else get inpu
+     * @return
+     */
     public String getHintOrText()
     {
         if(this.getText().isEmpty())

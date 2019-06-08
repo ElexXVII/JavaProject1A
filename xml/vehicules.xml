@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="1.8.0_191" class="java.beans.XMLDecoder">
+ <object class="java.util.ArrayList">
+  <void method="add">
+   <object class="Class.Voiture">
+    <void property="className">
+     <string>Voiture</string>
+    </void>
+    <void property="etat">
+     <string>Bonne</string>
+    </void>
+    <void property="id">
+     <int>5</int>
+    </void>
+    <void property="marque">
+     <string>Renault</string>
+    </void>
+    <void property="modele">
+     <string>Twingo</string>
+    </void>
+    <void property="nbPlaces">
+     <int>4</int>
+    </void>
+    <void property="prixJournalier">
+     <float>100.0</float>
+    </void>
+    <void property="puissance">
+     <float>75.0</float>
+    </void>
+    <void property="vitesseMax">
+     <float>160.0</float>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Class.Voiture">
+    <void property="className">
+     <string>Voiture</string>
+    </void>
+    <void property="etat">
+     <string>Bonne</string>
+    </void>
+    <void property="id">
+     <int>6</int>
+    </void>
+    <void property="marque">
+     <string>Audi</string>
+    </void>
+    <void property="modele">
+     <string>R8</string>
+    </void>
+    <void property="nbPlaces">
+     <int>2</int>
+    </void>
+    <void property="prixJournalier">
+     <float>260.0</float>
+    </void>
+    <void property="puissance">
+     <float>290.0</float>
+    </void>
+    <void property="vitesseMax">
+     <float>340.0</float>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Class.Avion">
+    <void property="className">
+     <string>Avion</string>
+    </void>
+    <void property="etat">
+     <string>Bonne</string>
+    </void>
+    <void property="heuresVol">
+     <int>150</int>
+    </void>
+    <void property="id">
+     <int>7</int>
+    </void>
+    <void property="marque">
+     <string>Boeing</string>
+    </void>
+    <void property="modele">
+     <string>747</string>
+    </void>
+    <void property="nbMoteurs">
+     <int>4</int>
+    </void>
+    <void property="prixJournalier">
+     <float>25000.0</float>
+    </void>
+    <void property="vitesseMax">
+     <float>950.0</float>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Class.Moto">
+    <void property="className">
+     <string>Moto</string>
+    </void>
+    <void property="etat">
+     <string>Moyenne</string>
+    </void>
+    <void property="id">
+     <int>8</int>
+    </void>
+    <void property="marque">
+     <string>Ducati</string>
+    </void>
+    <void property="modele">
+     <string>1100 Panigale V4</string>
+    </void>
+    <void property="prixJournalier">
+     <float>35.0</float>
+    </void>
+    <void property="puissance">
+     <float>400.0</float>
+    </void>
+    <void property="vitesseMax">
+     <float>350.0</float>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Class.Voiture">
+    <void property="className">
+     <string>Voiture</string>
+    </void>
+    <void property="etat">
+     <string>Bonne</string>
+    </void>
+    <void property="id">
+     <int>9</int>
+    </void>
+    <void property="marque">
+     <string>Audi</string>
+    </void>
+    <void property="modele">
+     <string>TT</string>
+    </void>
+    <void property="nbPlaces">
+     <int>4</int>
+    </void>
+    <void property="prixJournalier">
+     <float>250.0</float>
+    </void>
+    <void property="puissance">
+     <float>250.0</float>
+    </void>
+    <void property="vitesseMax">
+     <float>290.0</float>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Class.Voiture">
+    <void property="className">
+     <string>Voiture</string>
+    </void>
+    <void property="etat">
+     <string>Bonne</string>
+    </void>
+    <void property="id">
+     <int>10</int>
+    </void>
+    <void property="marque">
+     <string>Audi</string>
+    </void>
+    <void property="modele">
+     <string>R7</string>
+    </void>
+    <void property="nbPlaces">
+     <int>2</int>
+    </void>
+    <void property="prixJournalier">
+     <float>260.0</float>
+    </void>
+    <void property="puissance">
+     <float>290.0</float>
+    </void>
+    <void property="vitesseMax">
+     <float>340.0</float>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Class.Voiture">
+    <void property="className">
+     <string>Voiture</string>
+    </void>
+    <void property="etat">
+     <string>Bonne</string>
+    </void>
+    <void property="id">
+     <int>11</int>
+    </void>
+    <void property="marque">
+     <string>Audi</string>
+    </void>
+    <void property="modele">
+     <string>R6</string>
+    </void>
+    <void property="nbPlaces">
+     <int>2</int>
+    </void>
+    <void property="prixJournalier">
+     <float>260.0</float>
+    </void>
+    <void property="puissance">
+     <float>290.0</float>
+    </void>
+    <void property="vitesseMax">
+     <float>340.0</float>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Class.Avion">
+    <void property="className">
+     <string>Avion</string>
+    </void>
+    <void property="etat">
+     <string>Bonne</string>
+    </void>
+    <void property="heuresVol">
+     <int>150</int>
+    </void>
+    <void property="id">
+     <int>12</int>
+    </void>
+    <void property="marque">
+     <string>BAE Systems</string>
+    </void>
+    <void property="modele">
+     <string>Concorde</string>
+    </void>
+    <void property="nbMoteurs">
+     <int>4</int>
+    </void>
+    <void property="prixJournalier">
+     <float>15000.0</float>
+    </void>
+    <void property="vitesseMax">
+     <float>1250.0</float>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Class.Avion">
+    <void property="className">
+     <string>Avion</string>
+    </void>
+    <void property="etat">
+     <string>Bonne</string>
+    </void>
+    <void property="heuresVol">
+     <int>150</int>
+    </void>
+    <void property="id">
+     <int>15</int>
+    </void>
+    <void property="marque">
+     <string>Boeing</string>
+    </void>
+    <void property="modele">
+     <string>717</string>
+    </void>
+    <void property="nbMoteurs">
+     <int>4</int>
+    </void>
+    <void property="prixJournalier">
+     <float>15000.0</float>
+    </void>
+    <void property="vitesseMax">
+     <float>1250.0</float>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Class.Avion">
+    <void property="className">
+     <string>Avion</string>
+    </void>
+    <void property="etat">
+     <string>Bonne</string>
+    </void>
+    <void property="heuresVol">
+     <int>150</int>
+    </void>
+    <void property="id">
+     <int>16</int>
+    </void>
+    <void property="marque">
+     <string>Dassault Aviation</string>
+    </void>
+    <void property="modele">
+     <string>Falcon 2000 LX</string>
+    </void>
+    <void property="nbMoteurs">
+     <int>4</int>
+    </void>
+    <void property="prixJournalier">
+     <float>15000.0</float>
+    </void>
+    <void property="vitesseMax">
+     <float>1250.0</float>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Class.Avion">
+    <void property="className">
+     <string>Avion</string>
+    </void>
+    <void property="etat">
+     <string>Bonne</string>
+    </void>
+    <void property="heuresVol">
+     <int>150</int>
+    </void>
+    <void property="id">
+     <int>17</int>
+    </void>
+    <void property="marque">
+     <string>Dassault Aviation</string>
+    </void>
+    <void property="modele">
+     <string>Falcon 10</string>
+    </void>
+    <void property="nbMoteurs">
+     <int>4</int>
+    </void>
+    <void property="prixJournalier">
+     <float>15000.0</float>
+    </void>
+    <void property="vitesseMax">
+     <float>1250.0</float>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Class.Moto">
+    <void property="className">
+     <string>Moto</string>
+    </void>
+    <void property="etat">
+     <string>Bonne</string>
+    </void>
+    <void property="id">
+     <int>18</int>
+    </void>
+    <void property="marque">
+     <string>Roadster</string>
+    </void>
+    <void property="modele">
+     <string>1100 Scrambler</string>
+    </void>
+    <void property="prixJournalier">
+     <float>15000.0</float>
+    </void>
+    <void property="vitesseMax">
+     <float>1250.0</float>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Class.Moto">
+    <void property="className">
+     <string>Moto</string>
+    </void>
+    <void property="etat">
+     <string>Bonne</string>
+    </void>
+    <void property="id">
+     <int>19</int>
+    </void>
+    <void property="marque">
+     <string>Roadster</string>
+    </void>
+    <void property="modele">
+     <string>DIAVEL 1260 S</string>
+    </void>
+    <void property="prixJournalier">
+     <float>15000.0</float>
+    </void>
+    <void property="vitesseMax">
+     <float>1250.0</float>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Class.Moto">
+    <void property="className">
+     <string>Moto</string>
+    </void>
+    <void property="etat">
+     <string>Bonne</string>
+    </void>
+    <void property="id">
+     <int>20</int>
+    </void>
+    <void property="marque">
+     <string>Roadster</string>
+    </void>
+    <void property="modele">
+     <string>821 Monster</string>
+    </void>
+    <void property="prixJournalier">
+     <float>15000.0</float>
+    </void>
+    <void property="vitesseMax">
+     <float>1250.0</float>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Class.Moto">
+    <void property="className">
+     <string>Moto</string>
+    </void>
+    <void property="etat">
+     <string>Bonne</string>
+    </void>
+    <void property="id">
+     <int>13</int>
+    </void>
+    <void property="marque">
+     <string>Roadster</string>
+    </void>
+    <void property="modele">
+     <string>821 Monster</string>
+    </void>
+    <void property="prixJournalier">
+     <float>15000.0</float>
+    </void>
+    <void property="vitesseMax">
+     <float>1250.0</float>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Class.Moto">
+    <void property="className">
+     <string>Moto</string>
+    </void>
+    <void property="etat">
+     <string>Bonne</string>
+    </void>
+    <void property="id">
+     <int>14</int>
+    </void>
+    <void property="marque">
+     <string>Roadster</string>
+    </void>
+    <void property="modele">
+     <string>821 Monster</string>
+    </void>
+    <void property="prixJournalier">
+     <float>15000.0</float>
+    </void>
+    <void property="vitesseMax">
+     <float>1250.0</float>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Class.Moto">
+    <void property="className">
+     <string>Moto</string>
+    </void>
+    <void property="etat">
+     <string>Bonne</string>
+    </void>
+    <void property="id">
+     <int>21</int>
+    </void>
+    <void property="marque">
+     <string>Roadster</string>
+    </void>
+    <void property="modele">
+     <string>821 Monster</string>
+    </void>
+    <void property="prixJournalier">
+     <float>15000.0</float>
+    </void>
+    <void property="vitesseMax">
+     <float>1250.0</float>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Class.Moto">
+    <void property="className">
+     <string>Moto</string>
+    </void>
+    <void property="etat">
+     <string>Bonne</string>
+    </void>
+    <void property="id">
+     <int>22</int>
+    </void>
+    <void property="marque">
+     <string>Roadster</string>
+    </void>
+    <void property="modele">
+     <string>1200 Monster 25° Anniversario</string>
+    </void>
+    <void property="prixJournalier">
+     <float>15000.0</float>
+    </void>
+    <void property="vitesseMax">
+     <float>1250.0</float>
+    </void>
+   </object>
+  </void>
+ </object>
+</java>
