@@ -25,11 +25,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GUI/TCheckBox.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
-              <caret line="37" column="4" selection-start-line="37" selection-start-column="4" selection-end-line="37" selection-end-column="4" />
+            <state relative-caret-position="477">
+              <caret line="37" selection-start-line="37" selection-end-line="37" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Class/Contrat.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="522">
+              <caret line="209" column="6" selection-start-line="209" selection-start-column="6" selection-end-line="209" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -111,7 +123,6 @@
         <option value="$PROJECT_DIR$/src/Class/ParcAgent.java" />
         <option value="$PROJECT_DIR$/src/GUI/TDateField.java" />
         <option value="$PROJECT_DIR$/src/Interface/Definition.java" />
-        <option value="$PROJECT_DIR$/src/Class/Contrat.java" />
         <option value="$PROJECT_DIR$/contrats.xml" />
         <option value="$PROJECT_DIR$/vehicules.xml" />
         <option value="$PROJECT_DIR$/src/JavaPark1A.java" />
@@ -138,6 +149,7 @@
         <option value="$PROJECT_DIR$/src/GUI/TSearchBar.java" />
         <option value="$PROJECT_DIR$/src/GUI/TTextField.java" />
         <option value="$PROJECT_DIR$/src/GUI/TCheckBox.java" />
+        <option value="$PROJECT_DIR$/src/Class/Contrat.java" />
       </list>
     </option>
   </component>
@@ -297,13 +309,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1557952296058</updated>
-    </task>
-    <task id="LOCAL-00001" summary="wiiiiiiiiiiiiii">
-      <created>1558945867644</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1558945867645</updated>
     </task>
     <task id="LOCAL-00002" summary="wiiiiiiiiiiiiii">
       <created>1558948119399</created>
@@ -620,7 +625,35 @@
       <option name="project" value="LOCAL" />
       <updated>1560009347849</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="FINAL with JavaDoc">
+      <created>1560009710419</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1560009710419</updated>
+    </task>
+    <task id="LOCAL-00048" summary="FINAL with JavaDoc">
+      <created>1560009866871</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1560009866871</updated>
+    </task>
+    <task id="LOCAL-00049" summary="FINAL with JavaDoc">
+      <created>1560009959613</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1560009959613</updated>
+    </task>
+    <task id="LOCAL-00050" summary="FINAL with RAPPORT">
+      <created>1560012886496</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1560012886497</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TodoView">
@@ -636,7 +669,7 @@
     <frame x="64" y="-4" width="1857" height="1085" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18960752" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18960752" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -645,7 +678,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.6777225" visible="true" weight="0.13965341" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.6777225" visible="true" weight="0.13965341" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49731544" weight="0.3975535" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -676,6 +709,8 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="wiiiiiiiiiiiiii" />
     <MESSAGE value="pouêt" />
     <MESSAGE value="charger/sauvegarder vehicules" />
@@ -688,7 +723,8 @@
     <MESSAGE value="&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;" />
     <MESSAGE value="FINAL (I think)" />
     <MESSAGE value="FINAL with JavaDoc" />
-    <option name="LAST_COMMIT_MESSAGE" value="FINAL with JavaDoc" />
+    <MESSAGE value="FINAL with RAPPORT" />
+    <option name="LAST_COMMIT_MESSAGE" value="FINAL with RAPPORT" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/TTextField.java" />
@@ -976,16 +1012,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Class/Contrat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="684">
-          <caret line="209" column="7" selection-start-line="209" selection-start-column="7" selection-end-line="209" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Class/Moto.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -1037,8 +1063,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/TCheckBox.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="37" column="4" selection-start-line="37" selection-start-column="4" selection-end-line="37" selection-end-column="4" />
+        <state relative-caret-position="477">
+          <caret line="37" selection-start-line="37" selection-end-line="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Class/Contrat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="209" column="6" selection-start-line="209" selection-start-column="6" selection-end-line="209" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
