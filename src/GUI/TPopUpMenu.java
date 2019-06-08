@@ -6,6 +6,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 class TPopUpMenu extends JPopupMenu implements Definition
 {
@@ -23,16 +24,14 @@ class TPopUpMenu extends JPopupMenu implements Definition
     private TPanel areaToFillCardPanel;
 
 
-    public TPopUpMenu(TFrame frame, int whichMenu, int selectedIndex)
-    {
+    public TPopUpMenu(TFrame frame, int whichMenu, int selectedIndex) {
         this.setBorder(BorderFactory.createMatteBorder(1, 1, 1, 1, Color.BLUE));//Border( 2, 2, 2, 2 ));
 
         this.frame = frame;
         this.whichMenu = whichMenu;
         this.selectedIndex = selectedIndex;
 
-        switch(whichMenu)
-        {
+        switch (whichMenu) {
             case 0:
                 scrollPane = frame.getContractScrollPane();
                 tlist = frame.getContractTList();
@@ -59,36 +58,64 @@ class TPopUpMenu extends JPopupMenu implements Definition
 
         if (whichMenu == 0)
         {
-            EndItem = new JMenuItem("Finaliser");
-            EndItem.addActionListener(new ActionListener()
+            ArrayList<Contrat> list = Gestionnaire.getContrats();
+
+            for (int i = 0; i < list.size(); i++)
+            {
+                Contrat c = (Contrat) list.get(i);
+
+                if (c.getId() == Integer.parseInt(tlist.getModel().getElementAt(tlist.getSelectedIndex()).toString().split(" ")[0]) && c.getFinished().equals("✘"))
+                {
+                    EndItem = new JMenuItem("Finaliser");
+                    EndItem.addActionListener(new ActionListener()
+                    {
+                        @Override
+                        public void actionPerformed(ActionEvent e) {
+                            cardLayout.show(areaToFillCardPanel, Definition.areaTofillCardName[3]);
+                        }
+                    });
+                    add(EndItem);
+                }
+            }
+
+            for (int i = 0; i < list.size(); i++) {
+                Contrat c = (Contrat) list.get(i);
+
+                if (c.getId() == Integer.parseInt(tlist.getModel().getElementAt(tlist.getSelectedIndex()).toString().split(" ")[0]) && c.getFinished().equals("✘"))
+                {
+                    changeItem = new JMenuItem("Modifier");
+                    changeItem.addActionListener(new ActionListener() {
+                        @Override
+                        public void actionPerformed(ActionEvent e) {
+                            frame.AddPanelToChangePanel(whichMenu, tlist.getSelectedIndex());
+                            cardLayout.show(areaToFillCardPanel, Definition.areaTofillCardName[1]);
+                        }
+                    });
+                    add(changeItem);
+                }
+            }
+        }
+        else
+        {
+            changeItem = new JMenuItem("Modifier");
+            changeItem.addActionListener(new ActionListener()
             {
                 @Override
-                public void actionPerformed(ActionEvent e)
-                {
-
+                public void actionPerformed(ActionEvent e) {
+                    frame.AddPanelToChangePanel(whichMenu, tlist.getSelectedIndex());
+                    cardLayout.show(areaToFillCardPanel, Definition.areaTofillCardName[1]);
                 }
             });
-            add(EndItem);
+            add(changeItem);
         }
 
-        changeItem = new JMenuItem("Modifier");
-        changeItem.addActionListener(new ActionListener()
-        {
-            @Override
-            public void actionPerformed(ActionEvent e)
-            {
-                frame.AddPanelToChangePanel(whichMenu, tlist.getSelectedIndex());
-                cardLayout.show(areaToFillCardPanel, Definition.areaTofillCardName[1]);
-            }
-        });
-        add(changeItem);
+
+
 
         deleteItem = new JMenuItem("Supprimer");
-        deleteItem.addActionListener(new ActionListener()
-        {
+        deleteItem.addActionListener(new ActionListener() {
             @Override
-            public void actionPerformed(ActionEvent e)
-            {
+            public void actionPerformed(ActionEvent e) {
                 cardLayout.show(areaToFillCardPanel, Definition.areaTofillCardName[2]);
                 //scrollPane.delElement((DefaultListModel<String>) tlist.getModel(), selectedIndex);
             }

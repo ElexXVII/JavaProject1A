@@ -310,6 +310,44 @@ public class TConfirmButton extends TFlatButton implements Definition, ActionLis
                 textField.focusLost();
             }
         }
+        else if (name.equals("Finaliser"))
+        {
+            boolean isEmpty = false;
+
+            TTextField textField = textFields[0];
+
+            if (textField.getText().isEmpty() && textField.isVisible())
+            {
+                textField.setBackground(Definition.emptyErrorColor);
+            }
+            else
+            {
+                textField.setBackground(Definition.WHITE);
+            }
+
+            if (!textField.getText().equals(""))
+            {
+                for (int i = 0; i < list.size(); i++)
+                {
+                    Contrat c = (Contrat) list.get(i);
+
+                    if (c.getId() == Integer.parseInt(tlist.getModel().getElementAt(tlist.getSelectedIndex()).toString().split(" ")[0]))
+                    {
+                        Contrat newAgent = new Contrat(c.getClient(), c.getVehicule(),  c.getDebutLoc(), c.getFinLoc(), Integer.parseInt(textField.getText()),
+                                c.getReduction());
+                        list.set(i,newAgent);
+                        ((Contrat) list.get(i)).setId(c.getId());
+                        ((Contrat) list.get(i)).setFinished();
+                        tlist.setModel(tlist.createDefaultListModel());
+
+                        textField.setText("");
+                        textField.setHint("Km parcourus");
+                        textField.focusLost();
+                        cardLayout.show(areaToFillCardPanel, Definition.areaTofillCardName[0]);
+                    }
+                }
+            }
+        }
         else
         {
             boolean isEmpty = false;

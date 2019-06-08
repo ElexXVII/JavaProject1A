@@ -102,6 +102,11 @@ public class TFrame extends JFrame implements Definition
     private TConfirmButton vehicleConfirmButton;
     private TConfirmButton vehicleCancelButton;
 
+    private TPanel contractFinishPanel;
+    private TTextField contractKmFinishField;
+    private TConfirmButton contractConfirmFinishButton;
+    private TConfirmButton contractCancelFinishButton;
+
     private TPanel vehicleDeletePanel;
     private TConfirmButton vehicleConfirmDeleteButton;
     private TConfirmButton vehicleCancelDeleteButton;
@@ -369,11 +374,36 @@ public class TFrame extends JFrame implements Definition
         return clientContractScrollPane;
     }
 
+    public TTextField getContractKmFinishField() {
+        return contractKmFinishField;
+    }
+
+    public void setContractKmFinishField(TTextField contractKmFinishField) {
+        this.contractKmFinishField = contractKmFinishField;
+    }
+
     private void initContractAreasToFill()
     {
         // Empty Panel
         contractEmpty = new TPanel(690, 616, Definition.InterfaceLightColor, null, null, true);
         contractAreaToFillPanel.add(contractEmpty, Definition.areaTofillCardName[0]);
+
+        // Finish Contract Panel
+
+        contractFinishPanel = new TPanel(390, 616, Definition.InterfaceLightColor, null, new FlowLayout(FlowLayout.CENTER, 195, 15), true);
+        contractAreaToFillPanel.add(contractFinishPanel, Definition.areaTofillCardName[3]);
+
+        TPanel CenterPanel = new TPanel(500, ((int)contractFinishPanel.getPreferredSize().getHeight()-4*30-3*15)/2, null, null, null, false);
+        contractFinishPanel.add(CenterPanel);
+
+        contractKmFinishField = new TTextField(frame, "Km parcourus", 250, 30, Definition.WHITE, Definition.BLACK);
+        contractFinishPanel.add(contractKmFinishField);
+
+        contractConfirmFinishButton = new TConfirmButton(frame, 0, "Finaliser", 250, 30, contractKmFinishField);
+        contractFinishPanel.add(contractConfirmFinishButton);
+
+        contractCancelFinishButton = new TConfirmButton(frame, 0, "Retour", 250, 30);
+        contractFinishPanel.add(contractCancelFinishButton);
 
         // TextField Panel
         TPanel t = new TPanel(690, 616, null, null, new FlowLayout(0, 0, 0), false);

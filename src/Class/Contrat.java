@@ -22,6 +22,7 @@ import java.util.Calendar;
     private Calendar debutLoc;
     private Calendar finLoc;
     private int kmEstime;
+    private String finished;
 
     private float prixEstime;
 
@@ -57,8 +58,23 @@ import java.util.Calendar;
         System.out.println(duree);
         this.prixEstime = this.calculerPrix();
 
+        this.finished = "✘";
+
         this.id = contractID;
         contractID ++;
+    }
+
+    public String getFinished() {
+        return finished;
+    }
+
+    public void setFinished(String finished) {
+        this.finished = finished;
+    }
+
+    public void setFinished()
+    {
+        this.finished = "✔";
     }
 
     public Calendar getDebutLoc() {
@@ -76,7 +92,6 @@ import java.util.Calendar;
     public void setFinLoc(Calendar finLoc) {
         this.finLoc = finLoc;
     }
-
 
     public static int getContractID() {
         return contractID;
@@ -192,13 +207,15 @@ import java.util.Calendar;
 
     }
 
+    //✔✘
+
     /**
      * Renvoie la chaîne de caractères représentant le contrat, affichée dans le panneau latéral de la page "Mes Contrats"
      * @return String
      */
     public String toString()
     {
-        return id + " - " + client.getName() + " " + vehicule.getModele() + "     " + this.prixEstime + "€";
+        return id + " "+this.getFinished()+" " + client.getName() + " " + vehicule.getModele() + "     " + this.prixEstime + "€";
     }
 
 }
