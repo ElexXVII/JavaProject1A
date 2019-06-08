@@ -179,7 +179,7 @@ public class TConfirmButton extends TFlatButton implements Definition, ActionLis
                     Client cFinal = null;
                     Vehicule vFinal = null;
 
-                    if (frame.getClientContractList().getSelectedIndex() > 0)
+                    if (frame.getClientContractList().getSelectedIndex() >= 0)
                     {
                         for (int i = 0; i < Gestionnaire.getClients().size(); i++)
                         {
@@ -192,7 +192,7 @@ public class TConfirmButton extends TFlatButton implements Definition, ActionLis
                         }
                     }
 
-                    if (frame.getVehicleContractList().getSelectedIndex() > 0)
+                    if (frame.getVehicleContractList().getSelectedIndex() >= 0)
                     {
                         for (int i = 0; i < Gestionnaire.getVehicules().size(); i++) {
                             Vehicule v = Gestionnaire.getVehicule(i);
@@ -203,25 +203,25 @@ public class TConfirmButton extends TFlatButton implements Definition, ActionLis
                         }
                     }
 
-                    if (cFinal!=null && vFinal!=null && tlist.getSelectedIndex() > 0 && frame.getVehicleContractList().getSelectedIndex() > 0 && frame.getClientContractList().getSelectedIndex() > 0)
+                    System.out.println(" -- "+tlist.getSelectedIndex());
+                    if (cFinal!=null && vFinal!=null && tlist.getSelectedIndex() >= 0)
                     {
                         for (int i = 0; i < list.size(); i++)
                         {
                             Contrat c = (Contrat) list.get(i);
 
-                            System.out.println(tlist.getSelectedIndex());
-                            if (c.getId() == Integer.parseInt(tlist.getModel().
-                                    getElementAt(
-                                            tlist.getSelectedIndex()).
-                                    toString().split(" ")[0]))
+                            System.out.println(tlist.getModel()+" "+tlist.getSelectedIndex()+" "+tlist.getModel().getElementAt(0));
+
+                            if ((tlist.getSelectedIndex() >= 0) && (c.getId() == Integer.parseInt(tlist.getModel().getElementAt(tlist.getSelectedIndex()).toString().split(" ")[0])))
                             {
                                 Contrat newAgent = new Contrat(cFinal, vFinal, frame.getContractBeginningField().getD(), frame.getContractEndingField().getD(), Integer.parseInt(frame.getContractEstimatedKm().getHintOrText()),
                                         frame.getContractHasReduction().isSelected());
-                                scrollPane.addElement((DefaultListModel<String>) tlist.getModel(), newAgent);
+                                //scrollPane.addElement((DefaultListModel<String>) tlist.getModel(), newAgent);
                                 list.set(i,newAgent);
                                 ((Contrat) list.get(i)).setId(c.getId());
 
                                 frame.getContractTList().setModel(frame.getContractTList().createDefaultListModel());
+                                cardLayout.show(areaToFillCardPanel, Definition.areaTofillCardName[0]);
                             }
                         }
                     }
@@ -230,7 +230,7 @@ public class TConfirmButton extends TFlatButton implements Definition, ActionLis
                     for (int i = 0; i < list.size(); i++) {
                         Vehicule v = (Vehicule) list.get(i);
 
-                        if (v.getId() == Integer.parseInt(tlist.getModel().getElementAt(index).toString().split(" - ")[0])) {
+                        if (v.getId() == Integer.parseInt(tlist.getModel().getElementAt(index).toString().split(" ")[0])) {
 
                             System.out.println(frame.getVehicleTypeSelector().getSelectedIndex());
                             switch (frame.getVehicleTypeSelector().getSelectedIndex()) {
@@ -259,15 +259,10 @@ public class TConfirmButton extends TFlatButton implements Definition, ActionLis
 
                             }
 
-/*
-                            list.set(i, new Voiture(textFields[0].getHintOrText(), textFields[1].getHintOrText(), Float.parseFloat(textFields[2].getHintOrText()),
-                                    Float.parseFloat(textFields[3].getHintOrText()), textFields[4].getHintOrText(), Integer.parseInt(textFields[5].getHintOrText()),
-                                    Float.parseFloat(textFields[6].getHintOrText()), Integer.parseInt(textFields[7].getHintOrText())) );
-                            ((Vehicule) list.get(i)).setId(v.getId());
-*/
 
                             tlist.setModel(tlist.createDefaultListModel());
                             frame.getVehicleContractList().setModel(frame.getVehicleContractList().createDefaultListModel());
+                            cardLayout.show(areaToFillCardPanel, Definition.areaTofillCardName[0]);
                         }
                     }
                     this.setName("Confirmer");
@@ -276,7 +271,7 @@ public class TConfirmButton extends TFlatButton implements Definition, ActionLis
                     for (int i = 0; i < list.size(); i++) {
                         Client c = (Client) list.get(i);
 
-                        if (c.getId() == Integer.parseInt((tlist.getModel().getElementAt(index).toString().split(" - ")[0])))
+                        if (c.getId() == Integer.parseInt((tlist.getModel().getElementAt(index).toString().split(" ")[0])))
                         {
                             list.set(i, new Client(textFields[0].getHintOrText(), textFields[1].getHintOrText(), textFields[2].getHintOrText(), textFields[3].getHintOrText(), textFields[4].getHintOrText()) );
                             ((Client) list.get(i)).setId(c.getId());
@@ -301,6 +296,7 @@ public class TConfirmButton extends TFlatButton implements Definition, ActionLis
                             textFields[2].focusLost();
                             textFields[3].focusLost();
                             textFields[4].focusLost();
+                            cardLayout.show(areaToFillCardPanel, Definition.areaTofillCardName[0]);
                         }
                     }
                     this.setName("Confirmer");
@@ -309,7 +305,6 @@ public class TConfirmButton extends TFlatButton implements Definition, ActionLis
             Gestionnaire.sauvegarder();
             frame.ChangePanelToAddPanel(whichMenu);
 
-            cardLayout.show(areaToFillCardPanel, Definition.areaTofillCardName[0]);
 
             for (TTextField textField : textFields)
             {
@@ -407,6 +402,8 @@ public class TConfirmButton extends TFlatButton implements Definition, ActionLis
                         newAgent = new Contrat(c, v, frame.getContractBeginningField().getD(), frame.getContractEndingField().getD(), Integer.parseInt(frame.getContractEstimatedKm().getText()), frame.getContractHasReduction().isSelected());
                         scrollPane.addElement((DefaultListModel<String>) tlist.getModel(), newAgent);
                         list.add(newAgent);
+                        cardLayout.show(areaToFillCardPanel, Definition.areaTofillCardName[0]);
+
                         break;
                     case 1:
                         System.out.println(frame.getVehicleTypeSelector().getSelectedIndex());
@@ -445,6 +442,7 @@ public class TConfirmButton extends TFlatButton implements Definition, ActionLis
                                 break;
 
                         }
+                        cardLayout.show(areaToFillCardPanel, Definition.areaTofillCardName[0]);
 
                         break;
                     case 2:
@@ -452,12 +450,11 @@ public class TConfirmButton extends TFlatButton implements Definition, ActionLis
                         scrollPane.addElement((DefaultListModel<String>) tlist.getModel(), newAgent);
                         frame.getClientContractScrollPane().addElement((DefaultListModel<String>) frame.getClientContractList().getModel(), newAgent);
                         list.add(newAgent);
+                        cardLayout.show(areaToFillCardPanel, Definition.areaTofillCardName[0]);
                         break;
 
                 }
                 Gestionnaire.sauvegarder();
-
-                cardLayout.show(areaToFillCardPanel, Definition.areaTofillCardName[0]);
 
                 for (TTextField textField : textFields)
                 {

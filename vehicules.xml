@@ -7,102 +7,56 @@
      <string>Voiture</string>
     </void>
     <void property="etat">
-     <string>10</string>
+     <string>14</string>
     </void>
     <void property="id">
      <int>2</int>
     </void>
-    <void property="isUsed">
-     <boolean>true</boolean>
-    </void>
-    <void property="km">
-     <long>140</long>
-    </void>
     <void property="marque">
-     <string>10</string>
+     <string>14</string>
     </void>
     <void property="modele">
-     <string>10</string>
+     <string>14</string>
     </void>
     <void property="nbPlaces">
-     <int>10</int>
+     <int>14</int>
     </void>
     <void property="prixJournalier">
-     <float>10.0</float>
+     <float>147.0</float>
     </void>
     <void property="puissance">
-     <float>10.0</float>
+     <float>14.0</float>
     </void>
     <void property="vitesseMax">
-     <float>10.0</float>
+     <float>14.0</float>
     </void>
    </object>
   </void>
   <void method="add">
-   <object class="Class.Voiture">
+   <object class="Class.Moto">
     <void property="className">
-     <string>Voiture</string>
+     <string>Moto</string>
     </void>
     <void property="etat">
-     <string>10</string>
+     <string>14</string>
     </void>
     <void property="id">
      <int>3</int>
     </void>
-    <void property="isUsed">
-     <boolean>true</boolean>
-    </void>
-    <void property="km">
-     <long>10</long>
-    </void>
     <void property="marque">
-     <string>20</string>
+     <string>15</string>
     </void>
     <void property="modele">
-     <string>20</string>
-    </void>
-    <void property="nbPlaces">
-     <int>10</int>
+     <string>15</string>
     </void>
     <void property="prixJournalier">
-     <float>20.0</float>
+     <float>14.0</float>
     </void>
     <void property="puissance">
-     <float>10.0</float>
+     <float>14.0</float>
     </void>
     <void property="vitesseMax">
-     <float>10.0</float>
-    </void>
-   </object>
-  </void>
-  <void method="add">
-   <object class="Class.Avion">
-    <void property="className">
-     <string>Avion</string>
-    </void>
-    <void property="etat">
-     <string>645645</string>
-    </void>
-    <void property="heuresVol">
-     <int>654645</int>
-    </void>
-    <void property="id">
-     <int>5</int>
-    </void>
-    <void property="marque">
-     <string>878</string>
-    </void>
-    <void property="modele">
-     <string>Boeing</string>
-    </void>
-    <void property="nbMoteurs">
-     <int>564</int>
-    </void>
-    <void property="prixJournalier">
-     <float>6446.0</float>
-    </void>
-    <void property="vitesseMax">
-     <float>6.4645656E7</float>
+     <float>14.0</float>
     </void>
    </object>
   </void>
