@@ -164,6 +164,20 @@ public class TFrame extends JFrame implements Definition
     // CONSTRUCTOR
     //=============
 
+    /*/**
+     * Returns the component at the specified index.
+     * <blockquote>
+     * <b>Note:</b> Although this method is not deprecated, the preferred
+     *    method to use is <code>get(int)</code>, which implements the
+     *    <code>List</code> interface defined in the 1.2 Collections framework.
+     * </blockquote>
+     * @param      index   an index into this list
+     * @return     the component at the specified index
+     * @exception  ArrayIndexOutOfBoundsException  if the <code>index</code>
+     *             is negative or greater than the current size of this
+     *             list
+     * @see #get(int)
+     */
     public TFrame()
     {
         super();
