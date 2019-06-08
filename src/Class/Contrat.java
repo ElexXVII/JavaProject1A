@@ -148,7 +148,8 @@ import java.util.Calendar;
      * Calcule le prix estimé en se basant sur la table des prix fournie par le sujet, le nombre de km estimé, la durée du contrat et la présence ou non de la réduction
      * @return int
      */
-    private float calculerPrix () {
+    private float calculerPrix ()
+    {
 
         float res = 0;
         int kmRestants = kmEstime - 50;

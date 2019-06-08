@@ -34,6 +34,7 @@ public class TDateField extends TTextField implements DocumentListener {
     public TDateField(TFrame frame, String hint, int x, int y, Color back, Color front, boolean beginning) {
         super(frame, hint, x, y, back, front);
         this.beginning = beginning;
+
         this.d = null;
         reduc = frame.getContractHasReduction();
         this.getDocument().addDocumentListener(this);
@@ -47,9 +48,10 @@ public class TDateField extends TTextField implements DocumentListener {
 
         Calendar c = Calendar.getInstance();
         try {
-            c.set(Calendar.DAY_OF_MONTH, Integer.parseInt(this.getText().subSequence(0, 2).toString()));
-            c.set(Calendar.MONTH, Integer.parseInt(this.getText().subSequence(3, 5).toString()));
-            c.set(Calendar.YEAR, Integer.parseInt(this.getText().subSequence(6, 10).toString()));
+            c.set(Calendar.DAY_OF_MONTH, Integer.parseInt(this.getHintOrText().subSequence(0, 2).toString()));
+            c.set(Calendar.MONTH, Integer.parseInt(this.getHintOrText().subSequence(3, 5).toString()));
+            c.set(Calendar.YEAR, Integer.parseInt(this.getHintOrText().subSequence(6, 10).toString()));
+
         } catch (StringIndexOutOfBoundsException e) {
             return null;
         }
@@ -57,7 +59,16 @@ public class TDateField extends TTextField implements DocumentListener {
 
     }
 
-    public Calendar getD() {
+    public Calendar getOtherDay()
+    {
+        return date();
+    }
+
+    public Calendar getD()
+    {
+        d = date();
+        int dur = (int)Math.abs(Duration.between(d.toInstant(), otherDate.getOtherDay().toInstant()).toDays());
+        this.reduc.setDuration(dur);
         return d;
     }
 
@@ -92,10 +103,10 @@ public class TDateField extends TTextField implements DocumentListener {
     {
         super.focusLost(e);
 
-        d = date();
-
-        if (this.getD() != null && this.otherDate.getD() != null) {
-            int dur = (int)Math.abs(Duration.between(this.getD().toInstant(), otherDate.getD().toInstant()).toDays());
+        if (!this.getHintOrText().subSequence(0, 2).toString().equals("Dé") && !this.getHintOrText().subSequence(0, 2).toString().equals("Fi")
+            && !otherDate.getHintOrText().subSequence(0, 2).toString().equals("Dé") && !otherDate.getHintOrText().subSequence(0, 2).toString().equals("Fi"))
+        {
+            int dur = (int)Math.abs(Duration.between(getOtherDay().toInstant(), otherDate.getOtherDay().toInstant()).toDays());
             this.reduc.setDuration(dur);
         }
     }
