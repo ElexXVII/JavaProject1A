@@ -7,6 +7,13 @@ import java.awt.event.FocusEvent;
 import java.time.Duration;
 import java.util.Calendar;
 
+/**
+ * Classe {@link TDateField} fille de {@link TTextField} permettant de rentrer une date pour le contrat (début ou fin resp.).
+ * Contient un booléen disant si la {@link TDateField} correspond à la date de début.
+ * Contient l'autre {@link TDateField} nécessaire au calcul de la durée (fin ou début resp.)
+ * Contient la {@link TCheckBox} pour l'activation de la réduction.
+ */
+
 public class TDateField extends TTextField implements DocumentListener {
 
     private boolean beginning;
@@ -14,6 +21,16 @@ public class TDateField extends TTextField implements DocumentListener {
     private TDateField otherDate;
     private Calendar d;
 
+    /**
+     * Constructeur avec initialisation de {@link TDateField} basé sur celui de {@link TTextField}
+     * @param frame {@link TFrame}
+     * @param hint String
+     * @param x int
+     * @param y int
+     * @param back {@link Color}
+     * @param front {@link Color}
+     * @param beginning boolean
+     */
     public TDateField(TFrame frame, String hint, int x, int y, Color back, Color front, boolean beginning) {
         super(frame, hint, x, y, back, front);
         this.beginning = beginning;
@@ -22,6 +39,10 @@ public class TDateField extends TTextField implements DocumentListener {
         this.getDocument().addDocumentListener(this);
     }
 
+    /**
+     * Récupération de la date écrite dans le {@link TDateField}
+     * @return Calendar : la date écrite par l'utilisateur
+     */
     public Calendar date () {
 
         Calendar c = Calendar.getInstance();
@@ -40,6 +61,9 @@ public class TDateField extends TTextField implements DocumentListener {
         return d;
     }
 
+    /**
+     * Place le champ otherDate sur le {@link TDateField} de début ou de fin selon la valeur de beginning
+     */
     public void setOtherDate () {
         otherDate = beginning ? this.getFrame().getContractEndingField() : this.getFrame().getContractBeginningField();
     }
@@ -58,6 +82,11 @@ public class TDateField extends TTextField implements DocumentListener {
 
     }
 
+    /**
+     * Lorsque l'utilisateur quitte un {@link TDateField}, la fonction suivante se lance
+     * On calcule alors la durée si les deux {@link TDateField} associés sont remplis
+     * @param e {@link FocusEvent}
+     */
     @Override
     public void focusLost (FocusEvent e)
     {

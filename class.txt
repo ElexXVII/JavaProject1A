@@ -1,6 +1,6 @@
 @startuml
 
-abstract class Class.Vehicule {
+abstract class Vehicule {
   -float vitesseMax
   -String marque
   -String modele
@@ -8,44 +8,52 @@ abstract class Class.Vehicule {
   -float prixJournalier
   }
 
-abstract class Class.VehiculeAerien {
+abstract class VehiculeAerien {
   -int heuresVol
   -int nbMoteurs
   }
 
-class Class.Avion {
+class Avion {
   }
 
-abstract class Class.VehiculeTerrestre {
+abstract class VehiculeTerrestre {
   -int km
   -float puissance
   }
 
-class Class.Voiture {
+class Voiture {
   -int nbPlaces
   }
 
 
-class Class.Moto {
+class Moto {
   }
 
-class Class.Client {
+class Client {
   -String nom
-  -boolean reduction
-  -Class.Vehicule vehiculeLoue
-  -Date debutLoc
-  -Date finLoc
-  -float prixEstime
-  +faireUnDab()
+  -String surname;
+  -String phone;
+  -String mail;
+  -String address;
   }
 
-Class.VehiculeAerien <|-down- Class.Avion
+class Contrat {
+  -Client client
+  -Vehicule vehicule
+  -Calendar debutLoc
+  -Calendar finLoc
+  -int kmEstime
+  -boolean reduction
+  -float prixEstime
+  }
 
-Class.VehiculeTerrestre <|-down- Class.Voiture
-Class.VehiculeTerrestre <|-down- Class.Moto
+VehiculeAerien <|-down- Class.Avion
 
-Class.Vehicule <|-down- Class.VehiculeTerrestre
-Class.Vehicule <|-down- Class.VehiculeAerien
+VehiculeTerrestre <|-down- Voiture
+VehiculeTerrestre <|-down- Moto
+
+Vehicule <|-down- VehiculeTerrestre
+Vehicule <|-down- VehiculeAerien
 
 @enduml
 

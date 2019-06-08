@@ -7,23 +7,24 @@ import java.beans.XMLEncoder;
 import java.io.*;
 import java.util.ArrayList;
 
+
+/**
+ * Classe {@link Gestionnaire} permettant de stocker une liste de {@link Vehicule}, une liste de {@link Client} et une liste de {@link Contrat}
+ * Elle permet également les interactions avec les fichiers XML associés en permettant de charger les listes depuis ces fichiers, ou de sauvegarder les listes dans les fichiers.
+ */
 public class Gestionnaire implements Definition
 {
 
+    /**
+     * Constructeur vide
+     */
     public Gestionnaire() {}
 
     private static ArrayList<Vehicule> vehicules = new ArrayList<>();
-    private static ArrayList vehiculesTest = new ArrayList<>();
     private static ArrayList<Client> clients = new ArrayList<>();
     private static ArrayList<Contrat> contrats = new ArrayList<>();
 
-    public static void initArrayList()
-    {
-        charger();
-        //contrats.add(new Contrat(Tony, Twingo, 100, true));
-    }
-
-    /** Vehicules **/
+    /* Gestion des véhicules **/
 
     public static ArrayList<Vehicule> getVehicules() {
         return vehicules;
@@ -33,15 +34,7 @@ public class Gestionnaire implements Definition
         return vehicules.get(id);
     }
 
-    public static int getNbVehicules () {
-        return vehicules.size();
-    }
-
-    public static void ajouterVehicule (Vehicule v) {
-        vehicules.add(v);
-    }
-
-    /** Clients **/
+    /* Gestion des clients **/
 
     public static ArrayList<Client> getClients() {
         return clients;
@@ -51,35 +44,25 @@ public class Gestionnaire implements Definition
         return clients.get(id);
     }
 
-    public static int getNbClients () {
-        return clients.size();
-    }
-
-    public static void ajouterClient (Client c) {
-        clients.add(c);
-    }
-
-    /** Contrats **/
+    /* Gestion des contrats **/
 
     public static ArrayList<Contrat> getContrats() {
         return contrats;
     }
 
-    public static Contrat getContrat (int id) {
-        return contrats.get(id);
+    /* Sérialisation XML **/
+
+    /**
+     * Initialise les 3 ArrayList avec les valeurs sérialisées
+     */
+    public static void initArrayList()
+    {
+        charger();
     }
 
-    public static int getNbContrats () {
-        return contrats.size();
-    }
-
-    public static void ajouterContrat (Contrat c) {
-        contrats.add(c);
-
-    }
-
-    /** XML **/
-
+    /**
+     * Sérialise les 3 ArrayList dans les fichiers XML correspondants
+     */
     public static void sauvegarder()
     {
         sauvegarderClients();
@@ -87,14 +70,20 @@ public class Gestionnaire implements Definition
         sauvegarderVehicules();
     }
 
-    public static void charger()
+    /**
+     * Désérialise les 3 ArrayList depuis les fichiers XML correspondants
+     */
+    private static void charger()
     {
         chargerClients();
         chargerContrats();
         chargerVehicules();
     }
 
-    public static void chargerVehicules () {
+    /**
+     * Désérialise les véhicules enregistrés dans vehicules.xml
+     */
+    private static void chargerVehicules () {
         XMLDecoder decoder;
 
         try {
@@ -118,11 +107,13 @@ public class Gestionnaire implements Definition
                 maxID = vehicule.getId();
             }
         }
-        Vehicule.setCarID(maxID+1);
+        Vehicule.setVehicleId(maxID+1);
     }
 
-    // int get
 
+    /**
+     * Sérialise les véhicules enregistrés dans vehicules.xml
+     */
     private static void sauvegarderVehicules () {
         XMLEncoder encoder;
 
@@ -147,7 +138,9 @@ public class Gestionnaire implements Definition
         }
     }
 
-
+    /**
+     * Désérialise les clients enregistrés dans clients.xml
+     */
     private static void chargerClients () {
         XMLDecoder decoder;
         try {
@@ -160,10 +153,6 @@ public class Gestionnaire implements Definition
         assert decoder != null;
 
         clients = (ArrayList<Client>) decoder.readObject();
-        /*for (int i=0; i<50; i++)
-        {
-            clients.add(clients.get(0));
-        }*/
 
         decoder.close();
 
@@ -178,6 +167,9 @@ public class Gestionnaire implements Definition
         Client.setClientID(maxID+1);
     }
 
+    /**
+     * Sérialise les clients enregistrés dans clients.xml
+     */
     private static void sauvegarderClients () {
         XMLEncoder encoder;
 
@@ -188,13 +180,17 @@ public class Gestionnaire implements Definition
             e.printStackTrace();
         }
 
+        assert encoder != null;
         encoder.writeObject(clients);
 
         encoder.close();
     }
 
 
-    public static void chargerContrats () {
+    /**
+     * Désérialise les contrats enregistrés dans contrats.xml
+     */
+    private static void chargerContrats () {
         XMLDecoder decoder;
         try {
             decoder = new XMLDecoder(new FileInputStream("contrats.xml"));
@@ -218,6 +214,9 @@ public class Gestionnaire implements Definition
         Contrat.setContractID(maxID+1);
     }
 
+    /**
+     * Sérialise les contrats enregistrés dans contrats.xml
+     */
     private static void sauvegarderContrats () {
         XMLEncoder encoder;
 
@@ -227,6 +226,7 @@ public class Gestionnaire implements Definition
             encoder = null;
             e.printStackTrace();
         }
+        assert encoder != null;
         encoder.writeObject(contrats);
 
         encoder.close();
