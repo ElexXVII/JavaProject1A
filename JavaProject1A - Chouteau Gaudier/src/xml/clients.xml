@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="1.8.0_191" class="java.beans.XMLDecoder">
+ <object class="java.util.ArrayList">
+  <void method="add">
+   <object class="Class.Client">
+    <void property="address">
+     <string>x</string>
+    </void>
+    <void property="id">
+     <int>6</int>
+    </void>
+    <void property="mail">
+     <string>@.fr</string>
+    </void>
+    <void property="name">
+     <string>Tony</string>
+    </void>
+    <void property="phone">
+     <string>4564546465</string>
+    </void>
+    <void property="surname">
+     <string>Chouteau</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Class.Client">
+    <void property="address">
+     <string>y</string>
+    </void>
+    <void property="id">
+     <int>7</int>
+    </void>
+    <void property="mail">
+     <string>@.com</string>
+    </void>
+    <void property="name">
+     <string>Thibault</string>
+    </void>
+    <void property="phone">
+     <string>144464</string>
+    </void>
+    <void property="surname">
+     <string>Gaudier</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Class.Client">
+    <void property="address">
+     <string>7 rue des pissenlis</string>
+    </void>
+    <void property="id">
+     <int>11</int>
+    </void>
+    <void property="mail">
+     <string>dupont.jerome@.com</string>
+    </void>
+    <void property="name">
+     <string>Jérôme</string>
+    </void>
+    <void property="phone">
+     <string>0655485614</string>
+    </void>
+    <void property="surname">
+     <string>Du Pont</string>
+    </void>
+   </object>
+  </void>
+ </object>
+</java>
