@@ -832,7 +832,6 @@ public class TFrame extends JFrame implements Definition
 
     public void ChangePanelToAddPanel(int whichMenu)
     {
-
         switch (whichMenu)
         {
             case 0:

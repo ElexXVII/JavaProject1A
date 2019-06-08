@@ -175,6 +175,50 @@ public class TConfirmButton extends TFlatButton implements Definition, ActionLis
 
             switch (whichMenu)
             {
+                case 0:
+                    Client cFinal = null;
+                    Vehicule vFinal = null;
+
+                    for (int i = 0; i < Gestionnaire.getClients().size(); i++)
+                    {
+                        Client c = Gestionnaire.getClient(i);
+
+                        if (c.getId() == Integer.parseInt(frame.getClientContractList().getModel().getElementAt(frame.getClientContractList().getSelectedIndex()).toString().split(" ")[0]))
+                        {
+                            cFinal = c;
+                        }
+                    }
+
+                    for (int i = 0; i < Gestionnaire.getVehicules().size(); i++)
+                    {
+                        Vehicule v = Gestionnaire.getVehicule(i);
+
+                        if (v.getId() == Integer.parseInt(frame.getVehicleContractList().getModel().getElementAt(frame.getVehicleContractList().getSelectedIndex()).toString().split(" ")[0]))
+                        {
+                            vFinal = v;
+                        }
+                    }
+
+                    if (cFinal!=null && vFinal!=null)
+                    {
+                        for (int i = 0; i < list.size(); i++)
+                        {
+                            Contrat c = (Contrat) list.get(i);
+
+                            if (c.getId() == Integer.parseInt(tlist.getModel().getElementAt(tlist.getSelectedIndex()).toString().split(" ")[0]))
+                            {
+                                System.out.println("--");
+                                Contrat newAgent = new Contrat(cFinal, vFinal, frame.getContractBeginningField().getD(), frame.getContractEndingField().getD(), Integer.parseInt(frame.getContractEstimatedKm().getHintOrText()),
+                                        frame.getContractHasReduction().isSelected());
+                                scrollPane.addElement((DefaultListModel<String>) tlist.getModel(), newAgent);
+                                list.set(i,newAgent);
+                                ((Contrat) list.get(i)).setId(c.getId());
+
+                                frame.getContractTList().setModel(frame.getContractTList().createDefaultListModel());
+                            }
+                        }
+                    }
+                    break;
                 case 1:
                     for (int i = 0; i < list.size(); i++) {
                         Vehicule v = (Vehicule) list.get(i);
@@ -217,38 +261,6 @@ public class TConfirmButton extends TFlatButton implements Definition, ActionLis
 
                             tlist.setModel(tlist.createDefaultListModel());
                             frame.getVehicleContractList().setModel(frame.getVehicleContractList().createDefaultListModel());
-                            textFields[0].setHint("Modèle");
-                            textFields[1].setHint("Marque");
-                            textFields[2].setHint("Prix journalier");
-                            textFields[3].setHint("Vitesse maximale");
-                            textFields[4].setHint("Etat du véhicule");
-                            textFields[5].setHint("Distance déjà parcourue");
-                            textFields[6].setHint("Puissance");
-                            textFields[7].setHint("Nombre de places");
-                            textFields[8].setHint("Nombre d'heures de vol");
-                            textFields[9].setHint("Nombre de moteurs");
-
-                            textFields[0].setText("");
-                            textFields[1].setText("");
-                            textFields[2].setText("");
-                            textFields[3].setText("");
-                            textFields[4].setText("");
-                            textFields[5].setText("");
-                            textFields[6].setText("");
-                            textFields[7].setText("");
-                            textFields[8].setText("");
-                            textFields[9].setText("");
-
-                            textFields[0].focusLost();
-                            textFields[1].focusLost();
-                            textFields[2].focusLost();
-                            textFields[3].focusLost();
-                            textFields[4].focusLost();
-                            textFields[5].focusLost();
-                            textFields[6].focusLost();
-                            textFields[7].focusLost();
-                            textFields[8].focusLost();
-                            textFields[9].focusLost();
                         }
                     }
                     this.setName("Confirmer");
@@ -288,6 +300,7 @@ public class TConfirmButton extends TFlatButton implements Definition, ActionLis
                     break;
             }
             Gestionnaire.sauvegarder();
+            frame.ChangePanelToAddPanel(whichMenu);
 
             cardLayout.show(areaToFillCardPanel, Definition.areaTofillCardName[0]);
 
