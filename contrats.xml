@@ -61,5 +61,812 @@
     </void>
    </object>
   </void>
+  <void method="add">
+   <object class="Class.Contrat">
+    <void property="client">
+     <object class="Class.Client">
+      <void property="address">
+       <string>rt</string>
+      </void>
+      <void property="id">
+       <int>2</int>
+      </void>
+      <void property="name">
+       <string>a</string>
+      </void>
+      <void property="phone">
+       <string>e</string>
+      </void>
+      <void property="surname">
+       <string>z</string>
+      </void>
+     </object>
+    </void>
+    <void property="debutLoc">
+     <object class="java.util.GregorianCalendar">
+      <void property="time">
+       <object class="java.util.Date">
+        <long>949323618476</long>
+       </object>
+      </void>
+     </object>
+    </void>
+    <void property="finLoc">
+     <object class="java.util.GregorianCalendar">
+      <void property="time">
+       <object class="java.util.Date">
+        <long>912430828431</long>
+       </object>
+      </void>
+     </object>
+    </void>
+    <void property="id">
+     <int>4</int>
+    </void>
+    <void property="kmEstime">
+     <int>100</int>
+    </void>
+    <void property="prixEstime">
+     <float>45.0</float>
+    </void>
+    <void property="vehicule">
+     <object class="Class.Voiture">
+      <void property="etat">
+       <string>Bonne</string>
+      </void>
+      <void property="id">
+       <int>12</int>
+      </void>
+      <void property="marque">
+       <string>Volkswagen</string>
+      </void>
+      <void property="modele">
+       <string>Golf TDI</string>
+      </void>
+      <void property="prixJournalier">
+       <float>20.0</float>
+      </void>
+      <void property="vitesseMax">
+       <float>150.0</float>
+      </void>
+     </object>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Class.Contrat">
+    <void property="client">
+     <object class="Class.Client">
+      <void property="address">
+       <string>rt</string>
+      </void>
+      <void property="id">
+       <int>2</int>
+      </void>
+      <void property="name">
+       <string>a</string>
+      </void>
+      <void property="phone">
+       <string>e</string>
+      </void>
+      <void property="surname">
+       <string>z</string>
+      </void>
+     </object>
+    </void>
+    <void property="debutLoc">
+     <object class="java.util.GregorianCalendar">
+      <void property="time">
+       <object class="java.util.Date">
+        <long>886338079343</long>
+       </object>
+      </void>
+     </object>
+    </void>
+    <void property="finLoc">
+     <object class="java.util.GregorianCalendar">
+      <void property="time">
+       <object class="java.util.Date">
+        <long>886424484622</long>
+       </object>
+      </void>
+     </object>
+    </void>
+    <void property="id">
+     <int>5</int>
+    </void>
+    <void property="kmEstime">
+     <int>100</int>
+    </void>
+    <void property="prixEstime">
+     <float>85.0</float>
+    </void>
+    <void property="vehicule">
+     <object class="Class.Voiture">
+      <void property="etat">
+       <string>70</string>
+      </void>
+      <void property="id">
+       <int>14</int>
+      </void>
+      <void property="marque">
+       <string>Renault</string>
+      </void>
+      <void property="modele">
+       <string>Pouêt</string>
+      </void>
+      <void property="prixJournalier">
+       <float>60.0</float>
+      </void>
+      <void property="vitesseMax">
+       <float>654.0</float>
+      </void>
+     </object>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Class.Contrat">
+    <void property="client">
+     <object class="Class.Client">
+      <void property="address">
+       <string>a.b@c.d</string>
+      </void>
+      <void property="id">
+       <int>6</int>
+      </void>
+      <void property="name">
+       <string>a</string>
+      </void>
+      <void property="phone">
+       <string>0147852369</string>
+      </void>
+      <void property="surname">
+       <string>b</string>
+      </void>
+     </object>
+    </void>
+    <void property="debutLoc">
+     <object class="java.util.GregorianCalendar">
+      <void property="time">
+       <object class="java.util.Date">
+        <long>1528634430973</long>
+       </object>
+      </void>
+     </object>
+    </void>
+    <void property="finLoc">
+     <object class="java.util.GregorianCalendar">
+      <void property="time">
+       <object class="java.util.Date">
+        <long>1529066435132</long>
+       </object>
+      </void>
+     </object>
+    </void>
+    <void property="id">
+     <int>6</int>
+    </void>
+    <void property="kmEstime">
+     <int>100</int>
+    </void>
+    <void property="prixEstime">
+     <float>30.0</float>
+    </void>
+    <void property="vehicule">
+     <object class="Class.Voiture">
+      <void property="etat">
+       <string>9</string>
+      </void>
+      <void property="id">
+       <int>22</int>
+      </void>
+      <void property="marque">
+       <string>Vroum Vroum</string>
+      </void>
+      <void property="modele">
+       <string>Vroum</string>
+      </void>
+      <void property="nbPlaces">
+       <int>4</int>
+      </void>
+      <void property="prixJournalier">
+       <float>1.0</float>
+      </void>
+      <void property="puissance">
+       <float>45.0</float>
+      </void>
+      <void property="vitesseMax">
+       <float>100.0</float>
+      </void>
+     </object>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Class.Contrat">
+    <void property="client">
+     <object class="Class.Client">
+      <void property="address">
+       <string>a.b@c.d</string>
+      </void>
+      <void property="id">
+       <int>6</int>
+      </void>
+      <void property="name">
+       <string>a</string>
+      </void>
+      <void property="phone">
+       <string>0147852369</string>
+      </void>
+      <void property="surname">
+       <string>b</string>
+      </void>
+     </object>
+    </void>
+    <void property="debutLoc">
+     <object class="java.util.GregorianCalendar">
+      <void property="time">
+       <object class="java.util.Date">
+        <long>1559738627309</long>
+       </object>
+      </void>
+     </object>
+    </void>
+    <void property="finLoc">
+     <object class="java.util.GregorianCalendar">
+      <void property="time">
+       <object class="java.util.Date">
+        <long>1560170631446</long>
+       </object>
+      </void>
+     </object>
+    </void>
+    <void property="id">
+     <int>7</int>
+    </void>
+    <void property="kmEstime">
+     <int>100</int>
+    </void>
+    <void property="prixEstime">
+     <float>30.0</float>
+    </void>
+    <void property="vehicule">
+     <object class="Class.Voiture">
+      <void property="etat">
+       <string>9</string>
+      </void>
+      <void property="id">
+       <int>22</int>
+      </void>
+      <void property="marque">
+       <string>Vroum Vroum</string>
+      </void>
+      <void property="modele">
+       <string>Vroum</string>
+      </void>
+      <void property="nbPlaces">
+       <int>4</int>
+      </void>
+      <void property="prixJournalier">
+       <float>1.0</float>
+      </void>
+      <void property="puissance">
+       <float>45.0</float>
+      </void>
+      <void property="vitesseMax">
+       <float>100.0</float>
+      </void>
+     </object>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Class.Contrat">
+    <void property="client">
+     <object class="Class.Client">
+      <void property="address">
+       <string>653</string>
+      </void>
+      <void property="id">
+       <int>4</int>
+      </void>
+      <void property="name">
+       <string>14</string>
+      </void>
+      <void property="phone">
+       <string>92</string>
+      </void>
+      <void property="surname">
+       <string>15</string>
+      </void>
+     </object>
+    </void>
+    <void property="debutLoc">
+     <object class="java.util.GregorianCalendar">
+      <void property="time">
+       <object class="java.util.Date">
+        <long>-30267080115553</long>
+       </object>
+      </void>
+     </object>
+    </void>
+    <void property="finLoc">
+     <object class="java.util.GregorianCalendar">
+      <void property="time">
+       <object class="java.util.Date">
+        <long>-30266907310402</long>
+       </object>
+      </void>
+     </object>
+    </void>
+    <void property="id">
+     <int>8</int>
+    </void>
+    <void property="kmEstime">
+     <int>100</int>
+    </void>
+    <void property="prixEstime">
+     <float>27.0</float>
+    </void>
+    <void property="vehicule">
+     <object class="Class.Voiture">
+      <void property="etat">
+       <string>9</string>
+      </void>
+      <void property="id">
+       <int>22</int>
+      </void>
+      <void property="marque">
+       <string>Vroum Vroum</string>
+      </void>
+      <void property="modele">
+       <string>Vroum</string>
+      </void>
+      <void property="nbPlaces">
+       <int>4</int>
+      </void>
+      <void property="prixJournalier">
+       <float>1.0</float>
+      </void>
+      <void property="puissance">
+       <float>45.0</float>
+      </void>
+      <void property="vitesseMax">
+       <float>100.0</float>
+      </void>
+     </object>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Class.Contrat">
+    <void property="client">
+     <object class="Class.Client">
+      <void property="address">
+       <string>a.b@c.d</string>
+      </void>
+      <void property="id">
+       <int>6</int>
+      </void>
+      <void property="name">
+       <string>a</string>
+      </void>
+      <void property="phone">
+       <string>0147852369</string>
+      </void>
+      <void property="surname">
+       <string>b</string>
+      </void>
+     </object>
+    </void>
+    <void property="debutLoc">
+     <object class="java.util.GregorianCalendar">
+      <void property="time">
+       <object class="java.util.Date">
+        <long>-29951460752361</long>
+       </object>
+      </void>
+     </object>
+    </void>
+    <void property="finLoc">
+     <object class="java.util.GregorianCalendar">
+      <void property="time">
+       <object class="java.util.Date">
+        <long>-29951028747888</long>
+       </object>
+      </void>
+     </object>
+    </void>
+    <void property="id">
+     <int>9</int>
+    </void>
+    <void property="kmEstime">
+     <int>100</int>
+    </void>
+    <void property="prixEstime">
+     <float>30.0</float>
+    </void>
+    <void property="vehicule">
+     <object class="Class.Voiture">
+      <void property="etat">
+       <string>9</string>
+      </void>
+      <void property="id">
+       <int>22</int>
+      </void>
+      <void property="marque">
+       <string>Vroum Vroum</string>
+      </void>
+      <void property="modele">
+       <string>Vroum</string>
+      </void>
+      <void property="nbPlaces">
+       <int>4</int>
+      </void>
+      <void property="prixJournalier">
+       <float>1.0</float>
+      </void>
+      <void property="puissance">
+       <float>45.0</float>
+      </void>
+      <void property="vitesseMax">
+       <float>100.0</float>
+      </void>
+     </object>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Class.Contrat">
+    <void property="client">
+     <object class="Class.Client">
+      <void property="address">
+       <string>a.b@c.d</string>
+      </void>
+      <void property="id">
+       <int>6</int>
+      </void>
+      <void property="name">
+       <string>a</string>
+      </void>
+      <void property="phone">
+       <string>0147852369</string>
+      </void>
+      <void property="surname">
+       <string>b</string>
+      </void>
+     </object>
+    </void>
+    <void property="debutLoc">
+     <object class="java.util.GregorianCalendar">
+      <void property="time">
+       <object class="java.util.Date">
+        <long>-30267079420163</long>
+       </object>
+      </void>
+     </object>
+    </void>
+    <void property="finLoc">
+     <object class="java.util.GregorianCalendar">
+      <void property="time">
+       <object class="java.util.Date">
+        <long>-30266647414244</long>
+       </object>
+      </void>
+     </object>
+    </void>
+    <void property="id">
+     <int>10</int>
+    </void>
+    <void property="kmEstime">
+     <int>100</int>
+    </void>
+    <void property="prixEstime">
+     <float>30.0</float>
+    </void>
+    <void property="vehicule">
+     <object class="Class.Voiture">
+      <void property="etat">
+       <string>9</string>
+      </void>
+      <void property="id">
+       <int>22</int>
+      </void>
+      <void property="marque">
+       <string>Vroum Vroum</string>
+      </void>
+      <void property="modele">
+       <string>Vroum</string>
+      </void>
+      <void property="nbPlaces">
+       <int>4</int>
+      </void>
+      <void property="prixJournalier">
+       <float>1.0</float>
+      </void>
+      <void property="puissance">
+       <float>45.0</float>
+      </void>
+      <void property="vitesseMax">
+       <float>100.0</float>
+      </void>
+     </object>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Class.Contrat">
+    <void property="client">
+     <object class="Class.Client" id="Client0">
+      <void property="address">
+       <string>a.b@c.d</string>
+      </void>
+      <void property="id">
+       <int>6</int>
+      </void>
+      <void property="name">
+       <string>a</string>
+      </void>
+      <void property="phone">
+       <string>0147852369</string>
+      </void>
+      <void property="surname">
+       <string>b</string>
+      </void>
+     </object>
+    </void>
+    <void property="debutLoc">
+     <object class="java.util.GregorianCalendar">
+      <void property="time">
+       <object class="java.util.Date">
+        <long>-30290666382224</long>
+       </object>
+      </void>
+     </object>
+    </void>
+    <void property="finLoc">
+     <object class="java.util.GregorianCalendar">
+      <void property="time">
+       <object class="java.util.Date">
+        <long>-30290234378705</long>
+       </object>
+      </void>
+     </object>
+    </void>
+    <void property="id">
+     <int>11</int>
+    </void>
+    <void property="kmEstime">
+     <int>23</int>
+    </void>
+    <void property="prixEstime">
+     <float>5.0</float>
+    </void>
+    <void property="vehicule">
+     <object class="Class.Voiture" id="Voiture0">
+      <void property="etat">
+       <string>9</string>
+      </void>
+      <void property="id">
+       <int>22</int>
+      </void>
+      <void property="marque">
+       <string>Vroum Vroum</string>
+      </void>
+      <void property="modele">
+       <string>Vroum</string>
+      </void>
+      <void property="nbPlaces">
+       <int>4</int>
+      </void>
+      <void property="prixJournalier">
+       <float>1.0</float>
+      </void>
+      <void property="puissance">
+       <float>45.0</float>
+      </void>
+      <void property="vitesseMax">
+       <float>100.0</float>
+      </void>
+     </object>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Class.Contrat">
+    <void property="client">
+     <object idref="Client0"/>
+    </void>
+    <void property="debutLoc">
+     <object class="java.util.GregorianCalendar">
+      <void property="time">
+       <object class="java.util.Date">
+        <long>-30267079163656</long>
+       </object>
+      </void>
+     </object>
+    </void>
+    <void property="finLoc">
+     <object class="java.util.GregorianCalendar">
+      <void property="time">
+       <object class="java.util.Date">
+        <long>-30266647159838</long>
+       </object>
+      </void>
+     </object>
+    </void>
+    <void property="id">
+     <int>12</int>
+    </void>
+    <void property="kmEstime">
+     <int>57</int>
+    </void>
+    <void property="prixEstime">
+     <float>8.5</float>
+    </void>
+    <void property="vehicule">
+     <object idref="Voiture0"/>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Class.Contrat">
+    <void property="client">
+     <object idref="Client0"/>
+    </void>
+    <void property="debutLoc">
+     <object class="java.util.GregorianCalendar">
+      <void property="time">
+       <object class="java.util.Date">
+        <long>-30267079115815</long>
+       </object>
+      </void>
+     </object>
+    </void>
+    <void property="finLoc">
+     <object class="java.util.GregorianCalendar">
+      <void property="time">
+       <object class="java.util.Date">
+        <long>-30266215110264</long>
+       </object>
+      </void>
+     </object>
+    </void>
+    <void property="id">
+     <int>13</int>
+    </void>
+    <void property="kmEstime">
+     <int>23</int>
+    </void>
+    <void property="prixEstime">
+     <float>10.0</float>
+    </void>
+    <void property="vehicule">
+     <object idref="Voiture0"/>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Class.Contrat">
+    <void property="client">
+     <object idref="Client0"/>
+    </void>
+    <void property="debutLoc">
+     <object class="java.util.GregorianCalendar">
+      <void property="time">
+       <object class="java.util.Date">
+        <long>-30267079099105</long>
+       </object>
+      </void>
+     </object>
+    </void>
+    <void property="finLoc">
+     <object class="java.util.GregorianCalendar">
+      <void property="time">
+       <object class="java.util.Date">
+        <long>-30266215094559</long>
+       </object>
+      </void>
+     </object>
+    </void>
+    <void property="id">
+     <int>14</int>
+    </void>
+    <void property="kmEstime">
+     <int>20</int>
+    </void>
+    <void property="prixEstime">
+     <float>9.0</float>
+    </void>
+    <void property="reduction">
+     <boolean>true</boolean>
+    </void>
+    <void property="vehicule">
+     <object idref="Voiture0"/>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Class.Contrat">
+    <void property="client">
+     <object class="Class.Client">
+      <void property="address">
+       <string>&gt;&lt;&gt;&lt;</string>
+      </void>
+      <void property="id">
+       <int>10</int>
+      </void>
+      <void property="mail">
+       <string>&lt;&gt;&lt;&gt;</string>
+      </void>
+      <void property="name">
+       <string>&lt;&gt;</string>
+      </void>
+      <void property="phone">
+       <string>&gt;&lt;&lt;&gt;</string>
+      </void>
+      <void property="surname">
+       <string>&gt;&lt;</string>
+      </void>
+     </object>
+    </void>
+    <void property="debutLoc">
+     <object class="java.util.GregorianCalendar">
+      <void property="time">
+       <object class="java.util.Date">
+        <long>920316687349</long>
+       </object>
+      </void>
+     </object>
+    </void>
+    <void property="finLoc">
+     <object class="java.util.GregorianCalendar">
+      <void property="time">
+       <object class="java.util.Date">
+        <long>921958292205</long>
+       </object>
+      </void>
+     </object>
+    </void>
+    <void property="id">
+     <int>15</int>
+    </void>
+    <void property="kmEstime">
+     <int>789</int>
+    </void>
+    <void property="prixEstime">
+     <float>197.01</float>
+    </void>
+    <void property="reduction">
+     <boolean>true</boolean>
+    </void>
+    <void property="vehicule">
+     <object class="Class.Voiture">
+      <void property="className">
+       <string>Voiture</string>
+      </void>
+      <void property="etat">
+       <string>5</string>
+      </void>
+      <void property="id">
+       <int>24</int>
+      </void>
+      <void property="marque">
+       <string>z</string>
+      </void>
+      <void property="modele">
+       <string>z</string>
+      </void>
+      <void property="prixJournalier">
+       <float>5.0</float>
+      </void>
+      <void property="vitesseMax">
+       <float>5.0</float>
+      </void>
+     </object>
+    </void>
+   </object>
+  </void>
  </object>
 </java>

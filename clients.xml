@@ -1,4 +1,134 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <java version="1.8.0_191" class="java.beans.XMLDecoder">
- <object class="java.util.ArrayList"/>
+ <object class="java.util.ArrayList">
+  <void method="add">
+   <object class="Class.Client">
+    <void property="address">
+     <string>rt</string>
+    </void>
+    <void property="id">
+     <int>2</int>
+    </void>
+    <void property="name">
+     <string>a</string>
+    </void>
+    <void property="phone">
+     <string>e</string>
+    </void>
+    <void property="surname">
+     <string>z</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Class.Client">
+    <void property="address">
+     <string>653</string>
+    </void>
+    <void property="id">
+     <int>4</int>
+    </void>
+    <void property="mail">
+     <string>null</string>
+    </void>
+    <void property="name">
+     <string>687</string>
+    </void>
+    <void property="phone">
+     <string>92</string>
+    </void>
+    <void property="surname">
+     <string>15</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Class.Client">
+    <void property="address">
+     <string>a.b@c.d</string>
+    </void>
+    <void property="id">
+     <int>6</int>
+    </void>
+    <void property="mail">
+     <string>null</string>
+    </void>
+    <void property="name">
+     <string>Bulot</string>
+    </void>
+    <void property="phone">
+     <string>0147852369</string>
+    </void>
+    <void property="surname">
+     <string>Chapo</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Class.Client">
+    <void property="address">
+     <string>&gt;&lt;&gt;&lt;</string>
+    </void>
+    <void property="id">
+     <int>10</int>
+    </void>
+    <void property="mail">
+     <string>&lt;&gt;&lt;&gt;</string>
+    </void>
+    <void property="name">
+     <string>&lt;&gt;</string>
+    </void>
+    <void property="phone">
+     <string>&gt;&lt;&lt;&gt;</string>
+    </void>
+    <void property="surname">
+     <string>&gt;&lt;</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Class.Client">
+    <void property="address">
+     <string>yvdt</string>
+    </void>
+    <void property="id">
+     <int>11</int>
+    </void>
+    <void property="mail">
+     <string>se(yvsesr</string>
+    </void>
+    <void property="name">
+     <string>&gt;&gt;</string>
+    </void>
+    <void property="phone">
+     <string>(yvse(</string>
+    </void>
+    <void property="surname">
+     <string>sertvservtseyv</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Class.Client">
+    <void property="address">
+     <string>465687</string>
+    </void>
+    <void property="id">
+     <int>13</int>
+    </void>
+    <void property="mail">
+     <string>98783</string>
+    </void>
+    <void property="name">
+     <string>az</string>
+    </void>
+    <void property="phone">
+     <string>897</string>
+    </void>
+    <void property="surname">
+     <string>azz</string>
+    </void>
+   </object>
+  </void>
+ </object>
 </java>

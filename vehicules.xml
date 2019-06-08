@@ -35,7 +35,7 @@
      <string>Renault</string>
     </void>
     <void property="modele">
-     <string>Twingo</string>
+     <string>Pouêt</string>
     </void>
     <void property="prixJournalier">
      <float>60.0</float>
@@ -59,8 +59,14 @@
     <void property="modele">
      <string>Clio</string>
     </void>
+    <void property="nbPlaces">
+     <int>23</int>
+    </void>
     <void property="prixJournalier">
      <float>546.0</float>
+    </void>
+    <void property="puissance">
+     <float>23.0</float>
     </void>
     <void property="vitesseMax">
      <float>54654.0</float>
@@ -69,6 +75,9 @@
   </void>
   <void method="add">
    <object class="Class.Voiture">
+    <void property="className">
+     <string>Voiture</string>
+    </void>
     <void property="etat">
      <string>5</string>
     </void>
@@ -79,9 +88,168 @@
      <string>Chouteau</string>
     </void>
     <void property="modele">
-     <string>Tony</string>
+     <string>Pouêt</string>
     </void>
     <void property="prixJournalier">
+     <float>5.0</float>
+    </void>
+    <void property="vitesseMax">
+     <float>5.0</float>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Class.Moto">
+    <void property="className">
+     <string>Moto</string>
+    </void>
+    <void property="etat">
+     <string>5</string>
+    </void>
+    <void property="id">
+     <int>20</int>
+    </void>
+    <void property="marque">
+     <string>Chouteau</string>
+    </void>
+    <void property="modele">
+     <string>aaa</string>
+    </void>
+    <void property="prixJournalier">
+     <float>6.0</float>
+    </void>
+    <void property="vitesseMax">
+     <float>5.0</float>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Class.Voiture">
+    <void property="className">
+     <string>Voiture</string>
+    </void>
+    <void property="etat">
+     <string>5</string>
+    </void>
+    <void property="id">
+     <int>24</int>
+    </void>
+    <void property="marque">
+     <string>z</string>
+    </void>
+    <void property="modele">
+     <string>z</string>
+    </void>
+    <void property="prixJournalier">
+     <float>5.0</float>
+    </void>
+    <void property="vitesseMax">
+     <float>5.0</float>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Class.Voiture">
+    <void property="className">
+     <string>Voiture</string>
+    </void>
+    <void property="etat">
+     <string>5</string>
+    </void>
+    <void property="id">
+     <int>26</int>
+    </void>
+    <void property="marque">
+     <string>z</string>
+    </void>
+    <void property="modele">
+     <string>77</string>
+    </void>
+    <void property="prixJournalier">
+     <float>5.0</float>
+    </void>
+    <void property="vitesseMax">
+     <float>5.0</float>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Class.Voiture">
+    <void property="etat">
+     <string>8</string>
+    </void>
+    <void property="id">
+     <int>28</int>
+    </void>
+    <void property="marque">
+     <string>a</string>
+    </void>
+    <void property="modele">
+     <string>a</string>
+    </void>
+    <void property="nbPlaces">
+     <int>8</int>
+    </void>
+    <void property="prixJournalier">
+     <float>8.0</float>
+    </void>
+    <void property="puissance">
+     <float>8.0</float>
+    </void>
+    <void property="vitesseMax">
+     <float>8.0</float>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Class.Avion">
+    <void property="etat">
+     <string>8</string>
+    </void>
+    <void property="heuresVol">
+     <int>8</int>
+    </void>
+    <void property="id">
+     <int>29</int>
+    </void>
+    <void property="marque">
+     <string>pouet</string>
+    </void>
+    <void property="modele">
+     <string>pouet</string>
+    </void>
+    <void property="nbMoteurs">
+     <int>8</int>
+    </void>
+    <void property="prixJournalier">
+     <float>8.0</float>
+    </void>
+    <void property="vitesseMax">
+     <float>8.0</float>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Class.Voiture">
+    <void property="etat">
+     <string>5</string>
+    </void>
+    <void property="id">
+     <int>31</int>
+    </void>
+    <void property="marque">
+     <string>a</string>
+    </void>
+    <void property="modele">
+     <string>a</string>
+    </void>
+    <void property="nbPlaces">
+     <int>5</int>
+    </void>
+    <void property="prixJournalier">
+     <float>5.0</float>
+    </void>
+    <void property="puissance">
      <float>5.0</float>
     </void>
     <void property="vitesseMax">
@@ -95,16 +263,140 @@
      <string>5</string>
     </void>
     <void property="id">
-     <int>20</int>
+     <int>33</int>
     </void>
     <void property="marque">
-     <string>Chouteau</string>
+     <string>a</string>
     </void>
     <void property="modele">
-     <string>Tony</string>
+     <string>a</string>
+    </void>
+    <void property="nbPlaces">
+     <int>5</int>
     </void>
     <void property="prixJournalier">
-     <float>6.0</float>
+     <float>5.0</float>
+    </void>
+    <void property="puissance">
+     <float>5.0</float>
+    </void>
+    <void property="vitesseMax">
+     <float>5.0</float>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Class.Moto">
+    <void property="className">
+     <string>Moto</string>
+    </void>
+    <void property="etat">
+     <string>5</string>
+    </void>
+    <void property="id">
+     <int>35</int>
+    </void>
+    <void property="marque">
+     <string>test</string>
+    </void>
+    <void property="modele">
+     <string>tst</string>
+    </void>
+    <void property="prixJournalier">
+     <float>5.0</float>
+    </void>
+    <void property="puissance">
+     <float>5.0</float>
+    </void>
+    <void property="vitesseMax">
+     <float>5.0</float>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Class.Voiture">
+    <void property="className">
+     <string>Voiture</string>
+    </void>
+    <void property="etat">
+     <string>5</string>
+    </void>
+    <void property="id">
+     <int>37</int>
+    </void>
+    <void property="marque">
+     <string>az</string>
+    </void>
+    <void property="modele">
+     <string>az</string>
+    </void>
+    <void property="nbPlaces">
+     <int>5</int>
+    </void>
+    <void property="prixJournalier">
+     <float>5.0</float>
+    </void>
+    <void property="puissance">
+     <float>5.0</float>
+    </void>
+    <void property="vitesseMax">
+     <float>5.0</float>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Class.Voiture">
+    <void property="className">
+     <string>Voiture</string>
+    </void>
+    <void property="etat">
+     <string>5</string>
+    </void>
+    <void property="id">
+     <int>39</int>
+    </void>
+    <void property="marque">
+     <string>aze</string>
+    </void>
+    <void property="modele">
+     <string>aze</string>
+    </void>
+    <void property="nbPlaces">
+     <int>5</int>
+    </void>
+    <void property="prixJournalier">
+     <float>5.0</float>
+    </void>
+    <void property="puissance">
+     <float>55.0</float>
+    </void>
+    <void property="vitesseMax">
+     <float>5.0</float>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Class.Moto">
+    <void property="className">
+     <string>Moto</string>
+    </void>
+    <void property="etat">
+     <string>5</string>
+    </void>
+    <void property="id">
+     <int>40</int>
+    </void>
+    <void property="marque">
+     <string>zea</string>
+    </void>
+    <void property="modele">
+     <string>eza</string>
+    </void>
+    <void property="prixJournalier">
+     <float>5.0</float>
+    </void>
+    <void property="puissance">
+     <float>5.0</float>
     </void>
     <void property="vitesseMax">
      <float>5.0</float>
