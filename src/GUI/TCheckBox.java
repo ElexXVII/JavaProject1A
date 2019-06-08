@@ -36,6 +36,7 @@ public class TCheckBox extends JCheckBox {
         super.setFocusPainted(false);
     }
 
+
     public void disableCB () {
         this.setEnabled(false);
         isEnabled = false;
