@@ -262,5 +262,256 @@
     </void>
    </object>
   </void>
+  <void method="add">
+   <object class="Class.Contrat">
+    <void property="client">
+     <object class="Class.Client">
+      <void property="address">
+       <string>y</string>
+      </void>
+      <void property="id">
+       <int>7</int>
+      </void>
+      <void property="mail">
+       <string>@.com</string>
+      </void>
+      <void property="name">
+       <string>Thibault</string>
+      </void>
+      <void property="phone">
+       <string>144464</string>
+      </void>
+      <void property="surname">
+       <string>Gaudier</string>
+      </void>
+     </object>
+    </void>
+    <void property="debutLoc">
+     <object class="java.util.GregorianCalendar">
+      <void property="time">
+       <object class="java.util.Date">
+        <long>910721067357</long>
+       </object>
+      </void>
+     </object>
+    </void>
+    <void property="finLoc">
+     <object class="java.util.GregorianCalendar">
+      <void property="time">
+       <object class="java.util.Date">
+        <long>911412267357</long>
+       </object>
+      </void>
+     </object>
+    </void>
+    <void property="finished">
+     <string>✔</string>
+    </void>
+    <void property="id">
+     <int>8</int>
+    </void>
+    <void property="kmEstime">
+     <int>10</int>
+    </void>
+    <void property="prixEstime">
+     <float>108000.0</float>
+    </void>
+    <void property="reduction">
+     <boolean>true</boolean>
+    </void>
+    <void property="vehicule">
+     <object class="Class.Avion">
+      <void property="className">
+       <string>Avion</string>
+      </void>
+      <void property="etat">
+       <string>Bonne</string>
+      </void>
+      <void property="heuresVol">
+       <int>150</int>
+      </void>
+      <void property="id">
+       <int>16</int>
+      </void>
+      <void property="marque">
+       <string>Dassault Aviation</string>
+      </void>
+      <void property="modele">
+       <string>Falcon 2000 LX</string>
+      </void>
+      <void property="nbMoteurs">
+       <int>4</int>
+      </void>
+      <void property="prixJournalier">
+       <float>15000.0</float>
+      </void>
+      <void property="vitesseMax">
+       <float>1250.0</float>
+      </void>
+     </object>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Class.Contrat">
+    <void property="client">
+     <object class="Class.Client" id="Client0">
+      <void property="address">
+       <string>x</string>
+      </void>
+      <void property="id">
+       <int>6</int>
+      </void>
+      <void property="mail">
+       <string>@.fr</string>
+      </void>
+      <void property="name">
+       <string>Tony</string>
+      </void>
+      <void property="phone">
+       <string>4564546465</string>
+      </void>
+      <void property="surname">
+       <string>Chouteau</string>
+      </void>
+     </object>
+    </void>
+    <void property="debutLoc">
+     <object class="java.util.GregorianCalendar">
+      <void property="time">
+       <object class="java.util.Date">
+        <long>910721221127</long>
+       </object>
+      </void>
+     </object>
+    </void>
+    <void property="finLoc">
+     <object class="java.util.GregorianCalendar">
+      <void property="time">
+       <object class="java.util.Date">
+        <long>910807621128</long>
+       </object>
+      </void>
+     </object>
+    </void>
+    <void property="finished">
+     <string>✘</string>
+    </void>
+    <void property="id">
+     <int>10</int>
+    </void>
+    <void property="kmEstime">
+     <int>10</int>
+    </void>
+    <void property="prixEstime">
+     <float>13500.0</float>
+    </void>
+    <void property="reduction">
+     <boolean>true</boolean>
+    </void>
+    <void property="vehicule">
+     <object class="Class.Avion">
+      <void property="className">
+       <string>Avion</string>
+      </void>
+      <void property="etat">
+       <string>Bonne</string>
+      </void>
+      <void property="heuresVol">
+       <int>150</int>
+      </void>
+      <void property="id">
+       <int>15</int>
+      </void>
+      <void property="marque">
+       <string>Boeing</string>
+      </void>
+      <void property="modele">
+       <string>717</string>
+      </void>
+      <void property="nbMoteurs">
+       <int>4</int>
+      </void>
+      <void property="prixJournalier">
+       <float>15000.0</float>
+      </void>
+      <void property="vitesseMax">
+       <float>1250.0</float>
+      </void>
+     </object>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Class.Contrat">
+    <void property="client">
+     <object idref="Client0"/>
+    </void>
+    <void property="debutLoc">
+     <object class="java.util.GregorianCalendar">
+      <void property="time">
+       <object class="java.util.Date">
+        <long>910807601294</long>
+       </object>
+      </void>
+     </object>
+    </void>
+    <void property="finLoc">
+     <object class="java.util.GregorianCalendar">
+      <void property="time">
+       <object class="java.util.Date">
+        <long>910807601295</long>
+       </object>
+      </void>
+     </object>
+    </void>
+    <void property="finished">
+     <string>✘</string>
+    </void>
+    <void property="id">
+     <int>11</int>
+    </void>
+    <void property="kmEstime">
+     <int>100</int>
+    </void>
+    <void property="prixEstime">
+     <float>22.5</float>
+    </void>
+    <void property="reduction">
+     <boolean>true</boolean>
+    </void>
+    <void property="vehicule">
+     <object class="Class.Voiture">
+      <void property="className">
+       <string>Voiture</string>
+      </void>
+      <void property="etat">
+       <string>Bonne</string>
+      </void>
+      <void property="id">
+       <int>11</int>
+      </void>
+      <void property="marque">
+       <string>Audi</string>
+      </void>
+      <void property="modele">
+       <string>R6</string>
+      </void>
+      <void property="nbPlaces">
+       <int>2</int>
+      </void>
+      <void property="prixJournalier">
+       <float>260.0</float>
+      </void>
+      <void property="puissance">
+       <float>290.0</float>
+      </void>
+      <void property="vitesseMax">
+       <float>340.0</float>
+      </void>
+     </object>
+    </void>
+   </object>
+  </void>
  </object>
 </java>
